@@ -28,7 +28,7 @@ using std::vector;
 #define Vs 3.4                              // S wave velocity (km/s)
 #define Vp 6.4                              // P wave velocity (km/s)
 #define T_max 90.                           // Maximum time between triggers in seconds
-#define D_max 200.                          // Maximum distance between triggers in km
+#define D_max 1000.  // change from 200. by CMC 7/1/2013                          // Maximum distance between triggers in km
 #define C_CNT_MIN 5                         // Min # of correlated triggers for event detect
 #define EVENT_MASK 0755
 
