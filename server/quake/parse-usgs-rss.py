@@ -144,6 +144,12 @@ def walk(parent, outFile, level, fileqcn, ctr, dbconn):                   # [1]
             elif node.nodeName == "description":   # UTC date in format November 23, 2007 17:52:45 GMT
                 where = strContent.find(" ")   # find the first blank, from 0 to where will be the month
                 where2 = strContent.find(", ")
+                day = "01"
+                year = "1900"
+                month = "01"
+                hour = "00"
+                minute = "00"
+                second = "00"
                 if where > -1 and where2 > -1:
                    strMonth = strContent[0:where].strip()
                    month = "01"
@@ -171,12 +177,6 @@ def walk(parent, outFile, level, fileqcn, ctr, dbconn):                   # [1]
                       month = "11"
                    elif strMonth == "December":
                       month = "12"
-
-                   day = "01"
-                   year = "1900"
-                   hour = "00"
-                   minute = "00"
-                   second = "00"
 
                    day = strContent[where+1:where2]
                    year = strContent[where2+2:where2+6]
