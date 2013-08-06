@@ -943,7 +943,9 @@ bool CheckTriggerTrickle(struct STriggerInfo& ti)
            "<tsync>%f</tsync>\n"
            "<toff>%f</toff>\n"
            "<%s>%.2f</%s>\n"
-           "<%s>%.2f</%s>\n",
+           "<%s>%.2f</%s>\n"
+           "<qlat>%f</qlat>\n"
+           "<qlng>%f</qlng>\n",
        QCN_VERSION_STRING,
        qcn_util::os_type_str(),
        sm->eSensor,
@@ -957,7 +959,8 @@ bool CheckTriggerTrickle(struct STriggerInfo& ti)
        g_dTimeSync>0.0f ? g_dTimeSync + g_dTimeOffset : 0.0f,  // note we're sending the local client offset sync time adjusted to server time!
        g_dTimeOffset, 
           XML_CLOCK_TIME, sm->clock_time, XML_CLOCK_TIME,
-          XML_CPU_TIME, sm->cpu_time, XML_CPU_TIME
+          XML_CPU_TIME, sm->cpu_time, XML_CPU_TIME,
+            sm->dTrLatitude, sm->dTrLongitude
     );
 
     trickleup::qcnTrickleUp(strTrigger, ti.iVariety, (const char*) sm->dataBOINC.wu_name);  // send a trigger for this trickle
