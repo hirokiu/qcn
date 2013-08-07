@@ -1,0 +1,24 @@
+qcn_util::ResetCounter(0)
+Trigger SAC Files will be stored in 
+../data
+and removed after a month.
+Image Files will be stored in ../images
+Host machine is little-endian
+Significance Filter Cutoff    = 3.000000
+Short Term Average Magnitude  = 11.000000
+BOINC Project Path            = init
+No motion sensor available of type # 1 IOI2CMotionSensor
+No motion sensor available of type # 2 IOI2CMotionSensor
+No motion sensor available of type # 3 PMUMotionSensor
+Intel Macbook Pro compatible motion sensor detected!
+SMS KERNEL: 4 5 Intel Mac Laptop
+Motion sensor initialized of type 4 - Intel Mac Laptop.
+Start of monitoring at time 1375828792.153544  interval 0.020000  threshold 0.100000
+Initial sensor values:  x0=-0.725884  y0=0.114613  z0=10.085965  sample size=1  dt=0.020000
+Server time synchronization started at   1375828792.179284
+Synchronized server time at local time = 1375828793.252114   offset = -0.433697   elapsed time = 1.072830
+Closing SMS sensor port...
+Port closed!
+qcnqt: stopping main monitoring thread
+qcnqt: main thread quit within 0.039000 seconds...
+Freeing shared memory segment

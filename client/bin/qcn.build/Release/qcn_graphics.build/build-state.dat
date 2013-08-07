@@ -1,0 +1,1264 @@
+Tqcn_graphics
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app/Contents/Info.plist qcn_graphics-Info.plist
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_earth.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_2dplot.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_2dplot.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_cube.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/nation_boundary.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/nation_boundary.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/coastline.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/coastline.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/plate_boundary.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/plate_boundary.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/cserialize.o /Users/carlgt1/projects/qcn/client/mac_build/../util/cserialize.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_shmem.o /Users/carlgt1/projects/qcn/client/mac_build/../main/qcn_shmem.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_gzip.o /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_gzip.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/gzstream.o /Users/carlgt1/projects/qcn/client/mac_build/../util/gzstream.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_signal.o /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_signal.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_util.o /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_util.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/ttfont.o /Users/carlgt1/projects/qcn/client/mac_build/../util/ttfont.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/texture.o /Users/carlgt1/projects/qcn/client/mac_build/../util/texture.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_2dplot.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_2dplot.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_earth.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_cube.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/nation_boundary.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/nation_boundary.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/coastline.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/coastline.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/plate_boundary.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/plate_boundary.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/cserialize.o /Users/carlgt1/projects/qcn/client/mac_build/../util/cserialize.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics normal x86_64
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_shmem.o /Users/carlgt1/projects/qcn/client/mac_build/../main/qcn_shmem.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_gzip.o /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_gzip.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/gzstream.o /Users/carlgt1/projects/qcn/client/mac_build/../util/gzstream.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_signal.o /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_signal.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_util.o /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_util.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/ttfont.o /Users/carlgt1/projects/qcn/client/mac_build/../util/ttfont.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/texture.o /Users/carlgt1/projects/qcn/client/mac_build/../util/texture.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics normal i386
+cCreateUniversalBinary /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app/Contents/MacOS/qcn_graphics normal "x86_64 i386"
+cTouch /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+c0000000051C0C32500000000000000CC
+t1371587365
+s204
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/api/boinc_api.h
+c0000000051FEC20E0000000000001756
+t1375650318
+s5974
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/api/boinc_gl.h
+c0000000051BF5FA200000000000005CB
+t1371496354
+s1483
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/api/graphics2.h
+c0000000051BF5FA20000000000000717
+t1371496354
+s1815
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/api/gutil.h
+c0000000051BF5FA200000000000018F7
+t1371496354
+s6391
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/api/reduce.h
+c0000000051BF5FA20000000000001020
+t1371496354
+s4128
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/lib/app_ipc.h
+c0000000051FEC20E0000000000001EFE
+t1375650318
+s7934
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/lib/cal_boinc.h
+c0000000051BF5FA3000000000000B7B3
+t1371496355
+s47027
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/lib/cl_boinc.h
+c0000000051BF5FA300000000000028C8
+t1371496355
+s10440
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/lib/common_defs.h
+c0000000051FEC20E00000000000022EA
+t1375650318
+s8938
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/lib/coproc.h
+c0000000051FEC20E000000000000409F
+t1375650318
+s16543
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/lib/diagnostics.h
+c0000000051BF5FA30000000000001854
+t1371496355
+s6228
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/lib/error_numbers.h
+c0000000051BF5FA30000000000001DCF
+t1371496355
+s7631
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/lib/filesys.h
+c0000000051BF5FA30000000000000F14
+t1371496355
+s3860
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/lib/hostinfo.h
+c0000000051FEC20E0000000000000F6A
+t1375650318
+s3946
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/lib/mfile.h
+c0000000051BF5FA30000000000000783
+t1371496355
+s1923
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/lib/miofile.h
+c0000000051BF5FA30000000000000898
+t1371496355
+s2200
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/lib/parse.h
+c0000000051BF5FA30000000000002AA8
+t1371496355
+s10920
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/lib/prefs.h
+c0000000051FEC20E00000000000016EF
+t1375650318
+s5871
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/lib/proxy_info.h
+c0000000051BF5FA300000000000009BD
+t1371496355
+s2493
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/lib/str_util.h
+c0000000051FEC20E0000000000000B82
+t1375650318
+s2946
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/lib/util.h
+c0000000051BF5FA30000000000000B59
+t1371496355
+s2905
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/samples/jpeglib/jconfig.h
+c0000000051BF5FA40000000000000628
+t1371496356
+s1576
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/samples/jpeglib/jmorecfg.h
+c0000000051BF5FA4000000000000309B
+t1371496356
+s12443
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/samples/jpeglib/jpeglib.h
+c0000000051BF5FA4000000000000B56B
+t1371496356
+s46443
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../../boinc/zip/boinc_zip.h
+c0000000051BF5FA40000000000000C34
+t1371496356
+s3124
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../config.h
+c0000000052018AD40000000000002E61
+t1375832788
+s11873
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../freetype-2.4.6/include/freetype/config/ftconfig.h
+c0000000051BF666A0000000000004D73
+t1371498090
+s19827
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../freetype-2.4.6/include/freetype/config/ftheader.h
+c0000000051BF666A0000000000006207
+t1371498090
+s25095
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../freetype-2.4.6/include/freetype/config/ftoption.h
+c0000000051BF666A000000000000C5F0
+t1371498090
+s50672
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../freetype-2.4.6/include/freetype/config/ftstdlib.h
+c0000000051BF666A0000000000001C6B
+t1371498090
+s7275
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../freetype-2.4.6/include/freetype/freetype.h
+c0000000051BF666A000000000003BBC7
+t1371498090
+s244679
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../freetype-2.4.6/include/freetype/fterrdef.h
+c0000000051BF666A0000000000002F2B
+t1371498090
+s12075
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../freetype-2.4.6/include/freetype/fterrors.h
+c0000000051BF666A00000000000024F0
+t1371498090
+s9456
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../freetype-2.4.6/include/freetype/ftglyph.h
+c0000000051BF666A0000000000009B8B
+t1371498090
+s39819
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../freetype-2.4.6/include/freetype/ftimage.h
+c0000000051BF666A0000000000014276
+t1371498090
+s82550
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../freetype-2.4.6/include/freetype/ftmoderr.h
+c0000000051BF666A0000000000001D39
+t1371498090
+s7481
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../freetype-2.4.6/include/freetype/ftoutln.h
+c0000000051BF666A0000000000007F91
+t1371498090
+s32657
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../freetype-2.4.6/include/freetype/ftsystem.h
+c0000000051BF666A00000000000027D5
+t1371498090
+s10197
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../freetype-2.4.6/include/freetype/fttypes.h
+c0000000051BF666A00000000000088A0
+t1371498090
+s34976
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../freetype-2.4.6/include/ft2build.h
+c0000000051BF666A0000000000000889
+t1371498090
+s2185
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTBBox.h
+c0000000051BF666A00000000000013FF
+t1371498090
+s5119
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTBitmapGlyph.h
+c0000000051BF666A00000000000009D5
+t1371498090
+s2517
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTBuffer.h
+c0000000051BF666A0000000000000CFB
+t1371498090
+s3323
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTBufferFont.h
+c0000000051BF666A0000000000000B9C
+t1371498090
+s2972
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTBufferGlyph.h
+c0000000051BF666A00000000000008B2
+t1371498090
+s2226
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTExtrdGlyph.h
+c0000000051BF666A0000000000000EBD
+t1371498090
+s3773
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTFont.h
+c0000000051BF666A0000000000004ECD
+t1371498090
+s20173
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTGLBitmapFont.h
+c0000000051BF666A0000000000000C33
+t1371498090
+s3123
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTGLExtrdFont.h
+c0000000051BF666A0000000000000C7F
+t1371498090
+s3199
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTGLOutlineFont.h
+c0000000051BF666A0000000000000C4D
+t1371498090
+s3149
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTGLPixmapFont.h
+c0000000051BF666A0000000000000C4E
+t1371498090
+s3150
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTGLPolygonFont.h
+c0000000051BF666A0000000000000C64
+t1371498090
+s3172
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTGLTextureFont.h
+c0000000051BF666A0000000000000C56
+t1371498090
+s3158
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTGlyph.h
+c0000000051BF666A0000000000001861
+t1371498090
+s6241
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTLayout.h
+c0000000051BF666A000000000000196F
+t1371498090
+s6511
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTOutlineGlyph.h
+c0000000051BF666A0000000000000CE9
+t1371498090
+s3305
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTPixmapGlyph.h
+c0000000051BF666A00000000000009D6
+t1371498090
+s2518
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTPoint.h
+c0000000051BF666A0000000000001E14
+t1371498090
+s7700
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTPolyGlyph.h
+c0000000051BF666A0000000000000D49
+t1371498090
+s3401
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTSimpleLayout.h
+c0000000051BF666A00000000000019DA
+t1371498090
+s6618
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/FTTextureGlyph.h
+c0000000051BF666A0000000000000DFF
+t1371498090
+s3583
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../ftgl-2.1.3/include/FTGL/ftgl.h
+c0000000051BF666A00000000000010A7
+t1371498090
+s4263
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../../version.h
+c0000000052018AD40000000000000088
+t1375832788
+s136
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/coastline.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/cserialize.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/gzstream.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/nation_boundary.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/plate_boundary.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_2dplot.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_cube.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_earth.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics.LinkFileList
+c0000000052018ADB000000000000071F
+t1375832795
+s1823
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_gzip.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_shmem.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_signal.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_util.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/texture.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/ttfont.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/coastline.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/cserialize.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/gzstream.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/nation_boundary.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/plate_boundary.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_2dplot.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_cube.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_earth.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics.LinkFileList
+c0000000052018ADB000000000000073D
+t1375832795
+s1853
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_gzip.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_shmem.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_signal.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_util.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/texture.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/ttfont.o
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app/Contents/Info.plist
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app/Contents/MacOS/qcn_graphics
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../graphics/coastline.cpp
+c0000000051BF666800000000000995CA
+t1371498088
+s628170
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../graphics/coastline.h
+c0000000051BF6668000000000000012B
+t1371498088
+s299
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../graphics/country.h
+c0000000051BF66680000000000000227
+t1371498088
+s551
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../graphics/nation_boundary.cpp
+c0000000051BF666800000000000A9FCC
+t1371498088
+s696268
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../graphics/nation_boundary.h
+c0000000051BF666800000000000002E9
+t1371498088
+s745
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../graphics/plate_boundary.cpp
+c0000000051BF6668000000000001EB87
+t1371498088
+s125831
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../graphics/plate_boundary.h
+c0000000051BF6668000000000000013E
+t1371498088
+s318
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_2dplot.cpp
+c0000000051BF666800000000000056C8
+t1371498088
+s22216
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_2dplot.h
+c0000000051BF66680000000000000302
+t1371498088
+s770
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp
+c0000000051BF66680000000000006665
+t1371498088
+s26213
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.h
+c0000000051BF66680000000000000DC4
+t1371498088
+s3524
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp
+c0000000051BF6668000000000000F820
+t1371498088
+s63520
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.h
+c0000000051BF666800000000000015D0
+t1371498088
+s5584
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cpp
+c0000000051BF66680000000000011F5B
+t1371498088
+s73563
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.h
+c0000000051BF66680000000000002094
+t1371498088
+s8340
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../main/define.h
+c0000000051BF66690000000000004096
+t1371498089
+s16534
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../main/main.h
+c0000000051BF666900000000000019AB
+t1371498089
+s6571
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../main/qcn_shmem.cpp
+c0000000051BF66690000000000001D6B
+t1371498089
+s7531
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../main/qcn_shmem.h
+c0000000051BF66690000000000001948
+t1371498089
+s6472
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../main/qcn_thread_sensor.h
+c0000000051BF66690000000000000135
+t1371498089
+s309
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../main/qcn_thread_time.h
+c0000000051BF66690000000000000141
+t1371498089
+s321
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../sensor/csensor.h
+c0000000051BF66690000000000001057
+t1371498089
+s4183
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/cserialize.cpp
+c0000000051BF66690000000000000885
+t1371498089
+s2181
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/cserialize.h
+c0000000051BF666900000000000000FD
+t1371498089
+s253
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/execproc.h
+c0000000051BF66690000000000000110
+t1371498089
+s272
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/gzstream.cpp
+c0000000051BF666900000000000013E5
+t1371498089
+s5093
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/gzstream.h
+c0000000051BF666900000000000011FC
+t1371498089
+s4604
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_gzip.cpp
+c0000000051BF66690000000000000A20
+t1371498089
+s2592
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_gzip.h
+c0000000051BF666900000000000000C9
+t1371498089
+s201
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_signal.cpp
+c0000000051BF66690000000000000D0B
+t1371498089
+s3339
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_signal.h
+c0000000051BF6669000000000000031A
+t1371498089
+s794
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_thread.h
+c0000000051BF6669000000000000053D
+t1371498089
+s1341
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_util.cpp
+c0000000051BF6669000000000000B4AC
+t1371498089
+s46252
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_util.h
+c0000000051BF66690000000000000EAF
+t1371498089
+s3759
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/sac.h
+c0000000051BF66690000000000000DE4
+t1371498089
+s3556
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/texture.cpp
+c0000000051BF6669000000000000272E
+t1371498089
+s10030
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/trickledown.h
+c0000000051BF66690000000000000075
+t1371498089
+s117
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/trickleup.h
+c0000000051BF666900000000000000D0
+t1371498089
+s208
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/ttfont.cpp
+c0000000051BF666900000000000028A7
+t1371498089
+s10407
+
+N/Users/carlgt1/projects/qcn/client/mac_build/../util/ttfont.h
+c0000000051BF66690000000000000872
+t1371498089
+s2162
+
+N/Users/carlgt1/projects/qcn/client/mac_build/libboinc.a
+c0000000051BF66680000000000116FF0
+t1371498088
+s1142768
+
+N/Users/carlgt1/projects/qcn/client/mac_build/libboinc_api.a
+c0000000051BF66680000000000015F98
+t1371498088
+s90008
+
+N/Users/carlgt1/projects/qcn/client/mac_build/libboinc_graphics2.a
+c0000000051BF66680000000000020080
+t1371498088
+s131200
+
+N/Users/carlgt1/projects/qcn/client/mac_build/libboinc_zip.a
+c0000000051BF666800000000000DD950
+t1371498088
+s907600
+
+N/Users/carlgt1/projects/qcn/client/mac_build/libbz2-universal.a
+c0000000051BF66680000000000034F04
+t1371498088
+s216836
+
+N/Users/carlgt1/projects/qcn/client/mac_build/libfreetype-universal.a
+c0000000051BF666800000000001EF70C
+t1371498088
+s2029324
+
+N/Users/carlgt1/projects/qcn/client/mac_build/libftgl-universal.a
+c0000000051BF666900000000000E4C74
+t1371498089
+s937076
+
+N/Users/carlgt1/projects/qcn/client/mac_build/libz-universal.a
+c0000000051BF66690000000000049D24
+t1371498089
+s302372
+
+Nqcn_graphics-Info.plist
+c0000000051BF66690000000000000308
+t1371498089
+s776
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesce1a685bc2b1b741^e7fe7a5bc2b1b741^---0#1#0#--18"Check dependencies36"F1901386-92C2-4E09-A6DA-C018D6544429-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/coastline.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/coastline.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525596.505375
+e397525597.215286
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/coastline.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../graphics/coastline.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/carlgt1/projects/qcn/client/mac_build/../graphics/coastline.cppbd8d815cc2b1b741^eb1c375dc2b1b741^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../graphics/coastline.cpp0000000000000000^2945"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/coastline.o ../graphics/coastline.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/i386 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/coastline.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/coastline.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../graphics/coastline.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/coastline.o36"EF956667-EA8A-4398-A926-4132D0A5AE1E-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/cserialize.o /Users/carlgt1/projects/qcn/client/mac_build/../util/cserialize.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525596.806934
+e397525597.338845
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/cserialize.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../util/cserialize.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/carlgt1/projects/qcn/client/mac_build/../util/cserialize.cppfdbfce5cc2b1b741^06be565dc2b1b741^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../util/cserialize.cpp0000000000000000^2943"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/cserialize.o ../util/cserialize.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/i386 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/cserialize.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/cserialize.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../util/cserialize.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/cserialize.o36"EF350311-6EB6-4A41-9C25-9C699934A696-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/gzstream.o /Users/carlgt1/projects/qcn/client/mac_build/../util/gzstream.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525597.027365
+e397525597.419265
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/gzstream.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../util/gzstream.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/carlgt1/projects/qcn/client/mac_build/../util/gzstream.cpp3256075dc2b1b741^a8566b5dc2b1b741^---0#0#0#-19%DVTDocumentLocation2@81"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../util/gzstream.cpp0000000000000000^2931"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/gzstream.o ../util/gzstream.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/i386 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/gzstream.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/gzstream.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../util/gzstream.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/gzstream.o36"DCE139CE-DB1E-4030-960A-75CC8CD94D9F-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/nation_boundary.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/nation_boundary.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525596.485904
+e397525597.152544
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/nation_boundary.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../graphics/nation_boundary.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/carlgt1/projects/qcn/client/mac_build/../graphics/nation_boundary.cpp79927c5cc2b1b741^670c275dc2b1b741^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../graphics/nation_boundary.cpp0000000000000000^2981"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/nation_boundary.o ../graphics/nation_boundary.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/i386 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/nation_boundary.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/nation_boundary.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../graphics/nation_boundary.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/nation_boundary.o36"0545F1D3-8CFA-4923-A95A-9F11C4DAC6D2-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/plate_boundary.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/plate_boundary.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525596.666701
+e397525596.989481
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/plate_boundary.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../graphics/plate_boundary.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/carlgt1/projects/qcn/client/mac_build/../graphics/plate_boundary.cpp1bd8aa5cc2b1b741^944dfd5cc2b1b741^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../graphics/plate_boundary.cpp0000000000000000^2975"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/plate_boundary.o ../graphics/plate_boundary.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/i386 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/plate_boundary.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/plate_boundary.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../graphics/plate_boundary.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/plate_boundary.o36"DB8C62C0-56AE-43CC-AB3F-9B98670AD1FE-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_2dplot.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_2dplot.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525596.327166
+e397525596.829066
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_2dplot.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_2dplot.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_2dplot.cppf2ef535cc2b1b741^f33cd45cc2b1b741^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_2dplot.cpp0000000000000000^2951"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_2dplot.o ../graphics/qcn_2dplot.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/i386 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_2dplot.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_2dplot.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_2dplot.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_2dplot.o36"9766B898-71AA-4825-8B5A-60A647553AF7-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_cube.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525596.463912
+e397525596.979255
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_cube.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp:9:
+o../graphics/qcn_cube.h:84:18: warning: private field 'auto_rot' is not used [-Wunused-private-field]
+o    Point3f rot, auto_rot;
+o                 ^
+o../graphics/qcn_cube.h:95:13: warning: private field 'sunshine' is not used [-Wunused-private-field]
+o    Point3f sunshine;
+o            ^
+o../graphics/qcn_cube.h:98:15: warning: private field 'm_tmTime' is not used [-Wunused-private-field]
+o    struct tm m_tmTime;
+o              ^
+o3 warnings generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cppdcf1765cc2b1b741^a4c4fa5cc2b1b741^-542"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp:9:../graphics/qcn_cube.h:84:18: warning: private field 'auto_rot' is not used [-Wunused-private-field]    Point3f rot, auto_rot;                 ^../graphics/qcn_cube.h:95:13: warning: private field 'sunshine' is not used [-Wunused-private-field]    Point3f sunshine;            ^../graphics/qcn_cube.h:98:15: warning: private field 'm_tmTime' is not used [-Wunused-private-field]    struct tm m_tmTime;              ^3 warnings generated.3(36%IDEClangDiagnosticActivityLogMessage2@36"Private field 'auto_rot' is not used-397525596#18446744073709551615#0#1(2@94"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp:9:-397525596#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@72"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_cube.cpp0000000000000000^8#9#8#9#328#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@70"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_cube.h0000000000000000^83#17#83#17#2482#0#19"Unused Entity Issue--2@36"Private field 'sunshine' is not used-397525596#18446744073709551615#0#1(2@94"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp:9:-397525596#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@72"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_cube.cpp0000000000000000^8#9#8#9#328#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@70"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_cube.h0000000000000000^94#12#94#12#2688#0#19"Unused Entity Issue--2@36"Private field 'm_tmTime' is not used-397525596#18446744073709551615#0#1(2@94"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp:9:-397525596#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@72"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_cube.cpp0000000000000000^8#9#8#9#328#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@70"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_cube.h0000000000000000^97#14#97#14#2735#0#19"Unused Entity Issue--0#0#0#-19%DVTDocumentLocation4@85"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp0000000000000000^2939"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_cube.o ../graphics/qcn_cube.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/i386 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_cube.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_cube.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_cube.o36"C2F198F0-FA24-4745-B5B9-13544CAAC81F-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_earth.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525596.392824
+e397525597.320137
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_earth.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp:17:
+o../graphics/qcn_earth.h:37:19: warning: private field 'cxTexture' is not used [-Wunused-private-field]
+o    const GLsizei cxTexture;  // generated textures need to be powers of 2
+o                  ^
+o../graphics/qcn_earth.h:38:19: warning: private field 'cyTexture' is not used [-Wunused-private-field]
+o    const GLsizei cyTexture;
+o                  ^
+o../graphics/qcn_earth.h:59:13: warning: private field 'country_names_pos' is not used [-Wunused-private-field]
+o    Point3f     country_names_pos[NUM_COUNTRY];
+o                ^
+o../graphics/qcn_earth.h:80:13: warning: private field 'coastline_rgb' is not used [-Wunused-private-field]
+o    GLfloat coastline_rgb[4];
+o            ^
+o../graphics/qcn_earth.h:84:18: warning: private field 'auto_rot' is not used [-Wunused-private-field]
+o    Point3f rot, auto_rot;
+o                 ^
+o5 warnings generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cppa0c3645cc2b1b741^62f3515dc2b1b741^-945"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp:17:../graphics/qcn_earth.h:37:19: warning: private field 'cxTexture' is not used [-Wunused-private-field]    const GLsizei cxTexture;  // generated textures need to be powers of 2                  ^../graphics/qcn_earth.h:38:19: warning: private field 'cyTexture' is not used [-Wunused-private-field]    const GLsizei cyTexture;                  ^../graphics/qcn_earth.h:59:13: warning: private field 'country_names_pos' is not used [-Wunused-private-field]    Point3f     country_names_pos[NUM_COUNTRY];                ^../graphics/qcn_earth.h:80:13: warning: private field 'coastline_rgb' is not used [-Wunused-private-field]    GLfloat coastline_rgb[4];            ^../graphics/qcn_earth.h:84:18: warning: private field 'auto_rot' is not used [-Wunused-private-field]    Point3f rot, auto_rot;                 ^5 warnings generated.5(36%IDEClangDiagnosticActivityLogMessage2@37"Private field 'cxTexture' is not used-397525597#18446744073709551615#0#1(2@96"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp:17:-397525597#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@73"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.cpp0000000000000000^16#9#16#9#680#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@71"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.h0000000000000000^36#18#36#18#752#0#19"Unused Entity Issue--2@37"Private field 'cyTexture' is not used-397525597#18446744073709551615#0#1(2@96"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp:17:-397525597#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@73"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.cpp0000000000000000^16#9#16#9#680#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@71"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.h0000000000000000^37#18#37#18#827#0#19"Unused Entity Issue--2@45"Private field 'country_names_pos' is not used-397525597#18446744073709551615#0#1(2@96"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp:17:-397525597#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@73"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.cpp0000000000000000^16#9#16#9#680#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@71"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.h0000000000000000^58#12#58#12#1910#0#19"Unused Entity Issue--2@41"Private field 'coastline_rgb' is not used-397525597#18446744073709551615#0#1(2@96"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp:17:-397525597#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@73"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.cpp0000000000000000^16#9#16#9#680#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@71"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.h0000000000000000^79#12#79#12#2541#0#19"Unused Entity Issue--2@36"Private field 'auto_rot' is not used-397525597#18446744073709551615#0#1(2@96"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp:17:-397525597#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@73"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.cpp0000000000000000^16#9#16#9#680#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@71"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.h0000000000000000^83#17#83#17#2630#0#19"Unused Entity Issue--0#0#0#-19%DVTDocumentLocation4@86"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp0000000000000000^2945"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_earth.o ../graphics/qcn_earth.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/i386 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_earth.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_earth.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_earth.o36"031631A9-7742-435E-9E74-833C3614B9AA-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525596.256618
+e397525597.233199
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cpp:1842:13: warning: enumeration value 'VIEW_GAME' not handled in switch [-Wswitch]
+o    switch (g_eView) {
+o            ^
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cpp93e0415cc2b1b741^0dc73b5dc2b1b741^-213"/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cpp:1842:13: warning: enumeration value 'VIEW_GAME' not handled in switch [-Wswitch]    switch (g_eView) {            ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@51"Enumeration value 'VIEW_GAME' not handled in switch-397525597#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@76"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_graphics.cpp0000000000000000^1841#12#1841#12#63296#0#14"Semantic Issue--0#0#0#-19%DVTDocumentLocation4@89"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cpp0000000000000000^2963"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics.o ../graphics/qcn_graphics.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/i386 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics.o36"D7E9C6E9-7777-4A49-8B00-FE60503E880F-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_gzip.o /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_gzip.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525596.990816
+e397525597.174424
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_gzip.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_gzip.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_gzip.cpp6bd6fd5cc2b1b741^55a62c5dc2b1b741^---0#0#0#-19%DVTDocumentLocation2@81"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_gzip.cpp0000000000000000^2931"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_gzip.o ../util/qcn_gzip.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/i386 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_gzip.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_gzip.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_gzip.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_gzip.o36"0FE666E8-6962-40B1-B5E1-9D6EFAD7822D-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_shmem.o /Users/carlgt1/projects/qcn/client/mac_build/../main/qcn_shmem.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525596.980693
+e397525597.370847
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_shmem.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../main/qcn_shmem.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Users/carlgt1/projects/qcn/client/mac_build/../main/qcn_shmem.cpp6c3dfb5cc2b1b741^0f095f5dc2b1b741^---0#0#0#-19%DVTDocumentLocation2@82"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../main/qcn_shmem.cpp0000000000000000^2937"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_shmem.o ../main/qcn_shmem.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/i386 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_shmem.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_shmem.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../main/qcn_shmem.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_shmem.o36"3C4E4909-9165-4429-B7FD-FE2E46633290-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_signal.o /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_signal.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525597.153891
+e397525597.383393
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_signal.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_signal.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_signal.cpp2593275dc2b1b741^c729625dc2b1b741^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_signal.cpp0000000000000000^2943"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_signal.o ../util/qcn_signal.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/i386 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_signal.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_signal.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_signal.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_signal.o36"4E9A03A4-3B10-4AA4-B25E-0CFBFC4F28D3-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_util.o /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_util.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525597.176086
+e397525597.601844
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_util.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_util.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_util.cpp6c3f2d5dc2b1b741^30129a5dc2b1b741^---0#0#0#-19%DVTDocumentLocation2@81"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_util.cpp0000000000000000^2931"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_util.o ../util/qcn_util.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/i386 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_util.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_util.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_util.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_util.o36"32EEC92A-5434-41B4-B0ED-DD5C1FB44009-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/texture.o /Users/carlgt1/projects/qcn/client/mac_build/../util/texture.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525597.234739
+e397525597.383399
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/texture.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../util/texture.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/carlgt1/projects/qcn/client/mac_build/../util/texture.cppdd453c5dc2b1b741^b725625dc2b1b741^---0#0#0#-19%DVTDocumentLocation2@80"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../util/texture.cpp0000000000000000^2925"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/texture.o ../util/texture.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/i386 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/texture.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/texture.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../util/texture.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/texture.o36"24FCBA79-9C1E-4700-95C5-5266BD9640DD-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/ttfont.o /Users/carlgt1/projects/qcn/client/mac_build/../util/ttfont.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525597.216661
+e397525597.520265
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/ttfont.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../util/ttfont.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Compile /Users/carlgt1/projects/qcn/client/mac_build/../util/ttfont.cppc6a4375dc2b1b741^fd31855dc2b1b741^---0#0#0#-19%DVTDocumentLocation2@79"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../util/ttfont.cpp0000000000000000^2919"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/ttfont.o ../util/ttfont.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/i386 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/ttfont.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/ttfont.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../util/ttfont.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/ttfont.o36"2CB6CA4E-8B98-4D30-8C47-8C4DF96E9192-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/coastline.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/coastline.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525595.497200
+e397525596.239932
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/coastline.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../graphics/coastline.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/carlgt1/projects/qcn/client/mac_build/../graphics/coastline.cpp8c837f5bc2b1b741^766b3d5cc2b1b741^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../graphics/coastline.cpp0000000000000000^2959"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/coastline.o ../graphics/coastline.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/x86_64 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/coastline.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/coastline.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../graphics/coastline.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/coastline.o36"A9FC7E06-626B-4C7D-BDCE-D694997E2C86-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/cserialize.o /Users/carlgt1/projects/qcn/client/mac_build/../util/cserialize.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525595.497434
+e397525595.991409
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/cserialize.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../util/cserialize.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/carlgt1/projects/qcn/client/mac_build/../util/cserialize.cpp84817f5bc2b1b741^53ccfd5bc2b1b741^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../util/cserialize.cpp0000000000000000^2957"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/cserialize.o ../util/cserialize.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/x86_64 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/cserialize.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/cserialize.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../util/cserialize.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/cserialize.o36"B80597FE-C3AF-42EB-9275-B6E201C1499E-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/gzstream.o /Users/carlgt1/projects/qcn/client/mac_build/../util/gzstream.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525596.050308
+e397525596.462554
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/gzstream.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../util/gzstream.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/carlgt1/projects/qcn/client/mac_build/../util/gzstream.cpp990e0d5cc2b1b741^ad69765cc2b1b741^---0#0#0#-19%DVTDocumentLocation2@81"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../util/gzstream.cpp0000000000000000^2945"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/gzstream.o ../util/gzstream.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/x86_64 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/gzstream.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/gzstream.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../util/gzstream.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/gzstream.o36"DABAEA9C-C7BE-4166-85FB-4DBD93FCC44D-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/nation_boundary.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/nation_boundary.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525595.497169
+e397525596.222675
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/nation_boundary.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../graphics/nation_boundary.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/carlgt1/projects/qcn/client/mac_build/../graphics/nation_boundary.cpp02847f5bc2b1b741^6f10395cc2b1b741^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../graphics/nation_boundary.cpp0000000000000000^2995"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/nation_boundary.o ../graphics/nation_boundary.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/x86_64 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/nation_boundary.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/nation_boundary.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../graphics/nation_boundary.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/nation_boundary.o36"0AD91CF5-1A2A-4189-AF2E-210499A73582-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/plate_boundary.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/plate_boundary.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525595.497255
+e397525595.848943
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/plate_boundary.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../graphics/plate_boundary.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/carlgt1/projects/qcn/client/mac_build/../graphics/plate_boundary.cpp3d827f5bc2b1b741^3866d95bc2b1b741^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../graphics/plate_boundary.cpp0000000000000000^2989"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/plate_boundary.o ../graphics/plate_boundary.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/x86_64 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/plate_boundary.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/plate_boundary.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../graphics/plate_boundary.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/plate_boundary.o36"12FC2C1E-7184-4E83-886C-4FBFAADC36D1-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_2dplot.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_2dplot.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525595.497144
+e397525596.048953
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_2dplot.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_2dplot.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_2dplot.cpp0a827f5bc2b1b741^66870c5cc2b1b741^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_2dplot.cpp0000000000000000^2965"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_2dplot.o ../graphics/qcn_2dplot.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/x86_64 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_2dplot.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_2dplot.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_2dplot.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_2dplot.o36"BE968ECE-BBF0-41E9-B109-55192733C923-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_cube.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525595.497154
+e397525596.064477
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_cube.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp:9:
+o../graphics/qcn_cube.h:84:18: warning: private field 'auto_rot' is not used [-Wunused-private-field]
+o    Point3f rot, auto_rot;
+o                 ^
+o../graphics/qcn_cube.h:95:13: warning: private field 'sunshine' is not used [-Wunused-private-field]
+o    Point3f sunshine;
+o            ^
+o../graphics/qcn_cube.h:98:15: warning: private field 'm_tmTime' is not used [-Wunused-private-field]
+o    struct tm m_tmTime;
+o              ^
+o3 warnings generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection77"Compile /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cppb9887f5bc2b1b741^b680105cc2b1b741^-542"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp:9:../graphics/qcn_cube.h:84:18: warning: private field 'auto_rot' is not used [-Wunused-private-field]    Point3f rot, auto_rot;                 ^../graphics/qcn_cube.h:95:13: warning: private field 'sunshine' is not used [-Wunused-private-field]    Point3f sunshine;            ^../graphics/qcn_cube.h:98:15: warning: private field 'm_tmTime' is not used [-Wunused-private-field]    struct tm m_tmTime;              ^3 warnings generated.3(36%IDEClangDiagnosticActivityLogMessage2@36"Private field 'auto_rot' is not used-397525596#18446744073709551615#0#1(2@94"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp:9:-397525596#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@72"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_cube.cpp0000000000000000^8#9#8#9#328#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@70"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_cube.h0000000000000000^83#17#83#17#2482#0#19"Unused Entity Issue--2@36"Private field 'sunshine' is not used-397525596#18446744073709551615#0#1(2@94"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp:9:-397525596#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@72"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_cube.cpp0000000000000000^8#9#8#9#328#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@70"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_cube.h0000000000000000^94#12#94#12#2688#0#19"Unused Entity Issue--2@36"Private field 'm_tmTime' is not used-397525596#18446744073709551615#0#1(2@94"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp:9:-397525596#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@72"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_cube.cpp0000000000000000^8#9#8#9#328#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@70"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_cube.h0000000000000000^97#14#97#14#2735#0#19"Unused Entity Issue--0#0#0#-19%DVTDocumentLocation4@85"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp0000000000000000^2953"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_cube.o ../graphics/qcn_cube.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/x86_64 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_cube.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_cube.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_cube.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_cube.o36"BB7C13FD-CDC7-4CAD-8069-49775010488D-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_earth.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525595.497124
+e397525596.502873
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_earth.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp:17:
+o../graphics/qcn_earth.h:37:19: warning: private field 'cxTexture' is not used [-Wunused-private-field]
+o    const GLsizei cxTexture;  // generated textures need to be powers of 2
+o                  ^
+o../graphics/qcn_earth.h:38:19: warning: private field 'cyTexture' is not used [-Wunused-private-field]
+o    const GLsizei cyTexture;
+o                  ^
+o../graphics/qcn_earth.h:59:13: warning: private field 'country_names_pos' is not used [-Wunused-private-field]
+o    Point3f     country_names_pos[NUM_COUNTRY];
+o                ^
+o../graphics/qcn_earth.h:80:13: warning: private field 'coastline_rgb' is not used [-Wunused-private-field]
+o    GLfloat coastline_rgb[4];
+o            ^
+o../graphics/qcn_earth.h:84:18: warning: private field 'auto_rot' is not used [-Wunused-private-field]
+o    Point3f rot, auto_rot;
+o                 ^
+o5 warnings generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp38837f5bc2b1b741^eed0805cc2b1b741^-945"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp:17:../graphics/qcn_earth.h:37:19: warning: private field 'cxTexture' is not used [-Wunused-private-field]    const GLsizei cxTexture;  // generated textures need to be powers of 2                  ^../graphics/qcn_earth.h:38:19: warning: private field 'cyTexture' is not used [-Wunused-private-field]    const GLsizei cyTexture;                  ^../graphics/qcn_earth.h:59:13: warning: private field 'country_names_pos' is not used [-Wunused-private-field]    Point3f     country_names_pos[NUM_COUNTRY];                ^../graphics/qcn_earth.h:80:13: warning: private field 'coastline_rgb' is not used [-Wunused-private-field]    GLfloat coastline_rgb[4];            ^../graphics/qcn_earth.h:84:18: warning: private field 'auto_rot' is not used [-Wunused-private-field]    Point3f rot, auto_rot;                 ^5 warnings generated.5(36%IDEClangDiagnosticActivityLogMessage2@37"Private field 'cxTexture' is not used-397525596#18446744073709551615#0#1(2@96"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp:17:-397525596#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@73"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.cpp0000000000000000^16#9#16#9#680#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@71"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.h0000000000000000^36#18#36#18#752#0#19"Unused Entity Issue--2@37"Private field 'cyTexture' is not used-397525596#18446744073709551615#0#1(2@96"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp:17:-397525596#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@73"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.cpp0000000000000000^16#9#16#9#680#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@71"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.h0000000000000000^37#18#37#18#827#0#19"Unused Entity Issue--2@45"Private field 'country_names_pos' is not used-397525596#18446744073709551615#0#1(2@96"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp:17:-397525596#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@73"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.cpp0000000000000000^16#9#16#9#680#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@71"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.h0000000000000000^58#12#58#12#1910#0#19"Unused Entity Issue--2@41"Private field 'coastline_rgb' is not used-397525596#18446744073709551615#0#1(2@96"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp:17:-397525596#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@73"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.cpp0000000000000000^16#9#16#9#680#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@71"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.h0000000000000000^79#12#79#12#2541#0#19"Unused Entity Issue--2@36"Private field 'auto_rot' is not used-397525596#18446744073709551615#0#1(2@96"In file included from /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp:17:-397525596#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@73"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.cpp0000000000000000^16#9#16#9#680#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@71"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_earth.h0000000000000000^83#17#83#17#2630#0#19"Unused Entity Issue--0#0#0#-19%DVTDocumentLocation4@86"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp0000000000000000^2959"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_earth.o ../graphics/qcn_earth.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/x86_64 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_earth.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_earth.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_earth.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_earth.o36"72B69788-DD4B-4A41-8FF3-D0E7F65B6742-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics.o /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525595.497124
+e397525596.484563
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cpp:1842:13: warning: enumeration value 'VIEW_GAME' not handled in switch [-Wswitch]
+o    switch (g_eView) {
+o            ^
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cppa6817f5bc2b1b741^350b7c5cc2b1b741^-213"/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cpp:1842:13: warning: enumeration value 'VIEW_GAME' not handled in switch [-Wswitch]    switch (g_eView) {            ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@51"Enumeration value 'VIEW_GAME' not handled in switch-397525596#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@76"file://localhost/Users/carlgt1/projects/qcn/client/graphics/qcn_graphics.cpp0000000000000000^1841#12#1841#12#63296#0#14"Semantic Issue--0#0#0#-19%DVTDocumentLocation4@89"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cpp0000000000000000^2977"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics.o ../graphics/qcn_graphics.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/x86_64 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../graphics/qcn_graphics.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics.o36"EA3C258E-F7C8-48C7-BFF9-86DB2BE7A955-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_gzip.o /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_gzip.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525595.992656
+e397525596.177385
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_gzip.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_gzip.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_gzip.cpp6f49fe5bc2b1b741^40682d5cc2b1b741^---0#0#0#-19%DVTDocumentLocation2@81"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_gzip.cpp0000000000000000^2945"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_gzip.o ../util/qcn_gzip.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/x86_64 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_gzip.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_gzip.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_gzip.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_gzip.o36"2A74BCB1-F125-4FC6-9EB1-F8CB71CEB02A-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_shmem.o /Users/carlgt1/projects/qcn/client/mac_build/../main/qcn_shmem.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525595.850237
+e397525596.255274
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_shmem.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../main/qcn_shmem.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Users/carlgt1/projects/qcn/client/mac_build/../main/qcn_shmem.cpp11c8d95bc2b1b741^f759415cc2b1b741^---0#0#0#-19%DVTDocumentLocation2@82"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../main/qcn_shmem.cpp0000000000000000^2951"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_shmem.o ../main/qcn_shmem.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/x86_64 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_shmem.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_shmem.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../main/qcn_shmem.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_shmem.o36"DDB531ED-6089-4FAF-A158-863B42164868-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_signal.o /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_signal.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525596.066063
+e397525596.325740
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_signal.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_signal.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_signal.cpp8f71115cc2b1b741^d862535cc2b1b741^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_signal.cpp0000000000000000^2957"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_signal.o ../util/qcn_signal.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/x86_64 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_signal.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_signal.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_signal.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_signal.o36"060ADA0B-3757-4278-BB3B-3A67D46607B2-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_util.o /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_util.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525596.178733
+e397525596.805614
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_util.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_util.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_util.cpp0ce82d5cc2b1b741^bc3bce5cc2b1b741^---0#0#0#-19%DVTDocumentLocation2@81"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_util.cpp0000000000000000^2945"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_util.o ../util/qcn_util.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/x86_64 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_util.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_util.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../util/qcn_util.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_util.o36"BA9C51BB-3889-4889-B494-557C301A49CD-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/texture.o /Users/carlgt1/projects/qcn/client/mac_build/../util/texture.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525596.242169
+e397525596.391459
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/texture.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../util/texture.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Compile /Users/carlgt1/projects/qcn/client/mac_build/../util/texture.cpp772c3e5cc2b1b741^bd35645cc2b1b741^---0#0#0#-19%DVTDocumentLocation2@80"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../util/texture.cpp0000000000000000^2939"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/texture.o ../util/texture.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/x86_64 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/texture.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/texture.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../util/texture.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/texture.o36"98C5F73C-DD4D-4B70-8270-65DA3B43D43F-
+
+CCompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/ttfont.o /Users/carlgt1/projects/qcn/client/mac_build/../util/ttfont.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s397525596.224036
+e397525596.665374
+r1
+xCompileC
+x../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/ttfont.o
+x/Users/carlgt1/projects/qcn/client/mac_build/../util/ttfont.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Compile /Users/carlgt1/projects/qcn/client/mac_build/../util/ttfont.cppfb96395cc2b1b741^2a55aa5cc2b1b741^---0#0#0#-19%DVTDocumentLocation2@79"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../util/ttfont.cpp0000000000000000^2933"CompileC ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/ttfont.o ../util/ttfont.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-generated-files.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-own-target-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-all-target-headers.hmap -iquote /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/qcn_graphics-project-headers.hmap -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/include -I../.. -I../main -I../sensor -I../util -I../graphics -I../qcnusb -I../../bzip2-1.0.6 -I../../freetype-2.4.6/include -I../../ftgl-2.1.3/include -I../../../boinc/lib -I../../../boinc/lib/mac -I../../../boinc/api -I../../../boinc_zip -I../../../boinc/samples/jpeglib -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources/x86_64 -I/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/DerivedSources -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -Wall -DQCN -D_THREAD_SAFE -D_ZLIB -DQCNGRAPHICS -DGRAPHICS_PROGRAM -DHAVE_SYS_RESOURCE_H -DNDEBUG -MMD -MT dependencies -MF /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/ttfont.d --serialize-diagnostics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/ttfont.dia -c /Users/carlgt1/projects/qcn/client/mac_build/../util/ttfont.cpp -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/ttfont.o36"56168C91-D589-40F9-A417-FF3F8A9D5E50-
+
+CCreateUniversalBinary /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app/Contents/MacOS/qcn_graphics normal "x86_64 i386"
+s397525597.717242
+e397525597.753180
+r1
+xCreateUniversalBinary
+x/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app/Contents/MacOS/qcn_graphics
+xnormal
+xx86_64 i386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Create universal binary /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app/Contents/MacOS/qcn_graphics02bab75dc2b1b741^9ecfc05dc2b1b741^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app/Contents/MacOS/qcn_graphics000000000080d041^515"CreateUniversalBinary ../bin/qcn_graphics.app/Contents/MacOS/qcn_graphics normal "x86_64 i386"    cd /Users/carlgt1/projects/qcn/client/mac_build    lipo -create /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics -output /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app/Contents/MacOS/qcn_graphics36"C1A0817C-F17E-4831-8597-93986BAE8CFB-
+
+CLd /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics normal i386
+s397525597.608185
+e397525597.710519
+r1
+xLd
+x/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Link /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics26c59b5dc2b1b741^50e4b55dc2b1b741^---0#0#0#--1076"Ld ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics normal i386    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv MACOSX_DEPLOYMENT_TARGET 10.7    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -L/Users/carlgt1/projects/qcn/client/mac_build/../bin -L/Users/carlgt1/projects/qcn/client/mac_build -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -filelist /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics.LinkFileList -mmacosx-version-min=10.7 -L./ -framework Foundation -framework OpenGL -framework GLUT -framework Carbon -framework Cocoa -ljpeg -lbz2-universal -lboinc_zip -lz-universal -lfreetype-universal -lftgl-universal -lboinc_api -lboinc_graphics2 -lboinc -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/i386/qcn_graphics36"D276C6D6-B22B-4906-86D5-FF79B57587F0-
+
+CLd /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics normal x86_64
+s397525596.830411
+e397525597.025257
+r1
+xLd
+x/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics
+xnormal
+xx86_64
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection128"Link /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics7bbcd45cc2b1b741^3e77065dc2b1b741^---0#0#0#--1086"Ld ../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics normal x86_64    cd /Users/carlgt1/projects/qcn/client/mac_build    setenv MACOSX_DEPLOYMENT_TARGET 10.7    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -L/Users/carlgt1/projects/qcn/client/mac_build/../bin -L/Users/carlgt1/projects/qcn/client/mac_build -F/Users/carlgt1/projects/qcn/client/mac_build/../bin -filelist /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics.LinkFileList -mmacosx-version-min=10.7 -L./ -framework Foundation -framework OpenGL -framework GLUT -framework Carbon -framework Cocoa -ljpeg -lbz2-universal -lboinc_zip -lz-universal -lfreetype-universal -lftgl-universal -lboinc_api -lboinc_graphics2 -lboinc -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn.build/Release/qcn_graphics.build/Objects-normal/x86_64/qcn_graphics36"E0B95915-76D6-4060-B56E-F9BB66FF1ABC-
+
+CProcessInfoPlistFile /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app/Contents/Info.plist qcn_graphics-Info.plist
+s397525595.484559
+e397525595.488677
+r1
+xProcessInfoPlistFile
+x/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app/Contents/Info.plist
+xqcn_graphics-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Process qcn_graphics-Info.plist683d7c5bc2b1b741^c51f7d5bc2b1b741^-203"warning: invalid character '_' in Bundle Identifier at column 20. This string must be a uniform type identifier (UTI) that contains only alphanumeric (A-Z,a-z,0-9), hyphen (-), and period (.) characters.1(21%IDEActivityLogMessage2@194"invalid character '_' in Bundle Identifier at column 20. This string must be a uniform type identifier (UTI) that contains only alphanumeric (A-Z,a-z,0-9), hyphen (-), and period (.) characters.102"Invalid character '_' in Bundle Identifier at column 20. This string must be a uniform type identifier397525595#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#26"Info.plist Utility Warning--0#0#0#-19%DVTDocumentLocation4@84"file://localhost/Users/carlgt1/projects/qcn/client/mac_build/qcn_graphics-Info.plist0000000000000000^422"ProcessInfoPlistFile ../bin/qcn_graphics.app/Contents/Info.plist qcn_graphics-Info.plist    cd /Users/carlgt1/projects/qcn/client/mac_build    builtin-infoPlistUtility qcn_graphics-Info.plist -genpkginfo /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app/Contents/Info.plist36"67345C28-DEDA-4D6C-A343-D20217581B39-
+
+CTouch /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app
+s397525597.761788
+e397525597.766771
+r1
+xTouch
+x/Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Touch /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.appd316c35dc2b1b741^7f4bc45dc2b1b741^---0#0#0#--173"Touch ../bin/qcn_graphics.app    cd /Users/carlgt1/projects/qcn/client/mac_build    /usr/bin/touch -c /Users/carlgt1/projects/qcn/client/mac_build/../bin/qcn_graphics.app36"5E7B80FB-DBCF-48A8-9707-7C534FBA5695-
+
