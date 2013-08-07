@@ -1,36 +1,27 @@
 <?php
-if (file_exists("../inc/common.inc"))
+if (file_exists("../../inc/common.inc"))
+   require_once("../../inc/common.inc");
+elseif (file_exists("../inc/common.inc"))
    require_once("../inc/common.inc");
-elseif (file_exists("inc/common.inc"))
-   require_once("inc/common.inc");
-elseif (file_exists("common.inc"))
-   require_once("common.inc");
+elseif (file_exists("../../../inc/common.inc"))
+   require_once("../../../inc/common.inc");
 
-require_once(BASEPATH . "/qcn/inc/inc/utils.inc");
-require_once(BASEPATH . "/qcn/inc/qcn_auto_detect.inc");
+require_once(BASEPATH . '/qcn/inc/utils.inc');
+require_once(BASEPATH . '/qcn/inc/qcn_auto_detect.inc');
 
-page_top();
 $show_mg = $_GET["show_mag"];
+page_top();
 
-gmt_quake_map();   // Generate the earthquake map.
+if ( ($show_mg == "y")||($show_mg=="Y") ) { event_info("y"); } else { event_info();}
 
-echo "<table width=\"98%\"><tr>\n";
-echo "<td width=\"68%\"><p><h1>Recent Earthquakes:</h1></p></td>";
-echo "<td width=\"30%\"><p><h2>Latest Earthquake:</h2></p></td>";
-echo "</tr><tr>\n";
-echo "<td width=\"68%\"><p><ul><img src=\"" . BASEURL . "/earthquakes/images/events.png\" width=\"430\"></ul></td>\n";
-echo "<td width=\"30%\"><p>\n";
-if ( ($show_mg=="y")||($show_mg=="Y") ) {show_last_eq("y");} else { show_last_eq();; }
-echo "</td>\n</tr></table>\n";
-
-echo "<p align=\"justify\">The Quake-Catcher Network now locates earthquakes based on the data collected through volunteer distrbuted computing. Above is a map of the events recently detected by QCN.  Below is a list of earthquakes with links to each page.</p>";
-
-
+if ( ($show_mg == "y")||($show_mg=="Y") ) { show_maps("y"); } else { show_maps();}
 
 if ( ($show_mg== "y")||($show_mg=="Y") ) {list_quakes("y"); } else { list_quakes(); } 
 
-show_viewed_on();  // Show the date page viewed on
+echo " 
+<p>The information contained on this page is not intended for official use.  This is a scientific project aiming to validate the methods used to produce these data.  For official earthquake characterization, please obtain the appropriate information from your national earthquake program or the <a href=\"http://earthquake.usgs.gov/earthquakes/\">USGS.</a>
 
+";
+echo "<p>Page viewed on: ". date('M d Y'). " at ". date('h:i:s'); echo " (UTC)";
 page_end();
-
 ?>

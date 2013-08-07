@@ -2,7 +2,7 @@
 
 # libtool - Provide generalized library-building support services.
 # Generated automatically by config.status () 
-# Libtool was configured on host macbook.local:
+# Libtool was configured on host cmc-mbp17.local:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 #
 #   Copyright (C) 1996, 1997, 1998, 1999, 2000, 2001, 2003, 2004, 2005,
@@ -77,8 +77,8 @@ host_os=none
 
 # The build system.
 build_alias=
-build=x86_64-apple-darwin11.1.0
-build_os=darwin11.1.0
+build=x86_64-apple-darwin12.4.0
+build_os=darwin12.4.0
 
 # A sed program that does not truncate output.
 SED="/usr/bin/sed"
@@ -272,7 +272,7 @@ finish_eval=""
 hardcode_into_libs=no
 
 # Compile-time system search path for libraries.
-sys_lib_search_path_spec="/Developer/usr/lib/gcc/i686-apple-darwin10/4.2.1/x86_64 /usr/lib/gcc/i686-apple-darwin10/4.2.1/x86_64 /usr/lib/i686-apple-darwin10/4.2.1 /usr/lib /Developer/usr/lib/gcc /Developer/usr/lib/i686-apple-darwin10/4.2.1 /Developer/usr/lib "
+sys_lib_search_path_spec="/Developer/usr/lib/gcc/i686-apple-darwin10/4.2.1/x86_64 /usr/lib /Developer/usr/lib/gcc /Developer/usr/lib/i686-apple-darwin10/4.2.1 /Developer/usr/lib "
 
 # Run-time system search path for libraries.
 sys_lib_dlsearch_path_spec="/lib /usr/lib"

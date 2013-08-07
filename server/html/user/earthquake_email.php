@@ -1,15 +1,15 @@
 <?php
 chdir("/var/www/boinc/sensor/html/user");
 require_once("/var/www/boinc/sensor/html/inc/earthquake_email.inc");
-$mag  = 3.2; 
-$longitude = -119.866; 
-$latitude = 36.455; 
-$depth = 37.2; 
-$n_stations = 7; 
-$etime = 1370918371.276176; 
-$dtime = 1370918456; 
-$dt_detect  = 84.7; 
-$edir       = 1370918371; 
+$mag  = 3.5; 
+$longitude = 174.282; 
+$latitude = -41.731; 
+$depth = 11.9; 
+$n_stations = 8; 
+$etime = 1375016834.711047; 
+$dtime = 1375016872; 
+$dt_detect  = 37.3; 
+$edir       = 1375016834; 
 
 earthquake_email($mag,$longitude,$latitude,$depth,$n_stations,$etime,$edir,$dtime,$dt_detect);
 
