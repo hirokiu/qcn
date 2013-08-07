@@ -89,11 +89,12 @@ if ( test "`uname -s`" = "Darwin" ) then
        init/$ntpdv $zipuplstring \
        init/phidget218.dylib \
          -x@exclude.lst
-    cp qcnusb.app/Contents/MacOS/qcnusb ../qcnusb/install
-    cd ../qcnusb/install
-    /Developer/usr/bin/packagemaker --doc qcnusb.pmdoc --out ../../bin/qcnusb-mac.mpkg
-    cd ../../bin/
-    zip -r qcnusb-mac.zip qcnusb-mac.mpkg -x@exclude.lst
+    #cp qcnusb.app/Contents/MacOS/qcnusb ../qcnusb/install
+    #cd ../qcnusb/install
+    #/Developer/usr/bin/packagemaker --doc qcnusb.pmdoc --out ../../bin/qcnusb-mac.mpkg
+    #cd ../../bin/
+    #zip -r qcnusb-mac.zip qcnusb-mac.mpkg -x@exclude.lst
+    rm qcnusb-mac.zip
 
   lipo -extract i386 qcn.app/Contents/MacOS/qcn -output qcn_${vnci}_$suffixi$ncisuffix
   lipo -extract i386 qcn.app/Contents/MacOS/qcn -output qcn_${vnon}_$suffixi
