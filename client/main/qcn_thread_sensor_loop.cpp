@@ -25,12 +25,11 @@ void TriggerDetectionAlgorithm()
         + QCN_SQR(sm->y0[sm->lOffset-sm->iWindow] - sm->ya[sm->lOffset-sm->iWindow] )
         + QCN_SQR(sm->z0[sm->lOffset-sm->iWindow] - sm->za[sm->lOffset-sm->iWindow] ) ) / (float) sm->iWindow;
 
-    
-    if isnan(sm->vari[sm->lOffset]) {
-        sm->vari[sm->lOffset] = sm->vari[sm->lOffset-1];  // just reuse the last value
+    if (isnan(sm->vari[sm->lOffset])) {
+		sm->vari[sm->lOffset] = sm->vari[sm->lOffset-1];  // just reuse the last value
         fprintf(stderr, "IsNAN on sm->vari!\n");
     }
-       sm->fmag[sm->lOffset]= sqrt(QCN_SQR(sm->x0[sm->lOffset]-sm->xa[sm->lOffset-1]) +
+	sm->fmag[sm->lOffset]= sqrt(QCN_SQR(sm->x0[sm->lOffset]-sm->xa[sm->lOffset-1]) +
          QCN_SQR(sm->y0[sm->lOffset]-sm->ya[sm->lOffset-1])+QCN_SQR(sm->z0[sm->lOffset]-sm->za[sm->lOffset-1]));
         
 // CMC added Jesse's mod to have a short term avg mag, and put this var in shared mem so it can be perturbed

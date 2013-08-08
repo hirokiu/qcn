@@ -913,10 +913,6 @@
       <Project>{7b784da7-237d-4ff0-88c4-a25ddb38e003}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="libcurl.vcxproj">
-      <Project>{e2cc4853-e690-40bf-8556-9eafdf7a91d4}</Project>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
     <ProjectReference Include="setwinver.vcxproj">
       <Project>{d26e8731-741c-45c5-b7e8-d1724cc3b1e1}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
