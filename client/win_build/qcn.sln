@@ -34,7 +34,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "freetype", "..\..\freetype-
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "boinc_zip", "boinc_zip.vcxproj", "{753E897D-9ECE-42B1-9F0D-CD566775C77E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcurl", "..\..\curl-7.31.0\vs\vc8\lib\vc8libcurl.vcxproj", "{87EE9DA4-DE1E-4448-8324-183C98DCA588}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcurl", "..\..\curl\vs\vc8\lib\vc8libcurl.vcxproj", "{87EE9DA4-DE1E-4448-8324-183C98DCA588}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
