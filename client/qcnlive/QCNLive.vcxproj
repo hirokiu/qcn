@@ -282,8 +282,8 @@
       <ForcedIncludeFiles>windows.h;GL/gl.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>wsock32.lib;hid.lib;setupapi.lib;winmm.lib;comctl32.lib;boinc_zipl.lib;libcurll.lib;jpeglibl.lib;zlibl.lib;ftgll.lib;freetypel.lib;boinc_libl.lib;boinc_apil.lib;gdi32.lib;user32.lib;Ws2_32.lib;Wldap32.lib;psapi.lib;qtmain.lib;QtCore45.lib;QtGui45.lib;QtOpenGL45.lib;Qt5Core.lib;Qt5Gui.lib;Qt5OpenGL.lib;opengl32.lib;glu32.lib;Qt5PrintSupport.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;c:/projects/qcn/client/win_build/;c:\projects\qcn\curl\vs\vc8\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>wsock32.lib;hid.lib;setupapi.lib;winmm.lib;comctl32.lib;boinc_zipl.lib;libcurl.lib;jpeglibl.lib;zlibl.lib;ftgll.lib;freetypel.lib;boinc_libl.lib;boinc_apil.lib;gdi32.lib;user32.lib;Ws2_32.lib;Wldap32.lib;psapi.lib;QtCore4.lib;QtGui4.lib;QtOpenGL4.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;c:\projects\qcn\curl\vs\vc8\lib\Release\;c:/projects/qcn/client/win_build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>false</GenerateDebugInformation>
