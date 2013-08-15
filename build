@@ -97,7 +97,7 @@ else
   ./set-version $VERSION
   ./_autosetup
   ./configure --enable-client-release --disable-server
-  make clean && make
+  make clean ; make
   mv client/qcnlive/QCNLive client/bin/
 fi
 cd client/bin
