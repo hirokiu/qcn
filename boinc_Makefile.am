@@ -1,5 +1,5 @@
 ## -*- mode: makefile; tab-width: 4 -*-
-## $Id: Makefile.am 22268 2010-08-18 17:49:13Z romw $
+## $Id$
 
 AUTOMAKE_OPTIONS = foreign
 
@@ -9,11 +9,15 @@ include Makefile.incl
 ACLOCAL_AMFLAGS = -I m4
 
 if ENABLE_LIBRARIES
-   API_SUBDIRS = api lib zip zip/zip zip/unzip
+    API_SUBDIRS = api lib zip samples/jpeglib
+if ENABLE_SERVER
+    API_SUBDIRS += zip
+endif
 endif
 
 if ENABLE_SERVER
-   SERVER_SUBDIRS = db test py sched apps tools samples/example_app
+   SERVER_SUBDIRS = db test py sched apps tools vda html
+## once contained samples/example_app which breaks out-of-source-tree builds
 endif
 
 if ENABLE_CLIENT
@@ -21,10 +25,10 @@ if ENABLE_CLIENT
 endif
 
 if ENABLE_MANAGER
-	CLIENTGUI_SUBDIRS = clientgui clientgui/res locale
-	if BUILD_X11_SCREENSAVER
-		CLIENTGUI_SUBDIRS += clientscr
-	endif 
+   CLIENTGUI_SUBDIRS = clientgui locale
+if BUILD_X11_SCREENSAVER
+   CLIENTGUI_SUBDIRS += clientscr
+endif
 endif
 
 # ORDER MATTERS below.  One must build dependencies FIRST, then things
@@ -35,10 +39,10 @@ SUBDIRS = m4 $(API_SUBDIRS) $(SERVER_SUBDIRS) $(CLIENT_SUBDIRS) $(CLIENTGUI_SUBD
 # dist-hook below gets rid of CVS directories.
 
 EXTRA_DIST =                                    \
-	win_build                                   \
-	doc                                         \
-	stripchart                                  \
-    INSTALL										
+    win_build                                   \
+    doc                                         \
+    stripchart                                  \
+    INSTALL
 
 if INSTALL_HEADERS
 pkginclude_HEADERS = \
