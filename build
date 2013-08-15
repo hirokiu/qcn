@@ -91,8 +91,6 @@ else
   cp lib/libboinc.a ../qcn/client/$OSBUILD/
   cp api/libboinc_api.a ../qcn/client/$OSBUILD/
   cp api/libboinc_graphics2.a ../qcn/client/$OSBUILD/
-
-
   cd ../qcn
  fi   # end of library or 'all' build
   cp configure.ac.linux configure.ac
