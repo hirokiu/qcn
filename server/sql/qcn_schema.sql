@@ -320,9 +320,56 @@ create index qcn_trigger_latitude on qcn_trigger(latitude);
 create index qcn_trigger_longitude on qcn_trigger(longitude);
 create index qcn_trigger_result_name on qcn_trigger(result_name);
 
-create table qcn_trigger_followup
+
+create table qcn_remote
 (
-id int(11) not null primary key,
+   id int(11) not null primary key,
+   name varchar(64) not null,
+   url varchar(128) not null,
+   country varchar(32),
+   trigger_url varchar(128) not null,
+   download_url varchar(128) not null,
+   password varchar(32) not null,
+   contact_email_1 varchar(128) not null,
+   contact_email_2 varchar(128),
+   contact_email_3 varchar(128)
+);
+
+create index qcn_remote_name on qcn_remote(name);
+create index qcn_remote_url on qcn_remote(url);
+
+insert into qcn_remote values (1, 'QCN Stanford Sensor', 'http://qcn.stanford.edu/sensor', 'US',
+    'http://qcn.stanford.edu/sensor', 'http://qcn-upl.stanford.edu/trigger', '', 'carlgt1@yahoo.com', 'jflawrence@stanford.edu', 'escochran@gmail.com');
+insert into qcn_remote values (2, 'QCN Stanford Continual', 'http://qcn.stanford.edu/continual', 'US',
+    'http://qcn.stanford.edu/continual', 'http://qcn-upl.stanford.edu/trigger/continual', '', 'carlgt1@yahoo.com', 'jflawrence@stanford.edu', 'escochran@gmail.com');
+insert into qcn_remote values (3, 'QCN Taiwan Sensor', 'http://qcn.twgrid.org/sensor', 'TW',
+    'http://qcn.stanford.edu/sensor/tw_sensor_rep.php', 'http://qcn.twgrid.org/trigger', '', 'waynesan@twgrid.org', 'eric.yen@twgrid.org', 'ychen@twgrid.org');
+insert into qcn_remote values (4, 'QCN Taiwan Continual', 'http://qcn.twgrid.org/continual', 'TW',
+    'http://qcn.stanford.edu/sensor/tw_continual_rep.php', 'http://qcn.twgrid.org/trigger/continual', '', 'waynesan@twgrid.org', 'eric.yen@twgrid.org', 'ychen@twgrid.org');
+insert into qcn_remote values (5, 'QCN Mexico Sensor', 'http://www.ras.unam.mx/sensor', 'MX',
+    'http://qcn.stanford.edu/sensor/mx_sensor_rep.php', 'http://www.ras.unam.mx/trigger', '', 'jesus@ssn.ssn.unam.mx', 'uskerhay@gmail.com', 'luis');
+insert into qcn_remote values (6, 'QCN Mexico Continual', 'http://www.ras.unam.mx/continual', 'MX',
+    'http://qcn.stanford.edu/sensor/mx_continual_rep.php', 'http://www.ras.unam.mx/trigger/continual', '', 'jesus@ssn.ssn.unam.mx', 'uskerhay@gmail.com', 'luis');
+insert into qcn_remote values (7, 'QCN France Sensor', 'http://emsc-csem.org/sensor', 'FR',
+    'http://qcn.stanford.edu/sensor/fr_sensor_rep.php', 'http://emsc-csem.org/trigger', '', 'mazet@emsc-csem.org', '', '');
+insert into qcn_remote values (8, 'QCN France Continual', 'http://emsc-csem.org/continual', 'FR',
+    'http://qcn.stanford.edu/sensor/fr_continual_rep.php', 'http://emsc-csem.org/trigger/continual', '', 'mazet@emsc-csem.org', '', '');
+
+
+
+create table qcn_trigger_remote
+(
+id int(11) not null primary key auto_increment,
+qcn_remoteid int(11) not null,
+hostid int(11) not null,
+ipaddr varchar(32) not null,
+result_name varchar(64) not null,
+time_trigger double,
+time_received double,
+time_sync double,
+sync_offset double,
+significance double,
+magnitude double,
 mxy1p float null,
 mz1p float null,
 mxy1a float null,
@@ -330,8 +377,44 @@ mz1a float null,
 mxy2a float null,
 mz2a float null,
 mxy4a float null,
-mz4a float null
+mz4a float null,
+latitude double,
+longitude double,
+levelvalue float,
+levelid smallint,
+alignid smallint,
+file varchar(64),
+dt float,
+numreset int(6),
+qcn_sensorid int(3),
+sw_version varchar(8),
+os_type varchar(8),
+qcn_quakeid int(11),
+time_filereq double,
+received_file tinyint(1),
+runtime_clock double,
+runtime_cpu double,
+varietyid smallint not null default 0,
+flag boolean not null default 0,
+hostipaddrid int(11) not null default 0,
+geoipaddrid int(11) not null default 0
 );
+
+create index qcn_trigger_remote_remoteid on qcn_trigger_remote(qcn_remoteid);
+create index qcn_trigger_remote_file on qcn_trigger_remote(file);
+create index qcn_trigger_remote_sensorid on qcn_trigger_remote(qcn_sensorid);
+create index qcn_trigger_remote_quakeid on qcn_trigger_remote(qcn_quakeid);
+create index qcn_trigger_remote_flag on qcn_trigger_remote(flag);
+
+create index qcn_trigger_remote_time_trigger on qcn_trigger_remote(time_trigger);
+create index qcn_trigger_remote_hostid on qcn_trigger_remote(hostid);
+create index qcn_trigger_remote_time_filereq on qcn_trigger_remote(time_filereq);
+create index qcn_trigger_remote_received_file on qcn_trigger_remote(received_file);
+create index qcn_trigger_remote_varietyid on qcn_trigger_remote(varietyid);
+create index qcn_trigger_remote_latitude on qcn_trigger_remote(latitude);
+create index qcn_trigger_remote_longitude on qcn_trigger_remote(longitude);
+create index qcn_trigger_remote_result_name on qcn_trigger_remote(result_name);
+
 
 /* temp tables for stats */
 CREATE TABLE qcn_recalcresult (resultid int(11) NOT NULL PRIMARY KEY, weight double, total_credit double, time_received double);

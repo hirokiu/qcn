@@ -33,7 +33,7 @@ thread_stack = 128K
 #CHANGE MASTER TO
 #  MASTER_HOST='www.ras.unam.mx',
 #  MASTER_USER='qcn',
-#  MASTER_PASSWORD='qcn-mx',
+#  MASTER_PASSWORD='',
 #  MASTER_PORT=3306,
 #  MASTER_LOG_FILE='mysql-bin.000002',
 #  MASTER_LOG_POS=107,

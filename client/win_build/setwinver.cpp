@@ -12,8 +12,9 @@
 
 #ifndef _DEBUG
 //#include "boinc_zip.h"
-#define ZIPCMD "\"c:\\program files\\7-Zip\\7z.exe\" a"
-#define SFTPCMD "psftp -be -b"    // -be = don't stop batch on errors
+// channge as  appropriate for your system - I have 64-bit 7zip but 32-bit putty/ssh tools
+#define ZIPCMD  "\"c:\\program files\\7-Zip\\7z.exe\" a"
+#define SFTPCMD "\"c:\\program files (x86)\\Putty\\psftp.exe\" -be -b"    // -be = don't stop batch on errors
 #define SFTPBATCH "qcnsftp.txt"
 int deploy_qcn(bool bQCNLive = false);  // send exe's to QCN server
 #endif

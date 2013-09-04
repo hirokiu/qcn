@@ -1,7 +1,7 @@
 #!/bin/sh
-if (test "$1" = "all" || test "$2" = "all") then
-    ./getboinc
-fi
+#if (test "$1" = "all" || test "$2" = "all") then
+#    ./getboinc
+#fi
 if ( test "`uname -s`" = "Darwin" ) then
   rm -f vers; gcc version.c -o vers 
   VERSION=`./vers 1`
@@ -42,12 +42,12 @@ else
   cp libbz2.a ../client/$OSBUILD/
 
   # make sure there's a /usr/local/bin/libtool for jpeg-6b
-  cd ../jpeg-6b
-  ./configure --enable-static
-  make clean && make
-  cp .libs/libjpeg.a ../client/$OSBUILD/
+  #cd ../jpeg-6b
+  #./configure --enable-static
+  #make clean && make
+  #cp .libs/libjpeg.a ../client/$OSBUILD/
 
-  cd ../curl-7.25.0
+  cd ../curl
   ./configure --disable-crypto-auth --without-ssl --disable-ldap --disable-ldaps --disable-telnet --enable-static --disable-shared
   make clean && make
   cp lib/.libs/libcurl.a ../client/$OSBUILD/
@@ -79,11 +79,14 @@ else
   #               zip/zip/Makefile
   #               zip/unzip/Makefile
   cd ../../boinc
+  cp Makefile.am Makefile.am.bak
+  cp ../qcn/boinc_Makefile.am Makefile.am
+  cp ../qcn/boinc_configure.ac configure.ac
   # always build the latest boinc libs
-  cd ../boinc
   ./_autosetup
   ./configure --disable-client --disable-server --enable-libraries
   make clean && make
+  cp samples/jpeglib/libjpeg.a ../qcn/client/$OSBUILD/
   cp zip/libboinc_zip.a ../qcn/client/$OSBUILD/
   cp lib/libboinc.a ../qcn/client/$OSBUILD/
   cp api/libboinc_api.a ../qcn/client/$OSBUILD/
@@ -94,7 +97,7 @@ else
   ./set-version $VERSION
   ./_autosetup
   ./configure --enable-client-release --disable-server
-  make clean && make
+  make clean ; make
   mv client/qcnlive/QCNLive client/bin/
 fi
 cd client/bin

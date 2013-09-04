@@ -681,6 +681,7 @@ void SetSensorThresholdAndDiffFactor()
 int CCONV PhidgetsAttachHandler(CPhidgetHandle spatial, void *userPtr)
 {
    // add serial # to our phidget device array
+	return 0;
 }
 
 int CCONV PhidgetsDetachHandler(CPhidgetHandle spatial, void *userPtr)

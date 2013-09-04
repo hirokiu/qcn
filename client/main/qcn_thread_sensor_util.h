@@ -18,12 +18,14 @@
   #include "csensor_mac_usb_jw24f14.h"
   #include "csensor_mac_usb_onavi.h"
 #else
-  #ifdef _WIN32
+  #ifdef WIN32
     #include "csensor_win_usb_jw.h"
     #include "csensor_win_usb_jw24f14.h"
     #include "csensor_win_usb_onavi.h"
     #include "csensor_win_laptop_thinkpad.h"
     #include "csensor_win_laptop_hp.h"
+	#include <float.h>
+	#define isnan _isnan
     #ifndef QCNLIVE
       //#include "csensor_win_usb_generic.h"
     #endif

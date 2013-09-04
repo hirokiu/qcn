@@ -24,6 +24,7 @@
  <project_preferences>
  <quakes>
 <qu001>  0.0|1900/01/01 00:00:00|   0.0000|   0.0000|   0.00||http://earthquake.usgs.gov/earthquakes/catalogs/</qu001>
+<<<<<<< HEAD
 <qu002>  2.7|2013/08/14 13:55:56|  40.2455|-121.2138|   0.80|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72049096.php</qu002>
 <qu003>  4.6|2013/08/14 11:51:07|   5.8852| 127.4930|  59.70|Philippine Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j303.php</qu003>
 <qu004>  4.8|2013/08/14 11:24:51|  10.2755| 125.8947|  78.80|Leyte, Philippines|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j2zk.php</qu004>
@@ -240,6 +241,227 @@
 <qu215>  4.3|2013/08/07 21:30:59|  12.1898| -86.4311| 164.10|Nicaragua|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iy4b.php</qu215>
 <qu216>  4.2|2013/08/07 21:15:39|  52.5093|-169.5732|  29.30|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iy2j.php</qu216>
 <qu217>  3.0|2013/08/07 18:57:57|  40.1948|-121.0387|   7.80|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72044786.php</qu217>
+=======
+<qu002>  2.5|2013/08/14 18:01:52|  40.3542|-124.3045|  16.50|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72049236.php</qu002>
+<qu003>  2.7|2013/08/14 17:35:29|  45.2993|-121.7518|   7.60|Mount Hood area, Oregon|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/uw60572321.php</qu003>
+<qu004>  3.9|2013/08/14 16:16:13|  50.7937| 178.6256|  25.40|Rat Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10780632.php</qu004>
+<qu005>  2.5|2013/08/14 13:55:56|  40.2475|-121.2140|   7.40|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72049096.php</qu005>
+<qu006>  4.6|2013/08/14 11:51:07|   5.8852| 127.4930|  59.70|Philippine Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j303.php</qu006>
+<qu007>  4.8|2013/08/14 11:24:51|  10.2755| 125.8947|  78.80|Leyte, Philippines|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j2zk.php</qu007>
+<qu008>  2.7|2013/08/14 09:49:25|  19.3132|-155.1022|   7.20|Island of Hawaii, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60522837.php</qu008>
+<qu009>  5.0|2013/08/14 07:59:24| -16.4614|-173.6245|  61.80|Tonga|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j2xj.php</qu009>
+<qu010>  4.4|2013/08/14 07:58:01|  15.4128| -94.6376|  26.30|offshore Oaxaca, Mexico|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j2xh.php</qu010>
+<qu011>  2.8|2013/08/14 07:54:16|  51.6574|-173.4768|   6.70|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10780511.php</qu011>
+<qu012>  2.5|2013/08/14 07:48:30|  54.7766|-162.0685|  37.90|Alaska Peninsula|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10780505.php</qu012>
+<qu013>  2.5|2013/08/14 07:15:48|  35.6142| -97.2047|   4.90|Oklahoma|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j2y6.php</qu013>
+<qu014>  3.1|2013/08/14 05:55:12|  18.5020| -65.2145|  94.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13226001.php</qu014>
+<qu015>  3.0|2013/08/14 05:47:37|  37.8080|-113.1732|  11.00|Utah|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/uu60033412.php</qu015>
+<qu016>  3.0|2013/08/14 05:28:30|  38.0273|-118.0882|  12.10|Nevada|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nn00420274.php</qu016>
+<qu017>  4.9|2013/08/14 05:15:51|  67.6240| 142.9793|  10.00|northeastern Sakha, Russia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j2r7.php</qu017>
+<qu018>  3.4|2013/08/14 04:28:57|  19.4575| -68.8539|  62.00|Dominican Republic region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13226000.php</qu018>
+<qu019>  4.5|2013/08/14 02:10:33|  -5.2366| 104.9462| 179.70|southern Sumatra, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j2q4.php</qu019>
+<qu020>  2.9|2013/08/13 23:49:14|  52.0857|-169.3699|  17.30|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10780223.php</qu020>
+<qu021>  2.8|2013/08/13 20:36:58|  19.3498|-154.7310|  43.10|Hawaii region, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60522542.php</qu021>
+<qu022>  2.7|2013/08/13 20:24:27|  19.5976| -65.8257|  49.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13225001.php</qu022>
+<qu023>  2.6|2013/08/13 18:31:57|  59.6722|-152.9070| 104.20|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10779993.php</qu023>
+<qu024>  4.5|2013/08/13 17:23:53| -15.2818| -70.6176| 190.70|southern Peru|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j29x.php</qu024>
+<qu025>  4.7|2013/08/13 17:18:32|   1.5020| 127.2472| 133.00|Halmahera, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j29s.php</qu025>
+<qu026>  5.3|2013/08/13 16:50:45|  16.9160| -98.4398|  28.40|Guerrero, Mexico|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usa000k5y0.php</qu026>
+<qu027>  5.3|2013/08/13 16:50:44|  16.7665| -98.3083|  35.90|Guerrero, Mexico|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j28u.php</qu027>
+<qu028>  2.5|2013/08/13 15:50:43|  59.8047|-152.5262| 100.70|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10779830.php</qu028>
+<qu029>  6.6|2013/08/13 15:43:14|   5.7566| -78.1997|  10.00|south of Panama|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j275.php</qu029>
+<qu030>  4.4|2013/08/13 15:41:18|  10.1974| 125.9379|  76.60|Leyte, Philippines|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j27e.php</qu030>
+<qu031>  4.6|2013/08/13 14:36:07|  24.4965| 141.7867|  91.50|Volcano Islands, Japan region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j256.php</qu031>
+<qu032>  4.4|2013/08/13 14:25:40|  30.0728|  98.0533|  25.10|eastern Xizang|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j24h.php</qu032>
+<qu033>  4.6|2013/08/13 14:16:33| -15.0851|-173.6110|   3.10|Tonga|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j247.php</qu033>
+<qu034>  2.9|2013/08/13 10:11:07|  63.4167|-144.4016|  14.60|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10779680.php</qu034>
+<qu035>  4.4|2013/08/13 09:53:30| -28.0054| -68.8160|  93.10|La Rioja, Argentina|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j1zx.php</qu035>
+<qu036>  2.5|2013/08/13 08:08:32|  34.9586| -84.9797|   8.00|Georgia, USA|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/se081313a.php</qu036>
+<qu037>  3.9|2013/08/13 07:01:34|  66.9552|-146.5045|  20.40|northern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10779639.php</qu037>
+<qu038>  3.8|2013/08/13 06:14:36|  43.1459|  27.5268|   8.40|Bulgaria|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j1yc.php</qu038>
+<qu039>  2.7|2013/08/13 05:01:41|  63.1674|-149.3169|   9.20|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10779597.php</qu039>
+<qu040>  4.2|2013/08/13 03:46:19|  11.3085| -74.4363|  18.20|near the north coast of Colombia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j2xy.php</qu040>
+<qu041>  4.6|2013/08/13 01:01:50|  38.6129| 141.9214|  94.80|near the east coast of Honshu, Japan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j1vb.php</qu041>
+<qu042>  4.7|2013/08/13 00:41:08|  -6.5969| -81.5370|  34.90|near the coast of northern Peru|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j1v2.php</qu042>
+<qu043>  5.1|2013/08/13 00:09:44|  43.7460| 143.5324| 175.70|Hokkaido, Japan region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j1u9.php</qu043>
+<qu044>  4.7|2013/08/12 23:03:02|  33.8936| -33.3860|  10.00|northern Mid-Atlantic Ridge|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j1su.php</qu044>
+<qu045>  3.0|2013/08/12 22:43:56|  19.4727| -66.2673|  37.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13224007.php</qu045>
+<qu046>  4.9|2013/08/12 22:07:42| -10.2914| 162.3014|  42.40|Solomon Islands|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j1r3.php</qu046>
+<qu047>  3.3|2013/08/12 21:43:24|  36.2583| -89.2993|   4.50|Tennessee|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nm081213e.php</qu047>
+<qu048>  4.9|2013/08/12 21:34:29|  14.5220| -93.0689|  80.00|offshore Chiapas, Mexico|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j1pk.php</qu048>
+<qu049>  2.9|2013/08/12 20:30:42|  52.9154|-163.9622|  28.10|south of Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10779238.php</qu049>
+<qu050>  5.7|2013/08/12 18:03:33| -56.5139|-142.3098|  10.00|Pacific-Antarctic Ridge|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j25k.php</qu050>
+<qu051>  2.6|2013/08/12 17:54:59|  60.5164|-147.7050|  14.60|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10779175.php</qu051>
+<qu052>  3.5|2013/08/12 14:04:38|  17.9295| -68.3824|  59.00|Dominican Republic region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13224006.php</qu052>
+<qu053>  2.8|2013/08/12 13:07:46|  19.0618| -65.1461|  29.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13224005.php</qu053>
+<qu054>  4.4|2013/08/12 13:07:45| -19.3606| 169.2979| 226.70|Vanuatu|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j13y.php</qu054>
+<qu055>  2.8|2013/08/12 13:06:15|  18.9435| -65.0587|  60.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13224004.php</qu055>
+<qu056>  4.9|2013/08/12 12:59:34|  36.9151| 141.1362|  20.70|near the east coast of Honshu, Japan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j13i.php</qu056>
+<qu057>  3.7|2013/08/12 12:02:34| -33.1128| -68.8971|  13.30|Mendoza, Argentina|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j2xu.php</qu057>
+<qu058>  2.9|2013/08/12 11:55:38|  46.6915|-122.3623|  11.60|Washington|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/uw60570246.php</qu058>
+<qu059>  6.1|2013/08/12 09:49:32|  -5.3837| -81.8731|  10.00|near the coast of northern Peru|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j10u.php</qu059>
+<qu060>  2.9|2013/08/12 08:50:45|  61.0348|-146.4341|  13.30|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10778976.php</qu060>
+<qu061>  2.5|2013/08/12 08:20:46|  34.2913|-116.7642|   1.00|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11349026.php</qu061>
+<qu062>  5.0|2013/08/12 08:09:38|  30.1251|  97.9380|   9.60|eastern Xizang|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j10g.php</qu062>
+<qu063>  3.8|2013/08/12 07:32:34|  36.0215|-117.7760|   1.40|Central California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11348882.php</qu063>
+<qu064>  4.6|2013/08/12 06:40:16|  -0.0389| 125.0763|  63.40|Molucca Sea|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0zw.php</qu064>
+<qu065>  3.3|2013/08/12 06:05:13|  19.0338| -68.6798|  35.00|Dominican Republic region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13224002.php</qu065>
+<qu066>  5.1|2013/08/12 05:19:02|  10.4907| -86.8867|  42.20|off the coast of Costa Rica|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0zb.php</qu066>
+<qu067>  6.0|2013/08/12 04:16:46| -30.6205|-179.6134| 325.20|Kermadec Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0yl.php</qu067>
+<qu068>  2.8|2013/08/12 04:10:25|  47.7778|-123.2287|  41.00|Olympic Peninsula, Washington|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/uw60570171.php</qu068>
+<qu069>  2.9|2013/08/12 03:20:51|  34.2892|-116.7670|   2.30|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11348690.php</qu069>
+<qu070>  4.5|2013/08/12 02:58:51|  30.0917|  97.9777|  34.20|eastern Xizang|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0xw.php</qu070>
+<qu071>  4.5|2013/08/12 01:34:03|  30.2429|  98.0379|  27.50|eastern Xizang|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0ws.php</qu071>
+<qu072>  3.0|2013/08/12 00:57:31|  18.5965| -68.9725| 108.00|Dominican Republic|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13224000.php</qu072>
+<qu073>  6.0|2013/08/12 00:53:43|  -7.1229| 129.8100|  92.00|Kepulauan Babar, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0vl.php</qu073>
+<qu074>  2.5|2013/08/12 00:51:20|  31.8717|-115.7545|   3.20|Baja California, Mexico|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11348650.php</qu074>
+<qu075>  4.8|2013/08/12 00:51:12|  41.9987| 142.2663|  71.00|Hokkaido, Japan region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0vn.php</qu075>
+<qu076>  2.9|2013/08/12 00:37:23|  38.7762|-123.1037|   2.50|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72047391.php</qu076>
+<qu077>  4.6|2013/08/12 00:11:14|  30.1594|  97.9786|  58.70|eastern Xizang|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0v7.php</qu077>
+<qu078>  5.2|2013/08/11 23:58:52|  30.0289|  97.8821|  59.30|eastern Xizang|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0v3.php</qu078>
+<qu079>  5.0|2013/08/11 23:48:25|  30.0195|  97.9167|  59.00|eastern Xizang|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0uv.php</qu079>
+<qu080>  2.7|2013/08/11 23:21:11|  51.4326|-178.3816|  51.20|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10780357.php</qu080>
+<qu081>  3.3|2013/08/11 23:18:30|  63.4721|-149.4778| 102.30|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10778753.php</qu081>
+<qu082>  4.7|2013/08/11 22:33:29| -11.1439| 165.1179|  27.40|Santa Cruz Islands|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0uj.php</qu082>
+<qu083>  4.4|2013/08/11 22:30:16|  30.0706|  97.9504|  35.00|eastern Xizang|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0ud.php</qu083>
+<qu084>  2.8|2013/08/11 21:53:49|  18.3300| -65.2332|  15.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13223004.php</qu084>
+<qu085>  5.7|2013/08/11 21:23:43|  30.0760|  97.9286|  19.70|eastern Xizang|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0t5.php</qu085>
+<qu086>  4.6|2013/08/11 21:23:04|  30.0573|  97.9902|  39.70|eastern Xizang|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0t6.php</qu086>
+<qu087>  4.3|2013/08/11 20:35:07|   8.2294| -82.6313|  30.10|Panama-Costa Rica border region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j2sc.php</qu087>
+<qu088>  2.6|2013/08/11 20:25:59|  52.4541|-169.1073|   3.60|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10778710.php</qu088>
+<qu089>  2.9|2013/08/11 18:24:16|  19.3792|-155.2288|   3.70|Island of Hawaii, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60521647.php</qu089>
+<qu090>  4.4|2013/08/11 17:23:21|  33.8466|  27.7307|  55.30|eastern Mediterranean Sea|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0r8.php</qu090>
+<qu091>  3.4|2013/08/11 16:06:48|  19.3417|-155.2647|  32.70|Island of Hawaii, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60521562.php</qu091>
+<qu092>  4.2|2013/08/11 16:00:54|  13.8443| -93.0157|  35.00|off the coast of Chiapas, Mexico|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0qb.php</qu092>
+<qu093>  4.9|2013/08/11 15:54:05|  19.3385|-155.2703|  31.80|Island of Hawaii, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60521547.php</qu093>
+<qu094>  4.6|2013/08/11 15:28:41| -22.9863| -68.9347| 108.50|Antofagasta, Chile|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0pl.php</qu094>
+<qu095>  2.7|2013/08/11 15:14:53|  19.2982| -65.5286| 124.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13223002.php</qu095>
+<qu096>  4.0|2013/08/11 14:53:53|  -8.3194| -50.2433|  15.60|Para, Brazil|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j2rc.php</qu096>
+<qu097>  4.5|2013/08/11 14:21:27|  30.0919|  97.9687|  24.80|eastern Xizang|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0pb.php</qu097>
+<qu098>  4.3|2013/08/11 13:31:08|  45.7546|  26.7288| 107.70|Romania|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0p4.php</qu098>
+<qu099>  3.1|2013/08/11 13:15:49|  18.8083| -64.7614|  11.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13223003.php</qu099>
+<qu100>  4.2|2013/08/11 13:11:39|  30.0242|  97.9336|  59.10|eastern Xizang|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0p1.php</qu100>
+<qu101>  2.7|2013/08/11 13:08:55|  60.6317|-152.3012|  93.00|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10778620.php</qu101>
+<qu102>  4.8|2013/08/11 12:40:12|  29.9444|  97.9162|  63.00|eastern Xizang|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0nw.php</qu102>
+<qu103>  3.5|2013/08/11 12:11:18|  54.1502|-162.4959|  12.60|Alaska Peninsula|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10778615.php</qu103>
+<qu104>  3.7|2013/08/11 11:30:35|  63.4065|-152.9133|  17.50|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10778595.php</qu104>
+<qu105>  2.5|2013/08/11 11:02:46|  63.5141|-151.2294|  12.70|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10778586.php</qu105>
+<qu106>  4.8|2013/08/11 10:38:40|  -6.0359| 102.6826|  19.30|southwest of Sumatra, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0mw.php</qu106>
+<qu107>  5.0|2013/08/11 10:33:55| -29.1106|-178.4404| 183.70|Kermadec Islands, New Zealand|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0mp.php</qu107>
+<qu108>  3.0|2013/08/11 09:34:47|  51.4243|-167.7621|  31.60|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10780321.php</qu108>
+<qu109>  2.7|2013/08/11 06:34:36|  34.7060|-120.3780|   1.20|Central California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11348202.php</qu109>
+<qu110>  4.6|2013/08/11 06:05:01|  35.6080| 143.4916|  32.20|off the east coast of Honshu, Japan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0lj.php</qu110>
+<qu111>  4.2|2013/08/11 05:12:52|  14.2077| -91.4627|  71.40|Guatemala|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0l3.php</qu111>
+<qu112>  2.5|2013/08/11 04:24:35|  40.3707|-124.5767|  23.60|offshore Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72046966.php</qu112>
+<qu113>  2.5|2013/08/11 03:18:43|  58.7154|-141.6010|   5.00|off the coast of Southeastern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10778436.php</qu113>
+<qu114>  4.4|2013/08/11 02:20:39|  29.3361| 130.3121|  34.20|Ryukyu Islands, Japan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0k7.php</qu114>
+<qu115>  3.2|2013/08/11 00:21:30|  62.2466|-145.7457|  13.90|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10778387.php</qu115>
+<qu116>  3.0|2013/08/10 23:22:20|  36.6803|-121.3073|   4.20|Central California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72046881.php</qu116>
+<qu117>  4.8|2013/08/10 22:39:43| -15.3388| 167.8844| 115.10|Vanuatu|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0ic.php</qu117>
+<qu118>  4.8|2013/08/10 22:31:41|  -5.7745| 146.6250| 117.90|eastern New Guinea region, Papua New Guinea|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0hw.php</qu118>
+<qu119>  2.8|2013/08/10 22:06:03|  18.0772| -68.1720|  69.00|Mona Passage, Dominican Republic|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13222008.php</qu119>
+<qu120>  2.5|2013/08/10 20:34:45|  19.1460| -64.3411|  43.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13222006.php</qu120>
+<qu121>  2.9|2013/08/10 19:34:01|  58.8177|-152.2597|  78.20|Kodiak Island region, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10778190.php</qu121>
+<qu122>  2.6|2013/08/10 19:08:54|  18.5118| -66.6453|  15.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13222004.php</qu122>
+<qu123>  4.4|2013/08/10 18:57:27|  39.5583| 143.2200|  70.60|off the east coast of Honshu, Japan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0ew.php</qu123>
+<qu124>  2.6|2013/08/10 18:55:38|  37.1708|-104.6113|   7.80|Colorado|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0eb.php</qu124>
+<qu125>  2.8|2013/08/10 18:48:22|  19.1842| -64.3003|  39.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13222005.php</qu125>
+<qu126>  2.6|2013/08/10 17:34:31|  40.6718|-125.1420|  25.80|offshore Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72046731.php</qu126>
+<qu127>  4.6|2013/08/10 17:26:09|  -4.4153| 151.2055| 292.70|New Britain region, Papua New Guinea|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0bx.php</qu127>
+<qu128>  5.0|2013/08/10 17:20:48|  28.3948|  51.7466|  17.30|southern Iran|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0bu.php</qu128>
+<qu129>  4.8|2013/08/10 17:05:35|  28.3562|  51.7083|   9.70|southern Iran|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j0aw.php</qu129>
+<qu130>  3.3|2013/08/10 16:33:00|  32.8795|-116.2543|   5.60|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11347906.php</qu130>
+<qu131>  3.8|2013/08/10 14:10:08|  32.8797|-116.2560|   9.10|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11347834.php</qu131>
+<qu132>  3.9|2013/08/10 14:09:18|  32.8772|-116.2553|   5.40|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11347826.php</qu132>
+<qu133>  4.4|2013/08/10 12:08:01|  33.8477|  56.7136|  10.00|central Iran|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j086.php</qu133>
+<qu134>  4.2|2013/08/10 10:02:37|  53.4070| 179.7890|  14.30|Rat Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j07r.php</qu134>
+<qu135>  4.6|2013/08/10 09:01:04|  44.5911| 148.2775|  62.60|Kuril Islands|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j07j.php</qu135>
+<qu136>  3.0|2013/08/10 08:44:28|  35.5890| -97.2784|   4.90|Oklahoma|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j07e.php</qu136>
+<qu137>  5.0|2013/08/10 07:20:04|  -6.7883| 130.0640| 109.10|Banda Sea|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j07a.php</qu137>
+<qu138>  2.6|2013/08/10 05:19:13|  19.4745|-154.8957|   2.60|Hawaii region, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60520857.php</qu138>
+<qu139>  4.5|2013/08/10 05:10:16|  43.7285|-128.0178|  10.00|off the coast of Oregon|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j06u.php</qu139>
+<qu140>  3.1|2013/08/10 04:37:21|  63.2402|-150.4126| 123.30|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10778018.php</qu140>
+<qu141>  2.6|2013/08/10 03:19:59|  18.7637| -64.3093|  39.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13222002.php</qu141>
+<qu142>  3.4|2013/08/10 02:28:49|  19.1580| -67.5049|  37.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13222000.php</qu142>
+<qu143>  2.9|2013/08/10 02:19:47|  32.8810|-116.2525|   5.70|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11347650.php</qu143>
+<qu144>  2.8|2013/08/10 00:41:05|  36.0541| -89.8152|   8.70|southeastern Missouri|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nm081013a.php</qu144>
+<qu145>  4.4|2013/08/09 23:19:15|  -5.7047| 128.1096| 369.60|Banda Sea|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j04l.php</qu145>
+<qu146>  2.7|2013/08/09 23:17:15|  33.9587|-118.4257|   9.90|Greater Los Angeles area, California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11347570.php</qu146>
+<qu147>  2.7|2013/08/09 23:07:36|  50.0335|-178.7899|  29.50|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10779432.php</qu147>
+<qu148>  5.0|2013/08/09 22:56:03|  36.9127| 141.0894|  56.70|near the east coast of Honshu, Japan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j04d.php</qu148>
+<qu149>  2.9|2013/08/09 22:43:11|  36.0628|-120.0883|  17.40|Central California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72046281.php</qu149>
+<qu150>  3.0|2013/08/09 22:01:56|  50.0128|-178.7465|  25.20|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10779431.php</qu150>
+<qu151>  2.9|2013/08/09 22:01:50|  36.0523|-120.0983|  17.00|Central California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72046216.php</qu151>
+<qu152>  5.0|2013/08/09 21:46:48|  49.9592|-179.0224|  10.80|south of the Aleutian Islands|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j02p.php</qu152>
+<qu153>  2.7|2013/08/09 21:36:05|  19.0872| -66.4192|  47.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13221005.php</qu153>
+<qu154>  4.5|2013/08/09 20:57:17|  14.1449| -91.5093|  86.30|Guatemala|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j00s.php</qu154>
+<qu155>  3.2|2013/08/09 20:45:00|  19.4888| -65.3219|  48.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13221004.php</qu155>
+<qu156>  4.9|2013/08/09 20:17:41|   3.8206| 126.7805|  43.10|Kepulauan Talaud, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izys.php</qu156>
+<qu157>  4.4|2013/08/09 19:22:13|   4.9722|  96.1108|  44.70|northern Sumatra, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j03h.php</qu157>
+<qu158>  5.0|2013/08/09 19:15:56|  -5.5640| 147.2087| 193.80|eastern New Guinea region, Papua New Guinea|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izv4.php</qu158>
+<qu159>  3.0|2013/08/09 19:15:56|  52.8414|-169.3022|  40.30|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izw9.php</qu159>
+<qu160>  2.5|2013/08/09 18:35:36|  19.0158|-155.3770|  40.50|Island of Hawaii, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60520517.php</qu160>
+<qu161>  4.8|2013/08/09 18:34:17|  32.0687| 141.2209|  62.60|Izu Islands, Japan region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izss.php</qu161>
+<qu162>  2.5|2013/08/09 15:18:58|  54.0234|-163.7791|  47.00|Unimak Island region, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10777548.php</qu162>
+<qu163>  4.7|2013/08/09 14:57:27|  39.7773| 143.6709|  33.90|off the east coast of Honshu, Japan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izil.php</qu163>
+<qu164>  3.5|2013/08/09 14:30:32|   9.6824| -84.0991|   6.40|Costa Rica|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000j06t.php</qu164>
+<qu165>  2.8|2013/08/09 14:25:40|  62.8881|-148.7694|  65.90|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10777515.php</qu165>
+<qu166>  4.6|2013/08/09 13:25:42|  12.7521| -88.9268|  61.60|offshore El Salvador|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izgr.php</qu166>
+<qu167>  4.7|2013/08/09 13:10:14|  38.7002|  22.6921|  41.50|Greece|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izgi.php</qu167>
+<qu168>  2.8|2013/08/09 12:40:58|  18.9545| -67.2593|   9.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13221002.php</qu168>
+<qu169>  5.0|2013/08/09 11:49:24|  38.7006|  22.7572|  10.00|Greece|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izg0.php</qu169>
+<qu170>  2.9|2013/08/09 10:53:16|  18.1721| -67.4182|  10.00|Mona Passage, Puerto Rico|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13221001.php</qu170>
+<qu171>  3.2|2013/08/09 10:44:09|  47.3316|  11.4363|   9.20|Austria|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izfh.php</qu171>
+<qu172>  2.6|2013/08/09 10:37:24|  36.7770|-121.5077|   8.80|Central California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72045881.php</qu172>
+<qu173>  4.6|2013/08/09 09:50:24|  18.7671| 145.8117| 145.00|Pagan region, Northern Mariana Islands|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izf7.php</qu173>
+<qu174>  4.6|2013/08/09 09:10:43|  -8.5212| 116.2411| 186.50|Lombok region, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izf4.php</qu174>
+<qu175>  4.4|2013/08/09 08:25:10|  15.3417| -91.9001| 180.80|Guatemala|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izeq.php</qu175>
+<qu176>  2.5|2013/08/09 07:30:13|  52.7343|-169.5530|   4.80|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10779398.php</qu176>
+<qu177>  2.7|2013/08/09 07:01:42|  52.2937| 179.8727|  18.80|Rat Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10779395.php</qu177>
+<qu178>  4.5|2013/08/09 05:34:02| -20.2396| 168.6933|  13.00|Loyalty Islands, New Caledonia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izdb.php</qu178>
+<qu179>  3.5|2013/08/09 04:49:54|  57.5144|-155.6838|  83.00|Alaska Peninsula|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10777409.php</qu179>
+<qu180>  4.4|2013/08/09 04:19:25|  39.3832|  20.3244|  10.10|Greece|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izd3.php</qu180>
+<qu181>  2.8|2013/08/09 03:24:54|  36.2635| -89.2998|   4.10|Tennessee|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nm080813a.php</qu181>
+<qu182>  2.9|2013/08/09 03:10:30|  36.4125|-120.9938|   7.30|Central California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72045696.php</qu182>
+<qu183>  2.7|2013/08/09 03:00:31|  60.3532|-153.7015| 196.40|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10777374.php</qu183>
+<qu184>  5.0|2013/08/09 02:59:38|  39.8074| 143.5368|  36.10|off the east coast of Honshu, Japan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izcl.php</qu184>
+<qu185>  2.5|2013/08/09 02:59:31|  51.8174|-178.4063|  94.10|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10777373.php</qu185>
+<qu186>  4.8|2013/08/09 01:36:11| -16.8662| 167.4560|   9.90|Vanuatu|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izbv.php</qu186>
+<qu187>  4.8|2013/08/09 01:26:16|   2.9359| -31.3258|  10.00|central Mid-Atlantic Ridge|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izbr.php</qu187>
+<qu188>  4.6|2013/08/09 01:19:44|   4.5418| 125.6936| 181.50|Kepulauan Sangihe, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izbn.php</qu188>
+<qu189>  2.5|2013/08/08 23:25:37|  20.1182|-156.6350|  36.20|Maui region, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60520052.php</qu189>
+<qu190>  2.9|2013/08/08 23:09:35|  36.8790| -97.9740|   4.10|Oklahoma|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izdg.php</qu190>
+<qu191>  3.2|2013/08/08 22:46:29|  36.8630| -97.9940|   5.00|Oklahoma|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000izdd.php</qu191>
+<qu192>  4.5|2013/08/08 21:52:03|   3.1206|  92.8799|  27.60|off the west coast of northern Sumatra|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iz74.php</qu192>
+<qu193>  2.7|2013/08/08 18:32:48|  33.5140|-116.4497|  11.20|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11346906.php</qu193>
+<qu194>  4.8|2013/08/08 16:57:25| -11.4776| 164.9645|  37.70|Santa Cruz Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iyrn.php</qu194>
+<qu195>  2.6|2013/08/08 16:49:18|  18.9083| -67.6370|   5.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13220001.php</qu195>
+<qu196>  4.7|2013/08/08 16:01:35|  -0.3145| 123.6043|  81.20|Sulawesi, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iyn0.php</qu196>
+<qu197>  2.7|2013/08/08 15:26:28|  52.6907|-168.4627|  20.70|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10776836.php</qu197>
+<qu198>  4.7|2013/08/08 15:21:41| -17.6697| -71.2051|   9.80|near the coast of southern Peru|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iyki.php</qu198>
+<qu199>  3.0|2013/08/08 15:21:39|  18.9864| -65.3945|  36.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13220000.php</qu199>
+<qu200>  2.9|2013/08/08 14:07:59|  57.1524|-156.4993|  16.60|Alaska Peninsula|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10776807.php</qu200>
+<qu201>  2.8|2013/08/08 13:03:16|  38.8352|-122.8003|   2.60|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72045226.php</qu201>
+<qu202>  2.9|2013/08/08 11:16:37|  60.0703|-152.2736| 101.00|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10776755.php</qu202>
+<qu203>  5.3|2013/08/08 10:45:57|  -8.8246| 110.9093|   9.70|Java, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iyfk.php</qu203>
+<qu204>  4.1|2013/08/08 09:11:00| -15.4064|-178.6812| 405.90|Fiji region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iyew.php</qu204>
+<qu205>  3.3|2013/08/08 08:55:36|  63.0515|-151.2366|  12.90|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10776722.php</qu205>
+<qu206>  4.8|2013/08/08 08:55:07|  -0.5885| 133.2541|  31.30|near the north coast of Papua, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iyek.php</qu206>
+<qu207>  4.2|2013/08/08 07:05:26|  35.2541|  -4.2391|  10.00|Strait of Gibraltar|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iydg.php</qu207>
+<qu208>  3.3|2013/08/08 06:57:51|  35.4418| -96.5656|   5.00|Oklahoma|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iyd7.php</qu208>
+<qu209>  2.6|2013/08/08 05:48:54|  20.5125|-156.1008|  28.80|Maui region, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60519312.php</qu209>
+<qu210>  5.0|2013/08/08 04:57:57| -20.2688|-176.5133| 241.00|Fiji region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iycm.php</qu210>
+<qu211>  2.5|2013/08/08 02:52:24|  32.8827|-116.2527|   5.40|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11346618.php</qu211>
+<qu212>  5.1|2013/08/08 02:03:08|   6.7180| 126.6804| 179.50|Mindanao, Philippines|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iyb2.php</qu212>
+<qu213>  3.0|2013/08/08 01:15:09|  32.8810|-116.2567|   5.70|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11346586.php</qu213>
+<qu214>  4.9|2013/08/07 23:59:20|  20.5647|  94.0912|  35.30|Myanmar|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iy9d.php</qu214>
+<qu215>  3.8|2013/08/07 23:53:10|  51.2071|-178.8934|  19.50|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10776591.php</qu215>
+<qu216>  4.5|2013/08/07 23:15:47| -23.9557| -66.8121| 197.20|Jujuy, Argentina|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iy8d.php</qu216>
+<qu217>  5.2|2013/08/07 21:44:07|  -2.3849| 140.0960|  24.30|near the north coast of Papua, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iy4n.php</qu217>
+<qu218>  4.3|2013/08/07 21:30:59|  12.1898| -86.4311| 164.10|Nicaragua|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iy4b.php</qu218>
+<qu219>  4.2|2013/08/07 21:15:39|  52.5093|-169.5732|  29.30|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000iy2j.php</qu219>
+<qu220>  3.0|2013/08/07 18:57:57|  40.1948|-121.0387|   7.80|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72044786.php</qu220>
+>>>>>>> 8c826b24ad33ae5546236b4699e538f85a92a9ce
 </quakes>
 <quakes>
 <wequ001>  9.5|1960/05/22 19:11:14|  -38.24|-73.05 |   0.0|Chile, #1|http://earthquake.usgs.gov/regional/world/events/1960_05_22.php</wequ001>
