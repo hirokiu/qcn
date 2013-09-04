@@ -10,6 +10,7 @@ scp carlgt1@qcn-web:/var/www/boinc/sensor/bin/clean_tmpdata.sh ../config/
 scp carlgt1@qcn-web:/usr/local/apache2/conf/httpd.conf ../config/
 scp carlgt1@qcn-web:/usr/local/apache2/conf/drupal.conf ../config/
 scp carlgt1@qcn-web:/etc/init.d/httpd ../config/
+scp carlgt1@qcn-web:/var/www/boinc/sensor/html/inc/qcn_trigger_rep.inc inc/
 scp carlgt1@qcn-web:/var/www/boinc/sensor/html/inc/forum_email.inc inc/
 scp carlgt1@qcn-web:/var/www/boinc/sensor/html/inc/prefs_util.inc inc/
 scp carlgt1@qcn-web:/var/www/boinc/sensor/html/inc/cache.inc inc/
@@ -39,6 +40,12 @@ mv cc.txt ../config/config.xml
 scp carlgt1@qcn-web:/var/www/boinc/continual/config.xml ../config/continual_config.xml
 cat ../config/continual_config.xml | grep -v 'NQu' > cc.txt
 mv cc.txt ../config/continual_config.xml
+scp carlgt1@qcn-web:/var/www/boinc/sensor/html/user/tw_continual_rep.php user/
+scp carlgt1@qcn-web:/var/www/boinc/sensor/html/user/tw_sensor_rep.php user/
+scp carlgt1@qcn-web:/var/www/boinc/sensor/html/user/fr_continual_rep.php user/
+scp carlgt1@qcn-web:/var/www/boinc/sensor/html/user/fr_sensor_rep.php user/
+scp carlgt1@qcn-web:/var/www/boinc/sensor/html/user/mx_continual_rep.php user/
+scp carlgt1@qcn-web:/var/www/boinc/sensor/html/user/mx_sensor_rep.php user/
 scp carlgt1@qcn-web:/var/www/boinc/sensor/html/user/forum_help_desk.php user/
 scp carlgt1@qcn-web:/var/www/boinc/sensor/html/user/forum_rate.php user/
 scp carlgt1@qcn-web:/var/www/boinc/sensor/html/user/REDS_list_signup.php user/
