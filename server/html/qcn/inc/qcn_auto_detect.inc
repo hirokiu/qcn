@@ -190,8 +190,10 @@ $files = array_reverse($files);
 $aa = 0;$aaa = 0;
 foreach ($files as $file1) {
   if(is_dir($file1)){
-    if (  ($file1!=".")&&($file1!="..")&&($file1!="JUNK")&&($file1!="SAFE")&&($file1!="view")&&($file1!="inc")
-        &&($file1!="images")&&($file1!="stats")&&($file1!="aichung")&&($file1!="yildirim") ){
+    if (  ($file1!=".")&&($file1!="..")&&($file1!="JUNK")&&($file1!="ecochran")&&($file1!="yildirim_online")&&($file1!="SAFE")&&($file1!="view")&&($file1!="inc")
+        &&($file1!="images")&&($file1!="stats")&&($file1!="aichung")&&($file1!="yildirim")&&($file1!="offline_code") ){
+// changed by B. Yildirim, Aug 15, 2013
+//      if ( !is_numeric($file1) && ($file1!=".") && ($file1!="..")){
         $aa++;
     }
   }
@@ -226,9 +228,11 @@ if ($aa > 0) {
   if($aaa>=$qmax) {break 1;}
   if(is_dir($file1)){
 
-  if (  ($file1!=".")&&($file1!="..")&&($file1!="JUNK")&&($file1!="SAFE")&&($file1!="view")&&($file1!="inc")
-      &&($file1!="images")&&($file1!="stats")&&($file1!="aichung")&&($file1!="yildirim") ){
 
+//changed by B. Yildirim, Aug 15, 2013
+  if (  ($file1!=".")&&($file1!="..")&&($file1!="JUNK")&&($file1!="ecochran")&&($file1!="yildirim_online")&&($file1!="SAFE")&&($file1!="view")&&($file1!="inc")
+      &&($file1!="images")&&($file1!="stats")&&($file1!="aichung")&&($file1!="yildirim")&&($file1!="offline_code") ){
+//      if ( is_numeric($file1) && ($file1!=".") && ($file1!="..")){
   $aaa++;
 
   if ($a>1) {
