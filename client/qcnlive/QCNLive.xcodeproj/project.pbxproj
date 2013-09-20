@@ -387,7 +387,7 @@
 		91B15E841AA80083484172DE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = CC82A9286117DFED018F418F /* Build configuration list for PBXProject "QCNLive" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -499,7 +499,6 @@
 		4B72B24813252891014BCF61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CONFIGURATION_BUILD_DIR = ../bin/;
 				CONFIGURATION_TEMP_DIR = build/Debug;
 				COPY_PHASE_STRIP = NO;
@@ -545,6 +544,7 @@
 					/System/Library/Frameworks/,
 					/Users/carlgt1/projects/qcn/client/mac_build,
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-pipe",
 					"-g",
@@ -592,7 +592,7 @@
 					"-L/Users/carlgt1/projects/qcn/client/mac_build",
 				);
 				PRODUCT_NAME = QCNLive;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				SYMROOT = ../bin/;
 				VALID_ARCHS = x86_64;
 			};
@@ -609,7 +609,7 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = QCNLive;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				SYMROOT = ../bin/;
 				VALID_ARCHS = x86_64;
 			};
@@ -627,7 +627,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = QCNLive;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				SYMROOT = ../bin/;
 				VALID_ARCHS = x86_64;
 			};
@@ -636,7 +636,6 @@
 		D70590BEB531B51029F711BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CONFIGURATION_BUILD_DIR = ../bin/;
 				CONFIGURATION_TEMP_DIR = build/Release;
 				COPY_PHASE_STRIP = YES;
@@ -728,7 +727,7 @@
 					"-L/Users/carlgt1/projects/qcn/client/mac_build",
 				);
 				PRODUCT_NAME = QCNLive;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				SYMROOT = ../bin/;
 				VALID_ARCHS = x86_64;
 			};
