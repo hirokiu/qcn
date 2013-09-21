@@ -3,6 +3,7 @@
 scp carlgt1@qcn-web:/var/www/qcnwp/wp-content/plugins/external-database-authentication/* qcnwp/external-database-authentication
 scp carlgt1@qcn-web:/var/www/qcn/ramp/index.php ../ramp/
 scp carlgt1@qcn-web:/var/www/boinc/sensor/project_files.xml ../config/
+scp carlgt1@qcn-web:/var/www/boinc/sensor/plan_class_spec.xml ../config/
 scp carlgt1@qcn-web:/var/www/boinc/sensor/gui_urls.xml ../config/
 scp carlgt1@qcn-web:/var/www/boinc/sensor/bin/generate_maptrig.sh ../config/
 scp carlgt1@qcn-web:/usr/local/apache2/conf/extra/httpd-ssl.conf ../config/
