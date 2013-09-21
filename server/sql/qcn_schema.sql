@@ -324,6 +324,7 @@ create index qcn_trigger_result_name on qcn_trigger(result_name);
 create table qcn_remote
 (
    id int(11) not null primary key,
+   script_name varchar(64) not null,
    name varchar(64) not null,
    url varchar(128) not null,
    country varchar(32),
@@ -335,24 +336,25 @@ create table qcn_remote
    contact_email_3 varchar(128)
 );
 
+create index qcn_script_name on qcn_remote(script_name);
 create index qcn_remote_name on qcn_remote(name);
 create index qcn_remote_url on qcn_remote(url);
 
-insert into qcn_remote values (1, 'QCN Stanford Sensor', 'http://qcn.stanford.edu/sensor', 'US',
+insert into qcn_remote values (1, 'st_sensor_rep.php', 'QCN Stanford Sensor', 'http://qcn.stanford.edu/sensor', 'US',
     'http://qcn.stanford.edu/sensor', 'http://qcn-upl.stanford.edu/trigger', '', 'carlgt1@yahoo.com', 'jflawrence@stanford.edu', 'escochran@gmail.com');
-insert into qcn_remote values (2, 'QCN Stanford Continual', 'http://qcn.stanford.edu/continual', 'US',
+insert into qcn_remote values (2, 'st_continual_rep.php', 'QCN Stanford Continual', 'http://qcn.stanford.edu/continual', 'US',
     'http://qcn.stanford.edu/continual', 'http://qcn-upl.stanford.edu/trigger/continual', '', 'carlgt1@yahoo.com', 'jflawrence@stanford.edu', 'escochran@gmail.com');
-insert into qcn_remote values (3, 'QCN Taiwan Sensor', 'http://qcn.twgrid.org/sensor', 'TW',
+insert into qcn_remote values (3, 'tw_sensor_rep.php', 'QCN Taiwan Sensor', 'http://qcn.twgrid.org/sensor', 'TW',
     'http://qcn.stanford.edu/sensor/tw_sensor_rep.php', 'http://qcn.twgrid.org/trigger', '', 'waynesan@twgrid.org', 'eric.yen@twgrid.org', 'ychen@twgrid.org');
-insert into qcn_remote values (4, 'QCN Taiwan Continual', 'http://qcn.twgrid.org/continual', 'TW',
+insert into qcn_remote values (4, 'tw_continual_rep.php', 'QCN Taiwan Continual', 'http://qcn.twgrid.org/continual', 'TW',
     'http://qcn.stanford.edu/sensor/tw_continual_rep.php', 'http://qcn.twgrid.org/trigger/continual', '', 'waynesan@twgrid.org', 'eric.yen@twgrid.org', 'ychen@twgrid.org');
-insert into qcn_remote values (5, 'QCN Mexico Sensor', 'http://www.ras.unam.mx/sensor', 'MX',
+insert into qcn_remote values (5, 'mx_sensor_rep.php', 'QCN Mexico Sensor', 'http://www.ras.unam.mx/sensor', 'MX',
     'http://qcn.stanford.edu/sensor/mx_sensor_rep.php', 'http://www.ras.unam.mx/trigger', '', 'jesus@ssn.ssn.unam.mx', 'uskerhay@gmail.com', 'luis');
-insert into qcn_remote values (6, 'QCN Mexico Continual', 'http://www.ras.unam.mx/continual', 'MX',
+insert into qcn_remote values (6, 'mx_continual_rep.php', 'QCN Mexico Continual', 'http://www.ras.unam.mx/continual', 'MX',
     'http://qcn.stanford.edu/sensor/mx_continual_rep.php', 'http://www.ras.unam.mx/trigger/continual', '', 'jesus@ssn.ssn.unam.mx', 'uskerhay@gmail.com', 'luis');
-insert into qcn_remote values (7, 'QCN France Sensor', 'http://emsc-csem.org/sensor', 'FR',
+insert into qcn_remote values (7, 'fr_sensor_rep.php', 'QCN France Sensor', 'http://emsc-csem.org/sensor', 'FR',
     'http://qcn.stanford.edu/sensor/fr_sensor_rep.php', 'http://emsc-csem.org/trigger', '', 'mazet@emsc-csem.org', '', '');
-insert into qcn_remote values (8, 'QCN France Continual', 'http://emsc-csem.org/continual', 'FR',
+insert into qcn_remote values (8, 'fr_continual_rep.php', 'QCN France Continual', 'http://emsc-csem.org/continual', 'FR',
     'http://qcn.stanford.edu/sensor/fr_continual_rep.php', 'http://emsc-csem.org/trigger/continual', '', 'mazet@emsc-csem.org', '', '');
 
 
