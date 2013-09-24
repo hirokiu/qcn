@@ -197,13 +197,13 @@ function insert_qcn_remote_trigger($server_id, $hostid, &$mfh)
        $isValid = true;
 
        // NB: don't need to capture continual info, just variety = 'trigger'
-       if ($xml->msg_from_host->variety != "trigger"
-           || $xml->msg_from_host->qlat > -90.1
-           || $xml->msg_from_host->qlng > -360.1
-           || strpos($xml->msg_from_host->file, "'") == false
-           || strpos($xml->msg_from_host->file, '"') == false
-           || strpos($xml->msg_from_host->file, '<') == false
-           || strpos($xml->msg_from_host->file, '>') == false
+       if ($mfh->variety != "trigger"
+           || $mfh->qlat < -90.
+           || $mfh->qlng < -360.
+           || strpos($mfh->file, "'") 
+           || strpos($mfh->file, '"') 
+           || strpos($mfh->file, '<') 
+           || strpos($mfh->file, '>') 
         ) {
            $isValid = false;
         } 
@@ -212,9 +212,14 @@ function insert_qcn_remote_trigger($server_id, $hostid, &$mfh)
        db_init();
 
        // debug output to temp table 
-       mysql_query("insert into sensor.qcn_trigger_remote_xml (qcn_remoteid, hostid, valid, variety, xml) "
-               . "values ($server_id, $hostid, " . ($isValid ? "1" : "0") . ", '" 
-               . $mfh->variety . "', '" . print_r($mfh, true) . "')");
+       $strsql = "insert into sensor.qcn_trigger_remote_xml (qcn_remoteid, hostid, valid, variety, result_name, latitude, longitude, xml) "
+               . "values ($server_id, $hostid, " . ($isValid ? "1" : "0") . "," 
+               . "'$mfh->variety', '$mfh->result_name', "
+               . ($mfh->qlat ? "$mfh->qlat," : "NULL,") 
+               . ($mfh->qlng ? "$mfh->qlng," : "NULL,") 
+               . "'" . print_r($mfh, true) . "')";
+       //qcn_log_error($strsql);
+       mysql_query($strsql);
     
        if (!$isValid) return; // not a valid trigger ie failed one of the above conditions
  
@@ -308,7 +313,7 @@ typical 'good' xml trigger input:
 <toff>2.504157</toff>
 <wct>4230.32</wct>
 <cpt>16.83</cpt>
-<qlat>52.216702</qlat>
+<qltat>52.216702</qlat>
 <qlng>9.550000</qlng>
 
     </msg_from_host>
