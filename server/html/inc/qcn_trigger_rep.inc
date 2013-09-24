@@ -212,8 +212,9 @@ function insert_qcn_remote_trigger($server_id, $hostid, &$mfh)
        db_init();
 
        // debug output to temp table 
-       mysql_query("insert into sensor.qcn_trigger_remote_xml (qcn_remoteid, hostid, valid, xml) "
-               . "values ($server_id, $hostid, " . ($isValid ? "1" : "0") . ", '" . print_r($mfh, true) . "')");
+       mysql_query("insert into sensor.qcn_trigger_remote_xml (qcn_remoteid, hostid, valid, variety, xml) "
+               . "values ($server_id, $hostid, " . ($isValid ? "1" : "0") . ", '" 
+               . $mfh->variety . "', '" . print_r($mfh, true) . "')");
     
        if (!$isValid) return; // not a valid trigger ie failed one of the above conditions
  
