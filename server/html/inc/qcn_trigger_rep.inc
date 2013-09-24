@@ -183,21 +183,9 @@ function qcn_trigger_rep_process($basefile)
 
      // this will return xml parsed into PHP objects, access via -> (note most are sub-values of msg_from_host)
      $xml = simplexml_load_string($string);
-     qcn_log_error("XML=" . $string . "\n");
 
-     // NB: don't need to capture continual info, just variety = 'trigger'
-     if ($xml->msg_from_host->variety == "trigger"
-           && $xml->msg_from_host->qlat > -90.1
-           && $xml->msg_from_host->qlng > -360.1
-           && strpos($xml->msg_from_host->file, "'") == false
-           && strpos($xml->msg_from_host->file, '"') == false
-           && strpos($xml->msg_from_host->file, '<') == false
-           && strpos($xml->msg_from_host->file, '>') == false
-        ) {
+     insert_qcn_remote_trigger($server_id, $xml->hostid, $xml->msg_from_host);
 
-          insert_qcn_remote_trigger($server_id, $xml->hostid, $xml->msg_from_host);
-
-     } // valid trigger ie variety is trigger, and lat/lng are OK
    }
    qcn_log_close();
 }
@@ -206,8 +194,30 @@ function insert_qcn_remote_trigger($server_id, $hostid, &$mfh)
 {
    global $g_REMDB;
 
+       $isValid = true;
+
+       // NB: don't need to capture continual info, just variety = 'trigger'
+       if ($xml->msg_from_host->variety != "trigger"
+           || $xml->msg_from_host->qlat > -90.1
+           || $xml->msg_from_host->qlng > -360.1
+           || strpos($xml->msg_from_host->file, "'") == false
+           || strpos($xml->msg_from_host->file, '"') == false
+           || strpos($xml->msg_from_host->file, '<') == false
+           || strpos($xml->msg_from_host->file, '>') == false
+        ) {
+           $isValid = false;
+        } 
+
        // this should be a valid trigger, also note the check for 'file' not having invalid characters ie sql injection attack
        db_init();
+
+       // debug output to temp table 
+       mysql_query("insert into sensor.qcn_trigger_remote_xml (qcn_remoteid, hostid, valid, xml) "
+               . "values ($server_id, $hostid, " . ($isValid ? "1" : "0") . ", '" . print_r($mfh, true) . "')");
+    
+       if (!$isValid) return; // not a valid trigger ie failed one of the above conditions
+ 
+       // valid trigger ie variety is trigger, and lat/lng are OK
        $sqllookup = "SELECT id FROM " . $g_REMDB . " WHERE qcn_remoteid=" . $server_id . " AND file='" . BoincDb::escape_string($mfh->file) .  "'";
        $result = mysql_query($sqllookup);
        //print "\n" . $sqllookup . "\n";
