@@ -21,7 +21,10 @@ sensor.qcn_remote table
 
 */
 
+$g_TRIGMEMDB_LINK = 0;
+$g_DB_LINK = 0;
 $g_REMDB = "sensor.qcn_trigger_remote";
+$g_TRIGMEMDB = "trigmem.qcn_trigger_memory";
 $g_LOGFILE = "../../log_qcn-web/qcn_remote_trigger.log";
 $g_lognum = 0; // file ID #
 $g_server = array(
@@ -69,6 +72,40 @@ $g_server = array(
   )
 );
 
+function qcn_db_init()
+{
+    global $g_TRIGMEMDB_LINK, $g_DB_LINK;
+
+    $config = get_config();
+    $user = parse_config($config, "<trigmem_db_user>");
+    $pass = parse_config($config, "<trigmem_db_passwd>");
+    $db_name = parse_config($config, "<trigmem_db_name>");
+    $host = parse_config($config, "<trigmem_db_host>");
+    $g_TRIGMEMDB_LINK = mysql_pconnect($host, $user, $pass);
+    if (!$g_TRIGMEMDB_LINK) {
+        return 1;
+    }
+    if (!mysql_select_db($db_name, $g_TRIGMEMDB_LINK)) {
+        echo "selecting $db_name\n";
+        return 2;
+    }
+
+    $user = parse_config($config, "<db_user>");
+    $pass = parse_config($config, "<db_passwd>");
+    $db_name = parse_config($config, "<db_name>");
+    $host = parse_config($config, "<db_host>");
+    $g_DB_LINK = mysql_pconnect($host, $user, $pass);
+    if (!$g_DB_LINK) {
+        return 3;
+    }
+    if (!mysql_select_db($db_name, $g_DB_LINK)) {
+        echo "selecting $db_name\n";
+        return 4;
+    }
+    return 0;
+}
+
+
 function qcn_get_server_id($filename)
 {
   global $g_server;
@@ -113,7 +150,7 @@ function qcn_trigger_rep_process($basefile)
 <vr>7.33</vr>
 <os>W32</os>
 <sms>105</sms>
-<ctime>1379947262.937414</ctime>
+<ctime>1380038196.937414</ctime>
 <fsig>3.272128</fsig>
 <fmag>0.022373</fmag>
 <file>qcnc_053434_000021_1379947263.zip</file>
@@ -190,9 +227,73 @@ function qcn_trigger_rep_process($basefile)
    qcn_log_close();
 }
 
+
+function insertValidRemoteTrigger($server_id, $hostid, &$mfh, $bTrigMem = false, $triggerid = 0)  
+{
+   global $g_TRIGMEMDB_LINK, $g_DB_LINK;
+   global $g_REMDB, $g_TRIGMEMDB;
+   global $g_server;
+
+       $strUseDB = "";
+       $sqllookup = "";
+       $mylink = 0;
+       // debug output to temp table 
+       if ($bTrigMem) {
+          $strUseDB = $g_TRIGMEMDB;
+          $mylink = $g_TRIGMEMDB_LINK;
+          $sqllookup = "SELECT id FROM " . $strUseDB 
+              . " WHERE db_name='" . $g_server[$server_id]['id'] . "' AND file='" . BoincDb::escape_string($mfh->file) .  "'";
+       }
+       else {
+          $strUseDB = $g_REMDB;
+          $mylink = $g_DB_LINK;
+          $sqllookup = "SELECT id FROM " . $strUseDB 
+              . " WHERE qcn_remoteid=" . $server_id . " AND file='" . BoincDb::escape_string($mfh->file) .  "'";
+         
+     /* 
+          $strsql = "insert into sensor.qcn_trigger_remote_xml (qcn_remoteid, hostid, valid, variety, result_name, latitude, longitude, xml) "
+               . "values ($server_id, $hostid, 1," 
+               . "'$mfh->variety', '$mfh->result_name', "
+               . ($mfh->qlat ? "$mfh->qlat," : "NULL,")
+               . ($mfh->qlng ? "$mfh->qlng," : "NULL,")
+               . "'" . print_r($mfh, true) . "')";
+          //qcn_log_error($strsql);
+          mysql_query($strsql, $mylink);
+      */
+       }
+
+       // valid trigger ie variety is trigger, and lat/lng are OK
+       $result = mysql_query($sqllookup, $mylink);
+       //print "\n" . $sqllookup . "\n";
+       $idRemote = 0;
+       if ($result && ($res = mysql_fetch_array($result))) {
+           $idRemote = $res[0];
+       }
+       if ($result) mysql_free_result($result);
+
+       if ($idRemote) { // do an update as we have the remote id
+          $sql = "UPDATE " . $strUseDB . " SET " . qcn_remote_update_string($server_id, $hostid, $mfh, $bTrigMem, $triggerid) 
+                     . " WHERE id=$idRemote";
+       }
+       else { // do an insert as thre is no existing remote id
+          $sql = "INSERT INTO " . $strUseDB . " SET " . qcn_remote_update_string($server_id, $hostid, $mfh, $bTrigMem, $triggerid);
+       }
+       try { // this is an 'action query' so better to trap in a try since $result is non-existent, and print out mysql_error
+          mysql_query($sql, $mylink);
+          // return the appropriate id, either the updated one found, or new trigger insert
+          if (!$idRemote && !$bTrigMem) {  // it was an insert
+             $idRemote = mysql_insert_id($mylink);
+          }
+       }
+       catch (Exception $e) {
+          qcn_log_error($sql . "\n" . mysql_error());
+       }
+       return $idRemote;
+}
+
 function insert_qcn_remote_trigger($server_id, $hostid, &$mfh)
 {
-   global $g_REMDB;
+   global $g_TRIGMEMDB_LINK, $g_DB_LINK;
 
        $isValid = true;
 
@@ -208,54 +309,24 @@ function insert_qcn_remote_trigger($server_id, $hostid, &$mfh)
            $isValid = false;
         } 
 
-       // this should be a valid trigger, also note the check for 'file' not having invalid characters ie sql injection attack
-       db_init();
-
-       // debug output to temp table 
-       $strsql = "insert into sensor.qcn_trigger_remote_xml (qcn_remoteid, hostid, valid, variety, result_name, latitude, longitude, xml) "
-               . "values ($server_id, $hostid, " . ($isValid ? "1" : "0") . "," 
-               . "'$mfh->variety', '$mfh->result_name', "
-               . ($mfh->qlat ? "$mfh->qlat," : "NULL,") 
-               . ($mfh->qlng ? "$mfh->qlng," : "NULL,") 
-               . "'" . print_r($mfh, true) . "')";
-       //qcn_log_error($strsql);
-       mysql_query($strsql);
-    
        if (!$isValid) return; // not a valid trigger ie failed one of the above conditions
- 
-       // valid trigger ie variety is trigger, and lat/lng are OK
-       $sqllookup = "SELECT id FROM " . $g_REMDB . " WHERE qcn_remoteid=" . $server_id . " AND file='" . BoincDb::escape_string($mfh->file) .  "'";
-       $result = mysql_query($sqllookup);
-       //print "\n" . $sqllookup . "\n";
-       $idRemote = 0;
-       if ($result && ($res = mysql_fetch_array($result))) {
-           $idRemote = $res[0];
-       }
-       if ($result) mysql_free_result($result);
+       if (!qcn_db_init()) { // db liks were setup OK
+          $triggerid = insertValidRemoteTrigger($server_id, $hostid, $mfh, false);  // regular db table
+          insertValidRemoteTrigger($server_id, $hostid, $mfh, true, $triggerid); // trigmem "live" table
 
-       if ($idRemote) { // do an update as we have the remote id
-          $sql = "UPDATE " . $g_REMDB . " SET " . qcn_remote_update_string($server_id, $hostid, $mfh, false);
-       }
-       else { // do an insert as thre is no existing remote id
-          $sql = "INSERT INTO " . $g_REMDB . " SET " . qcn_remote_update_string($server_id, $hostid, $mfh, false);
-       }
-       try { // this is an 'action query' so better to trap in a try since $result is non-existent, and print out mysql_error
-          mysql_query($sql);
-       }
-       catch (Exception $e) {
-          qcn_log_error($sql . "\n" . mysql_error());
-       }
-
+          mysql_close($g_TRIGMEMDB_LINK);
+          mysql_close($g_DB_LINK);
+       } 
 }
 
-function qcn_remote_update_string($server_id, $hostid, &$mfh, $memdb = false)
+function qcn_remote_update_string($server_id, $hostid, &$mfh, $memdb = false, $triggerid=0)
 {
-    return ($memdb == true ? "," : "qcn_remoteid=$server_id,") 
+    return ($memdb ? "db_name='$server_id',triggerid=$triggerid," : "qcn_remoteid=$server_id,") 
          . "hostid=$hostid, ipaddr='" . $_SERVER['REMOTE_ADDR'] . "',"
          . "result_name='$mfh->result_name', time_trigger=$mfh->ctime, time_received=unix_timestamp(),"
          . "time_sync=$mfh->tsync, sync_offset=$mfh->toff, significance=$mfh->fsig, magnitude=$mfh->fmag,"
-         . "dt=$mfh->dt, numreset=$mfh->reset, qcn_sensorid=$mfh->sms, sw_version='$mfh->vr', os_type='$mfh->os',"
-         . "runtime_clock=$mfh->wct, runtime_cpu=$mfh->cpt,"
+         . "dt=$mfh->dt, numreset=$mfh->reset, qcn_sensorid=$mfh->sms, "
+         . ($memdb ? "" : "sw_version='$mfh->vr', os_type='$mfh->os',runtime_clock=$mfh->wct, runtime_cpu=$mfh->cpt,")
          . "varietyid="  . ($mfh->variety == "continual" ? 2 : 0) . ","
          . "latitude=$mfh->qlat, longitude=$mfh->qlng, file='$mfh->file',"
          . "mxy1p=$mfh->mxy1p, mz1p=$mfh->mz1p, "
