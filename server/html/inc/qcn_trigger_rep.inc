@@ -301,6 +301,7 @@ function insert_qcn_remote_trigger($server_id, $hostid, &$mfh)
        if ($mfh->variety != "trigger"
            || $mfh->qlat < -90.
            || $mfh->qlng < -360.
+           || $mfh->tsync == 0
            || strpos($mfh->file, "'") 
            || strpos($mfh->file, '"') 
            || strpos($mfh->file, '<') 
