@@ -349,9 +349,9 @@ insert into qcn_remote values (3, 'tw_sensor_rep.php', 'QCN Taiwan Sensor', 'htt
 insert into qcn_remote values (4, 'tw_continual_rep.php', 'QCN Taiwan Continual', 'http://qcn.twgrid.org/continual', 'TW',
     'http://qcn.stanford.edu/sensor/tw_continual_rep.php', 'http://qcn.twgrid.org/trigger/continual', '', 'waynesan@twgrid.org', 'eric.yen@twgrid.org', 'ychen@twgrid.org');
 insert into qcn_remote values (5, 'mx_sensor_rep.php', 'QCN Mexico Sensor', 'http://www.ras.unam.mx/sensor', 'MX',
-    'http://qcn.stanford.edu/sensor/mx_sensor_rep.php', 'http://www.ras.unam.mx/trigger', '', 'jesus@ssn.ssn.unam.mx', 'uskerhay@gmail.com', 'luis');
+    'http://qcn.stanford.edu/sensor/mx_sensor_rep.php', 'http://www.ras.unam.mx/trigger', '', 'ladominguez@geofisica.unam.mx', 'uskerhay@gmail.com', '');
 insert into qcn_remote values (6, 'mx_continual_rep.php', 'QCN Mexico Continual', 'http://www.ras.unam.mx/continual', 'MX',
-    'http://qcn.stanford.edu/sensor/mx_continual_rep.php', 'http://www.ras.unam.mx/trigger/continual', '', 'jesus@ssn.ssn.unam.mx', 'uskerhay@gmail.com', 'luis');
+    'http://qcn.stanford.edu/sensor/mx_continual_rep.php', 'http://www.ras.unam.mx/trigger/continual', '', 'ladominguez@geofisica.unam.mx', 'uskerhay@gmail.com', '');
 insert into qcn_remote values (7, 'fr_sensor_rep.php', 'QCN France Sensor', 'http://emsc-csem.org/sensor', 'FR',
     'http://qcn.stanford.edu/sensor/fr_sensor_rep.php', 'http://emsc-csem.org/trigger', '', 'mazet@emsc-csem.org', '', '');
 insert into qcn_remote values (8, 'fr_continual_rep.php', 'QCN France Continual', 'http://emsc-csem.org/continual', 'FR',
