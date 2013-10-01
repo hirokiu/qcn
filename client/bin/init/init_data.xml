@@ -24,254 +24,156 @@
  <project_preferences>
  <quakes>
 <qu001>  0.0|1900/01/01 00:00:00|   0.0000|   0.0000|   0.00||http://earthquake.usgs.gov/earthquakes/catalogs/</qu001>
-<qu002>  3.0|2013/09/20 13:19:18|  18.6210| -65.1248|  80.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13263007.php</qu002>
-<qu003>  2.6|2013/09/20 13:13:07|  59.4851|-152.0662|  27.90|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10809667.php</qu003>
-<qu004>  2.7|2013/09/20 13:00:27|  62.2291|-145.8131|   0.00|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10809659.php</qu004>
-<qu005>  2.7|2013/09/20 12:44:48|  39.3805|-123.2988|   1.30|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72073776.php</qu005>
-<qu006>  2.9|2013/09/20 11:40:30|  60.0281|-154.1802|  99.00|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10809622.php</qu006>
-<qu007>  2.6|2013/09/20 09:08:02|  34.0783|-117.7882|   2.50|Greater Los Angeles area, California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11367266.php</qu007>
-<qu008>  2.8|2013/09/20 07:04:12|  17.5820| -67.6362|  46.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13263005.php</qu008>
-<qu009>  3.2|2013/09/20 06:38:23|  59.7793|-153.5543| 100.00|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10809532.php</qu009>
-<qu010>  3.9|2013/09/20 06:10:43|  33.3423|-116.3977|  13.30|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11366994.php</qu010>
-<qu011>  2.5|2013/09/20 05:10:46|  19.4503|-154.8482|   0.00|Hawaii region, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60564161.php</qu011>
-<qu012>  2.9|2013/09/20 04:51:38|  19.1277| -67.6386|  30.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13263002.php</qu012>
-<qu013>  3.3|2013/09/20 04:04:57|  19.7527| -65.5801|  40.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13263003.php</qu013>
-<qu014>  2.9|2013/09/20 01:00:56|  19.6590| -65.4730|  15.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13263000.php</qu014>
-<qu015>  2.5|2013/09/20 00:04:02|  60.8738|-147.9906|  16.60|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10809400.php</qu015>
-<qu016>  4.2|2013/09/19 19:48:42|  51.5916|-174.7906|  38.90|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10809074.php</qu016>
-<qu017>  2.5|2013/09/19 19:14:11|  32.9983| -80.2650|  11.50|South Carolina|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/se091913b.php</qu017>
-<qu018>  5.3|2013/09/19 17:25:09|  37.0716| 140.6495|  22.20|eastern Honshu, Japan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000jw8u.php</qu018>
-<qu019>  3.4|2013/09/19 16:03:47|  19.1648| -64.9985| 106.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13262007.php</qu019>
-<qu020>  4.6|2013/09/19 15:28:20| -15.8410|-174.7509| 262.30|Tonga|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000jw6t.php</qu020>
-<qu021>  3.2|2013/09/19 14:58:17|  58.4148|-156.4212| 100.00|Alaska Peninsula|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10808878.php</qu021>
-<qu022>  4.0|2013/09/19 13:27:17|  55.7401|-158.4865|  53.00|Alaska Peninsula|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000jw4k.php</qu022>
-<qu023>  3.8|2013/09/19 12:06:33|  34.0817|-117.7840|   3.60|Greater Los Angeles area, California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11366562.php</qu023>
-<qu024>  3.7|2013/09/19 11:43:55|  34.0817|-117.7850|   2.90|Greater Los Angeles area, California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11366538.php</qu024>
-<qu025>  4.5|2013/09/19 11:04:36|   5.0688| 124.7337| 370.60|Mindanao, Philippines|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000jw37.php</qu025>
-<qu026>  4.7|2013/09/19 10:15:19|  13.5085| 144.6659|  94.20|Guam region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000jw2z.php</qu026>
-<qu027>  2.9|2013/09/19 10:09:27|  19.1329| -64.8264|  21.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13262006.php</qu027>
-<qu028>  3.1|2013/09/19 08:33:30|  19.1075| -64.6835|  53.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13262005.php</qu028>
-<qu029>  4.2|2013/09/19 08:29:21|  15.6009| -87.1284|   4.50|Honduras|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000jw2j.php</qu029>
-<qu030>  3.2|2013/09/19 07:52:49|  19.1047| -64.6709|  63.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13262004.php</qu030>
-<qu031>  2.9|2013/09/19 07:24:56|  31.7887|-115.0182|   0.00|Baja California, Mexico|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11366434.php</qu031>
-<qu032>  3.3|2013/09/19 06:47:42|  19.5949| -65.3957|  57.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13262002.php</qu032>
-<qu033>  3.0|2013/09/19 04:47:35|  19.3094| -64.6651|  38.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13262001.php</qu033>
-<qu034>  3.3|2013/09/19 04:03:25|  19.4365| -64.7115|  59.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13262000.php</qu034>
-<qu035>  4.9|2013/09/19 04:01:49| -56.0332| -27.4019|  87.80|South Sandwich Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000jvzd.php</qu035>
-<qu036>  2.5|2013/09/19 00:56:13|  59.7817|-152.9628|  13.60|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10808672.php</qu036>
-<qu037>  2.5|2013/09/19 00:01:42|  19.3203|-155.1140|   3.20|Island of Hawaii, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60563601.php</qu037>
-<qu038>  2.6|2013/09/18 23:15:58|  58.2624|-156.1264| 159.20|Alaska Peninsula|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10808632.php</qu038>
-<qu039>  3.4|2013/09/18 22:54:31|  18.1089| -68.1191|  84.00|Mona Passage, Dominican Republic|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13261008.php</qu039>
-<qu040>  4.3|2013/09/18 22:44:58|  37.1404| 140.3533|  50.30|eastern Honshu, Japan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000jvx0.php</qu040>
-<qu041>  2.5|2013/09/18 21:14:51|  38.8297|-122.7982|   1.70|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72072781.php</qu041>
-<qu042>  3.7|2013/09/18 21:10:04|  37.3690|  36.2073|   7.80|central Turkey|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000jvv6.php</qu042>
-<qu043>  5.4|2013/09/18 20:53:31|  -3.2275| 144.2251|   6.50|near the north coast of New Guinea, Papua New Guinea|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000jvsr.php</qu043>
-<qu044>  2.5|2013/09/18 20:20:00|  50.3015|-173.7341|  50.20|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10808299.php</qu044>
-<qu045>  2.6|2013/09/18 20:17:24|  53.4378|-163.6450|  48.50|Unimak Island region, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10808293.php</qu045>
-<qu046>  3.2|2013/09/18 19:30:44|  19.1825| -64.6305|  71.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13261009.php</qu046>
-<qu047>  3.0|2013/09/18 17:38:37|  19.4381| -66.1327|  25.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13261007.php</qu047>
-<qu048>  5.5|2013/09/18 16:48:56|  19.1553| 145.5955| 138.30|Maug Islands region, Northern Mariana Islands|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000jvgy.php</qu048>
-<qu049>  2.7|2013/09/18 16:44:53|  33.9323|-116.3600|   8.00|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11366218.php</qu049>
-<qu050>  2.5|2013/09/18 16:41:20|  19.3467|-155.4217|   9.70|Island of Hawaii, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60563466.php</qu050>
-<qu051>  4.5|2013/09/18 16:26:51|  32.9674|  48.8911|  10.00|western Iran|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usb000jvfw.php</qu051>
-<qu052>  4.6|2013/09/18 16:22:07|   1.9876|  96.4907|  26.30|Nias region, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jx5l.php</qu052>
-<qu053>  2.9|2013/09/18 16:02:01|  60.4796|-152.0327|  95.20|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10808146.php</qu053>
-<qu054>  2.7|2013/09/18 15:36:35|  18.8476| -65.0559|  19.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13261006.php</qu054>
-<qu055>  4.9|2013/09/18 14:29:16|   3.3621|  97.4687|  89.20|northern Sumatra, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jx2w.php</qu055>
-<qu056>  3.2|2013/09/18 12:53:36|  32.8790|-116.2528|   4.70|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11366154.php</qu056>
-<qu057>  4.9|2013/09/18 12:42:39| -25.3010| -70.8264|  10.80|offshore Antofagasta, Chile|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jx0u.php</qu057>
-<qu058>  3.0|2013/09/18 11:41:13|  61.5826|-141.1952|   0.00|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10808063.php</qu058>
-<qu059>  3.0|2013/09/18 10:50:42|  19.2619| -64.5254|  50.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13261005.php</qu059>
-<qu060>  4.0|2013/09/18 10:36:37|  52.4883|-170.6383|  76.00|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jwzw.php</qu060>
-<qu061>  3.2|2013/09/18 10:10:30|  18.5883| -65.3813|  60.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13261004.php</qu061>
-<qu062>  5.0|2013/09/18 09:04:23|  15.7674|  39.3679|   9.80|Eritrea|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jwzc.php</qu062>
-<qu063>  4.3|2013/09/18 08:18:52|  18.4788| -70.6932|   9.00|Dominican Republic|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jwy8.php</qu063>
-<qu064>  4.5|2013/09/18 07:57:02|  39.9894| -29.5828|  28.50|Azores Islands, Portugal|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jwxb.php</qu064>
-<qu065>  2.6|2013/09/18 07:46:39|  45.7605|-111.8865|   5.90|western Montana|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/mb13919086.php</qu065>
-<qu066>  4.5|2013/09/18 04:36:49|  -3.8400| 153.9283| 327.80|New Ireland region, Papua New Guinea|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jwrf.php</qu066>
-<qu067>  3.2|2013/09/18 03:41:40|  19.4295| -65.4117| 100.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13261002.php</qu067>
-<qu068>  2.9|2013/09/18 02:13:29|  19.3279| -66.3386|  41.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13261000.php</qu068>
-<qu069>  2.6|2013/09/18 00:57:44|  60.1930|-152.1976|  80.20|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10807913.php</qu069>
-<qu070>  4.4|2013/09/18 00:32:36|   3.1105| 122.7099| 567.30|Celebes Sea|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jwn9.php</qu070>
-<qu071>  5.1|2013/09/18 00:27:45|  38.7332| 142.3146|  36.00|near the east coast of Honshu, Japan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jwn2.php</qu071>
-<qu072>  4.6|2013/09/17 23:53:38|  -7.8108| 118.0221|  35.30|Flores Sea|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jwmu.php</qu072>
-<qu073>  4.6|2013/09/17 23:11:33|   7.6380|  93.7267|  59.70|Nicobar Islands, India region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jwm9.php</qu073>
-<qu074>  3.4|2013/09/17 22:22:39|  19.4186| -65.5327| 112.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13260005.php</qu074>
-<qu075>  4.4|2013/09/17 21:59:46|  10.4883| -63.1545|   4.30|Sucre, Venezuela|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jwkt.php</qu075>
-<qu076>  3.6|2013/09/17 21:37:01|  53.8426|-164.7868|  54.80|Unimak Island region, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10807798.php</qu076>
-<qu077>  2.5|2013/09/17 21:21:58|  61.2642|-145.1304|  27.00|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10807534.php</qu077>
-<qu078>  4.9|2013/09/17 20:40:50|  38.9678|  41.5114|   5.60|eastern Turkey|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jwi4.php</qu078>
-<qu079>  2.5|2013/09/17 20:23:41|  46.6917|-122.2948|  15.50|Washington|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/uw60594087.php</qu079>
-<qu080>  3.0|2013/09/17 19:29:26|  40.1625|-121.0805|   7.70|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc71074969.php</qu080>
-<qu081>  3.0|2013/09/17 19:29:09|  40.1553|-121.0828|   8.00|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72072216.php</qu081>
-<qu082>  4.7|2013/09/17 19:16:48|  -8.1046| 119.0982|  20.40|Flores region, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jwf9.php</qu082>
-<qu083>  3.4|2013/09/17 16:49:18|  54.2525|-160.9828|   0.40|Alaska Peninsula|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10807340.php</qu083>
-<qu084>  5.0|2013/09/17 16:03:27|  -7.4142| 128.5870| 119.40|Kepulauan Barat Daya, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jwb1.php</qu084>
-<qu085>  2.5|2013/09/17 15:39:08|  61.4086|-146.5282|   8.70|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10807312.php</qu085>
-<qu086>  2.5|2013/09/17 13:55:02|  36.2763|-120.4463|  13.60|Central California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72072066.php</qu086>
-<qu087>  2.5|2013/09/17 11:35:30|  63.1165|-149.7167|  87.30|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10807248.php</qu087>
-<qu088>  5.1|2013/09/17 10:39:28| -14.6413| 166.8072|  40.10|Vanuatu|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jw51.php</qu088>
-<qu089>  2.9|2013/09/17 09:09:57|  19.2805| -64.6995|  47.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13260003.php</qu089>
-<qu090>  3.2|2013/09/17 08:09:28|  18.3673| -64.4564| 104.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr1326004.php</qu090>
-<qu091>  4.1|2013/09/17 07:39:46|  38.7570|  22.7528|  10.00|Greece|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jw3u.php</qu091>
-<qu092>  4.6|2013/09/17 07:12:05| -22.3302| -65.8553| 262.60|Jujuy, Argentina|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jw3k.php</qu092>
-<qu093>  3.4|2013/09/17 06:07:56|  19.6501| -66.3274|  33.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13260002.php</qu093>
-<qu094>  2.5|2013/09/17 05:44:32|  57.7245|-155.5002|  87.60|Alaska Peninsula|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10807195.php</qu094>
-<qu095>  2.5|2013/09/17 05:40:27|  40.8570|-123.2512|  34.00|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72071921.php</qu095>
-<qu096>  4.5|2013/09/17 05:21:38|  43.9655|  83.6408|  12.10|northern Xinjiang, China|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jw23.php</qu096>
-<qu097>  5.4|2013/09/17 04:09:14|  42.1123|  45.8343|  16.30|Georgia (Sak'art'velo)|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jw0j.php</qu097>
-<qu098>  3.4|2013/09/17 02:34:33|  58.3325|-150.8905|  10.00|Gulf of Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10807135.php</qu098>
-<qu099>  4.9|2013/09/16 23:25:48|  -7.3698| 128.4150| 153.00|Kepulauan Barat Daya, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jvyg.php</qu099>
-<qu100>  4.6|2013/09/16 23:12:37| -24.5519| -67.2473| 134.80|Salta, Argentina|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jvy8.php</qu100>
-<qu101>  3.0|2013/09/16 23:06:09|  19.1151| -64.8375|  33.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13259006.php</qu101>
-<qu102>  4.9|2013/09/16 22:58:50|  29.0989| 130.2946|  26.70|Ryukyu Islands, Japan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jvy3.php</qu102>
-<qu103>  3.0|2013/09/16 22:51:34|  18.7952| -65.0690|  13.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13259005.php</qu103>
-<qu104>  4.9|2013/09/16 22:43:40|  39.6041| 100.4498|  11.40|Gansu-Nei Mongol border region, China|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jvxk.php</qu104>
-<qu105>  4.1|2013/09/16 21:59:49|  13.6878| -90.5600|  64.70|offshore Guatemala|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jvw8.php</qu105>
-<qu106>  2.7|2013/09/16 20:20:07|  53.9234|-164.3745|  65.60|Unimak Island region, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806948.php</qu106>
-<qu107>  2.8|2013/09/16 17:01:32|  53.5071|-165.2979|  35.10|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806823.php</qu107>
-<qu108>  2.6|2013/09/16 16:42:51|  36.9890|-104.8981|   1.30|New Mexico|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jvit.php</qu108>
-<qu109>  2.7|2013/09/16 16:38:05|  62.2879|-151.2311|  73.70|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806804.php</qu109>
-<qu110>  4.8|2013/09/16 16:04:59|  32.3582|  49.5348|  10.00|western Iran|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jvh2.php</qu110>
-<qu111>  2.9|2013/09/16 15:38:35|  19.2082| -64.8464|  37.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13259004.php</qu111>
-<qu112>  5.3|2013/09/16 15:01:14|  38.7062|  22.7290|   7.70|Greece|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jvef.php</qu112>
-<qu113>  3.2|2013/09/16 14:56:41|  51.4865|-174.7791|   6.60|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806746.php</qu113>
-<qu114>  4.8|2013/09/16 14:42:40|  38.6792|  22.7085|   0.00|Greece|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jve1.php</qu114>
-<qu115>  3.7|2013/09/16 14:12:31|  37.5105|-115.4841|   5.50|Nevada|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nn00423851.php</qu115>
-<qu116>  4.8|2013/09/16 13:02:18|  28.8622| 142.6425|  26.60|Bonin Islands, Japan region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jvcz.php</qu116>
-<qu117>  2.6|2013/09/16 11:53:18|  52.2975|-169.4807|   8.30|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806700.php</qu117>
-<qu118>  4.7|2013/09/16 11:48:23|  55.9144| 161.9122|  33.70|near the east coast of the Kamchatka Peninsula, Russia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jvce.php</qu118>
-<qu119>  2.5|2013/09/16 11:09:07|  19.3631| -64.4580|  16.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13259003.php</qu119>
-<qu120>  4.6|2013/09/16 07:24:31| -30.2005|-178.5926| 152.10|Kermadec Islands, New Zealand|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jva6.php</qu120>
-<qu121>  4.2|2013/09/16 07:19:56|  53.5072|-165.2099|  19.50|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jv9t.php</qu121>
-<qu122>  3.2|2013/09/16 05:52:24|  18.4629| -67.9984| 105.00|Dominican Republic region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13259001.php</qu122>
-<qu123>  4.5|2013/09/16 05:31:19| -15.7663| -69.3110| 226.70|La Paz, Bolivia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jv88.php</qu123>
-<qu124>  3.0|2013/09/16 05:13:20|  19.0398| -64.8243|  42.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13259000.php</qu124>
-<qu125>  3.6|2013/09/16 05:01:13|  51.4871|-174.6562|  25.60|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806577.php</qu125>
-<qu126>  2.9|2013/09/16 04:13:20|  19.0277| -64.8235|  22.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13259002.php</qu126>
-<qu127>  4.8|2013/09/16 04:08:04|   6.0597| 126.0465| 155.50|Mindanao, Philippines|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jv6t.php</qu127>
-<qu128>  4.8|2013/09/16 03:25:26|  -5.4580|  68.7582|   9.70|Chagos Archipelago region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jv66.php</qu128>
-<qu129>  4.7|2013/09/16 00:33:42|  36.6386|  71.3371| 159.60|Hindu Kush region, Afghanistan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jv53.php</qu129>
-<qu130>  4.8|2013/09/16 00:16:34|  51.4409|-175.3533|  22.20|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jv4t.php</qu130>
-<qu131>  4.3|2013/09/16 00:14:07| -20.3861|-177.7077| 515.20|Fiji region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jv4z.php</qu131>
-<qu132>  3.5|2013/09/15 23:57:46|  51.5921|-174.7519|  25.80|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806491.php</qu132>
-<qu133>  4.5|2013/09/15 23:52:52|  28.3032| 139.5344| 444.00|Bonin Islands, Japan region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jv4d.php</qu133>
-<qu134>  2.5|2013/09/15 23:37:15|  18.6345| -67.1343|  68.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13258007.php</qu134>
-<qu135>  2.8|2013/09/15 23:18:06|  40.1898|-121.0635|   6.30|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72071146.php</qu135>
-<qu136>  4.3|2013/09/15 22:55:48|  19.4762| -70.2150|  23.30|Dominican Republic|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jv3e.php</qu136>
-<qu137>  2.8|2013/09/15 22:42:57|  51.3982|-174.6935|  10.70|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806473.php</qu137>
-<qu138>  2.7|2013/09/15 22:41:21|  51.3780|-174.6721|   6.20|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806472.php</qu138>
-<qu139>  4.8|2013/09/15 21:56:22|   0.4169| 122.1311| 119.90|Minahasa, Sulawesi, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jv2r.php</qu139>
-<qu140>  3.9|2013/09/15 21:52:23|  51.4387|-174.7363|   1.80|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806459.php</qu140>
-<qu141>  3.3|2013/09/15 21:17:10|  19.0473| -65.3190|  38.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13258006.php</qu141>
-<qu142>  4.6|2013/09/15 19:11:41|  36.4317|  71.1262| 251.20|Hindu Kush region, Afghanistan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juzp.php</qu142>
-<qu143>  2.9|2013/09/15 18:57:06|  19.0580| -68.0121|  43.00|Dominican Republic region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13258005.php</qu143>
-<qu144>  2.5|2013/09/15 18:38:30|  34.6930|-116.2700|   0.30|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11365018.php</qu144>
-<qu145>  2.6|2013/09/15 17:46:30|  19.3053|-155.2155|   1.20|Island of Hawaii, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60561891.php</qu145>
-<qu146>  3.3|2013/09/15 17:37:50|  53.4858|-165.2598|  38.10|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806390.php</qu146>
-<qu147>  4.8|2013/09/15 17:35:43|  30.1560| 130.9846|  39.00|Kyushu, Japan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juy2.php</qu147>
-<qu148>  4.7|2013/09/15 17:22:15|  51.5966|-174.8591|  42.00|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juxs.php</qu148>
-<qu149>  2.7|2013/09/15 17:16:53|  51.4751|-174.6366|   5.00|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806375.php</qu149>
-<qu150>  2.6|2013/09/15 17:07:25|  44.6190|-110.7988|   1.60|Yellowstone National Park, Wyoming|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/uu60001650.php</qu150>
-<qu151>  3.7|2013/09/15 17:07:00|  51.4630|-174.6671|  21.30|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806370.php</qu151>
-<qu152>  3.0|2013/09/15 16:43:19|  18.8862| -65.6624|  54.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13258004.php</qu152>
-<qu153>  6.1|2013/09/15 16:21:36|  51.5462|-174.6779|  22.30|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juwv.php</qu153>
-<qu154>  3.6|2013/09/15 15:53:02|  44.5613|-110.8242|  10.50|Yellowstone National Park, Wyoming|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/uu60037692.php</qu154>
-<qu155>  4.8|2013/09/15 14:11:34|  -6.6010| 148.1889|  57.70|New Britain region, Papua New Guinea|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juvv.php</qu155>
-<qu156>  2.5|2013/09/15 13:23:27|  44.5573|-110.8278|   6.40|Yellowstone National Park, Wyoming|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/uu60037652.php</qu156>
-<qu157>  3.7|2013/09/15 12:05:37|  18.2089| -67.9639| 102.00|Mona Passage, Puerto Rico|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13258003.php</qu157>
-<qu158>  2.8|2013/09/15 11:36:00|  53.1197|-166.7911|  18.40|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806257.php</qu158>
-<qu159>  2.7|2013/09/15 11:17:30|  44.5590|-110.8173|   7.20|Yellowstone National Park, Wyoming|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/uu60037492.php</qu159>
-<qu160>  2.7|2013/09/15 11:13:15|  44.5593|-110.8267|  10.00|Yellowstone National Park, Wyoming|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/uu60037482.php</qu160>
-<qu161>  3.2|2013/09/15 11:11:00|  44.5857|-110.8302|   7.40|Yellowstone National Park, Wyoming|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/uu60001645.php</qu161>
-<qu162>  3.4|2013/09/15 11:10:19|  44.5620|-110.8198|   8.40|Yellowstone National Park, Wyoming|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/uu60037477.php</qu162>
-<qu163>  4.5|2013/09/15 09:59:01|  -4.9178| -80.8750|  59.40|Peru-Ecuador border region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juuk.php</qu163>
-<qu164>  4.6|2013/09/15 09:23:41|  27.7912|-105.6816|   8.30|Chihuahua, Mexico|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juue.php</qu164>
-<qu165>  4.9|2013/09/15 09:06:44|  -2.9064| 129.5239|  31.50|Seram, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juud.php</qu165>
-<qu166>  2.8|2013/09/15 09:03:45|  39.4822|-123.3342|   9.10|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72070696.php</qu166>
-<qu167>  4.5|2013/09/15 07:15:53|  -7.6474| 117.3857| 303.00|Bali Sea|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juth.php</qu167>
-<qu168>  3.8|2013/09/15 06:16:40|  52.0662| 179.5265|  79.70|Rat Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806176.php</qu168>
-<qu169>  4.2|2013/09/15 06:16:30|  50.8497| 179.4471|  35.00|Rat Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jusj.php</qu169>
-<qu170>  4.1|2013/09/15 06:04:34| -33.2066| -69.6246| 104.60|Mendoza, Argentina|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jusa.php</qu170>
-<qu171>  2.9|2013/09/15 05:58:52|  19.3617| -66.1171|  10.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13258002.php</qu171>
-<qu172>  3.1|2013/09/15 05:58:14|  35.4928| -96.5696|   5.00|Oklahoma|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jurv.php</qu172>
-<qu173>  2.5|2013/09/15 05:37:53|  35.4080| -92.4000|   0.90|Arkansas|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nm091513a.php</qu173>
-<qu174>  3.1|2013/09/15 03:05:42|  19.0867| -64.8807|  13.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13258001.php</qu174>
-<qu175>  2.8|2013/09/15 02:30:20|  53.6270|-165.6903|  50.30|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806131.php</qu175>
-<qu176>  4.8|2013/09/15 02:10:52| -25.4969|-178.6928| 366.40|south of the Fiji Islands|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juqi.php</qu176>
-<qu177>  4.3|2013/09/15 02:05:49| -20.9714|-178.6573| 562.90|Fiji region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juqe.php</qu177>
-<qu178>  2.9|2013/09/15 01:48:46|  19.1392| -64.9056|  29.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13258000.php</qu178>
-<qu179>  2.6|2013/09/15 01:42:46|  62.9101|-149.9112|  79.90|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806114.php</qu179>
-<qu180>  4.7|2013/09/15 00:38:35|  34.9058| 141.4801|  39.70|off the east coast of Honshu, Japan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jupn.php</qu180>
-<qu181>  3.2|2013/09/15 00:32:30|  50.0511|-177.0525|  25.00|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10807547.php</qu181>
-<qu182>  5.4|2013/09/15 00:23:55|  54.3582| 167.6482|  25.00|Komandorskiye Ostrova, Russia region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jup9.php</qu182>
-<qu183>  2.7|2013/09/15 00:02:28|  54.1082|-165.9928|   4.80|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10806085.php</qu183>
-<qu184>  2.6|2013/09/14 23:07:13|  33.5027|-116.4548|   6.60|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11364642.php</qu184>
-<qu185>  2.7|2013/09/14 21:30:14|  19.1755| -64.8700|  11.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257035.php</qu185>
-<qu186>  5.7|2013/09/14 20:35:27|  -6.3631| 154.7605|  79.00|Bougainville region, Papua New Guinea|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jukg.php</qu186>
-<qu187>  2.8|2013/09/14 20:33:35|  19.1926| -64.8762|  40.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257036.php</qu187>
-<qu188>  4.7|2013/09/14 20:02:12|  52.1339| -30.0390|   7.50|northern Mid-Atlantic Ridge|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jujv.php</qu188>
-<qu189>  4.6|2013/09/14 19:13:51| -11.1520| 166.3938| 159.70|Santa Cruz Islands|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juj7.php</qu189>
-<qu190>  4.3|2013/09/14 18:56:06|  51.4288|-174.8694|  23.50|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juiu.php</qu190>
-<qu191>  2.9|2013/09/14 18:52:53|  37.0519| -97.9279|   5.00|Kansas|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juin.php</qu191>
-<qu192>  2.7|2013/09/14 18:13:50|  59.4046|-152.4705|  87.60|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10805992.php</qu192>
-<qu193>  3.0|2013/09/14 18:12:38|  19.0358| -64.8423|  51.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257034.php</qu193>
-<qu194>  3.0|2013/09/14 18:03:37|  18.8418| -64.7185|  79.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257033.php</qu194>
-<qu195>  4.7|2013/09/14 17:57:31|   9.9741| 125.4437|  34.00|Mindanao, Philippines|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juhm.php</qu195>
-<qu196>  4.5|2013/09/14 17:41:19|  36.2974|  71.2182| 111.00|Hindu Kush region, Afghanistan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juh5.php</qu196>
-<qu197>  2.7|2013/09/14 17:25:17|  19.0995| -64.8860|  18.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257032.php</qu197>
-<qu198>  5.2|2013/09/14 17:09:03|  51.5293|-174.6197|  16.40|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jug6.php</qu198>
-<qu199>  4.5|2013/09/14 17:00:08|  -2.1695| -78.6240| 122.70|Ecuador|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jufn.php</qu199>
-<qu200>  2.9|2013/09/14 16:39:50|  57.7191|-154.8194|  11.30|Kodiak Island region, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10805933.php</qu200>
-<qu201>  4.2|2013/09/14 16:34:01|  19.1264| -64.8455|  48.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257011.php</qu201>
-<qu202>  3.2|2013/09/14 16:27:18|  59.5802|-151.9569|  84.40|Kenai Peninsula, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10805916.php</qu202>
-<qu203>  2.7|2013/09/14 16:24:12|  19.1615| -64.8588|  19.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257027.php</qu203>
-<qu204>  3.0|2013/09/14 16:07:20|  18.6760| -68.1717| 109.00|Dominican Republic region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257028.php</qu204>
-<qu205>  2.7|2013/09/14 15:48:17|  18.2507| -67.1979|  26.00|Mona Passage, Puerto Rico|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257002.php</qu205>
-<qu206>  3.4|2013/09/14 15:44:44|  18.9391| -64.7845|  72.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257010.php</qu206>
-<qu207>  5.8|2013/09/14 15:42:46|  51.5537|-174.7226|  24.90|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jue6.php</qu207>
-<qu208>  3.1|2013/09/14 15:30:07|  19.1082| -64.8712|  24.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257022.php</qu208>
-<qu209>  3.0|2013/09/14 15:24:43|  19.0825| -64.8482|  32.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257024.php</qu209>
-<qu210>  3.0|2013/09/14 15:14:53|  19.0974| -64.8555|  39.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257021.php</qu210>
-<qu211>  3.0|2013/09/14 14:52:53|  18.9831| -64.8014|  62.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257031.php</qu211>
-<qu212>  3.6|2013/09/14 14:46:33|  19.1151| -64.8517|  45.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257008.php</qu212>
-<qu213>  2.8|2013/09/14 14:41:41|  19.1697| -64.8908|  24.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257023.php</qu213>
-<qu214>  3.0|2013/09/14 14:41:41|  19.0480| -64.8358|  48.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257019.php</qu214>
-<qu215>  2.9|2013/09/14 14:40:49|  19.0400| -64.8235|  56.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257017.php</qu215>
-<qu216>  2.7|2013/09/14 14:39:38|  19.0494| -64.8606|  50.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257016.php</qu216>
-<qu217>  3.0|2013/09/14 14:37:17|  18.9251| -64.8328|  67.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257020.php</qu217>
-<qu218>  2.7|2013/09/14 14:32:46|  19.1140| -64.8470|  50.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257015.php</qu218>
-<qu219>  3.4|2013/09/14 14:30:35|  19.0575| -64.8160|  55.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257006.php</qu219>
-<qu220>  3.0|2013/09/14 14:26:56|  18.9874| -64.8200|  64.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257012.php</qu220>
-<qu221>  3.4|2013/09/14 14:21:25|  19.0419| -64.8410|  49.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257007.php</qu221>
-<qu222>  3.0|2013/09/14 14:18:00|  19.1105| -64.8571|  42.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257014.php</qu222>
-<qu223>  3.1|2013/09/14 14:16:25|  19.1019| -64.8815|  35.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257013.php</qu223>
-<qu224>  2.6|2013/09/14 14:14:22|  18.9796| -64.7929|  57.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257009.php</qu224>
-<qu225>  3.5|2013/09/14 14:09:28|  19.0237| -64.8349|  58.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257030.php</qu225>
-<qu226>  4.4|2013/09/14 14:04:17|  19.0533| -64.8430|  46.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257005.php</qu226>
-<qu227>  4.6|2013/09/14 12:42:02|  38.6323| 142.3650|  50.10|near the east coast of Honshu, Japan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jucl.php</qu227>
-<qu228>  4.6|2013/09/14 12:37:08| -27.9186| -67.2617| 127.70|Catamarca, Argentina|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juck.php</qu228>
-<qu229>  2.5|2013/09/14 12:17:14|  61.4128|-150.1884|  34.00|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10805838.php</qu229>
-<qu230>  4.1|2013/09/14 10:25:36|  32.4113|-115.2148|  10.00|Baja California, Mexico|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11364370.php</qu230>
-<qu231>  4.1|2013/09/14 10:14:06|  41.5362|  48.6734|  20.10|Azerbaijan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jubr.php</qu231>
-<qu232>  2.9|2013/09/14 10:10:48|  19.0363| -64.8991|  33.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257004.php</qu232>
-<qu233>  2.6|2013/09/14 10:04:57|  19.1256| -67.2161|  19.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13257003.php</qu233>
-<qu234>  4.6|2013/09/14 10:04:27|  -0.1373| 124.8164|  67.00|Molucca Sea|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jubn.php</qu234>
-<qu235>  3.1|2013/09/14 09:02:32|  56.8947|-156.1902|  62.80|Alaska Peninsula|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10805786.php</qu235>
-<qu236>  4.7|2013/09/14 08:44:33|  35.4877| 140.8811|  32.20|near the east coast of Honshu, Japan|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jub7.php</qu236>
-<qu237>  2.5|2013/09/14 07:14:59|  49.0717|-125.5750|  14.80|Vancouver Island, Canada region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juet.php</qu237>
-<qu238>  4.4|2013/09/14 06:08:42| -37.7407| -73.6534|  18.40|offshore Bio-Bio, Chile|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juad.php</qu238>
-<qu239>  3.0|2013/09/14 05:51:47|  61.5597|-149.8088|  29.30|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10805745.php</qu239>
-<qu240>  4.3|2013/09/14 05:13:06|   2.1496| 128.3630|  55.90|Halmahera, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000juay.php</qu240>
-<qu241>  2.5|2013/09/14 05:02:00|  34.1832|-116.9532|  13.30|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11364314.php</qu241>
-<qu242>  2.5|2013/09/14 03:28:36|  40.7917|-124.3407|  18.50|offshore Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72070096.php</qu242>
-<qu243>  5.5|2013/09/14 00:27:14|  51.5199|-174.6909|  23.20|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000ju8j.php</qu243>
-<qu244>  4.6|2013/09/13 20:50:16|  11.8031| 141.8289|  54.30|State of Yap, Federated States of Micronesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000ju2v.php</qu244>
-<qu245>  5.0|2013/09/13 19:30:35| -53.7828|   2.4790|  14.80|Bouvet Island region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jtxz.php</qu245>
-<qu246>  2.7|2013/09/13 19:21:30|  33.7915|-117.6348|   2.50|Greater Los Angeles area, California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11364146.php</qu246>
-<qu247>  2.6|2013/09/13 19:07:59|  61.2907|-147.2704|  23.60|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10805233.php</qu247>
-<qu248>  4.6|2013/09/13 18:44:07|   1.7414| 127.4003| 116.10|Halmahera, Indonesia|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/usc000jtuu.php</qu248>
-<qu249>  3.0|2013/09/13 15:40:39|  18.6569| -64.9885|  36.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13256006.php</qu249>
+<qu002>  2.5|2013/10/01 20:44:39|  38.8340|-122.8022|   2.30|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72079621.php</qu002>
+<qu003>  2.6|2013/10/01 20:17:15|  62.2540|-150.8158|  46.00|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10815814.php</qu003>
+<qu004>  2.7|2013/10/01 17:51:26|  38.8343|-122.7948|   2.50|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72079496.php</qu004>
+<qu005>  3.2|2013/10/01 17:30:48|  61.5510|-148.3818|  22.60|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10815652.php</qu005>
+<qu006>  2.6|2013/10/01 16:01:47|  60.4081|-147.2458|   9.80|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10815622.php</qu006>
+<qu007>  2.9|2013/10/01 14:27:33|  51.6568|-175.1590|  26.90|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10815572.php</qu007>
+<qu008>  3.1|2013/10/01 14:15:37|  61.3458|-141.1203|   5.70|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10815562.php</qu008>
+<qu009>  2.6|2013/10/01 09:50:50|  18.7667| -64.5865|  40.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13274001.php</qu009>
+<qu010>  2.5|2013/10/01 07:30:13|  60.1126|-141.6706|  17.70|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10815472.php</qu010>
+<qu011>  2.8|2013/10/01 06:13:59|  58.1304|-154.7175|  97.40|Alaska Peninsula|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10815447.php</qu011>
+<qu012>  2.6|2013/10/01 04:19:37|  60.6877|-152.6817| 100.00|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10815409.php</qu012>
+<qu013>  2.5|2013/10/01 03:49:38|  18.6595| -66.8277|  64.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13274000.php</qu013>
+<qu014>  3.1|2013/10/01 03:48:59|  60.3911|-144.8213|  29.20|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10815376.php</qu014>
+<qu015>  2.5|2013/10/01 01:04:46|  60.0389|-152.7503|  98.30|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10815301.php</qu015>
+<qu016>  3.2|2013/09/30 21:29:44|  51.6885|-175.1037|  25.80|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10815053.php</qu016>
+<qu017>  2.9|2013/09/30 21:00:26|  58.5939|-153.1258|  64.20|Kodiak Island region, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10815022.php</qu017>
+<qu018>  3.1|2013/09/30 19:13:25|  19.7630|-156.5815|  30.60|Hawaii region, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60569551.php</qu018>
+<qu019>  3.7|2013/09/30 19:00:06|  19.3835|-155.2412|   2.90|Island of Hawaii, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60569521.php</qu019>
+<qu020>  2.7|2013/09/30 17:35:33|  34.0313|-117.2472|  16.50|Greater Los Angeles area, California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11371754.php</qu020>
+<qu021>  2.7|2013/09/30 15:57:35|  19.3830|-155.2378|   3.50|Island of Hawaii, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60569461.php</qu021>
+<qu022>  2.8|2013/09/30 12:00:34|  19.1131| -65.9309|  35.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273027.php</qu022>
+<qu023>  2.9|2013/09/30 08:28:46|  19.3890|-155.2732|   3.10|Island of Hawaii, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60569321.php</qu023>
+<qu024>  3.7|2013/09/30 06:32:02|  61.9386|-151.0771|   7.90|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10814612.php</qu024>
+<qu025>  6.7|2013/09/30 05:55:54| -30.9000|-177.6000|  33.00|Kermadec Islands, New Zealand|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/at00mtwzi7.php</qu025>
+<qu026>  2.7|2013/09/30 05:13:37|  18.9090| -66.8905|  52.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273019.php</qu026>
+<qu027>  2.6|2013/09/30 05:06:12|  18.9531| -66.8448|  56.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273021.php</qu027>
+<qu028>  3.0|2013/09/30 05:02:06|  19.0354| -66.8080|  31.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273017.php</qu028>
+<qu029>  3.7|2013/09/30 04:23:28|  32.8737|-115.9947|   9.40|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11371586.php</qu029>
+<qu030>  2.6|2013/09/30 04:11:39|  19.0729| -66.8154|  25.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273024.php</qu030>
+<qu031>  2.8|2013/09/30 02:39:26|  18.9190| -66.8041|  58.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273023.php</qu031>
+<qu032>  2.8|2013/09/30 02:24:24|  18.8645| -66.8455|  58.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273022.php</qu032>
+<qu033>  2.5|2013/09/30 02:10:52|  19.0035| -66.8880|   9.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273018.php</qu033>
+<qu034>  2.7|2013/09/30 02:09:40|  18.9743| -66.8669|  41.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273020.php</qu034>
+<qu035>  2.5|2013/09/30 02:06:51|  19.0004| -66.6577|  46.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273016.php</qu035>
+<qu036>  2.8|2013/09/30 01:59:41|  18.9832| -66.8338|  28.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273005.php</qu036>
+<qu037>  2.9|2013/09/30 01:29:15|  18.9631| -66.8529|  43.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273015.php</qu037>
+<qu038>  3.1|2013/09/30 01:26:13|  19.2059| -66.9943|  46.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273004.php</qu038>
+<qu039>  2.7|2013/09/30 01:22:47|  18.8731| -66.5863|  17.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273014.php</qu039>
+<qu040>  2.8|2013/09/30 01:20:04|  18.9750| -66.8346|  50.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273013.php</qu040>
+<qu041>  2.9|2013/09/30 01:18:04|  19.0839| -66.8604|  32.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273012.php</qu041>
+<qu042>  2.8|2013/09/30 01:12:21|  18.9419| -66.7611|  63.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273011.php</qu042>
+<qu043>  2.7|2013/09/30 01:06:36|  18.9934| -66.8024|  10.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273010.php</qu043>
+<qu044>  2.9|2013/09/30 01:03:17|  40.6103|-124.8747|  35.90|offshore Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72078856.php</qu044>
+<qu045>  2.9|2013/09/30 01:00:23|  19.0158| -66.8671|  28.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273006.php</qu045>
+<qu046>  2.6|2013/09/30 00:58:21|  19.0077| -66.8476|  23.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273009.php</qu046>
+<qu047>  2.9|2013/09/30 00:57:05|  18.9860| -66.8452|  43.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273008.php</qu047>
+<qu048>  2.7|2013/09/30 00:55:19|  18.9361| -66.8480|  41.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273003.php</qu048>
+<qu049>  2.6|2013/09/30 00:54:35|  18.9419| -66.8478|  50.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273002.php</qu049>
+<qu050>  2.6|2013/09/30 00:52:16|  18.9465| -66.8355|  40.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13273001.php</qu050>
+<qu051>  2.8|2013/09/30 00:32:52|  38.8057|-122.7383|   2.70|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72078826.php</qu051>
+<qu052>  3.0|2013/09/29 21:15:20|  61.5700|-141.1995|   0.00|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10814452.php</qu052>
+<qu053>  2.9|2013/09/29 16:34:17|  50.1040| 179.5582|   3.50|Rat Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10814398.php</qu053>
+<qu054>  3.1|2013/09/29 14:35:59|  51.7946| 176.7460|  40.70|Rat Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10814369.php</qu054>
+<qu055>  2.7|2013/09/29 09:36:37|  19.2092|-155.5368|  35.40|Island of Hawaii, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60568841.php</qu055>
+<qu056>  3.3|2013/09/29 09:14:09|  18.0888| -68.3988| 127.00|Dominican Republic region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13272002.php</qu056>
+<qu057>  2.8|2013/09/29 08:47:49|  18.7747| -66.5948|  34.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13272001.php</qu057>
+<qu058>  3.6|2013/09/29 08:41:31|  32.9003|-116.2872|   1.70|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11371154.php</qu058>
+<qu059>  2.8|2013/09/29 07:47:13|  62.6613|-149.4277|  14.30|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10814286.php</qu059>
+<qu060>  2.5|2013/09/29 04:44:01|  64.8516|-148.9215|  15.50|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10814246.php</qu060>
+<qu061>  2.6|2013/09/29 03:56:05|  60.6265|-152.1033|  85.90|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10814236.php</qu061>
+<qu062>  2.5|2013/09/29 02:59:37|  60.2396|-152.3897|  99.80|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10814217.php</qu062>
+<qu063>  3.1|2013/09/29 01:18:40|  66.7901|-145.8740|   0.00|northern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10814192.php</qu063>
+<qu064>  3.3|2013/09/29 00:36:16|  32.8973|-116.2755|   1.80|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11371058.php</qu064>
+<qu065>  2.5|2013/09/28 23:21:20|  52.2434|-170.5181|  25.70|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10815239.php</qu065>
+<qu066>  2.6|2013/09/28 22:26:20|  64.8509|-147.3788|  18.90|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10814089.php</qu066>
+<qu067>  2.6|2013/09/28 21:47:50|  60.7403|-134.5192| 112.60|Southern Yukon Territory, Canada|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10814085.php</qu067>
+<qu068>  2.6|2013/09/28 18:57:20|  62.2808|-148.5982|  41.60|Central Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10814038.php</qu068>
+<qu069>  2.8|2013/09/28 18:50:21|  37.3657|-118.4162|  11.10|Central California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72078041.php</qu069>
+<qu070>  2.6|2013/09/28 16:42:54|  18.8425| -64.7396|  72.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271034.php</qu070>
+<qu071>  2.6|2013/09/28 16:26:45|  19.1058| -64.8145|  34.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271033.php</qu071>
+<qu072>  2.6|2013/09/28 16:18:15|  19.0981| -64.8657|  11.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271035.php</qu072>
+<qu073>  2.6|2013/09/28 13:29:06|  18.1018| -64.9280|   9.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271031.php</qu073>
+<qu074>  3.0|2013/09/28 11:19:51|  18.9692| -65.1365|  15.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271018.php</qu074>
+<qu075>  3.4|2013/09/28 10:18:23|  18.9109| -65.2257|  41.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271012.php</qu075>
+<qu076>  2.9|2013/09/28 09:53:13|  60.1661|-152.7682| 106.30|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10813905.php</qu076>
+<qu077>  3.0|2013/09/28 09:26:52|  18.9636| -65.1692|  47.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271030.php</qu077>
+<qu078>  3.2|2013/09/28 09:22:13|  18.8502| -65.1232|  61.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271029.php</qu078>
+<qu079>  3.0|2013/09/28 09:14:41|  18.9943| -65.1765|  35.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271028.php</qu079>
+<qu080>  2.8|2013/09/28 09:07:31|  32.5798|-115.6880|  14.20|Baja California, Mexico|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11370682.php</qu080>
+<qu081>  2.7|2013/09/28 09:04:55|  18.9398| -65.1837|  51.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271027.php</qu081>
+<qu082>  3.3|2013/09/28 08:59:06|  18.9694| -65.1613|   7.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271024.php</qu082>
+<qu083>  3.1|2013/09/28 08:54:21|  41.7178|-109.8507|   3.20|Wyoming|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/uu60039322.php</qu083>
+<qu084>  2.8|2013/09/28 08:52:44|  19.0189| -65.1652|  32.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271022.php</qu084>
+<qu085>  3.1|2013/09/28 08:50:10|  18.9342| -65.0835|  54.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271020.php</qu085>
+<qu086>  2.8|2013/09/28 08:48:11|  19.0445| -65.1330|  32.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271021.php</qu086>
+<qu087>  2.8|2013/09/28 08:41:38|  18.9260| -65.1290|  45.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271019.php</qu087>
+<qu088>  3.2|2013/09/28 08:38:51|  18.8857| -65.1585|  52.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271017.php</qu088>
+<qu089>  2.8|2013/09/28 08:28:26|  19.0254| -65.1804|  30.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271016.php</qu089>
+<qu090>  3.3|2013/09/28 08:07:33|  18.9500| -65.0895|  56.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271003.php</qu090>
+<qu091>  2.6|2013/09/28 06:35:51|  18.9664| -65.2009|   9.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271013.php</qu091>
+<qu092>  3.1|2013/09/28 06:08:57|  18.8518| -65.1709|  59.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271011.php</qu092>
+<qu093>  3.2|2013/09/28 05:44:32|  18.8314| -65.1641|  64.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271000.php</qu093>
+<qu094>  2.6|2013/09/28 05:30:38|  19.0417| -65.1412|  29.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271010.php</qu094>
+<qu095>  3.3|2013/09/28 05:28:00|  18.9216| -65.0775|  72.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271009.php</qu095>
+<qu096>  2.7|2013/09/28 05:16:19|  18.8302| -64.4477|  36.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271007.php</qu096>
+<qu097>  2.9|2013/09/28 05:05:07|  19.0013| -65.1785|  12.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271006.php</qu097>
+<qu098>  3.1|2013/09/28 04:56:19|  19.1030| -65.1925|  30.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271005.php</qu098>
+<qu099>  3.1|2013/09/28 04:52:08|  18.9853| -65.1259|  14.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271004.php</qu099>
+<qu100>  3.0|2013/09/28 04:35:52|  18.9564| -65.0579|  48.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271002.php</qu100>
+<qu101>  3.1|2013/09/28 04:13:07|  18.8355| -65.2741|  59.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13271001.php</qu101>
+<qu102>  3.3|2013/09/27 23:00:33|  19.8570| -64.5678|  76.00|north of the Virgin Islands|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13270013.php</qu102>
+<qu103>  2.8|2013/09/27 22:32:37|  50.0540| 179.6832|   6.90|Rat Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10813619.php</qu103>
+<qu104>  3.0|2013/09/27 22:26:41|  18.7786| -66.5774|  33.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13270011.php</qu104>
+<qu105>  2.8|2013/09/27 19:01:48|  59.9939|-152.7064|  87.70|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10813535.php</qu105>
+<qu106>  2.7|2013/09/27 14:40:11|  19.0426| -65.4675|  13.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13270010.php</qu106>
+<qu107>  3.4|2013/09/27 13:57:37|  55.7505|-135.5965|  10.00|off the coast of Southeastern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10814822.php</qu107>
+<qu108>  2.9|2013/09/27 12:35:54|  53.5488|-164.9296|  49.50|Unimak Island region, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10813419.php</qu108>
+<qu109>  3.2|2013/09/27 11:56:04|  19.5760| -64.5260|  12.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13270007.php</qu109>
+<qu110>  3.4|2013/09/27 10:12:19|  18.9430| -64.1806| 109.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13270004.php</qu110>
+<qu111>  3.0|2013/09/27 09:39:35|  19.0830| -67.6837|   3.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13270006.php</qu111>
+<qu112>  3.2|2013/09/27 08:15:38|  19.0895| -67.7188|  51.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13270003.php</qu112>
+<qu113>  3.0|2013/09/27 07:57:11|  18.9417| -64.3908|  37.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13270005.php</qu113>
+<qu114>  2.6|2013/09/27 07:22:16|  33.5307|-115.8655|   1.90|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11370386.php</qu114>
+<qu115>  2.7|2013/09/27 06:51:43|  53.2175|-168.4756|   6.90|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10813370.php</qu115>
+<qu116>  2.9|2013/09/27 06:45:11|  18.4582| -65.7782| 102.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13270002.php</qu116>
+<qu117>  3.3|2013/09/27 06:16:22|  18.2513| -68.0660| 108.00|Mona Passage, Dominican Republic|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13270000.php</qu117>
+<qu118>  2.7|2013/09/27 05:56:24|  19.1280| -65.0381|  96.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13270001.php</qu118>
+<qu119>  2.8|2013/09/27 05:18:40|  53.5391|-164.8539|  30.20|Unimak Island region, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10813348.php</qu119>
+<qu120>  3.1|2013/09/27 04:57:28|  53.5237|-164.8275|  25.60|Unimak Island region, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10813346.php</qu120>
+<qu121>  2.7|2013/09/27 04:54:48|  53.5731|-164.9652|  51.10|Unimak Island region, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10813345.php</qu121>
+<qu122>  2.6|2013/09/27 01:55:16|  53.2272|-168.4434|  10.10|Fox Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10813321.php</qu122>
+<qu123>  2.6|2013/09/27 01:12:31|  56.3870|-156.6152|   7.20|Alaska Peninsula|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10813308.php</qu123>
+<qu124>  3.4|2013/09/26 22:12:43|  18.8006| -68.7360| 162.00|Dominican Republic|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13269006.php</qu124>
+<qu125>  3.5|2013/09/26 18:44:01|  18.2122| -67.8785| 168.00|Mona Passage, Puerto Rico|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13269005.php</qu125>
+<qu126>  3.6|2013/09/26 18:36:02|  19.3578|-155.0843|   7.70|Island of Hawaii, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60567461.php</qu126>
+<qu127>  2.5|2013/09/26 16:38:37|  33.4278|-116.4478|   8.50|Southern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ci11370194.php</qu127>
+<qu128>  2.8|2013/09/26 07:56:39|  36.7562|-121.3497|   8.20|Central California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72076716.php</qu128>
+<qu129>  4.0|2013/09/26 07:48:03|  51.4140|-175.0930|  23.70|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10812811.php</qu129>
+<qu130>  2.8|2013/09/26 07:45:51|  51.3632|-175.0619|  25.50|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10812809.php</qu130>
+<qu131>  2.6|2013/09/26 04:09:03|  18.8365| -64.4349|  32.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13269002.php</qu131>
+<qu132>  4.4|2013/09/26 02:35:36|  55.9110|-135.5400|  10.00|off the coast of Southeastern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/at00mtpojc.php</qu132>
+<qu133>  3.3|2013/09/26 01:14:48|  19.4822| -64.6615|  90.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13269000.php</qu133>
+<qu134>  2.6|2013/09/25 21:03:10|  18.3330| -67.9442|  11.00|Dominican Republic region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13268004.php</qu134>
+<qu135>  2.7|2013/09/25 20:46:29|  19.0349| -64.4742|  25.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13268005.php</qu135>
+<qu136>  2.9|2013/09/25 20:07:56|  19.3031| -66.4032|  48.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13268003.php</qu136>
+<qu137>  2.7|2013/09/25 17:12:33|  51.2375|-174.4282|   9.00|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10812476.php</qu137>
+<qu138>  6.8|2013/09/25 16:42:42| -16.1430| -74.9310|  33.00|near the coast of southern Peru|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pt13268000.php</qu138>
+<qu139>  3.1|2013/09/25 16:01:29|  18.1851| -68.1175|  79.00|Mona Passage, Dominican Republic|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13268001.php</qu139>
+<qu140>  2.6|2013/09/25 15:06:07|  61.3580|-150.0436|  39.80|Southern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10812438.php</qu140>
+<qu141>  3.0|2013/09/25 14:34:20|  19.3810| -64.8880|  79.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13268000.php</qu141>
+<qu142>  5.8|2013/09/25 13:58:19|  52.7550| 171.0910|  31.00|Near Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/at00mtoph7.php</qu142>
+<qu143>  2.6|2013/09/25 13:32:26|  19.0536| -67.6317|  10.00|Puerto Rico region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13268002.php</qu143>
+<qu144>  2.9|2013/09/25 12:23:34|  51.5465|-175.2350|  25.50|Andreanof Islands, Aleutian Islands, Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10812412.php</qu144>
+<qu145>  2.7|2013/09/25 05:54:27|  66.0309|-148.4990|  14.40|northern Alaska|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10812367.php</qu145>
+<qu146>  3.3|2013/09/25 01:09:14|  54.3013|-161.4327|  24.90|Alaska Peninsula|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/ak10813121.php</qu146>
+<qu147>  2.8|2013/09/25 00:49:42|  20.1500|-155.7923|  25.50|Hawaii region, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60566641.php</qu147>
+<qu148>  2.9|2013/09/24 23:41:30|  20.1458|-155.8090|  24.50|Hawaii region, Hawaii|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/hv60566601.php</qu148>
+<qu149>  2.8|2013/09/24 23:39:46|  19.0963| -64.4278|  25.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13267004.php</qu149>
+<qu150>  3.1|2013/09/24 23:12:57|  19.3533| -64.2914|  82.00|Virgin Islands region|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/pr13267003.php</qu150>
+<qu151>  3.8|2013/09/24 21:36:34|  40.4550|-123.4072|  34.50|Northern California|http://earthquake.usgs.gov/earthquakes/recenteqsww/Quakes/nc72076146.php</qu151>
 </quakes>
 <quakes>
 <wequ001>  9.5|1960/05/22 19:11:14|  -38.24|-73.05 |   0.0|Chile, #1|http://earthquake.usgs.gov/regional/world/events/1960_05_22.php</wequ001>
