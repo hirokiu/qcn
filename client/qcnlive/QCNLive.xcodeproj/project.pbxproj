@@ -592,7 +592,7 @@
 					"-L/Users/carlgt1/projects/qcn/client/mac_build",
 				);
 				PRODUCT_NAME = QCNLive;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.8;
 				SYMROOT = ../bin/;
 				VALID_ARCHS = x86_64;
 			};
@@ -727,7 +727,7 @@
 					"-L/Users/carlgt1/projects/qcn/client/mac_build",
 				);
 				PRODUCT_NAME = QCNLive;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.8;
 				SYMROOT = ../bin/;
 				VALID_ARCHS = x86_64;
 			};
