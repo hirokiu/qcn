@@ -192,7 +192,7 @@ int open_database() {
             log_messages.printf(MSG_CRITICAL,
                 "lost connection to database - trying to reconnect\n"
             );
-         }
+        }
 /* CMC here
          else {
             return 0;
@@ -208,7 +208,6 @@ int open_database() {
         log_messages.printf(MSG_CRITICAL, "can't open database\n");
         return retval;
     }
-
 // CMC here -- create the trigmem db connection
     retval = trigmem_db.open(
         config.trigmem_db_name, config.trigmem_db_host, config.trigmem_db_user, config.trigmem_db_passwd
@@ -218,7 +217,6 @@ int open_database() {
         return retval;
     }
 // end CMC
-
     db_opened = true;
     return 0;
 }

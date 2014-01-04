@@ -80,6 +80,7 @@ QCN::execute()
         getTriggers();  // reads the memories from the trigger memory table into a global vector
         detectEvent();     // searches the vector of triggers for matching events
         k++;
+       // cout << " HI " << k << endl;
 
         check_stop_daemons();  // checks for a quit request /home/boinc/projects/boinc/sched/sched_util.h
         dTimeCurrent = dtime();
@@ -253,19 +254,16 @@ QCN::detectEvent()
                 e.dirty = true;
             }
 
-            //1:New Event -->continue
-            //2:Old Event && v.time_trigger - e.e_t_detect > 4 --> continue
-            //3:Old Event && vi.cnt > e.e_cnt --> continue
-            //For New event we will get e.e_cnt = 0 so condition 3 will be satisfied if we use ||  
-            if ( vi.c_cnt > e.e_cnt || (vi.time_trigger - e.e_t_detect > 4.) ) {
+            if ( !bEventFound && (vi.time_trigger - e.e_t_detect > 4.) ) {
                 // Only do new event location ... if more triggers for same event (or new event - no prior triggers)
-                if (!eventLocate(bEventFound,e,i) || e.e_r2 < 0.5){
-                    break;
+                bool isEvent = eventLocate(bEventFound, e, i);
+                bool isContinue = (isEvent && e.e_r2 >= 0.5);
+                if (isContinue){
+                   e.e_cnt = vi.c_cnt;
+                   bInsertEvent = (bool) (e.qcn_quakeid == 0); // if 0 then we don't have a quake id yet hence need to insert
+                   estimateMagnitude(e, i);                // Estimate the magnitude of the earthquake
+                   intensityMap(bInsertEvent, e, i);       // This generates the intensity map -- also where quake info updated in the qcn_quake & qcn_trigger tables    }
                 }
-                e.e_cnt = vi.c_cnt;
-                bInsertEvent = (bool) (e.qcn_quakeid == 0); // if 0 then we don't have a quake id yet hence need to insert
-                estimateMagnitude(e, i);                // Estimate the magnitude of the earthquake
-                intensityMap(bInsertEvent, e, i);       // This generates the intensity map -- also where quake info updated in the qcn_quake & qcn_trigger tables    }
             }
 
             if (bEventFound) {                            // replace element

@@ -12,16 +12,18 @@ CC       = gcc
 CXX      = g++
 LEX      = flex
 YACC     = yacc
-BOINC_DIR = /home/boinc/projects/boinc
-MYSQL_DIR = /usr/local/mysql
+
+BOINCDIR = ../../../boinc
+QCNTRIGDIR = ../trigger
+
 CFLAGS   = -pipe -Wall -W -O2  -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT
 CXXFLAGS = -pipe -o3 -funroll-loops -frounding-math -fPIC -Wall -W -O2  -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT
 LEXFLAGS = 
 YACCFLAGS= -d
-INCPATH  = -I. -I$(BOINC_DIR) -I$(BOINC_DIR)/lib -I$(BOINC_DIR)/tools -I$(BOINC_DIR)/db -I$(BOINC_DIR)/sched -I$(MYSQL_DIR)/include -I../trigger -I/usr/local/include -I../../client/util
+INCPATH  = -I/usr/lib64/qt-3.3/mkspecs/default -I. -I$(BOINCDIR) -I$(BOINCDIR)/lib -I$(BOINCDIR)/tools -I$(BOINCDIR)/db -I$(BOINCDIR)/sched -I/usr/local/mysql-5.5.16-linux2.6-x86_64/include -I$(QCNTRIGDIR) -I/usr/local/include -I../../../client/util -I$(QTDIR)/include
 LINK     = g++
 LFLAGS   = 
-LIBS     = $(SUBLIBS) -L$(BOINC_DIR)/lib -lboinc -L$(MYSQL_DIR)/lib -lmysqlclient_r -L/usr/local/ssl/lib -lcrypto -lssl -L/usr/local/lib -lcurl -lm
+LIBS     = $(SUBLIBS) -L$(QTDIR)/lib -L/usr/local/mysql/lib -lmysqlclient_r -L/home/boinc/projects/boinc/lib -L/home/boinc/projects/boinc/lib/.libs -lboinc -L/usr/local/ssl/lib -lcrypto -lssl -L/usr/local/lib -lcurl -lqt-mt -lXext -lX11 -lm
 AR       = ar cqs
 RANLIB   = 
 MOC      = $(QTDIR)/bin/moc
@@ -52,12 +54,13 @@ HEADERS = Crust2.h \
 		QCNEvent.h \
 		QCNTrigger.h \
 		QCN.h
-SOURCES = $(BOINC_DIR)/db/db_base.cpp \
-		$(BOINC_DIR)/sched/sched_msgs.cpp \
-		$(BOINC_DIR)/sched/sched_util.cpp \
-		$(BOINC_DIR)/sched/sched_limit.cpp \
-		$(BOINC_DIR)/sched/sched_config.cpp \
-		$(BOINC_DIR)/db/boinc_db.cpp \
+SOURCES =       $(BOINCDIR)/db/db_base.cpp \
+		$(BOINCDIR)/sched/sched_msgs.cpp \
+		$(BOINCDIR)/sched/sched_util.cpp \
+		$(BOINCDIR)/sched/sched_limit.cpp \
+		$(BOINCDIR)/sched/sched_config.cpp \
+		$(BOINCDIR)/lib/parse.cpp \
+		$(BOINCDIR)/db/boinc_db.cpp \
 		Crust2.cpp \
 		QCNBounds.cpp \
 		QCNEvent.cpp \
@@ -69,6 +72,7 @@ OBJECTS = db_base.o \
 		sched_util.o \
 		sched_limit.o \
 		sched_config.o \
+		parse.o \
 		boinc_db.o \
 		Crust2.o \
 		QCNBounds.o \
@@ -82,6 +86,7 @@ UICIMPLS =
 SRCMOC   = 
 OBJMOC = 
 DIST	   = qcn.pro
+QMAKE_TARGET = QCNTrigMonitor
 DESTDIR  = /var/www/boinc/sensor/bin/
 TARGET   = /var/www/boinc/sensor/bin/QCNTrigMonitor
 
@@ -148,41 +153,51 @@ FORCE:
 
 ####### Compile
 
-db_base.o: $(BOINC_DIR)/db/db_base.cpp $(BOINC_DIR)/db/db_base.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o db_base.o $(BOINC_DIR)/db/db_base.cpp
+db_base.o: $(BOINCDIR)/db/db_base.cpp $(BOINCDIR)/db/db_base.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o db_base.o $(BOINCDIR)/db/db_base.cpp
 
-sched_msgs.o: $(BOINC_DIR)/sched/sched_msgs.cpp $(BOINC_DIR)/sched/sched_msgs.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sched_msgs.o $(BOINC_DIR)/sched/sched_msgs.cpp
+sched_msgs.o: $(BOINCDIR)/sched/sched_msgs.cpp $(BOINCDIR)/sched/sched_msgs.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sched_msgs.o $(BOINCDIR)/sched/sched_msgs.cpp
 
-sched_util.o: $(BOINC_DIR)/sched/sched_util.cpp $(BOINC_DIR)/sched/sched_msgs.h \
-		$(BOINC_DIR)/sched/sched_util.h \
-		$(BOINC_DIR)/sched/sched_config.h \
-		$(BOINC_DIR)/sched/sched_limit.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sched_util.o $(BOINC_DIR)/sched/sched_util.cpp
+sched_util.o: $(BOINCDIR)/sched/sched_util.cpp $(BOINCDIR)/sched/sched_msgs.h \
+		$(BOINCDIR)/sched/sched_util.h \
+		$(BOINCDIR)/sched/sched_config.h \
+		$(BOINCDIR)/sched/sched_limit.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sched_util.o $(BOINCDIR)/sched/sched_util.cpp
 
-sched_limit.o: $(BOINC_DIR)/sched/sched_limit.cpp $(BOINC_DIR)/sched/sched_main.h \
-		$(BOINC_DIR)/sched/sched_limit.h \
-		$(BOINC_DIR)/sched/sched_config.h \
-		$(BOINC_DIR)/sched/sched_types.h \
-		$(BOINC_DIR)/sched/sched_shmem.h \
-		$(BOINC_DIR)/sched/sched_msgs.h \
-		../trigger/qcn_types.h \
-		$(BOINC_DIR)/sched/edf_sim.h \
-		$(BOINC_DIR)/sched/sched_util.h \
-		$(BOINC_DIR)/sched/hr_info.h \
-		$(BOINC_DIR)/sched/hr.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sched_limit.o $(BOINC_DIR)/sched/sched_limit.cpp
+sched_limit.o: $(BOINCDIR)/sched/sched_limit.cpp $(BOINCDIR)/sched/sched_main.h \
+		$(BOINCDIR)/sched/sched_limit.h \
+		$(BOINCDIR)/sched/sched_config.h \
+		$(BOINCDIR)/sched/sched_types.h \
+		$(BOINCDIR)/sched/sched_shmem.h \
+		$(BOINCDIR)/sched/sched_msgs.h \
+		$(QCNTRIGDIR)/qcn_types.h \
+		$(BOINCDIR)/sched/edf_sim.h \
+		$(BOINCDIR)/sched/sched_util.h \
+		$(BOINCDIR)/sched/hr_info.h \
+		$(BOINCDIR)/sched/hr.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sched_limit.o $(BOINCDIR)/sched/sched_limit.cpp
 
-sched_config.o: $(BOINC_DIR)/sched/sched_config.cpp $(BOINC_DIR)/sched/sched_msgs.h \
-		$(BOINC_DIR)/sched/sched_util.h \
-		$(BOINC_DIR)/sched/sched_config.h \
-		$(BOINC_DIR)/sched/sched_limit.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sched_config.o $(BOINC_DIR)/sched/sched_config.cpp
+sched_config.o: $(BOINCDIR)/sched/sched_config.cpp $(BOINCDIR)/sched/sched_msgs.h \
+		$(BOINCDIR)/sched/sched_util.h \
+		$(BOINCDIR)/sched/sched_config.h \
+		$(BOINCDIR)/sched/sched_limit.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sched_config.o $(BOINCDIR)/sched/sched_config.cpp
 
-boinc_db.o: $(BOINC_DIR)/db/boinc_db.cpp $(BOINC_DIR)/db/boinc_db.h \
-		$(BOINC_DIR)/db/db_base.h \
-		$(BOINC_DIR)/db/boinc_db_types.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o boinc_db.o $(BOINC_DIR)/db/boinc_db.cpp
+parse.o: $(BOINCDIR)/lib/parse.cpp $(BOINCDIR)/lib/boinc_win.h \
+		$(BOINCDIR)/lib/boinc_fcgi.h \
+		$(BOINCDIR)/lib/error_numbers.h \
+		$(BOINCDIR)/lib/str_util.h \
+		$(BOINCDIR)/lib/str_replace.h \
+		$(BOINCDIR)/lib/parse.h \
+		$(BOINCDIR)/lib/miofile.h \
+		$(BOINCDIR)/lib/mfile.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o parse.o $(BOINCDIR)/lib/parse.cpp
+
+boinc_db.o: $(BOINCDIR)/db/boinc_db.cpp $(BOINCDIR)/db/boinc_db.h \
+		$(BOINCDIR)/db/db_base.h \
+		$(BOINCDIR)/db/boinc_db_types.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o boinc_db.o $(BOINCDIR)/db/boinc_db.cpp
 
 Crust2.o: Crust2.cpp Crust2.h
 
@@ -191,7 +206,7 @@ QCNBounds.o: QCNBounds.cpp QCNBounds.h
 QCNEvent.o: QCNEvent.cpp QCNEvent.h
 
 QCNTrigger.o: QCNTrigger.cpp QCNTrigger.h \
-		../trigger/qcn_types.h
+		$(QCNTRIGDIR)/qcn_types.h
 
 QCN.o: QCN.cpp QCN.h \
 		QCNEvent.h \

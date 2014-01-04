@@ -38,14 +38,14 @@
 #include <errno.h>
 #include <sys/stat.h>
 
-#include "boinc_db.h"
 #include "backend_lib.h"
+#include "boinc_db.h"
 #include "error_numbers.h"
-#include "parse.h"
-#include "str_util.h"
-#include "str_replace.h"
-#include "util.h"
 #include "filesys.h"
+#include "parse.h"
+#include "str_replace.h"
+#include "str_util.h"
+#include "util.h"
 
 #include "sched_vda.h"
 
@@ -86,14 +86,14 @@ static bool find_host_by_other(DB_USER& user, HOST req_host, DB_HOST& host) {
     // Only check if all the fields are populated
     //
     if (strlen(req_host.domain_name) && strlen(req_host.last_ip_addr) && strlen(req_host.os_name) && strlen(req_host.p_model)) {
-        strcpy(dn, req_host.domain_name);
-        escape_string(dn, 512);
-        strcpy(ip, req_host.last_ip_addr);
-        escape_string(ip, 512);
-        strcpy(os, req_host.os_name);
-        escape_string(os, 512);
-        strcpy(pm, req_host.p_model);
-        escape_string(pm, 512);
+        safe_strcpy(dn, req_host.domain_name);
+        escape_string(dn, sizeof(dn));
+        safe_strcpy(ip, req_host.last_ip_addr);
+        escape_string(ip, sizeof(ip));
+        safe_strcpy(os, req_host.os_name);
+        escape_string(os, sizeof(os));
+        safe_strcpy(pm, req_host.p_model);
+        escape_string(pm, sizeof(pm));
 
         sprintf(buf,
             "where userid=%d and id>%d and domain_name='%s' and last_ip_addr = '%s' and os_name = '%s' and p_model = '%s'"
@@ -175,7 +175,7 @@ void unlock_sched() {
 // find the user's most recently-created host with given host CPID
 //
 static bool find_host_by_cpid(DB_USER& user, char* host_cpid, DB_HOST& host) {
-    char buf[256], buf2[256];
+    char buf[1024], buf2[256];
     sprintf(buf, "%s%s", host_cpid, user.email_addr);
     md5_block((const unsigned char*)buf, strlen(buf), buf2);
 
@@ -221,7 +221,7 @@ static void mark_results_over(DB_HOST& host) {
         wu.update_field(buf2);
 
         log_messages.printf(MSG_CRITICAL,
-            "[HOST#%d] [RESULT#%d] [WU#%d] changed CPID: marking in-progress result %s as client error!\n",
+            "[HOST#%d] [RESULT#%u] [WU#%u] changed CPID: marking in-progress result %s as client error!\n",
             host.id, result.id, result.workunitid, result.name
         );
     }
@@ -244,7 +244,7 @@ static void mark_results_over(DB_HOST& host) {
 //
 int authenticate_user() {
     int retval;
-    char buf[256];
+    char buf[1024];
     DB_HOST host;
     DB_USER user;
     DB_TEAM team;
@@ -302,6 +302,7 @@ int authenticate_user() {
                 strlcpy(
                     user.authenticator, g_request->authenticator, sizeof(user.authenticator)
                 );
+                escape_string(user.authenticator, sizeof(user.authenticator));
                 sprintf(buf, "where authenticator='%s'", user.authenticator);
                 retval = user.lookup(buf);
                 if (retval) {
@@ -368,6 +369,7 @@ lookup_user_and_make_new_host:
                 user.authenticator, g_request->authenticator,
                 sizeof(user.authenticator)
             );
+            escape_string(user.authenticator, sizeof(user.authenticator));
             sprintf(buf, "where authenticator='%s'", user.authenticator);
             retval = user.lookup(buf);
         }
@@ -440,7 +442,7 @@ make_new_host:
         host.userid = g_reply->user.id;
         host.rpc_seqno = 0;
         host.expavg_time = time(0);
-        strcpy(host.venue, g_reply->user.venue);
+        safe_strcpy(host.venue, g_reply->user.venue);
         host.fix_nans();
         retval = host.insert();
         if (retval) {
@@ -500,7 +502,7 @@ got_host:
 static int modify_host_struct(HOST& host) {
     host.timezone = g_request->host.timezone;
     strncpy(host.domain_name, g_request->host.domain_name, sizeof(host.domain_name));
-    char buf[256], buf2[256];
+    char buf[1024], buf2[1024];
     sprintf(buf, "[BOINC|%d.%d.%d]",
         g_request->core_client_major_version,
         g_request->core_client_minor_version,
@@ -549,8 +551,9 @@ static int modify_host_struct(HOST& host) {
     host.n_bwup = g_request->host.n_bwup;
     host.n_bwdown = g_request->host.n_bwdown;
     if (strlen(g_request->host.host_cpid)) {
-        strcpy(host.host_cpid, g_request->host.host_cpid);
+        safe_strcpy(host.host_cpid, g_request->host.host_cpid);
     }
+    strncpy(host.product_name, g_request->host.product_name, sizeof(host.product_name));
     host.fix_nans();
 
     return 0;
@@ -623,8 +626,8 @@ int send_result_abort() {
         if (i > 0) result_names.append(", ");
         result_names.append("'");
         char buf[1024];
-        strcpy(buf, orp.name);
-        escape_string(buf, 1024);
+        safe_strcpy(buf, orp.name);
+        escape_string(buf, sizeof(buf));
         result_names.append(buf);
         result_names.append("'");
     }
@@ -707,7 +710,7 @@ int send_result_abort() {
 // 2) send global prefs in reply msg if needed
 //
 int handle_global_prefs() {
-    char buf[BLOB_SIZE];
+    char buf[BLOB_SIZE+256];
     g_reply->send_global_prefs = false;
     bool have_working_prefs = (strlen(g_request->working_global_prefs_xml)>0);
     bool have_master_prefs = (strlen(g_request->global_prefs_xml)>0);
@@ -792,7 +795,7 @@ int handle_global_prefs() {
             if (config.debug_prefs) {
                 log_messages.printf(MSG_NORMAL, "[prefs] updating db prefs\n");
             }
-            strcpy(g_reply->user.global_prefs, g_request->global_prefs_xml);
+            safe_strcpy(g_reply->user.global_prefs, g_request->global_prefs_xml);
             DB_USER user;
             user.id = g_reply->user.id;
             escape_string(g_request->global_prefs_xml, sizeof(g_request->global_prefs_xml));
@@ -931,9 +934,9 @@ bool unacceptable_os() {
 
     for (i=0; i<config.ban_os->size(); i++) {
         regex_t& re = (*config.ban_os)[i];
-        strcpy(buf, g_request->host.os_name);
-        strcat(buf, "\t");
-        strcat(buf, g_request->host.os_version);
+        safe_strcpy(buf, g_request->host.os_name);
+        safe_strcat(buf, "\t");
+        safe_strcat(buf, g_request->host.os_version);
         if (!regexec(&re, buf, 0, NULL, 0)) {
             log_messages.printf(MSG_NORMAL,
                 "Unacceptable OS %s %s\n",
@@ -957,9 +960,9 @@ bool unacceptable_cpu() {
 
     for (i=0; i<config.ban_cpu->size(); i++) {
         regex_t& re = (*config.ban_cpu)[i];
-        strcpy(buf, g_request->host.p_vendor);
-        strcat(buf, "\t");
-        strcat(buf, g_request->host.p_model);
+        safe_strcpy(buf, g_request->host.p_vendor);
+        safe_strcat(buf, "\t");
+        safe_strcat(buf, g_request->host.p_model);
         if (!regexec(&re, buf, 0, NULL, 0)) {
             log_messages.printf(MSG_NORMAL,
                 "Unacceptable CPU %s %s\n",
@@ -1007,8 +1010,8 @@ void handle_msgs_from_host(DB_QCN_HOST_IPADDR& qhip) { // CMC mod line
     DB_MSG_FROM_HOST mfh;
     int retval;
 
-    // CMC here -- added i < 20 as seems to bomb out on large #'s of triggers 
-    for (i=0; i<g_request->msgs_from_host.size() && i < 20; i++) {
+    // CMC here -- may want to limit max # of triggers?
+    for (i=0; i<g_request->msgs_from_host.size(); i++) {
         g_reply->send_msg_ack = true;
         MSG_FROM_HOST_DESC& md = g_request->msgs_from_host[i];
         mfh.clear();
@@ -1021,7 +1024,6 @@ void handle_msgs_from_host(DB_QCN_HOST_IPADDR& qhip) { // CMC mod line
             "got msg from host; variety %s \n",
             mfh.variety
         );
-
    // CMC here -- begin handle triggers via handle_qcn_trigger
        // retval = mfh.insert();
         retval = 0;
@@ -1045,7 +1047,6 @@ void handle_msgs_from_host(DB_QCN_HOST_IPADDR& qhip) { // CMC mod line
         }
 //        retval = mfh.insert();
 // CMC here - end block for mfh insert
-
 
         if (retval) {
             log_messages.printf(MSG_CRITICAL,
@@ -1113,6 +1114,7 @@ static inline bool requesting_work() {
     if (g_request->cpu_req_secs > 0) return true;
     if (g_request->coprocs.nvidia.count && g_request->coprocs.nvidia.req_secs) return true;
     if (g_request->coprocs.ati.count && g_request->coprocs.ati.req_secs) return true;
+    if (g_request->coprocs.intel_gpu.count && g_request->coprocs.intel_gpu.req_secs) return true;
     if (ssp->have_nci_app) return true;
     return false;
 }
@@ -1445,6 +1447,7 @@ void handle_request(FILE* fin, FILE* fout, char* code_sign_key) {
     const char* p = sreq.parse(xp);
     double start_time = dtime();
     if (!p){
+
        // CMC here -- sreq has been parsed, see if contains a trigger
          //  loop through the msg_from_host vector and see that all entries are variety "trigger"
          //  IFF all entries are "trigger" should we bypass (i.e. may be part of another msg)
@@ -1486,11 +1489,11 @@ void handle_request(FILE* fin, FILE* fout, char* code_sign_key) {
         log_user_messages();
     }
 
-
   // CMC here -- next line to send a new param to SCHEDULER_REPLY::write e.g. to bypass quake list for project prefs etc
      sreply.write(fout, sreq, bTrigger, qhip);
      //sreply.write(fout, sreq);
   // CMC end
+
     log_messages.printf(MSG_NORMAL,
         "Scheduler ran %.3f seconds\n", dtime()-start_time
     );
