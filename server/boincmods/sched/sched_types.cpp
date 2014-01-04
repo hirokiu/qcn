@@ -1365,12 +1365,12 @@ int HOST::parse(XML_PARSER& xp) {
         if (xp.parse_string("cache_l2", stemp)) continue;
         if (xp.parse_string("cache_l3", stemp)) continue;
 #endif
+    }
 
 /* CMC HERE
         log_messages.printf(MSG_NORMAL,
             "HOST::parse(): unrecognized: %s\n", xp.parsed_tag
         );
-    }
 */
     return ERR_XML_PARSE;
 }
