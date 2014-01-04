@@ -1007,8 +1007,8 @@ void handle_msgs_from_host(DB_QCN_HOST_IPADDR& qhip) { // CMC mod line
     DB_MSG_FROM_HOST mfh;
     int retval;
 
-    // CMC here -- added i < 100 as seems to bomb out on large #'s of triggers 
-    for (i=0; i<g_request->msgs_from_host.size() && i < 100; i++) {
+    // CMC here -- added i < 20 as seems to bomb out on large #'s of triggers 
+    for (i=0; i<g_request->msgs_from_host.size() && i < 20; i++) {
         g_reply->send_msg_ack = true;
         MSG_FROM_HOST_DESC& md = g_request->msgs_from_host[i];
         mfh.clear();

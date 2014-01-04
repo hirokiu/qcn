@@ -32,7 +32,7 @@
 // which are 16MB in the DB
 //
 #define APP_VERSION_XML_BLOB_SIZE   262144
-#define MSG_FROM_HOST_BLOB_SIZE     262144
+#define MSG_FROM_HOST_BLOB_SIZE     1048576
 #define MSG_TO_HOST_BLOB_SIZE       262144
 
 struct BEST_APP_VERSION;
