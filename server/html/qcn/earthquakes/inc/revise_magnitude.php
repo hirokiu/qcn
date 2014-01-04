@@ -247,8 +247,8 @@ function revise_magnitude($edir) {
 
     //#51 (Updated 05/24/13) - Using ptime, Revised Trigger Data and CHCH Trigger data - ;
     //$qmag2 = $qmag2 + exp(0.0785*log($smag) + 0.0384*sqrt($dis) + 1.6071);
-    $ttmag[1] = $ttmag[1] + exp(0.0785*log($tpga[0]) + 0.0384*sqrt($dis) + 1.6071);
-    $ttmag[2] = $ttmag[2] + exp(0.0721*log($tpga[1]) + 0.0388*sqrt($dis) + 1.5976);
+    //$ttmag[1] = $ttmag[1] + exp(0.0785*log($tpga[0]) + 0.0384*sqrt($dis) + 1.6071);
+    //$ttmag[2] = $ttmag[2] + exp(0.0721*log($tpga[1]) + 0.0388*sqrt($dis) + 1.5976);
 
     //$ttmag[1] = $ttmag[1] + exp(0.0785*log($tmag[0]) + 0.0384*sqrt($dis) + 1.6071);
     //$ttmag[2] = $ttmag[2] + exp(0.0721*log($tmag[1]) + 0.0388*sqrt($dis) + 1.5976);
@@ -461,8 +461,8 @@ function revise_magnitude($edir) {
 
     //#51 (Updated 05/24/13) - Using ptime, Revised Trigger Data and CHCH Trigger data - ;
     //$qstd2 = $qstd2 + exp(0.0785*log($smag) + 0.0384*sqrt($dis) + 1.6071);
-    $ttstd[1] = $ttstd[1] + exp(0.0785*log($tpga[0]) + 0.0384*sqrt($dis) + 1.6071);
-    $ttstd[2] = $ttstd[2] + exp(0.0721*log($tpga[1]) + 0.0388*sqrt($dis) + 1.5976);
+    //$ttstd[1] = $ttstd[1] + exp(0.0785*log($tpga[0]) + 0.0384*sqrt($dis) + 1.6071);
+    //$ttstd[2] = $ttstd[2] + exp(0.0721*log($tpga[1]) + 0.0388*sqrt($dis) + 1.5976);
     //$ttstd[3] = $ttstd[3] + exp(0.0761*log($tpga[2]) + 0.0384*sqrt($dis) + 1.6315);
     //$ttstd[4] = $ttstd[4] + exp(0.0811*log($tpga[3]) + 0.0378*sqrt($dis) + 1.6738);
     //$ttstd[5] = $ttstd[5] + exp(0.0841*log($tpga[4]) + 0.0364*sqrt($dis) + 1.7084);

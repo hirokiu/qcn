@@ -187,7 +187,7 @@
         get_quakes.out
       </output>
       <cmd>
-        parse-usgs-rss.py
+        parse-usgs-json.py
       </cmd>
       <period>
         37 minutes
@@ -223,12 +223,12 @@
     </daemon>
     <daemon>
       <cmd>
-        trigmonitor -d 2 -sleep_interval 1 -time_interval 120 -delete_interval 200
+        jfl_trigmonitor -d 2 -sleep_interval 1 -time_interval 120 -delete_interval 200
       </cmd>
     </daemon>
     <daemon>
       <cmd>
-        trigdisplay -d 2 -sleep_interval 4 -time_interval 15 
+        jfl_trigdisplay -d 2 -sleep_interval 4 -time_interval 15 
       </cmd>
     </daemon>
   </daemons>
