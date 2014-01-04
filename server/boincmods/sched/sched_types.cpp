@@ -673,7 +673,8 @@ int SCHEDULER_REPLY::write(FILE* fout, SCHEDULER_REQUEST& sreq, bool bTrigger, D
         fprintf(fout, "   <ended>1</ended>\n");
     }
 
- // CMC block to bypass on triggers
+/* CMC HERE
+   // CMC block to bypass on triggers
   if (!bTrigger) {
     if (request_delay || config.min_sendwork_interval) {
         double min_delay_needed = 1.01*config.min_sendwork_interval;
@@ -690,7 +691,7 @@ int SCHEDULER_REPLY::write(FILE* fout, SCHEDULER_REQUEST& sreq, bool bTrigger, D
         host.id, wreq.njobs_sent, request_delay
     );
   } // CMC end bypass on triggers
-
+*/
     // if the scheduler has requested a delay OR the sysadmin has configured
     // the scheduler with a minimum time between RPCs, send a delay request.
     // Make it 1% larger than the min required to take care of time skew.
@@ -1365,10 +1366,12 @@ int HOST::parse(XML_PARSER& xp) {
         if (xp.parse_string("cache_l3", stemp)) continue;
 #endif
 
+/* CMC HERE
         log_messages.printf(MSG_NORMAL,
             "HOST::parse(): unrecognized: %s\n", xp.parsed_tag
         );
     }
+*/
     return ERR_XML_PARSE;
 }
 
