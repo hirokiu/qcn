@@ -687,8 +687,9 @@ int SCHEDULER_REPLY::write(FILE* fout, SCHEDULER_REQUEST& sreq, bool bTrigger, D
     // If this is less than one second bigger, bump up by one sec.
     //
    // CMC block to bypass on triggers
+/*
   if (!bTrigger) {
-
+*/
     if (request_delay || config.min_sendwork_interval) {
         double min_delay_needed = 1.01*config.min_sendwork_interval;
         if (min_delay_needed < config.min_sendwork_interval+1) {
@@ -699,7 +700,10 @@ int SCHEDULER_REPLY::write(FILE* fout, SCHEDULER_REQUEST& sreq, bool bTrigger, D
         }
         fprintf(fout, "<request_delay>%f</request_delay>\n", request_delay);
     }
-  } // CMC end bypass on triggers
+
+/*  } // CMC end bypass on triggers
+*/
+
     log_messages.printf(MSG_NORMAL,
         "Sending reply to [HOST#%d]: %d results, delay req %.2f\n",
         host.id, wreq.njobs_sent, request_delay

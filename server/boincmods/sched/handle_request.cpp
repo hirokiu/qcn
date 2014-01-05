@@ -1024,6 +1024,9 @@ void handle_msgs_from_host(DB_QCN_HOST_IPADDR& qhip) { // CMC mod line
             "got msg from host; variety %s \n",
             mfh.variety
         );
+       log_messages.printf(MSG_DEBUG,
+            "   xml = %s", mfh.xml);
+
    // CMC here -- begin handle triggers via handle_qcn_trigger
        // retval = mfh.insert();
         retval = 0;
@@ -1053,7 +1056,8 @@ void handle_msgs_from_host(DB_QCN_HOST_IPADDR& qhip) { // CMC mod line
                 "[HOST#%d] message insert failed: %s\n",
                 g_reply->host.id, boincerror(retval)
             );
-            g_reply->send_msg_ack = false;
+            // CMC - if too many msgs, send an ack so we don't get huge repeats
+            g_reply->send_msg_ack = (bool) (i > 20);
 
             // may as well return; if one insert failed, others will too
             //
