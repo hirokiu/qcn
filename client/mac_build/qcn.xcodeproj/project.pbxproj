@@ -691,6 +691,7 @@
 				ADDITIONAL_SDKS = "";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				COPY_PHASE_STRIP = NO;
@@ -720,7 +721,7 @@
 					"\"$(SRCROOT)/../../zlib-1.2.5\"",
 					"\"$(SRCROOT)\"",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = (
 					"-Wall",
 					"-W",
@@ -742,7 +743,7 @@
 					Cocoa,
 				);
 				PRODUCT_NAME = qcnusb;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx10.8;
 				SYMROOT = ../bin;
 			};
 			name = Debug;
@@ -753,6 +754,7 @@
 				ADDITIONAL_SDKS = "";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				COPY_PHASE_STRIP = YES;
@@ -780,7 +782,7 @@
 					"\"$(SRCROOT)/../../zlib-1.2.5\"",
 					"\"$(SRCROOT)\"",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = (
 					"-Wall",
 					"-W",
@@ -802,7 +804,7 @@
 					Cocoa,
 				);
 				PRODUCT_NAME = qcnusb;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx10.8;
 				SYMROOT = ../bin;
 				ZERO_LINK = NO;
 			};
@@ -832,6 +834,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = ../bin;
 				COPY_PHASE_STRIP = NO;
@@ -862,7 +865,7 @@
 					"\"$(SRCROOT)/../../zlib-1.2.5\"",
 					"\"$(SRCROOT)\"",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OBJROOT = ../bin;
 				OTHER_CFLAGS = (
 					"-Wall",
@@ -886,7 +889,7 @@
 					Cocoa,
 				);
 				PRODUCT_NAME = qcn;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx10.8;
 				SYMROOT = ../bin;
 				WRAPPER_EXTENSION = app;
 			};
@@ -897,6 +900,7 @@
 			buildSettings = {
 				ADDITIONAL_SDKS = "";
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = ../bin;
 				COPY_PHASE_STRIP = YES;
@@ -925,7 +929,7 @@
 					"\"$(SRCROOT)/../../zlib-1.2.5\"",
 					"\"$(SRCROOT)\"",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OBJROOT = ../bin;
 				OTHER_CFLAGS = (
 					"-Wall",
@@ -949,7 +953,7 @@
 					Cocoa,
 				);
 				PRODUCT_NAME = qcn;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx10.8;
 				SYMROOT = ../bin;
 				WRAPPER_EXTENSION = app;
 			};
@@ -960,7 +964,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				COPY_PHASE_STRIP = NO;
@@ -991,7 +995,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = (
 					"-Wall",
 					"-DQCN",
@@ -1017,7 +1021,7 @@
 					"-ljpeg",
 				);
 				PRODUCT_NAME = qcn_graphics;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx10.8;
 				SYMROOT = ../bin;
 			};
 			name = Debug;
@@ -1027,7 +1031,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				COPY_PHASE_STRIP = YES;
@@ -1056,7 +1060,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = (
 					"-Wall",
 					"-DQCN",
@@ -1082,7 +1086,7 @@
 					"-ljpeg",
 				);
 				PRODUCT_NAME = qcn_graphics;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx10.8;
 				SYMROOT = ../bin;
 				ZERO_LINK = NO;
 			};

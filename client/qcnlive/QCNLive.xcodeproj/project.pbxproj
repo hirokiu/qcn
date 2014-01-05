@@ -499,6 +499,7 @@
 		4B72B24813252891014BCF61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CONFIGURATION_BUILD_DIR = ../bin/;
 				CONFIGURATION_TEMP_DIR = build/Debug;
 				COPY_PHASE_STRIP = NO;
@@ -544,7 +545,8 @@
 					/System/Library/Frameworks/,
 					/Users/carlgt1/projects/qcn/client/mac_build,
 				);
-				ONLY_ACTIVE_ARCH = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
 					"-pipe",
 					"-g",
@@ -592,7 +594,7 @@
 					"-L/Users/carlgt1/projects/qcn/client/mac_build",
 				);
 				PRODUCT_NAME = QCNLive;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.7;
 				SYMROOT = ../bin/;
 				VALID_ARCHS = x86_64;
 			};
@@ -601,15 +603,17 @@
 		8C7174830A1E4DCBA0332EC1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = qcnlive.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = ../bin/;
 				CONFIGURATION_TEMP_DIR = build/Release;
 				COPY_PHASE_STRIP = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = QCNLive;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 				SYMROOT = ../bin/;
 				VALID_ARCHS = x86_64;
 			};
@@ -618,6 +622,7 @@
 		BEC09A62E69C3553534FF35E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = qcnlive.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = ../bin/;
@@ -625,9 +630,10 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = QCNLive;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 				SYMROOT = ../bin/;
 				VALID_ARCHS = x86_64;
 			};
@@ -680,6 +686,8 @@
 					/System/Library/Frameworks/,
 					/Users/carlgt1/projects/qcn/client/mac_build,
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
 					"-pipe",
 					"-g",
@@ -727,7 +735,7 @@
 					"-L/Users/carlgt1/projects/qcn/client/mac_build",
 				);
 				PRODUCT_NAME = QCNLive;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.7;
 				SYMROOT = ../bin/;
 				VALID_ARCHS = x86_64;
 			};
