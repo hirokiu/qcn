@@ -580,7 +580,7 @@ int qcn_main(int argc, char **argv)
                  goto done;
              }
 
-             // New Quake List -- now done with trickle down request about every 17 minutes
+             // New Quake List -- now done with trickle down request about every 30 minutes
              // check for new quake list every hour, i.e. when mod 1000
              // unnecessary for demo mode -- but should we wget or curl the latest quake list, perhaps just in the ./runme script?
              //if (!g_iStop && !(++iQuakeList % QUAKELIST_CHECK))  {
@@ -589,10 +589,9 @@ int qcn_main(int argc, char **argv)
               // this skips the very first time in i.e. when we're just starting up, also bypasses for the continual reporting app
 			  // also make sure we didn't just have a trickle within the past INTERVAL_PING_SECONDS (30 minutes)
 			  // i.e. don't bother sending a ping since we heard from this machine anyway!
-             //if (!g_iStop && g_bFirstPing && !g_bContinual && (dTimeLastTrigger + INTERVAL_PING_SECONDS < g_dTimeCurrent)) {
 			  
-			  // actually let's do a ping to get the host lat/lng info and earthquake list
-			  if (!g_iStop) { // && g_bFirstPing && !g_bContinual && (dTimeLastTrigger + INTERVAL_PING_SECONDS < g_dTimeCurrent)) {
+             // actually let's do a ping to get the host lat/lng info and earthquake list - if there is a sensor!
+	     if (!g_iStop && g_bFirstPing) { // && !g_bContinual && (dTimeLastTrigger + INTERVAL_PING_SECONDS < g_dTimeCurrent)) {
                 char *strTrigger = new char[512];
                 double dTrigTimeOffset = g_dTimeSync>0.0f ? g_dTimeOffset : 0.0f;
                 boinc_begin_critical_section();
