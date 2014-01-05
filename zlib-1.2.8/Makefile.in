@@ -70,11 +70,11 @@ OBJS = $(OBJC) $(OBJA)
 
 PIC_OBJS = $(PIC_OBJC) $(PIC_OBJA)
 
-all: static shared
+all: libz.a
 
 static: example$(EXE) minigzip$(EXE)
 
-shared: examplesh$(EXE) minigzipsh$(EXE)
+shared: examplesh$(EXE) minigzips$(EXE)
 
 all64: example64$(EXE) minigzip64$(EXE)
 

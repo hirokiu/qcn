@@ -35,20 +35,20 @@ export LIBTOOLIZE=/usr/local/bin/libtoolize
 #export CXXFLAGS="-O2 -I$SDKROOT/usr/include -I$SDKROOT/usr/local/include -isysroot $SDKROOT -arch $MARCH"
 
 
-export MARCH='-arch i386'
-export CXX=/Developer/usr/bin/g++-4.2
-export CC=/Developer/usr/bin/gcc-4.2
-export MACOSX_DEPLOYMENT_TARGET=10.6
-export SDKROOT="/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk"
-export EXTRA_INCLUDE=$SDKROOT/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/
-export LDFLAGS="-L$SDKROOT/usr/lib/ -isysroot $SDKROOT -Wl,-syslibroot,$SDKROOT $MARCH"
-export CPPFLAGS="-O2 -I$EXTRA_INCLUDE -I$SDKROOT/usr/include -I$SDKROOT/usr/local/include -isysroot $SDKROOT $MARCH"
-export CFLAGS="-O2 $BIGFILES -I$EXTRA_INCLUDE -I$SDKROOT/usr/include -I$SDKROOT/usr/local/include -isysroot $SDKROOT $MARCH"
-export CXXFLAGS="-O2 $BIGFILES -I$SDKROOT/usr/include -I$SDKROOT/usr/local/include -isysroot $SDKROOT $MARCH"
-./configure --static 
-make clean
-make
-mv libz.a lib/libz_i386.a
+#export MARCH='-arch i386'
+#export CXX=/Developer/usr/bin/g++-4.2
+#export CC=/Developer/usr/bin/gcc-4.2
+#export MACOSX_DEPLOYMENT_TARGET=10.6
+#export SDKROOT="/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk"
+#export EXTRA_INCLUDE=$SDKROOT/System/Library/Frameworks/Kernel.framework/Versions/A/Headers/
+#export LDFLAGS="-L$SDKROOT/usr/lib/ -isysroot $SDKROOT -Wl,-syslibroot,$SDKROOT $MARCH"
+#export CPPFLAGS="-O2 -I$EXTRA_INCLUDE -I$SDKROOT/usr/include -I$SDKROOT/usr/local/include -isysroot $SDKROOT $MARCH"
+#export CFLAGS="-O2 $BIGFILES -I$EXTRA_INCLUDE -I$SDKROOT/usr/include -I$SDKROOT/usr/local/include -isysroot $SDKROOT $MARCH"
+#export CXXFLAGS="-O2 $BIGFILES -I$SDKROOT/usr/include -I$SDKROOT/usr/local/include -isysroot $SDKROOT $MARCH"
+#./configure --static 
+#make clean
+#make
+#mv libz.a lib/libz_i386.a
 
 #Intel 64-bit Mac
 #export MARCH=x86_64
@@ -62,7 +62,7 @@ mv libz.a lib/libz_i386.a
 #export CXXFLAGS="-O2 -I$SDKROOT/usr/include -I$SDKROOT/usr/local/include -isysroot $SDKROOT -arch $MARCH"
 
 
-export MARCH='-arch x86_64'
+export MARCH='-arch i386 -arch x86_64'
 export CXX=/Developer/usr/bin/g++-4.2
 export CC=/Developer/usr/bin/gcc-4.2
 export MACOSX_DEPLOYMENT_TARGET=10.6
@@ -71,12 +71,11 @@ export LDFLAGS="-L$SDKROOT/usr/lib/ -isysroot $SDKROOT -Wl,-syslibroot,$SDKROOT 
 export CPPFLAGS="-O2 -I$SDKROOT/usr/include -I$SDKROOT/usr/local/include -isysroot $SDKROOT $MARCH"
 export CFLAGS="-O2 $BIGFILES -I$SDKROOT/usr/include -I$SDKROOT/usr/local/include -isysroot $SDKROOT $MARCH"
 export CXXFLAGS="-O2 $BIGFILES -I$SDKROOT/usr/include -I$SDKROOT/usr/local/include -isysroot $SDKROOT $MARCH"
-
-./configure --static --64
+./configure --static 
 make clean
 make
-mv libz.a lib/libz_x86_64.a
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/lipo -arch i386 lib/libz_i386.a -arch x86_64 lib/libz_x86_64.a -create -output libz-universal.a
-mv libz-universal.a ../client/mac_build/
+#mv libz.a lib/libz_x86_64.a
+#/usr/bin/lipo -arch i386 lib/libz_i386.a -arch x86_64 lib/libz_x86_64.a -create -output libz-universal.a
+mv libz.a ../client/mac_build/libz-universal.a
 cp zconf-win.h zconf.h
 rm -rf lib ; make clean
