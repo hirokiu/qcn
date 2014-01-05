@@ -12,6 +12,7 @@
     <sched_debug_level>
       2
     </sched_debug_level>
+    <send_result_abort/>
     <debug_version_select/>
     <uldl_host>qcn-upl</uldl_host>
     <uldl_pid>/var/run/httpd</uldl_pid>

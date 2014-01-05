@@ -5,9 +5,6 @@
     <upload_dir>
       /var/www/boinc/continual/upload
     </upload_dir>
-    <send_result_abort>
-      1
-    </send_result_abort>
     <msg_to_host/>
     <long_name>
       QCN Continual
@@ -24,6 +21,7 @@
     <sched_debug_level>
       2
     </sched_debug_level>
+    <send_result_abort/>
     <disable_account_creation>
       0
     </disable_account_creation>
