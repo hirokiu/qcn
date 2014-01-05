@@ -34,7 +34,7 @@ local int gz_load(state, buf, len, have)
         *have += ret;
     } while (*have < len);
     if (ret < 0) {
-        gz_error(state, Z_ERRNO, zstrerror());
+        //gz_error(state, Z_ERRNO, zstrerror());
         return -1;
     }
     if (ret == 0)
