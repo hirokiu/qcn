@@ -35,6 +35,8 @@
 #include "time_stats_log.h"
 #include "sched_types.h"
 
+// CMC start
+
 extern int qcn_process_ipaddr(char* strTrigger, int iLen);
 
 extern int qcn_doTriggerHostLookup(
@@ -44,6 +46,8 @@ extern int qcn_doTriggerHostLookup(
    const double* dmxy,
    const double* dmz
 );
+
+int qcn_send_quakelist(bool bTrigger, int hostid, DB_QCN_HOST_IPADDR& qhip, USER& user, FILE* fout);
 
 inline static const char* get_remote_addr() {
     const char * r = getenv("REMOTE_ADDR");
@@ -651,12 +655,6 @@ int SCHEDULER_REPLY::write(FILE* fout, SCHEDULER_REQUEST& sreq, bool bTrigger, D
     unsigned int i;
     char buf[BLOB_SIZE];
 
-    // CMC begin forward var declarations
-         char* strTemp  = NULL;
-         char* strQuake = NULL; // CMC note - read_file_malloc allocates this, make sure to free it! new char[APP_VERSION_XML_BLOB_SIZE];
-    // CMC end var decl
-
-
     // Note: at one point we had
     // "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?>\n"
     // after the Content-type (to make it legit XML),
@@ -818,115 +816,7 @@ int SCHEDULER_REPLY::write(FILE* fout, SCHEDULER_REQUEST& sreq, bool bTrigger, D
             fputs("\n", fout);
         }
 
-
-   // CMC here -- send latest quake list
-        // always send project prefs
-        //
-        //fputs(user.project_prefs, fout);
-        //fputs("\n", fout);
-        if (! bTrigger)  { // only sent on ping trickles so every trigger doesn't make the whole quake list
-        // CMC Here - send current latitude / longitude & elev info for this host
-           char* strLatLng = NULL;
-           if (!qhip.hostid) { // host info wasn't set, so do it here and spoof trigger info set varietyid=-1
-              double dmxy[4], dmz[4];
-              qhip.hostid = hostid;
-              DB_QCN_GEO_IPADDR qgip;
-              DB_QCN_TRIGGER qtrig;
-              qtrig.varietyid=-1;
-              qtrig.hostid = qhip.hostid;
-              qtrig.id = 0;
-              strncpy(qtrig.ipaddr, get_remote_addr(), 32);
-              int iIPRetval = qcn_process_ipaddr(qtrig.ipaddr, 32);
-              strncpy(qgip.ipaddr, qtrig.ipaddr, 32);
-              if (iIPRetval || qcn_doTriggerHostLookup(qhip, qgip, qtrig, dmxy, dmz)) {
-                log_messages.printf(MSG_DEBUG,
-                  "sched::handle_request::qcn_host_ipadr hostid lookup %d Failure -- IP Addr %s -- IPRetva = %d\n",
-                         qhip.hostid, qtrig.ipaddr, iIPRetval);
-                 qhip.hostid = 0; //reset so bypasses the strLatLng creation below
-              }
-              else { // OK
-                log_messages.printf(MSG_DEBUG,
-                  "sched::handle_request::qcn_host_ipadr hostid lookup %d OK\n", qhip.hostid);
-              }
-           }
-
-           if (qhip.hostid) {
-             strLatLng = new char[512];
-             memset(strLatLng, 0x00, sizeof(char) * 512);
-             sprintf(strLatLng, "\n<qlatlng>\n  <qlllat>%f</qlllat>\n  <qlllng>%f</qlllng>\n  <qlllvv>%f</qlllvv>\n"
-                                "  <qlllvt>%d</qlllvt>\n  <qllal>%d</qllal>\n</qlatlng>\n",
-                qhip.latitude, qhip.longitude, qhip.levelvalue, qhip.levelid, qhip.alignid);
-                log_messages.printf(MSG_DEBUG,
-                  "sched::handle_request::qcn_host_ipadr values: %s\n", strLatLng);
-           }
-
-
-         const char* strWhere = strstr(user.project_prefs, "</project_specific>");
-         strTemp  = new char[APP_VERSION_XML_BLOB_SIZE];
-
-
-/*
-       if (bTrigger) {  // send lat/lng info back to client for this trigger
-         // send lat/lng on trigger trickles
-         if (strLatLng) {
-           if (strWhere) { // we found </project so prefs exist, insert lat/lng in the middle
-               strTemp[0] = '\n'; // seems to like a leading newline?
-               strncpy(strTemp, user.project_prefs, strWhere - user.project_prefs - 1);
-               strlcat(strTemp, strLatLng, APP_VERSION_XML_BLOB_SIZE);
-               strlcat(strTemp, "</project_specific>\n</project_preferences>\n", APP_VERSION_XML_BLOB_SIZE);
-           }
-           else {  // blank project prefs, so just write quake data
-                 sprintf(strTemp, "<project_preferences>\n<project_specific>\n%s\n</project_specific>\n</project_preferences>\n",
-                     strLatLng);
-           }
-           fputs(strTemp, fout);
-           fputs("\n", fout);
-         } //strLatLng
-       } // bTrigger
-       else { // don't send the big quake list on a trigger trickle
-*/
-         strQuake = NULL; // CMC note - read_file_malloc allocates this, make sure to free it! new char[APP_VERSION_XML_BLOB_SIZE];
-         memset(strTemp,  0x00, sizeof(char) * APP_VERSION_XML_BLOB_SIZE);
-         //memset(strQuake, 0x00, sizeof(char) * APP_VERSION_XML_BLOB_SIZE);
-
-         if (boinc_file_exists("../qcn-quake.xml"))
-            read_file_malloc("../qcn-quake.xml", strQuake); // strQuake holds the quake file contents
-         if (strQuake && strlen(strQuake)>1 && strstr(strQuake, "<quakes>") && strstr(strQuake, "</quakes>")) { // we have valid quake data
-           if (strWhere) { // we found </project so prefs exist, insert quake in the middle
-               strTemp[0] = '\n'; // seems to like a leading newline?
-               strncpy(strTemp, user.project_prefs, strWhere - user.project_prefs - 1);
-               if (strLatLng) strlcat(strTemp, strLatLng, APP_VERSION_XML_BLOB_SIZE);
-               strlcat(strTemp, strQuake, APP_VERSION_XML_BLOB_SIZE);
-               strlcat(strTemp, "\n</project_specific>\n</project_preferences>\n", APP_VERSION_XML_BLOB_SIZE);
-           }
-           else {  // blank project prefs, so just write quake data
-               sprintf(strTemp, "\n<project_preferences>\n<project_specific>\n%s%s</project_specific>\n</project_preferences>\n",
-                 strQuake, strLatLng ? strLatLng : "");
-           }
-
-           fputs(strTemp, fout);
-           fputs("\n", fout);
-         }
-         else { // send normal proj prefs
-           // always send project prefs
-           //
-           strTemp[0] = '\n'; // seems to like a leading newline?
-           strncpy(strTemp, user.project_prefs, strWhere - user.project_prefs - 1);
-           if (strLatLng) strlcat(strTemp, strLatLng, APP_VERSION_XML_BLOB_SIZE);
-           strlcat(strTemp, "\n</project_specific>\n</project_preferences>\n", APP_VERSION_XML_BLOB_SIZE);
-           fputs(strTemp, fout);
-           fputs("\n", fout);
-       } //bTrigger
-
-      if (strTemp) delete [] strTemp;
-      if (strQuake) free(strQuake);  // note malloc was used for strQuake, so use free, not delete[]!
-      if (strLatLng) delete [] strLatLng;
-      // CMC note -- we bypass this if a trigger trickle
-     } // ! bTrigger
-     // end CMC mods
     }  // userid
-
-// CMC End
 
     if (hostid) {
         fprintf(fout,
@@ -1083,6 +973,10 @@ int SCHEDULER_REPLY::write(FILE* fout, SCHEDULER_REQUEST& sreq, bool bTrigger, D
             );
         }
     }
+
+// CMC here
+  qcn_send_quakelist(bTrigger, hostid, qhip, user, fout);
+// CMC end
 
     gui_urls.get_gui_urls(user, host, team, buf, sizeof(buf));
     fputs(buf, fout);
@@ -1615,4 +1509,117 @@ bool HOST::get_opencl_cpu_prop(const char* platform, OPENCL_CPU_PROP& ocp) {
     return false;
 }
 
+// CMC start
+int qcn_send_quakelist(bool bTrigger, int hostid, DB_QCN_HOST_IPADDR& qhip, USER& user, FILE* fout)
+{
+         char* strTemp  = NULL;
+         char* strQuake = NULL; // CMC note - read_file_malloc allocates this, make sure to free it! new char[APP_VERSION_XML_BLOB_SIZE];
+
+      // CMC note -- we bypass this if a trigger trickle
+	if (bTrigger || ! user.id) return 0;
+   // CMC here -- send latest quake list
+        // always send project prefs
+        //
+        //fputs(user.project_prefs, fout);
+        //fputs("\n", fout);
+        // CMC Here - send current latitude / longitude & elev info for this host
+           char* strLatLng = NULL;
+           if (!qhip.hostid) { // host info wasn't set, so do it here and spoof trigger info set varietyid=-1
+              double dmxy[4], dmz[4];
+              qhip.hostid = hostid;
+              DB_QCN_GEO_IPADDR qgip;
+              DB_QCN_TRIGGER qtrig;
+              qtrig.varietyid=-1;
+              qtrig.hostid = qhip.hostid;
+              qtrig.id = 0;
+              strncpy(qtrig.ipaddr, get_remote_addr(), 32);
+              int iIPRetval = qcn_process_ipaddr(qtrig.ipaddr, 32);
+              strncpy(qgip.ipaddr, qtrig.ipaddr, 32);
+              if (iIPRetval || qcn_doTriggerHostLookup(qhip, qgip, qtrig, dmxy, dmz)) {
+                log_messages.printf(MSG_DEBUG,
+                  "sched::handle_request::qcn_host_ipadr hostid lookup %d Failure -- IP Addr %s -- IPRetva = %d\n",
+                         qhip.hostid, qtrig.ipaddr, iIPRetval);
+                 qhip.hostid = 0; //reset so bypasses the strLatLng creation below
+              }
+              else { // OK
+                log_messages.printf(MSG_DEBUG,
+                  "sched::handle_request::qcn_host_ipadr hostid lookup %d OK\n", qhip.hostid);
+              }
+           }
+
+           if (qhip.hostid) {
+             strLatLng = new char[512];
+             memset(strLatLng, 0x00, sizeof(char) * 512);
+             sprintf(strLatLng, "\n<qlatlng>\n  <qlllat>%f</qlllat>\n  <qlllng>%f</qlllng>\n  <qlllvv>%f</qlllvv>\n"
+                                "  <qlllvt>%d</qlllvt>\n  <qllal>%d</qllal>\n</qlatlng>\n",
+                qhip.latitude, qhip.longitude, qhip.levelvalue, qhip.levelid, qhip.alignid);
+                log_messages.printf(MSG_DEBUG,
+                  "sched::handle_request::qcn_host_ipadr values: %s\n", strLatLng);
+           }
+
+
+         const char* strWhere = strstr(user.project_prefs, "</project_specific>");
+         strTemp  = new char[APP_VERSION_XML_BLOB_SIZE];
+
+
+/*
+       if (bTrigger) {  // send lat/lng info back to client for this trigger
+         // send lat/lng on trigger trickles
+         if (strLatLng) {
+           if (strWhere) { // we found </project so prefs exist, insert lat/lng in the middle
+               strTemp[0] = '\n'; // seems to like a leading newline?
+               strncpy(strTemp, user.project_prefs, strWhere - user.project_prefs - 1);
+               strlcat(strTemp, strLatLng, APP_VERSION_XML_BLOB_SIZE);
+               strlcat(strTemp, "</project_specific>\n</project_preferences>\n", APP_VERSION_XML_BLOB_SIZE);
+           }
+           else {  // blank project prefs, so just write quake data
+                 sprintf(strTemp, "<project_preferences>\n<project_specific>\n%s\n</project_specific>\n</project_preferences>\n",
+                     strLatLng);
+           }
+           fputs(strTemp, fout);
+           fputs("\n", fout);
+         } //strLatLng
+       } // bTrigger
+       else { // don't send the big quake list on a trigger trickle
+*/
+         strQuake = NULL; // CMC note - read_file_malloc allocates this, make sure to free it! new char[APP_VERSION_XML_BLOB_SIZE];
+         memset(strTemp,  0x00, sizeof(char) * APP_VERSION_XML_BLOB_SIZE);
+         //memset(strQuake, 0x00, sizeof(char) * APP_VERSION_XML_BLOB_SIZE);
+
+         if (boinc_file_exists("../qcn-quake.xml"))
+            read_file_malloc("../qcn-quake.xml", strQuake); // strQuake holds the quake file contents
+         if (strQuake && strlen(strQuake)>1 && strstr(strQuake, "<quakes>") && strstr(strQuake, "</quakes>")) { // we have valid quake data
+           if (strWhere) { // we found </project so prefs exist, insert quake in the middle
+               strTemp[0] = '\n'; // seems to like a leading newline?
+               strncpy(strTemp, user.project_prefs, strWhere - user.project_prefs - 1);
+               if (strLatLng) strlcat(strTemp, strLatLng, APP_VERSION_XML_BLOB_SIZE);
+               strlcat(strTemp, strQuake, APP_VERSION_XML_BLOB_SIZE);
+               strlcat(strTemp, "\n</project_specific>\n</project_preferences>\n", APP_VERSION_XML_BLOB_SIZE);
+           }
+           else {  // blank project prefs, so just write quake data
+               sprintf(strTemp, "\n<project_preferences>\n<project_specific>\n%s%s</project_specific>\n</project_preferences>\n",
+                 strQuake, strLatLng ? strLatLng : "");
+           }
+
+           fputs(strTemp, fout);
+           fputs("\n", fout);
+         }
+         else { // send normal proj prefs
+           // always send project prefs
+           //
+           strTemp[0] = '\n'; // seems to like a leading newline?
+           strncpy(strTemp, user.project_prefs, strWhere - user.project_prefs - 1);
+           if (strLatLng) strlcat(strTemp, strLatLng, APP_VERSION_XML_BLOB_SIZE);
+           strlcat(strTemp, "\n</project_specific>\n</project_preferences>\n", APP_VERSION_XML_BLOB_SIZE);
+           fputs(strTemp, fout);
+           fputs("\n", fout);
+       } //bTrigger
+
+      if (strTemp) delete [] strTemp;
+      if (strQuake) free(strQuake);  // note malloc was used for strQuake, so use free, not delete[]!
+      if (strLatLng) delete [] strLatLng;
+
+      return 0;
+}
+// CMC end
 const char *BOINC_RCSID_ea659117b3 = "$Id$";
