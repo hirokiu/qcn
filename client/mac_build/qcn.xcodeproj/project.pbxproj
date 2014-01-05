@@ -691,7 +691,7 @@
 				ADDITIONAL_SDKS = "";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				COPY_PHASE_STRIP = NO;
@@ -743,7 +743,7 @@
 					Cocoa,
 				);
 				PRODUCT_NAME = qcnusb;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.7;
 				SYMROOT = ../bin;
 			};
 			name = Debug;
@@ -754,7 +754,7 @@
 				ADDITIONAL_SDKS = "";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				COPY_PHASE_STRIP = YES;
@@ -804,7 +804,7 @@
 					Cocoa,
 				);
 				PRODUCT_NAME = qcnusb;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.7;
 				SYMROOT = ../bin;
 				ZERO_LINK = NO;
 			};
@@ -813,9 +813,12 @@
 		E3A499DF0D64E60400E51CDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx10.7;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = "non-global";
 			};
@@ -824,9 +827,12 @@
 		E3A499E00D64E60400E51CDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx10.7;
 			};
 			name = Release;
 		};
@@ -834,7 +840,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = ../bin;
 				COPY_PHASE_STRIP = NO;
@@ -889,7 +894,7 @@
 					Cocoa,
 				);
 				PRODUCT_NAME = qcn;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.7;
 				SYMROOT = ../bin;
 				WRAPPER_EXTENSION = app;
 			};
@@ -900,7 +905,6 @@
 			buildSettings = {
 				ADDITIONAL_SDKS = "";
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = ../bin;
 				COPY_PHASE_STRIP = YES;
@@ -953,7 +957,7 @@
 					Cocoa,
 				);
 				PRODUCT_NAME = qcn;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.7;
 				SYMROOT = ../bin;
 				WRAPPER_EXTENSION = app;
 			};
@@ -964,7 +968,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				COPY_PHASE_STRIP = NO;
@@ -1021,7 +1025,7 @@
 					"-ljpeg",
 				);
 				PRODUCT_NAME = qcn_graphics;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.7;
 				SYMROOT = ../bin;
 			};
 			name = Debug;
@@ -1031,7 +1035,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				COPY_PHASE_STRIP = YES;
@@ -1086,7 +1090,7 @@
 					"-ljpeg",
 				);
 				PRODUCT_NAME = qcn_graphics;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.7;
 				SYMROOT = ../bin;
 				ZERO_LINK = NO;
 			};

@@ -11,14 +11,15 @@ export CPPFLAGS=
 export CFLAGS=
 export CXXFLAGS=
 # building ntpdate is really "special" and not just a lib...
+#jpeg is now part of the boinc build
 #cd ntp-4.2.4p7
 #chmod uog+rx build.mac
 #./build.mac
 #cd ../jpeg-6b
-cd jpeg-6b
-chmod uog+rx build.mac
-./build.mac
-cd ../bzip2-1.0.6
+#cd jpeg-6b
+#chmod uog+rx build.mac
+#./build.mac
+cd bzip2-1.0.6
 chmod uog+rx build.mac
 ./build.mac
 cd ../zlib-1.2.5
