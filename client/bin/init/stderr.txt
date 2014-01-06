@@ -1,14 +1,16 @@
 shmget in attach_shmem: Invalid argument
-15:18:21 (30651): Can't set up shared mem: -1. Will run in standalone mode.
-qcn_util::getBOINCInitData requested at 1388953101.910091
+20:01:51 (78277): Can't set up shared mem: -1. Will run in standalone mode.
+qcn_util::getBOINCInitData requested at 1388970111.620860
 Successfully loaded 'logo.jpg'.
 Successfully loaded 'earthday4096.jpg'.
 Successfully loaded 'earthnight4096.jpg'.
 Successfully loaded 'xyzaxes.jpg'.
 Successfully loaded 'xyzaxesbl.jpg'.
 Failed to load 'ad.jpg'.
-qcn_util::getBOINCInitData requested at 1388953103.806812
-qcn_util::getBOINCInitData requested at 1388953111.684674
+qcn_util::getBOINCInitData requested at 1388970113.735089
+qcn_util::getBOINCInitData requested at 1388970152.625941
+qcn_util::getBOINCInitData requested at 1388970155.030823
+qcn_util::getBOINCInitData requested at 1388970156.544731
 Exception 3 caught in sensor thread mean_xyz()
 qcn_main: waited 0.000000 seconds for sensor and time threads to end
 Cleaning up graphics objects...
