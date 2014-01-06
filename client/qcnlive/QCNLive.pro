@@ -31,13 +31,18 @@ macx {
 GCC_VERSION="LLVM GCC 4.2"
 QMAKE_CC = llvm-gcc-4.2
 QMAKE_CXX = llvm-g++-4.2
-QMAKE_MACOSX_DEPLOYMENT_TARGET=10.5
-QMAKE_MAC_SDK=/Developer/SDKs/MacOSX10.5.sdk
+QMAKE_MACOSX_DEPLOYMENT_TARGET=10.6
+QMAKE_MAC_SDK=macosx
+
+MACINC = /Developer/Qt5.2.0/5.2.0/clang_64/lib/QtCore.framework/Versions/5/Headers \
+   /Developer/Qt5.2.0/5.2.0/clang_64/lib/QtGui.framework/Versions/5/Headers \
+   /Developer/Qt5.2.0/5.2.0/clang_64/lib/QtOpenGL.framework/Versions/5/Headers \
+   /Developer/Qt5.2.0/5.2.0/clang_64/lib/QtPrintSupport.framework/Versions/5/Headers
 
 # my own specific plist not the qmake generated one
 QMAKE_INFO_PLIST = "Info.plist.mac"
 
-LIBS += -framework IOKit -framework Carbon \
+LIBS += -framework IOKit -framework Carbon -framework QtPrintSupport -framework QtCore -framework QtGui -framework QtOpenGL \
    -L$$BASEDIRQCN/client/mac_build \
      -lboinc_api -lboinc -lboinc_zip -lboinc_graphics2 \
     -ljpeg -lcurl-universal -lbz2-universal \
@@ -70,9 +75,10 @@ DEFINES += _USE_NTPDATE_EXEC_ FTGL_LIBRARY_STATIC QCNLIVE GRAPHICS_PROGRAM APP_G
 
 # setup proper order of include paths
 INCLUDEPATH += \
+        $$MACINC \
         $$BASEDIRQCN \
-        $$BASEDIRQCN/jpeg-6b \
         $$BASEDIRQCN/zlib-1.2.5 \
+        $$BASEDIRQCN/curl-7.34.0/include \
         $$BZDIR \
         $$CURLDIR \
         $$BASEDIRQCN/ftgl-2.1.3/include \
@@ -83,6 +89,7 @@ INCLUDEPATH += \
         $$BASEDIRBOINC/lib \
         $$BASEDIRBOINC/api \
         $$BASEDIRBOINC/zip \
+        $$BASEDIRBOINC/samples/jpeglib \
         $$WININCLUDEPATH \
         $$GRAPHICSDIR 
 

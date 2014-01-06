@@ -1,26 +1,52 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'qcnqt.h'
 **
-** Created: Mon Jun 17 13:55:59 2013
-**      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.2.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
 #include "qcnqt.h"
+#include <QtCore/qbytearray.h>
+#include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'qcnqt.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 63
-#error "This file was generated using the moc from 4.8.4. It"
+#elif Q_MOC_OUTPUT_REVISION != 67
+#error "This file was generated using the moc from 5.2.0. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
+struct qt_meta_stringdata_MyApp_t {
+    QByteArrayData data[7];
+    char stringdata[76];
+};
+#define QT_MOC_LITERAL(idx, ofs, len) \
+    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
+    offsetof(qt_meta_stringdata_MyApp_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData) \
+    )
+static const qt_meta_stringdata_MyApp_t qt_meta_stringdata_MyApp = {
+    {
+QT_MOC_LITERAL(0, 0, 5),
+QT_MOC_LITERAL(1, 6, 22),
+QT_MOC_LITERAL(2, 29, 0),
+QT_MOC_LITERAL(3, 30, 13),
+QT_MOC_LITERAL(4, 44, 16),
+QT_MOC_LITERAL(5, 61, 9),
+QT_MOC_LITERAL(6, 71, 3)
+    },
+    "MyApp\0slotGetLatestQuakeList\0\0"
+    "slotMakeQuake\0slotPrintPreview\0QPrinter*\0"
+    "qpr\0"
+};
+#undef QT_MOC_LITERAL
+
 static const uint qt_meta_data_MyApp[] = {
 
  // content:
-       6,       // revision
+       7,       // revision
        0,       // classname
        0,    0, // classinfo
        3,   14, // methods
@@ -30,23 +56,22 @@ static const uint qt_meta_data_MyApp[] = {
        0,       // flags
        0,       // signalCount
 
- // slots: signature, parameters, type, tag, flags
-       7,    6,    6,    6, 0x08,
-      32,    6,    6,    6, 0x08,
-      52,   48,    6,    6, 0x08,
+ // slots: name, argc, parameters, tag, flags
+       1,    0,   29,    2, 0x08,
+       3,    0,   30,    2, 0x08,
+       4,    1,   31,    2, 0x08,
+
+ // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 5,    6,
 
        0        // eod
-};
-
-static const char qt_meta_stringdata_MyApp[] = {
-    "MyApp\0\0slotGetLatestQuakeList()\0"
-    "slotMakeQuake()\0qpr\0slotPrintPreview(QPrinter*)\0"
 };
 
 void MyApp::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        Q_ASSERT(staticMetaObject.cast(_o));
         MyApp *_t = static_cast<MyApp *>(_o);
         switch (_id) {
         case 0: _t->slotGetLatestQuakeList(); break;
@@ -57,28 +82,21 @@ void MyApp::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
     }
 }
 
-const QMetaObjectExtraData MyApp::staticMetaObjectExtraData = {
-    0,  qt_static_metacall 
-};
-
 const QMetaObject MyApp::staticMetaObject = {
-    { &QApplication::staticMetaObject, qt_meta_stringdata_MyApp,
-      qt_meta_data_MyApp, &staticMetaObjectExtraData }
+    { &QApplication::staticMetaObject, qt_meta_stringdata_MyApp.data,
+      qt_meta_data_MyApp,  qt_static_metacall, 0, 0}
 };
 
-#ifdef Q_NO_DATA_RELOCATION
-const QMetaObject &MyApp::getStaticMetaObject() { return staticMetaObject; }
-#endif //Q_NO_DATA_RELOCATION
 
 const QMetaObject *MyApp::metaObject() const
 {
-    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
 void *MyApp::qt_metacast(const char *_clname)
 {
     if (!_clname) return 0;
-    if (!strcmp(_clname, qt_meta_stringdata_MyApp))
+    if (!strcmp(_clname, qt_meta_stringdata_MyApp.stringdata))
         return static_cast<void*>(const_cast< MyApp*>(this));
     return QApplication::qt_metacast(_clname);
 }
@@ -91,6 +109,10 @@ int MyApp::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_c == QMetaObject::InvokeMetaMethod) {
         if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
+        _id -= 3;
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 3)
+            *reinterpret_cast<int*>(_a[0]) = -1;
         _id -= 3;
     }
     return _id;
