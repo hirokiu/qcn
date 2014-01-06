@@ -13,12 +13,12 @@ No motion sensor available of type # 3 PMUMotionSensor
 Intel Macbook Pro compatible motion sensor detected!
 SMS KERNEL: 4 5 Intel Mac Laptop
 Motion sensor initialized of type 4 - Intel Mac Laptop.
-Start of monitoring at time 1388970113.515647  interval 0.020000  threshold 0.100000
-Initial sensor values:  x0=-0.458453  y0=-0.458453  z0=10.009556  sample size=1  dt=0.020000
-Server time synchronization started at   1388970113.710022
-Synchronized server time at local time = 1388970114.554493   offset = 0.102619   elapsed time = 0.844471
+Start of monitoring at time 1388980233.416541  interval 0.020000  threshold 0.100000
+Initial sensor values:  x0=-0.840497  y0=-0.343840  z0=9.933147  sample size=1  dt=0.020000
+Server time synchronization started at   1388980233.601459
+Synchronized server time at local time = 1388980234.451588   offset = 0.010046   elapsed time = 0.850129
 Closing SMS sensor port...
 Port closed!
 qcnqt: stopping main monitoring thread
-qcnqt: main thread quit within 0.130000 seconds...
+qcnqt: main thread quit within 0.044000 seconds...
 Freeing shared memory segment

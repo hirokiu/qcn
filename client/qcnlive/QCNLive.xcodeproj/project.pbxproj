@@ -594,7 +594,7 @@
 					"-L/Users/carlgt1/projects/qcn/client/mac_build",
 				);
 				PRODUCT_NAME = QCNLive;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx10.8;
 				SYMROOT = ../bin/;
 				VALID_ARCHS = x86_64;
 			};
@@ -710,6 +710,7 @@
 		D70590BEB531B51029F711BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CONFIGURATION_BUILD_DIR = ../bin/;
 				CONFIGURATION_TEMP_DIR = build/Release;
 				COPY_PHASE_STRIP = YES;
@@ -803,7 +804,7 @@
 					"-L/Users/carlgt1/projects/qcn/client/mac_build",
 				);
 				PRODUCT_NAME = QCNLive;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx10.8;
 				SYMROOT = ../bin/;
 				VALID_ARCHS = x86_64;
 			};

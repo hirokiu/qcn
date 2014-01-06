@@ -184,7 +184,6 @@ IOReturn CSensorMacUSBJW::EnableCommandMode (IOHIDDeviceInterface122** hidInterf
 
 IOReturn CSensorMacUSBJW::ReadByteFromAddress (IOHIDDeviceInterface122** hidInterface, const UInt8 inAddress, UInt8 *result) // , bool bJoystick)
 {
-
 	UInt8	 readBuffer[8];
 	UInt8	 writeBuffer[8];
 	IOReturn ioReturnValue;
