@@ -217,12 +217,12 @@ AUTOHEADER = ${SHELL} "/Users/carlgt1/projects/qcn/curl-7.34.0/missing" --run au
 AUTOMAKE = ${SHELL} "/Users/carlgt1/projects/qcn/curl-7.34.0/missing" --run automake-1.14
 AWK = awk
 BLANK_AT_MAKETIME = 
-CC = gcc
+CC = /usr/bin/llvm-gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -O2 -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64 -Qunused-arguments
 CFLAG_CURL_SYMBOL_HIDING = -fvisibility=hidden
-CONFIGURE_OPTIONS = " '--disable-shared' 'CFLAGS=-O2  -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64' 'LDFLAGS=-L/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/ -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -Wl,-syslibroot,/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64' 'CPPFLAGS=-O2 -I/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64'"
-CPP = gcc -E
+CONFIGURE_OPTIONS = " '--disable-shared' 'CC=/usr/bin/llvm-gcc' 'CFLAGS=-O2  -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64' 'LDFLAGS=-L/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/ -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -Wl,-syslibroot,/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64' 'CPPFLAGS=-O2 -I/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64'"
+CPP = /usr/bin/llvm-gcc -E
 CPPFLAGS = -O2 -isystem /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64
 CPPFLAG_CURL_STATICLIB = -DCURL_STATICLIB
 CURLVERSION = 7.34.0
@@ -341,7 +341,7 @@ abs_srcdir = /Users/carlgt1/projects/qcn/curl-7.34.0/tests
 abs_top_builddir = /Users/carlgt1/projects/qcn/curl-7.34.0
 abs_top_srcdir = /Users/carlgt1/projects/qcn/curl-7.34.0
 ac_ct_AR = 
-ac_ct_CC = gcc
+ac_ct_CC = /usr/bin/llvm-gcc
 ac_ct_DUMPBIN = 
 am__include = include
 am__leading_dot = .
