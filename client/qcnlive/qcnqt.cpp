@@ -67,7 +67,6 @@ void MyApp::SetPath(const char* strArgv)
 	if (boinc_file_exists(FILENAME_LOGO)) 
 		setWindowIcon(QIcon(FILENAME_LOGO));
 	
-	
     delete [] strPath;
 }
 
@@ -117,11 +116,12 @@ bool MyApp::MainInit()
 	boinc_delete_file(STDERR_FILE);
 	boinc_delete_file("boinc_finished");
 	boinc_delete_file("boinc_lockfile");
-	
+/*
 	// freopen stdout to stdout.txt
 	if (!freopen("stdout.txt", "w", stdout)) {
            fprintf(stderr, "Can't redirect stdout for qcnqt!\n");
 	}
+ */
 	
 	processEvents(); // give the app time to process mouse events since we're before the event loop
 
@@ -384,6 +384,7 @@ void MyApp::SetRect(const QRect& rect)
 
 bool MyApp::Init()
 {
+    
 	m_bInit = false;
 		
 	// do splash screen until the mainwin show	

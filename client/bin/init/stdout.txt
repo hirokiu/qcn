@@ -13,51 +13,12 @@ No motion sensor available of type # 3 PMUMotionSensor
 Intel Macbook Pro compatible motion sensor detected!
 SMS KERNEL: 4 5 Intel Mac Laptop
 Motion sensor initialized of type 4 - Intel Mac Laptop.
-Start of monitoring at time 1388980598.278350  interval 0.020000  threshold 0.100000
-Initial sensor values:  x0=-0.649475  y0=-0.267431  z0=10.200579  sample size=1  dt=0.020000
-Server time synchronization started at   1388980598.464505
-Synchronized server time at local time = 1388980599.309518   offset = 0.009321   elapsed time = 0.845013
-Timing error encountered t0check=1388980601.160214  t0active=1388980610.260333  diff=-9.100119  timeadj=0  sample_size=1, dt=0.020000, lErr=0, lErrCum=0 resetting...
-  Last values were -0.687679 -0.305635 9.933147 1388980601.141131
-qcn_util::ResetCounter(3)
-Closing SMS sensor port...
-Port closed!
-No motion sensor available of type # 1 IOI2CMotionSensor
-No motion sensor available of type # 2 IOI2CMotionSensor
-No motion sensor available of type # 3 PMUMotionSensor
-Intel Macbook Pro compatible motion sensor detected!
-SMS KERNEL: 4 5 Intel Mac Laptop
-Motion sensor initialized of type 4 - Intel Mac Laptop.
-Start of monitoring at time 1388980663.166744  interval 0.020000  threshold 0.100000
-Initial sensor values:  x0=-0.534862  y0=-0.420249  z0=10.085965  sample size=1  dt=0.020000
-Timing error encountered t0check=1388980669.210645  t0active=1388980675.928176  diff=-6.717530  timeadj=1  sample_size=1, dt=0.020000, lErr=0, lErrCum=0 resetting...
-  Last values were -0.687679 -0.420249 9.933147 1388980669.191560
-qcn_util::ResetCounter(3)
-Closing SMS sensor port...
-Port closed!
-No motion sensor available of type # 1 IOI2CMotionSensor
-No motion sensor available of type # 2 IOI2CMotionSensor
-No motion sensor available of type # 3 PMUMotionSensor
-Intel Macbook Pro compatible motion sensor detected!
-SMS KERNEL: 4 5 Intel Mac Laptop
-Motion sensor initialized of type 4 - Intel Mac Laptop.
-Start of monitoring at time 1388980767.246064  interval 0.020000  threshold 0.100000
-Initial sensor values:  x0=-0.687679  y0=-0.191022  z0=9.971352  sample size=1  dt=0.020000
-Timing error encountered t0check=1388980770.527732  t0active=1388980777.460729  diff=-6.932997  timeadj=2  sample_size=1, dt=0.020000, lErr=0, lErrCum=0 resetting...
-  Last values were -0.687679 -0.420249 10.238783 1388980770.508895
-qcn_util::ResetCounter(3)
-Closing SMS sensor port...
-Port closed!
-No motion sensor available of type # 1 IOI2CMotionSensor
-No motion sensor available of type # 2 IOI2CMotionSensor
-No motion sensor available of type # 3 PMUMotionSensor
-Intel Macbook Pro compatible motion sensor detected!
-SMS KERNEL: 4 5 Intel Mac Laptop
-Motion sensor initialized of type 4 - Intel Mac Laptop.
-Start of monitoring at time 1388980779.498107  interval 0.020000  threshold 0.100000
-Initial sensor values:  x0=-0.725884  y0=-0.191022  z0=10.009556  sample size=1  dt=0.020000
+Start of monitoring at time 1388981245.401165  interval 0.020000  threshold 0.100000
+Initial sensor values:  x0=-0.420249  y0=-0.649475  z0=10.124169  sample size=1  dt=0.020000
+Server time synchronization started at   1388981245.584838
+Synchronized server time at local time = 1388981246.434774   offset = 0.008151   elapsed time = 0.849936
 Closing SMS sensor port...
 Port closed!
 qcnqt: stopping main monitoring thread
-qcnqt: main thread quit within 0.060000 seconds...
+qcnqt: main thread quit within 0.042000 seconds...
 Freeing shared memory segment

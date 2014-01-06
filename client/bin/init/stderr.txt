@@ -1,27 +1,13 @@
 shmget in attach_shmem: Invalid argument
-22:55:08 (79791): Can't set up shared mem: -1. Will run in standalone mode.
-qcn_util::getBOINCInitData requested at 1388980598.949576
+23:11:52 (81002): Can't set up shared mem: -1. Will run in standalone mode.
+qcn_util::getBOINCInitData requested at 1388981512.904285
 Successfully loaded 'logo.jpg'.
 Successfully loaded 'earthday4096.jpg'.
 Successfully loaded 'earthnight4096.jpg'.
 Successfully loaded 'xyzaxes.jpg'.
 Successfully loaded 'xyzaxesbl.jpg'.
 Failed to load 'ad.jpg'.
-Timing error encountered t0check=1388980601.160214  t0active=1388980610.260333  diff=-9.100119  timeadj=0  sample_size=1, dt=0.020000, lErr=0, lErrCum=0 resetting...
-  Last values were -0.687679 -0.305635 9.933147 1388980601.141131
-qcn_util::ResetCounter(3) - Incrementing iNumReset to 1 at 1388980610.271931
-qcn_util::getBOINCInitData requested at 1388980631.265100
-qcn_util::getBOINCInitData requested at 1388980663.155719
-Timing error encountered t0check=1388980669.210645  t0active=1388980675.928176  diff=-6.717530  timeadj=1  sample_size=1, dt=0.020000, lErr=0, lErrCum=0 resetting...
-  Last values were -0.687679 -0.420249 9.933147 1388980669.191560
-qcn_util::ResetCounter(3) - Incrementing iNumReset to 2 at 1388980675.939398
-qcn_util::getBOINCInitData requested at 1388980765.224427
-qcn_util::getBOINCInitData requested at 1388980765.786260
-Timing error encountered t0check=1388980770.527732  t0active=1388980777.460729  diff=-6.932997  timeadj=2  sample_size=1, dt=0.020000, lErr=0, lErrCum=0 resetting...
-  Last values were -0.687679 -0.420249 10.238783 1388980770.508895
-qcn_util::ResetCounter(3) - Incrementing iNumReset to 3 at 1388980777.460816
-qcn_util::getBOINCInitData requested at 1388980777.473297
-qcn_util::getBOINCInitData requested at 1388980778.041994
+qcn_util::getBOINCInitData requested at 1388981514.818219
 Exception 3 caught in sensor thread mean_xyz()
-qcn_main: waited 0.004000 seconds for sensor and time threads to end
+qcn_main: waited 0.002000 seconds for sensor and time threads to end
 Cleaning up graphics objects...
