@@ -283,7 +283,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>wsock32.lib;hid.lib;setupapi.lib;winmm.lib;comctl32.lib;boinc_zipl.lib;libcurl.lib;jpeglibl.lib;zlibl.lib;ftgll.lib;freetypel.lib;boinc_libl.lib;boinc_apil.lib;gdi32.lib;user32.lib;Ws2_32.lib;Wldap32.lib;psapi.lib;QtCore4.lib;QtGui4.lib;QtOpenGL4.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;c:\projects\qcn\curl\vs\vc8\lib\Release\;c:/projects/qcn/client/win_build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;c:\projects\qcn\curl-7.34.0\vs\vc8\lib\Release\;c:/projects/qcn/client/win_build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -464,7 +464,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>zlibdl.lib;wsock32.lib;hid.lib;setupapi.lib;winmm.lib;comctl32.lib;boinc_zipdl.lib;libcurl.lib;jpeglibdl.lib;ftgldl.lib;freetypedl.lib;boinc_libdl.lib;boinc_apidl.lib;psapi.lib;gdi32.lib;user32.lib;Ws2_32.lib;Wldap32.lib;qtmaind.lib;QtCored4.lib;QtGuid4.lib;QtOpenGLd4.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;c:\projects\qcn\curl\vs\vc8\lib\Debug\;c:/projects/qcn/client/win_build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;c:\projects\qcn\curl-7.34.0\vs\vc8\lib\Debug\;c:/projects/qcn/client/win_build;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>true</GenerateDebugInformation>

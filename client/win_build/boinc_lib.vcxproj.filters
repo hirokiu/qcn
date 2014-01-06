@@ -90,6 +90,9 @@
     <ClCompile Include="..\..\..\boinc\lib\win_util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\boinc\lib\opencl_boinc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\boinc\lib\app_ipc.h">

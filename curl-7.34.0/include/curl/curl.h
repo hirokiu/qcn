@@ -33,12 +33,12 @@
 #include "curlver.h"         /* libcurl version defines   */
 
 #ifdef _WIN32
-#include "../../../curlbuild-win.h"       /* libcurl build definitions */
+#include "../../curlbuild-win.h"       /* libcurl build definitions */
 #else
 #ifdef LINUX
-#include "../../../curlbuild-i386.h"
+#include "../../curlbuild-i386.h"
 #else
-#include "curlbuild.h"       /* libcurl build definitions */
+#include <curl/curlbuild.h>
 #endif
 #endif
 

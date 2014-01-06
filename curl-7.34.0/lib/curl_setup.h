@@ -122,7 +122,17 @@
  * and might also include required system header files to define them.
  */
 
+
+#ifdef _WIN32
+#include "../../curlbuild-win.h"       /* libcurl build definitions */
+#else
+#ifdef LINUX
+#include "../../curlbuild-i386.h"
+#else
 #include <curl/curlbuild.h>
+#endif
+#endif
+
 
 /*
  * Compile time sanity checks must also be done when building the library.

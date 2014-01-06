@@ -664,6 +664,7 @@
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename)1.obj</ObjectFileName>
       <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
     </ClCompile>
+    <ClCompile Include="..\..\..\boinc\lib\opencl_boinc.cpp" />
     <ClCompile Include="..\..\..\boinc\lib\parse.cpp">
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='DebugDLLRaw|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
       <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='DebugDLLRaw|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
