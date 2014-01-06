@@ -78,4 +78,7 @@ rm -rf QCNLive.app
 rm -rf ../bin/QCNLive.app
 $XCB -project QCNLive.xcodeproj -configuration Release -target QCNLive clean build
 cd ../bin
+mv qcnlive.app QCNLive.app
+mv QCNLive.app/Contents/MacOS/qcnlive QCNLive.app/Contents/MacOS/QCNLive 
 /Developer/Qt5.2.0/5.2.0/clang_64/bin/macdeployqt QCNLive.app
+

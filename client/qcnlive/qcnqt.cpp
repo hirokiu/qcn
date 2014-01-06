@@ -44,30 +44,37 @@ CQCNShMem* volatile sm = NULL;
 
 void MyApp::SetPath(const char* strArgv)
 {
-	char* strPath = new char[_MAX_PATH];
-    memset(strPath, 0x00, _MAX_PATH);
-	
-	if (strArgv)  {	
-	  // look for the app name in the full path in the executable name
-      char* strLast = strstr((char*) strArgv, QCNGUI_APP_NAME);
-      if (strLast) 
-         strncpy(strPath, strArgv, strLast - strArgv);
-  	  else 
-	     strcpy(strPath, "");  // something wrong if no path, I guess they're in root dir?
+  // use the Qt function to get the path as Mac can have weird paths depending on if you click from Finder etc
+    
+    QString qstrPath = QCoreApplication::applicationDirPath();
+    QByteArray qbaPath = qstrPath.toLocal8Bit();
+    const char* strPath = qbaPath.data();
+  	
+    _chdir(strPath);
+    
+#ifdef __APPLE_CC__
+    // it seems we now need to check we are not within the app ie .app/Contents/MacOS
+    if (strcasestr(qbaPath.data(), "Contents/MacOS")) {
+        // we need to chdir three levels back
+        _chdir("../../../");
     }
-	else {
-	  getcwd(strPath, _MAX_PATH);
-	  strPath[strlen(strPath)] = qcn_util::cPathSeparator();  // put the path char here
-	}
-	
-    strlcat(strPath, QCNGUI_INIT_DIR, _MAX_PATH);
-    _chdir(strPath); // first off, move to the init directory, this is where the boinc startup stuff is etc
+#endif // apple special case
 
+    _chdir(QCNGUI_INIT_DIR); // now move to the init subdir
+        
       // set icon - FILENAME_LOGO is set in qcnlive_define.h for the appropriate Mac/Win version
 	if (boinc_file_exists(FILENAME_LOGO)) 
 		setWindowIcon(QIcon(FILENAME_LOGO));
 	
-    delete [] strPath;
+/* for debugging...
+    
+    QMessageBox msgBox;
+    msgBox.setInformativeText(qbaPath.data());
+    msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel);
+    msgBox.setDefaultButton(QMessageBox::Save);
+    int ret = msgBox.exec();
+ */
+    
 }
 
 bool MyApp::CreateBOINCInitFile()

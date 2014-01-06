@@ -23,199 +23,201 @@
  <rsc_disk_bound>100000000.000000</rsc_disk_bound>
  <project_preferences>
  <quakes>
-<qu001>  5.1|2014/01/06 18:49:40|  25.4726| 122.8348| 228.60|112km N of Yonakuni, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxsm</qu001>
-<qu002>  2.8|2014/01/06 17:30:59|  63.1293|-150.9086| 100.00|98km NNW of Talkeetna, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10980415</qu002>
-<qu003>  5.1|2014/01/06 16:02:11|  -1.1611| -23.5815|  10.00|Central Mid-Atlantic Ridge|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxr3</qu003>
-<qu004>  2.7|2014/01/06 15:18:19|  31.9752|-116.2608|  11.17|35km ENE of Ensenada, Mexico|http://earthquake.usgs.gov/earthquakes/eventpage/ci11410786</qu004>
-<qu005>  3.3|2014/01/06 12:12:44|  17.7402| -68.4213|  84.00|73km SSE of Boca de Yuma, Dominican Republic|http://earthquake.usgs.gov/earthquakes/eventpage/pr14006004</qu005>
-<qu006>  2.9|2014/01/06 10:22:06|  62.8039|-149.1211|   2.00|66km S of Cantwell, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10977320</qu006>
-<qu007>  3.5|2014/01/06 09:14:12|  44.7577|-110.7793|   9.50|27km ENE of West Yellowstone, Montana|http://earthquake.usgs.gov/earthquakes/eventpage/uu60051017</qu007>
-<qu008>  4.8|2014/01/06 09:05:52|  -7.7933| 130.1339|  31.08|131km W of Saumlaki, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxiv</qu008>
-<qu009>  2.6|2014/01/06 09:00:11|  44.7443|-110.7860|   6.50|26km ENE of West Yellowstone, Montana|http://earthquake.usgs.gov/earthquakes/eventpage/uu60051012</qu009>
-<qu010>  4.8|2014/01/06 08:56:36|  20.6009| 147.0330|  34.83|222km E of Farallon de Pajaros, Northern Mariana Islands|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxit</qu010>
-<qu011>  3.5|2014/01/06 08:41:21|  35.2156|-102.6747|   5.00|22km W of Vega, Texas|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxim</qu011>
-<qu012>  4.7|2014/01/06 08:18:00|  36.2655| 138.7846| 144.69|10km W of Tomioka, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxik</qu012>
-<qu013>  4.9|2014/01/06 07:56:10| -20.7951| -70.5662|  16.34|77km SW of Iquique, Chile|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxig</qu013>
-<qu014>  3.0|2014/01/06 07:53:35|  19.3835|-155.2790|   3.50|6km SW of Volcano, Hawaii|http://earthquake.usgs.gov/earthquakes/eventpage/hv60616536</qu014>
-<qu015>  2.9|2014/01/06 05:56:14|  40.1210| -96.5271|   5.00|11km E of Wymore, Nebraska|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxh8</qu015>
-<qu016>  5.1|2014/01/06 03:59:02| -20.7643| -70.6303|  21.47|78km SW of Iquique, Chile|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxg7</qu016>
-<qu017>  4.4|2014/01/06 03:53:46|  50.3965| 178.8035|  30.40|173km S of Little Sitkin Island, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxg3</qu017>
-<qu018>  2.8|2014/01/06 02:05:43|  47.4268|-112.8440|  25.60|53km NNW of Lincoln, Montana|http://earthquake.usgs.gov/earthquakes/eventpage/mb29928</qu018>
-<qu019>  3.8|2014/01/06 01:38:25|  51.6069|-175.1849|  25.70|94km SW of Atka, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxfj</qu019>
-<qu020>  5.4|2014/01/06 01:25:09| -20.5219| 172.6386|  24.30|216km NNE of Ile Hunter, New Caledonia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxfa</qu020>
-<qu021>  2.9|2014/01/06 00:11:34|  61.8689|-147.2705|  42.70|83km E of Sutton-Alpine, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10972749</qu021>
-<qu022>  2.6|2014/01/05 23:11:39|  33.4987|-116.4728|   8.00|19km ESE of Anza, California|http://earthquake.usgs.gov/earthquakes/eventpage/ci11410562</qu022>
-<qu023>  2.6|2014/01/05 23:08:31|  61.7753|-150.2011|  28.90|9km WNW of Willow, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10972721</qu023>
-<qu024>  3.6|2014/01/05 22:58:59|  59.4723|-153.1627| 106.50|82km WSW of Anchor Point, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10972713</qu024>
-<qu025>  3.0|2014/01/05 22:57:05|  59.9998|-153.3823| 147.50|64km SSW of Redoubt Volcano, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10972709</qu025>
-<qu026>  5.3|2014/01/05 21:29:34|  -6.9572| 128.4225|  34.86|Banda Sea|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxaa</qu026>
-<qu027>  2.5|2014/01/05 19:46:53|  60.5337|-146.5296|  17.70|42km W of Cordova, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10971206</qu027>
-<qu028>  2.9|2014/01/05 16:56:58|  18.0330| -67.1884|  13.00|2km WNW of Boqueron, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14005002</qu028>
-<qu029>  5.1|2014/01/05 14:41:31|   3.1618| 128.3295|  68.32|162km NNE of Tobelo, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx68</qu029>
-<qu030>  4.6|2014/01/05 14:28:08|  33.4273| 139.5075|  27.49|46km NW of Hachijo-jima, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx66</qu030>
-<qu031>  3.6|2014/01/05 13:19:13|  51.6144| 176.2586|  25.00|85km SSE of Buldir Island, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10969731</qu031>
-<qu032>  4.7|2014/01/05 12:21:45|  30.2394| 103.0343|  10.24|45km WSW of Linqiong, China|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx5h</qu032>
-<qu033>  5.1|2014/01/05 11:44:11|   3.1795| 128.3537|  54.28|164km NNE of Tobelo, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx58</qu033>
-<qu034>  5.1|2014/01/05 11:32:11|  -5.9100| 105.3972|  58.23|28km SW of Kaliandak, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx54</qu034>
-<qu035>  4.7|2014/01/05 10:56:13|  53.7561| -35.2225|  10.00|Reykjanes Ridge|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx4z</qu035>
-<qu036>  2.8|2014/01/05 08:49:54|  66.9214|-154.8565|  20.10|88km E of Kobuk, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10966091</qu036>
-<qu037>  2.9|2014/01/05 08:36:03|  39.4806|-115.4352|  14.91|45km E of Eureka, Nevada|http://earthquake.usgs.gov/earthquakes/eventpage/nn00433080</qu037>
-<qu038>  2.7|2014/01/05 07:14:59|  60.4251|-152.5771| 100.00|11km SE of Redoubt Volcano, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10966071</qu038>
-<qu039>  3.1|2014/01/05 03:53:04|  18.6779| -66.4069| 100.00|24km NNW of Brenas, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14005000</qu039>
-<qu040>  5.3|2014/01/05 03:36:41|   4.5576| -76.6001|  61.39|40km W of El Dovio, Colombia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx2l</qu040>
-<qu041>  4.1|2014/01/05 01:52:33|  14.0639| -91.5126|  56.58|27km WSW of Nueva Concepcion, Guatemala|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx2e</qu041>
-<qu042>  3.7|2014/01/04 23:33:32|  36.0989| -97.3057|   4.64|17km NNW of Langston, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx1g</qu042>
-<qu043>  3.2|2014/01/04 21:26:17|  35.8379| -96.9336|   5.00|15km NNW of Chandler, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwzb</qu043>
-<qu044>  3.5|2014/01/04 20:35:32|  36.7723| -98.3471|  12.57|2km NNE of Cherokee, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwxy</qu044>
-<qu045>  5.1|2014/01/04 19:34:27|  56.7144| 129.6831|  12.32|292km E of Chul'man, Russia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwx9</qu045>
-<qu046>  3.2|2014/01/04 18:49:50|  18.8209| -67.1505|   9.00|35km NNW of Isabela, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14004007</qu046>
-<qu047>  4.7|2014/01/04 18:12:20|  33.7571| 141.2876|  36.76|157km ENE of Hachijo-jima, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lww7</qu047>
-<qu048>  4.8|2014/01/04 17:57:00| -13.1166| 167.0593| 215.42|100km NNW of Sola, Vanuatu|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lww0</qu048>
-<qu049>  4.9|2014/01/04 16:10:17|  47.2518| 153.0143|  51.45|Kuril Islands|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwuv</qu049>
-<qu050>  4.6|2014/01/04 12:38:00|   1.8200|-101.9517|  10.00|Galapagos Triple Junction region|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwtd</qu050>
-<qu051>  2.8|2014/01/04 12:12:43|  32.8628|-115.4788|  14.70|8km ENE of Imperial, California|http://earthquake.usgs.gov/earthquakes/eventpage/ci11409986</qu051>
-<qu052>  4.3|2014/01/04 11:02:41|  -6.6037| 129.6141| 152.87|239km NW of Saumlaki, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwsf</qu052>
-<qu053>  2.5|2014/01/04 09:54:30|  18.6716| -67.2291|  70.00|24km NW of San Antonio, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14004004</qu053>
-<qu054>  2.7|2014/01/04 08:54:10|  20.0320|-155.8967|  10.20|13km NNW of Waikoloa Village, Hawaii|http://earthquake.usgs.gov/earthquakes/eventpage/hv60615646</qu054>
-<qu055>  3.1|2014/01/04 08:45:52|  59.6795|-152.1334|  69.20|20km WSW of Anchor Point, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10957071</qu055>
-<qu056>  4.2|2014/01/04 08:45:42|  12.3938| -87.9388|  49.68|65km SW of Jiquilillo, Nicaragua|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwra</qu056>
-<qu057>  4.2|2014/01/04 08:25:36| -20.6570| -70.7620|  36.60|80km SW of Iquique, Chile|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx36</qu057>
-<qu058>  3.2|2014/01/04 08:13:30|  68.8221|-144.8139|   7.30|83km NNE of Arctic Village, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10957063</qu058>
-<qu059>  4.2|2014/01/04 06:05:55| -33.7580| -72.2610|  35.80|62km WSW of San Antonio, Chile|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx34</qu059>
-<qu060>  2.7|2014/01/04 05:27:25|  35.6081| -97.3260|   5.00|5km NW of Jones, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwqc</qu060>
-<qu061>  5.4|2014/01/04 05:22:59|  37.0169| 143.3114|  10.00|211km ESE of Namie, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwp7</qu061>
-<qu062>  2.5|2014/01/04 03:07:17|  62.1557|-152.0751| 100.00|103km W of Talkeetna, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10955697</qu062>
-<qu063>  4.8|2014/01/04 02:58:45| -10.9542| 163.7229|   9.78|204km ESE of Kirakira, Solomon Islands|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwnk</qu063>
-<qu064>  4.4|2014/01/04 01:55:04| -11.7294| 110.9391|  14.83|South of Java, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwn0</qu064>
-<qu065>  2.5|2014/01/04 01:00:32|  18.7507| -64.9800|  67.00|45km N of Charlotte Amalie, U.S. Virgin Islands|http://earthquake.usgs.gov/earthquakes/eventpage/pr14004001</qu065>
-<qu066>  5.9|2014/01/04 00:11:48| -20.6585| -70.6500|   7.33|71km SW of Iquique, Chile|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwmk</qu066>
-<qu067>  2.9|2014/01/04 00:08:27|  19.4333| -66.1235|  38.00|107km N of San Juan, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14004000</qu067>
-<qu068>  3.2|2014/01/03 23:21:36|  18.9803| -65.0120|  18.00|71km N of Charlotte Amalie, U.S. Virgin Islands|http://earthquake.usgs.gov/earthquakes/eventpage/pr14003007</qu068>
-<qu069>  2.5|2014/01/03 22:34:11|  17.9619| -65.4664|  17.00|14km S of Esperanza, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14003008</qu069>
-<qu070>  4.7|2014/01/03 20:44:41|  -5.0467| 145.1072|  63.77|78km WNW of Madang, Papua New Guinea|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwgx</qu070>
-<qu071>  5.2|2014/01/03 20:34:05|  -7.1687| 156.0251|  77.85|82km SW of Chirovanga, Solomon Islands|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwgg</qu071>
-<qu072>  2.5|2014/01/03 19:58:30|  37.0137|-104.9359|   5.00|42km WSW of Trinidad, Colorado|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwef</qu072>
-<qu073>  4.8|2014/01/03 19:52:44|   8.7228| 126.3124|  80.47|8km SSE of Marihatag, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwek</qu073>
-<qu074>  3.0|2014/01/03 19:47:59|  33.9820|-118.4525|  11.21|0km NNW of Marina del Rey, California|http://earthquake.usgs.gov/earthquakes/eventpage/ci11409738</qu074>
-<qu075>  4.5|2014/01/03 19:22:43|  -7.4968| 108.3785| 108.10|1km N of Lembursawah, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwd1</qu075>
-<qu076>  5.0|2014/01/03 18:34:04| -21.9569|-175.6577|  22.76|96km SSW of Vaini, Tonga|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwbt</qu076>
-<qu077>  4.7|2014/01/03 17:34:00|   7.3591| -35.5053|  14.22|Central Mid-Atlantic Ridge|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwac</qu077>
-<qu078>  2.6|2014/01/03 17:03:33|  18.7364| -64.6548|   8.00|35km N of Road Town, British Virgin Islands|http://earthquake.usgs.gov/earthquakes/eventpage/pr14003006</qu078>
-<qu079>  2.6|2014/01/03 16:54:26|  40.3167|-124.5655|  19.70|38km SW of Ferndale, California|http://earthquake.usgs.gov/earthquakes/eventpage/nc72135571</qu079>
-<qu080>  3.5|2014/01/03 14:25:20|  63.0261|-148.1721|  65.60|56km SE of Cantwell, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10949632</qu080>
-<qu081>  4.6|2014/01/03 14:21:59|  27.7365|  52.0810|  30.60|131km SSW of Firuzabad, Iran|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw8c</qu081>
-<qu082>  4.9|2014/01/03 14:17:47|  -5.8816| 103.4643|  30.30|87km SW of Biha, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw85</qu082>
-<qu083>  2.6|2014/01/03 13:17:16|  18.6567| -67.8714|  63.00|56km E of Punta Cana, Dominican Republic|http://earthquake.usgs.gov/earthquakes/eventpage/pr14003005</qu083>
-<qu084>  4.9|2014/01/03 13:06:33|  -0.2414| 122.9035|  94.40|77km SSW of Bilungala, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw7p</qu084>
-<qu085>  2.9|2014/01/03 11:52:17|  37.3237|-122.1572|  10.10|5km WSW of Loyola, California|http://earthquake.usgs.gov/earthquakes/eventpage/nc72135386</qu085>
-<qu086>  2.6|2014/01/03 11:23:19|  39.0939|-115.5248|   0.00|39km N of Currant, Nevada|http://earthquake.usgs.gov/earthquakes/eventpage/nn00432962</qu086>
-<qu087>  5.1|2014/01/03 10:24:35|  19.2089| 120.1474|  20.35|93km NNW of Davila, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw6l</qu087>
-<qu088>  3.7|2014/01/03 10:14:54|  19.4416| -67.9947|  30.00|76km NE of Punta Cana, Dominican Republic|http://earthquake.usgs.gov/earthquakes/eventpage/pr14003004</qu088>
-<qu089>  4.6|2014/01/03 10:09:43| -10.3227| -75.5576|  38.60|32km NNW of Oxapampa, Peru|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw6c</qu089>
-<qu090>  3.0|2014/01/03 08:37:15|  17.8283| -67.4107|  34.00|28km SW of Pole Ojea, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14003003</qu090>
-<qu091>  4.7|2014/01/03 08:20:46|  -5.1961| 103.3258|  67.28|51km WSW of Kuripan, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw4f</qu091>
-<qu092>  3.5|2014/01/03 07:01:39|  19.3383| -68.1550|  15.00|87km NNE of Punta Cana, Dominican Republic|http://earthquake.usgs.gov/earthquakes/eventpage/pr14003002</qu092>
-<qu093>  4.5|2014/01/03 06:16:32| -17.8723|-178.5501| 578.26|272km SE of Lambasa, Fiji|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw37</qu093>
-<qu094>  2.7|2014/01/03 03:37:21|  18.1863| -66.9189|  22.00|6km E of Maricao, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14003000</qu094>
-<qu095>  4.3|2014/01/03 03:34:43|  16.0586| -61.7963| 167.75|3km W of Vieux-Habitants, Guadeloupe|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw2c</qu095>
-<qu096>  4.2|2014/01/03 03:06:25|  17.9175|-106.0113|  28.07|199km SW of San Patricio, Mexico|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw23</qu096>
-<qu097>  2.5|2014/01/03 01:41:37|  37.3483|-117.1257|  13.81|41km SSE of Goldfield, Nevada|http://earthquake.usgs.gov/earthquakes/eventpage/nn00432953</qu097>
-<qu098>  4.8|2014/01/02 23:54:01|  16.3316| -97.7569|  45.31|8km NE of Santiago Jamiltepec, Mexico|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw1a</qu098>
-<qu099>  4.4|2014/01/02 23:02:28|  53.8683|-164.2639|  46.46|103km ESE of Akutan, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw0c</qu099>
-<qu100>  4.8|2014/01/02 22:39:44| -32.7889| -71.2245|  49.02|0km SW of Hacienda La Calera, Chile|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw00</qu100>
-<qu101>  4.5|2014/01/02 22:27:49| -10.8419| -77.8326|  49.58|9km WSW of Puerto Supe, Peru|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvzw</qu101>
-<qu102>  2.5|2014/01/02 22:11:04|  49.3560|-120.4662|   0.00|11km SSE of Princeton, Canada|http://earthquake.usgs.gov/earthquakes/eventpage/uw60665071</qu102>
-<qu103>  3.4|2014/01/02 20:49:24|  59.9474|-153.2885| 132.30|67km SSW of Redoubt Volcano, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10942773</qu103>
-<qu104>  5.3|2014/01/02 19:30:53|  19.2682| 120.1448|  10.00|98km NNW of Burgos, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvtq</qu104>
-<qu105>  3.0|2014/01/02 19:22:18|  59.5313|-152.4556|  66.00|44km SW of Anchor Point, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10942166</qu105>
-<qu106>  5.0|2014/01/02 19:02:24|  19.1081| 120.2459|  10.00|78km NNW of Davila, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvt0</qu106>
-<qu107>  4.7|2014/01/02 18:47:55| -10.9279| 113.1395|  15.33|278km SSW of Sarongan, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvsm</qu107>
-<qu108>  3.2|2014/01/02 17:20:27|  36.0808| -96.9176|   5.00|13km ESE of Stillwater, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvrp</qu108>
-<qu109>  4.6|2014/01/02 16:22:20|  40.7297|  51.2411|  31.73|82km ENE of Artyom, Azerbaijan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvnf</qu109>
-<qu110>  4.5|2014/01/02 15:19:46|  14.2733| -91.4548|  59.34|9km W of Pueblo Nuevo Tiquisate, Guatemala|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvmt</qu110>
-<qu111>  2.9|2014/01/02 13:19:32|  36.1229| -97.3086|   4.98|18km S of Perry, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvld</qu111>
-<qu112>  4.8|2014/01/02 13:11:05|  35.2661| 140.4505|  25.44|6km ENE of Ohara, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvlc</qu112>
-<qu113>  3.9|2014/01/02 12:04:50|  39.0570|-118.1082|   6.37|26km NW of Gabbs, Nevada|http://earthquake.usgs.gov/earthquakes/eventpage/nn00432876</qu113>
-<qu114>  4.5|2014/01/02 11:50:58|  -6.7144| 129.9477| 126.37|203km NW of Saumlaki, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvkt</qu114>
-<qu115>  4.5|2014/01/02 10:50:18|  27.1488|  54.3122|  10.49|59km S of Lar, Iran|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvkg</qu115>
-<qu116>  2.6|2014/01/02 10:04:07|  18.2194| -65.9785|   6.00|3km NNW of San Lorenzo, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14002005</qu116>
-<qu117>  5.0|2014/01/02 09:56:17|  10.3783| 126.4462|  56.78|56km NE of San Isidro, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvk3</qu117>
-<qu118>  3.0|2014/01/02 09:54:52|  18.2201| -65.9705|   8.00|3km NNW of San Lorenzo, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14002004</qu118>
-<qu119>  3.3|2014/01/02 09:32:27|  38.7867|-122.7408|   2.20|1km NE of The Geysers, California|http://earthquake.usgs.gov/earthquakes/eventpage/nc72134726</qu119>
-<qu120>  2.5|2014/01/02 08:23:12|  38.8142|-122.8178|   2.70|6km NW of The Geysers, California|http://earthquake.usgs.gov/earthquakes/eventpage/nc72134681</qu120>
-<qu121>  4.7|2014/01/02 07:48:30|  35.2355| 140.3611|  34.98|2km SW of Ohara, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvje</qu121>
-<qu122>  2.7|2014/01/02 07:21:47|  61.4475|-149.8848|  24.70|9km SSE of Big Lake, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10935945</qu122>
-<qu123>  4.5|2014/01/02 06:58:16|  55.4619| 162.8816|  70.39|88km SSE of Ust'-Kamchatsk Staryy, Russia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lviz</qu123>
-<qu124>  2.8|2014/01/02 06:51:38|  18.6706| -64.8455|  50.00|37km NNE of Charlotte Amalie, U.S. Virgin Islands|http://earthquake.usgs.gov/earthquakes/eventpage/pr14002003</qu124>
-<qu125>  4.0|2014/01/02 06:23:09|  40.2900|-124.4527|  20.30|35km SSW of Ferndale, California|http://earthquake.usgs.gov/earthquakes/eventpage/nc72134626</qu125>
-<qu126>  4.4|2014/01/02 05:37:55|  -7.2194| 129.3933| 152.29|227km WNW of Saumlaki, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvin</qu126>
-<qu127>  3.0|2014/01/02 05:30:55|  17.9580| -65.0122|   6.00|40km NW of Christiansted, U.S. Virgin Islands|http://earthquake.usgs.gov/earthquakes/eventpage/pr14002001</qu127>
-<qu128>  2.7|2014/01/02 04:31:20|  32.1570|-116.3687|  18.27|39km NE of Ensenada, Mexico|http://earthquake.usgs.gov/earthquakes/eventpage/ci11408970</qu128>
-<qu129>  2.7|2014/01/02 03:45:06|  18.5515| -65.0432|  29.00|26km NNW of Charlotte Amalie, U.S. Virgin Islands|http://earthquake.usgs.gov/earthquakes/eventpage/pr14002002</qu129>
-<qu130>  4.3|2014/01/02 03:24:20|  27.1750|  54.3768|  10.00|56km S of Lar, Iran|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvhu</qu130>
-<qu131>  5.5|2014/01/02 03:13:56|  27.2610|  54.4277|  10.10|47km S of Lar, Iran|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvhr</qu131>
-<qu132>  3.4|2014/01/02 03:04:16|  19.1184| -63.9459| 110.00|105km NE of Road Town, British Virgin Islands|http://earthquake.usgs.gov/earthquakes/eventpage/pr14002000</qu132>
-<qu133>  4.4|2014/01/02 03:01:23|   4.8994| 127.0028| 115.06|179km ESE of Sarangani, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvhq</qu133>
-<qu134>  2.6|2014/01/02 01:30:16|  39.3005|-122.7922|   9.10|18km NE of Upper Lake, California|http://earthquake.usgs.gov/earthquakes/eventpage/nc72134506</qu134>
-<qu135>  2.5|2014/01/02 01:29:48|  61.2558|-146.3244|  19.10|13km N of Valdez, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10934334</qu135>
-<qu136>  2.5|2014/01/02 00:08:07|  63.1670|-151.5844|   5.80|120km NW of Talkeetna, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10934324</qu136>
-<qu137>  2.7|2014/01/01 23:10:08|  18.3276| -66.1455|  58.00|4km SW of Guaynabo, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14001004</qu137>
-<qu138>  2.5|2014/01/01 22:20:35|  37.6037|-118.4288|   9.60|24km N of Dixon Lane-Meadow Creek, California|http://earthquake.usgs.gov/earthquakes/eventpage/nc72134431</qu138>
-<qu139>  4.7|2014/01/01 21:25:49|  -2.9824| 129.5064|  31.66|76km ENE of Amahai, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvew</qu139>
-<qu140>  4.5|2014/01/01 21:11:35|   1.0318|  97.0595|  20.72|177km SSE of Sinabang, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lven</qu140>
-<qu141>  4.9|2014/01/01 16:47:53|  51.9425|  82.0703|  20.83|20km E of Pospelikha, Russia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvcu</qu141>
-<qu142>  4.9|2014/01/01 16:14:14| -22.4429| -66.1655| 243.23|57km WNW of Abra Pampa, Argentina|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvb7</qu142>
-<qu143>  6.5|2014/01/01 16:03:28| -13.8779| 167.2434| 187.00|33km W of Sola, Vanuatu|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvb5</qu143>
-<qu144>  3.0|2014/01/01 15:47:16|  35.6647|-118.4690|  10.57|4km SSW of Wofford Heights, California|http://earthquake.usgs.gov/earthquakes/eventpage/ci11408690</qu144>
-<qu145>  4.9|2014/01/01 14:39:25|  36.6703| 141.0184|  57.74|27km ESE of Kitaibaraki, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lval</qu145>
-<qu146>  5.0|2014/01/01 14:23:04| -35.5023|-179.1738|  59.33|East of the North Island of New Zealand|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lva0</qu146>
-<qu147>  2.5|2014/01/01 13:40:46|  18.4022| -67.3630|  21.00|13km WNW of Rincon, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14001001</qu147>
-<qu148>  4.5|2014/01/01 11:08:10| -44.3245| -82.0489|  10.00|West Chile Rise|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv8w</qu148>
-<qu149>  2.5|2014/01/01 10:44:28|  53.4979|-165.1454|  21.00|82km SSE of Akutan, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10930287</qu149>
-<qu150>  3.2|2014/01/01 09:27:19|  19.0540| -67.7055|  42.00|89km NW of San Antonio, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14001000</qu150>
-<qu151>  2.5|2014/01/01 09:03:54|  51.4805|-178.1499|  10.80|44km S of Tanaga Volcano, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10930267</qu151>
-<qu152>  4.8|2014/01/01 07:53:55| -18.4698|-177.9316| 563.14|254km NNE of Ndoi Island, Fiji|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv7u</qu152>
-<qu153>  4.8|2014/01/01 07:04:04|  41.8989| 137.5443| 288.87|258km W of Kamiiso, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv7r</qu153>
-<qu154>  4.7|2014/01/01 04:46:29| -44.6265| -15.4332|   9.82|Southern Mid-Atlantic Ridge|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv78</qu154>
-<qu155>  2.9|2014/01/01 04:19:56|  42.1302|-112.5290|   6.80|23km WSW of Malad City, Idaho|http://earthquake.usgs.gov/earthquakes/eventpage/uu60050592</qu155>
-<qu156>  2.9|2014/01/01 03:39:43|  52.0722|-167.0103|  41.50|158km SE of Nikolski, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10928805</qu156>
-<qu157>  4.4|2014/01/01 03:20:14|  -6.9571| 127.6982| 251.75|293km NE of Dili, East Timor|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv6s</qu157>
-<qu158>  2.5|2014/01/01 01:58:50|  19.2765|-155.4777|   8.00|7km N of Pahala, Hawaii|http://earthquake.usgs.gov/earthquakes/eventpage/hv60614066</qu158>
-<qu159>  2.5|2014/01/01 01:58:14|  19.3297|-155.0803|   4.60|19km SE of Volcano, Hawaii|http://earthquake.usgs.gov/earthquakes/eventpage/hv60614061</qu159>
-<qu160>  4.6|2014/01/01 00:05:27| -18.4945|-175.5626| 203.50|167km W of Neiafu, Tonga|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv5j</qu160>
-<qu161>  5.1|2014/01/01 00:01:16|  19.0807| 120.2521|  10.05|75km NNW of Davila, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv5e</qu161>
-<qu162>  5.2|2013/12/31 23:41:47|  19.0873| 120.0979|   9.85|84km NW of Davila, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv53</qu162>
-<qu163>  3.2|2013/12/31 23:15:12|  17.5501| -67.6095|  38.00|65km SW of Pole Ojea, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr13365008</qu163>
-<qu164>  2.8|2013/12/31 22:30:36|  51.5220|-178.8153|   8.70|35km NE of Amatignak Island, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10927719</qu164>
-<qu165>  4.8|2013/12/31 21:45:56|  19.1382| 120.2376|  16.94|81km NNW of Davila, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv1d</qu165>
-<qu166>  5.2|2013/12/31 21:32:01|  19.1243| 120.2182|   5.49|81km NNW of Davila, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv0r</qu166>
-<qu167>  2.8|2013/12/31 21:03:30|  19.1690| -67.6737|  44.00|96km NW of San Antonio, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr13365009</qu167>
-<qu168>  5.7|2013/12/31 20:01:06|  19.1051| 120.2770|   8.31|76km NNW of Davila, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000luwe</qu168>
-<qu169>  2.6|2013/12/31 19:25:31|  36.5700| -97.8420|   4.40|19km N of Enid, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000luva</qu169>
-<qu170>  2.7|2013/12/31 17:45:12|  60.1853|-153.1610| 136.30|40km SW of Redoubt Volcano, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10926302</qu170>
-<qu171>  4.8|2013/12/31 15:43:30|  17.3888| 146.0868|  96.84|86km SSE of Pagan, Northern Mariana Islands|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lur4</qu171>
-<qu172>  4.2|2013/12/31 15:06:14|  34.3876|  25.3093|  26.50|69km SSE of Pirgos, Greece|http://earthquake.usgs.gov/earthquakes/eventpage/usc000luqt</qu172>
-<qu173>  3.2|2013/12/31 13:03:06|  66.1952|-149.0746|   4.70|128km SSE of Coldfoot, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10924947</qu173>
-<qu174>  3.1|2013/12/31 12:33:24|  31.5517|-115.4987|  10.00|81km SSW of Alberto Oviedo Mota, Mexico|http://earthquake.usgs.gov/earthquakes/eventpage/ci11408186</qu174>
-<qu175>  4.6|2013/12/31 10:45:28| -20.2756|-178.3935| 570.91|52km NE of Ndoi Island, Fiji|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lup9</qu175>
-<qu176>  2.8|2013/12/31 10:29:01|  18.4720| -64.8663| 107.00|15km NNE of Charlotte Amalie, U.S. Virgin Islands|http://earthquake.usgs.gov/earthquakes/eventpage/pr13365005</qu176>
-<qu177>  3.3|2013/12/31 10:27:56|  51.7924| 177.4318|  25.00|36km SSW of Kiska Volcano, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10924080</qu177>
-<qu178>  4.5|2013/12/31 10:22:06|  14.0124| -92.1119|  59.51|38km SSW of Champerico, Guatemala|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lunz</qu178>
-<qu179>  2.7|2013/12/31 09:46:52|  19.8598|-155.5455|  24.30|22km SE of Waimea, Hawaii|http://earthquake.usgs.gov/earthquakes/eventpage/hv60613471</qu179>
-<qu180>  3.1|2013/12/31 09:21:08|  33.5015|-116.4773|   9.50|19km ESE of Anza, California|http://earthquake.usgs.gov/earthquakes/eventpage/ci11407970</qu180>
-<qu181>  3.1|2013/12/31 08:55:30|  19.1187| -68.3127|  64.00|60km N of Punta Cana, Dominican Republic|http://earthquake.usgs.gov/earthquakes/eventpage/pr13365004</qu181>
-<qu182>  3.4|2013/12/31 08:48:34|  18.9064| -68.3977|  96.00|35km N of Punta Cana, Dominican Republic|http://earthquake.usgs.gov/earthquakes/eventpage/pr13365002</qu182>
-<qu183>  5.1|2013/12/31 08:36:30| -15.6590|-172.8473|  23.38|101km ENE of Hihifo, Tonga|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lumu</qu183>
-<qu184>  2.9|2013/12/31 08:21:16|  32.1850|-115.2572|  15.19|9km WSW of Alberto Oviedo Mota, Mexico|http://earthquake.usgs.gov/earthquakes/eventpage/ci11407954</qu184>
-<qu185>  4.3|2013/12/31 07:45:46|  13.4080| -91.1211|  48.23|65km SSW of Puerto San Jose, Guatemala|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lumj</qu185>
-<qu186>  2.9|2013/12/31 03:13:55|  36.0530| -96.8458|   4.99|10km NW of Cushing, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lul1</qu186>
-<qu187>  3.8|2013/12/31 02:23:19|  51.2391|-178.2623|  13.20|59km E of Amatignak Island, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10922301</qu187>
-<qu188>  2.9|2013/12/31 01:36:23|  36.6574| -98.5514|   5.00|19km SSE of Alva, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lujk</qu188>
-<qu189>  5.1|2013/12/31 01:03:00|  36.7891| 140.5911|   9.90|13km NW of Takahagi, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000luj7</qu189>
-<qu190>  3.2|2013/12/31 00:18:17|  18.2745| -68.0195| 105.00|52km SE of Punta Cana, Dominican Republic|http://earthquake.usgs.gov/earthquakes/eventpage/pr13365000</qu190>
-<qu191>  4.6|2013/12/30 23:48:19| -10.2336| -75.4972|  45.50|39km NNW of Oxapampa, Peru|http://earthquake.usgs.gov/earthquakes/eventpage/usc000luih</qu191>
-<qu192>  3.6|2013/12/30 23:44:21|  33.7002|-116.7325|  19.59|4km S of Idyllwild-Pine Cove, California|http://earthquake.usgs.gov/earthquakes/eventpage/ci11407682</qu192>
-<qu193>  4.2|2013/12/30 23:33:13| -31.9952|-177.9234|  23.74|111km SE of L'Esperance Rock, New Zealand|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lui7</qu193>
+<qu001>  4.0|2014/01/06 21:10:34|  37.1083|  71.2387| 120.27|45km NE of Jarm, Afghanistan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxwa</qu001>
+<qu002>  5.1|2014/01/06 18:49:40|  25.4726| 122.8348| 228.60|112km N of Yonakuni, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxsm</qu002>
+<qu003>  2.8|2014/01/06 17:30:59|  63.1293|-150.9086| 100.00|98km NNW of Talkeetna, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10980415</qu003>
+<qu004>  5.0|2014/01/06 17:00:58| -37.2866|  52.2075|  10.00|South Indian Ocean|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxrm</qu004>
+<qu005>  5.1|2014/01/06 16:02:11|  -1.1611| -23.5815|  10.00|Central Mid-Atlantic Ridge|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxr3</qu005>
+<qu006>  2.7|2014/01/06 15:18:19|  31.9752|-116.2608|  11.17|35km ENE of Ensenada, Mexico|http://earthquake.usgs.gov/earthquakes/eventpage/ci11410786</qu006>
+<qu007>  3.3|2014/01/06 12:12:44|  17.7402| -68.4213|  84.00|73km SSE of Boca de Yuma, Dominican Republic|http://earthquake.usgs.gov/earthquakes/eventpage/pr14006004</qu007>
+<qu008>  2.9|2014/01/06 10:22:06|  62.8039|-149.1211|   2.00|66km S of Cantwell, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10977320</qu008>
+<qu009>  3.5|2014/01/06 09:14:12|  44.7577|-110.7793|   9.50|27km ENE of West Yellowstone, Montana|http://earthquake.usgs.gov/earthquakes/eventpage/uu60051017</qu009>
+<qu010>  4.8|2014/01/06 09:05:52|  -7.7933| 130.1339|  31.08|131km W of Saumlaki, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxiv</qu010>
+<qu011>  2.6|2014/01/06 09:00:11|  44.7443|-110.7860|   6.50|26km ENE of West Yellowstone, Montana|http://earthquake.usgs.gov/earthquakes/eventpage/uu60051012</qu011>
+<qu012>  4.8|2014/01/06 08:56:36|  20.6009| 147.0330|  34.83|222km E of Farallon de Pajaros, Northern Mariana Islands|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxit</qu012>
+<qu013>  3.5|2014/01/06 08:41:21|  35.2156|-102.6747|   5.00|22km W of Vega, Texas|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxim</qu013>
+<qu014>  4.7|2014/01/06 08:18:00|  36.2655| 138.7846| 144.69|10km W of Tomioka, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxik</qu014>
+<qu015>  4.9|2014/01/06 07:56:10| -20.7951| -70.5662|  16.34|77km SW of Iquique, Chile|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxig</qu015>
+<qu016>  3.0|2014/01/06 07:53:35|  19.3835|-155.2790|   3.50|6km SW of Volcano, Hawaii|http://earthquake.usgs.gov/earthquakes/eventpage/hv60616536</qu016>
+<qu017>  2.9|2014/01/06 05:56:14|  40.1210| -96.5271|   5.00|11km E of Wymore, Nebraska|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxh8</qu017>
+<qu018>  5.1|2014/01/06 03:59:02| -20.7643| -70.6303|  21.47|78km SW of Iquique, Chile|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxg7</qu018>
+<qu019>  4.4|2014/01/06 03:53:46|  50.3965| 178.8035|  30.40|173km S of Little Sitkin Island, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxg3</qu019>
+<qu020>  2.8|2014/01/06 02:05:43|  47.4268|-112.8440|  25.60|53km NNW of Lincoln, Montana|http://earthquake.usgs.gov/earthquakes/eventpage/mb29928</qu020>
+<qu021>  3.8|2014/01/06 01:38:25|  51.6069|-175.1849|  25.70|94km SW of Atka, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxfj</qu021>
+<qu022>  5.4|2014/01/06 01:25:09| -20.5219| 172.6386|  24.30|216km NNE of Ile Hunter, New Caledonia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxfa</qu022>
+<qu023>  2.9|2014/01/06 00:11:34|  61.8689|-147.2705|  42.70|83km E of Sutton-Alpine, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10972749</qu023>
+<qu024>  2.6|2014/01/05 23:11:39|  33.4987|-116.4728|   8.00|19km ESE of Anza, California|http://earthquake.usgs.gov/earthquakes/eventpage/ci11410562</qu024>
+<qu025>  2.6|2014/01/05 23:08:31|  61.7753|-150.2011|  28.90|9km WNW of Willow, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10972721</qu025>
+<qu026>  3.6|2014/01/05 22:58:59|  59.4723|-153.1627| 106.50|82km WSW of Anchor Point, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10972713</qu026>
+<qu027>  3.0|2014/01/05 22:57:05|  59.9998|-153.3823| 147.50|64km SSW of Redoubt Volcano, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10972709</qu027>
+<qu028>  5.3|2014/01/05 21:29:34|  -6.9572| 128.4225|  34.86|Banda Sea|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lxaa</qu028>
+<qu029>  2.5|2014/01/05 19:46:53|  60.5337|-146.5296|  17.70|42km W of Cordova, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10971206</qu029>
+<qu030>  2.9|2014/01/05 16:56:58|  18.0330| -67.1884|  13.00|2km WNW of Boqueron, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14005002</qu030>
+<qu031>  5.1|2014/01/05 14:41:31|   3.1618| 128.3295|  68.32|162km NNE of Tobelo, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx68</qu031>
+<qu032>  4.6|2014/01/05 14:28:08|  33.4273| 139.5075|  27.49|46km NW of Hachijo-jima, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx66</qu032>
+<qu033>  3.6|2014/01/05 13:19:13|  51.6144| 176.2586|  25.00|85km SSE of Buldir Island, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10969731</qu033>
+<qu034>  4.7|2014/01/05 12:21:45|  30.2394| 103.0343|  10.24|45km WSW of Linqiong, China|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx5h</qu034>
+<qu035>  5.1|2014/01/05 11:44:11|   3.1795| 128.3537|  54.28|164km NNE of Tobelo, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx58</qu035>
+<qu036>  5.1|2014/01/05 11:32:11|  -5.9100| 105.3972|  58.23|28km SW of Kaliandak, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx54</qu036>
+<qu037>  4.7|2014/01/05 10:56:13|  53.7561| -35.2225|  10.00|Reykjanes Ridge|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx4z</qu037>
+<qu038>  2.8|2014/01/05 08:49:54|  66.9214|-154.8565|  20.10|88km E of Kobuk, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10966091</qu038>
+<qu039>  2.9|2014/01/05 08:36:03|  39.4806|-115.4352|  14.91|45km E of Eureka, Nevada|http://earthquake.usgs.gov/earthquakes/eventpage/nn00433080</qu039>
+<qu040>  2.7|2014/01/05 07:14:59|  60.4251|-152.5771| 100.00|11km SE of Redoubt Volcano, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10966071</qu040>
+<qu041>  3.1|2014/01/05 03:53:04|  18.6779| -66.4069| 100.00|24km NNW of Brenas, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14005000</qu041>
+<qu042>  5.3|2014/01/05 03:36:41|   4.5576| -76.6001|  61.39|40km W of El Dovio, Colombia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx2l</qu042>
+<qu043>  4.1|2014/01/05 01:52:33|  14.0639| -91.5126|  56.58|27km WSW of Nueva Concepcion, Guatemala|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx2e</qu043>
+<qu044>  3.7|2014/01/04 23:33:32|  36.0989| -97.3057|   4.64|17km NNW of Langston, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx1g</qu044>
+<qu045>  3.2|2014/01/04 21:26:17|  35.8379| -96.9336|   5.00|15km NNW of Chandler, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwzb</qu045>
+<qu046>  3.5|2014/01/04 20:35:32|  36.7723| -98.3471|  12.57|2km NNE of Cherokee, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwxy</qu046>
+<qu047>  5.1|2014/01/04 19:34:27|  56.7144| 129.6831|  12.32|292km E of Chul'man, Russia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwx9</qu047>
+<qu048>  3.2|2014/01/04 18:49:50|  18.8209| -67.1505|   9.00|35km NNW of Isabela, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14004007</qu048>
+<qu049>  4.7|2014/01/04 18:12:20|  33.7571| 141.2876|  36.76|157km ENE of Hachijo-jima, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lww7</qu049>
+<qu050>  4.8|2014/01/04 17:57:00| -13.1166| 167.0593| 215.42|100km NNW of Sola, Vanuatu|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lww0</qu050>
+<qu051>  4.9|2014/01/04 16:10:17|  47.2518| 153.0143|  51.45|Kuril Islands|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwuv</qu051>
+<qu052>  4.6|2014/01/04 12:38:00|   1.8200|-101.9517|  10.00|Galapagos Triple Junction region|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwtd</qu052>
+<qu053>  2.7|2014/01/04 12:12:43|  32.8692|-115.4938|  10.13|7km ENE of Imperial, California|http://earthquake.usgs.gov/earthquakes/eventpage/ci11409986</qu053>
+<qu054>  4.3|2014/01/04 11:02:41|  -6.6037| 129.6141| 152.87|239km NW of Saumlaki, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwsf</qu054>
+<qu055>  2.5|2014/01/04 09:54:30|  18.6716| -67.2291|  70.00|24km NW of San Antonio, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14004004</qu055>
+<qu056>  2.7|2014/01/04 08:54:10|  20.0320|-155.8967|  10.20|13km NNW of Waikoloa Village, Hawaii|http://earthquake.usgs.gov/earthquakes/eventpage/hv60615646</qu056>
+<qu057>  3.1|2014/01/04 08:45:52|  59.6795|-152.1334|  69.20|20km WSW of Anchor Point, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10957071</qu057>
+<qu058>  4.2|2014/01/04 08:45:42|  12.3938| -87.9388|  49.68|65km SW of Jiquilillo, Nicaragua|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwra</qu058>
+<qu059>  4.2|2014/01/04 08:25:36| -20.6570| -70.7620|  36.60|80km SW of Iquique, Chile|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx36</qu059>
+<qu060>  3.2|2014/01/04 08:13:30|  68.8221|-144.8139|   7.30|83km NNE of Arctic Village, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10957063</qu060>
+<qu061>  4.2|2014/01/04 06:05:55| -33.7580| -72.2610|  35.80|62km WSW of San Antonio, Chile|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lx34</qu061>
+<qu062>  2.7|2014/01/04 05:27:25|  35.6081| -97.3260|   5.00|5km NW of Jones, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwqc</qu062>
+<qu063>  5.4|2014/01/04 05:22:59|  37.0169| 143.3114|  10.00|211km ESE of Namie, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwp7</qu063>
+<qu064>  2.5|2014/01/04 03:07:17|  62.1557|-152.0751| 100.00|103km W of Talkeetna, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10955697</qu064>
+<qu065>  4.8|2014/01/04 02:58:45| -10.9542| 163.7229|   9.78|204km ESE of Kirakira, Solomon Islands|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwnk</qu065>
+<qu066>  4.4|2014/01/04 01:55:04| -11.7294| 110.9391|  14.83|South of Java, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwn0</qu066>
+<qu067>  2.5|2014/01/04 01:00:32|  18.7507| -64.9800|  67.00|45km N of Charlotte Amalie, U.S. Virgin Islands|http://earthquake.usgs.gov/earthquakes/eventpage/pr14004001</qu067>
+<qu068>  5.9|2014/01/04 00:11:48| -20.6585| -70.6500|   7.33|71km SW of Iquique, Chile|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwmk</qu068>
+<qu069>  2.9|2014/01/04 00:08:27|  19.4333| -66.1235|  38.00|107km N of San Juan, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14004000</qu069>
+<qu070>  3.2|2014/01/03 23:21:36|  18.9803| -65.0120|  18.00|71km N of Charlotte Amalie, U.S. Virgin Islands|http://earthquake.usgs.gov/earthquakes/eventpage/pr14003007</qu070>
+<qu071>  2.5|2014/01/03 22:34:11|  17.9619| -65.4664|  17.00|14km S of Esperanza, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14003008</qu071>
+<qu072>  4.7|2014/01/03 20:44:41|  -5.0467| 145.1072|  63.77|78km WNW of Madang, Papua New Guinea|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwgx</qu072>
+<qu073>  5.2|2014/01/03 20:34:05|  -7.1687| 156.0251|  77.85|82km SW of Chirovanga, Solomon Islands|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwgg</qu073>
+<qu074>  2.5|2014/01/03 19:58:30|  37.0137|-104.9359|   5.00|42km WSW of Trinidad, Colorado|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwef</qu074>
+<qu075>  4.8|2014/01/03 19:52:44|   8.7228| 126.3124|  80.47|8km SSE of Marihatag, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwek</qu075>
+<qu076>  3.0|2014/01/03 19:47:59|  33.9820|-118.4525|  11.21|0km NNW of Marina del Rey, California|http://earthquake.usgs.gov/earthquakes/eventpage/ci11409738</qu076>
+<qu077>  4.5|2014/01/03 19:22:43|  -7.4968| 108.3785| 108.10|1km N of Lembursawah, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwd1</qu077>
+<qu078>  5.0|2014/01/03 18:34:04| -21.9569|-175.6577|  22.76|96km SSW of Vaini, Tonga|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwbt</qu078>
+<qu079>  4.7|2014/01/03 17:34:00|   7.3591| -35.5053|  14.22|Central Mid-Atlantic Ridge|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lwac</qu079>
+<qu080>  2.6|2014/01/03 17:03:33|  18.7364| -64.6548|   8.00|35km N of Road Town, British Virgin Islands|http://earthquake.usgs.gov/earthquakes/eventpage/pr14003006</qu080>
+<qu081>  2.6|2014/01/03 16:54:26|  40.3167|-124.5655|  19.70|38km SW of Ferndale, California|http://earthquake.usgs.gov/earthquakes/eventpage/nc72135571</qu081>
+<qu082>  3.5|2014/01/03 14:25:20|  63.0261|-148.1721|  65.60|56km SE of Cantwell, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10949632</qu082>
+<qu083>  4.6|2014/01/03 14:21:59|  27.7365|  52.0810|  30.60|131km SSW of Firuzabad, Iran|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw8c</qu083>
+<qu084>  4.9|2014/01/03 14:17:47|  -5.8816| 103.4643|  30.30|87km SW of Biha, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw85</qu084>
+<qu085>  2.6|2014/01/03 13:17:16|  18.6567| -67.8714|  63.00|56km E of Punta Cana, Dominican Republic|http://earthquake.usgs.gov/earthquakes/eventpage/pr14003005</qu085>
+<qu086>  4.9|2014/01/03 13:06:33|  -0.2414| 122.9035|  94.40|77km SSW of Bilungala, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw7p</qu086>
+<qu087>  2.9|2014/01/03 11:52:17|  37.3237|-122.1572|  10.10|5km WSW of Loyola, California|http://earthquake.usgs.gov/earthquakes/eventpage/nc72135386</qu087>
+<qu088>  2.6|2014/01/03 11:23:19|  39.0939|-115.5248|   0.00|39km N of Currant, Nevada|http://earthquake.usgs.gov/earthquakes/eventpage/nn00432962</qu088>
+<qu089>  5.1|2014/01/03 10:24:35|  19.2089| 120.1474|  20.35|93km NNW of Davila, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw6l</qu089>
+<qu090>  3.7|2014/01/03 10:14:54|  19.4416| -67.9947|  30.00|76km NE of Punta Cana, Dominican Republic|http://earthquake.usgs.gov/earthquakes/eventpage/pr14003004</qu090>
+<qu091>  4.6|2014/01/03 10:09:43| -10.3227| -75.5576|  38.60|32km NNW of Oxapampa, Peru|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw6c</qu091>
+<qu092>  3.0|2014/01/03 08:37:15|  17.8283| -67.4107|  34.00|28km SW of Pole Ojea, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14003003</qu092>
+<qu093>  4.7|2014/01/03 08:20:46|  -5.1961| 103.3258|  67.28|51km WSW of Kuripan, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw4f</qu093>
+<qu094>  3.5|2014/01/03 07:01:39|  19.3383| -68.1550|  15.00|87km NNE of Punta Cana, Dominican Republic|http://earthquake.usgs.gov/earthquakes/eventpage/pr14003002</qu094>
+<qu095>  4.5|2014/01/03 06:16:32| -17.8723|-178.5501| 578.26|272km SE of Lambasa, Fiji|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw37</qu095>
+<qu096>  2.7|2014/01/03 03:37:21|  18.1863| -66.9189|  22.00|6km E of Maricao, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14003000</qu096>
+<qu097>  4.3|2014/01/03 03:34:43|  16.0586| -61.7963| 167.75|3km W of Vieux-Habitants, Guadeloupe|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw2c</qu097>
+<qu098>  4.2|2014/01/03 03:06:25|  17.9175|-106.0113|  28.07|199km SW of San Patricio, Mexico|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw23</qu098>
+<qu099>  2.5|2014/01/03 01:41:37|  37.3483|-117.1257|  13.81|41km SSE of Goldfield, Nevada|http://earthquake.usgs.gov/earthquakes/eventpage/nn00432953</qu099>
+<qu100>  4.8|2014/01/02 23:54:01|  16.3316| -97.7569|  45.31|8km NE of Santiago Jamiltepec, Mexico|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw1a</qu100>
+<qu101>  4.4|2014/01/02 23:02:28|  53.8683|-164.2639|  46.46|103km ESE of Akutan, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw0c</qu101>
+<qu102>  4.8|2014/01/02 22:39:44| -32.7889| -71.2245|  49.02|0km SW of Hacienda La Calera, Chile|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lw00</qu102>
+<qu103>  4.5|2014/01/02 22:27:49| -10.8419| -77.8326|  49.58|9km WSW of Puerto Supe, Peru|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvzw</qu103>
+<qu104>  2.5|2014/01/02 22:11:04|  49.3560|-120.4662|   0.00|11km SSE of Princeton, Canada|http://earthquake.usgs.gov/earthquakes/eventpage/uw60665071</qu104>
+<qu105>  3.4|2014/01/02 20:49:24|  59.9474|-153.2885| 132.30|67km SSW of Redoubt Volcano, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10942773</qu105>
+<qu106>  5.3|2014/01/02 19:30:53|  19.2682| 120.1448|  10.00|98km NNW of Burgos, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvtq</qu106>
+<qu107>  3.0|2014/01/02 19:22:18|  59.5313|-152.4556|  66.00|44km SW of Anchor Point, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10942166</qu107>
+<qu108>  5.0|2014/01/02 19:02:24|  19.1081| 120.2459|  10.00|78km NNW of Davila, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvt0</qu108>
+<qu109>  4.7|2014/01/02 18:47:55| -10.9279| 113.1395|  15.33|278km SSW of Sarongan, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvsm</qu109>
+<qu110>  3.2|2014/01/02 17:20:27|  36.0808| -96.9176|   5.00|13km ESE of Stillwater, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvrp</qu110>
+<qu111>  4.6|2014/01/02 16:22:20|  40.7297|  51.2411|  31.73|82km ENE of Artyom, Azerbaijan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvnf</qu111>
+<qu112>  4.5|2014/01/02 15:19:46|  14.2733| -91.4548|  59.34|9km W of Pueblo Nuevo Tiquisate, Guatemala|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvmt</qu112>
+<qu113>  2.9|2014/01/02 13:19:32|  36.1229| -97.3086|   4.98|18km S of Perry, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvld</qu113>
+<qu114>  4.8|2014/01/02 13:11:05|  35.2661| 140.4505|  25.44|6km ENE of Ohara, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvlc</qu114>
+<qu115>  3.9|2014/01/02 12:04:50|  39.0570|-118.1082|   6.37|26km NW of Gabbs, Nevada|http://earthquake.usgs.gov/earthquakes/eventpage/nn00432876</qu115>
+<qu116>  4.5|2014/01/02 11:50:58|  -6.7144| 129.9477| 126.37|203km NW of Saumlaki, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvkt</qu116>
+<qu117>  4.5|2014/01/02 10:50:18|  27.1488|  54.3122|  10.49|59km S of Lar, Iran|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvkg</qu117>
+<qu118>  2.6|2014/01/02 10:04:07|  18.2194| -65.9785|   6.00|3km NNW of San Lorenzo, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14002005</qu118>
+<qu119>  5.0|2014/01/02 09:56:17|  10.3783| 126.4462|  56.78|56km NE of San Isidro, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvk3</qu119>
+<qu120>  3.0|2014/01/02 09:54:52|  18.2201| -65.9705|   8.00|3km NNW of San Lorenzo, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14002004</qu120>
+<qu121>  3.3|2014/01/02 09:32:27|  38.7867|-122.7408|   2.20|1km NE of The Geysers, California|http://earthquake.usgs.gov/earthquakes/eventpage/nc72134726</qu121>
+<qu122>  2.5|2014/01/02 08:23:12|  38.8142|-122.8178|   2.70|6km NW of The Geysers, California|http://earthquake.usgs.gov/earthquakes/eventpage/nc72134681</qu122>
+<qu123>  4.7|2014/01/02 07:48:30|  35.2355| 140.3611|  34.98|2km SW of Ohara, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvje</qu123>
+<qu124>  2.7|2014/01/02 07:21:47|  61.4475|-149.8848|  24.70|9km SSE of Big Lake, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10935945</qu124>
+<qu125>  4.5|2014/01/02 06:58:16|  55.4619| 162.8816|  70.39|88km SSE of Ust'-Kamchatsk Staryy, Russia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lviz</qu125>
+<qu126>  2.8|2014/01/02 06:51:38|  18.6706| -64.8455|  50.00|37km NNE of Charlotte Amalie, U.S. Virgin Islands|http://earthquake.usgs.gov/earthquakes/eventpage/pr14002003</qu126>
+<qu127>  4.0|2014/01/02 06:23:09|  40.2900|-124.4527|  20.30|35km SSW of Ferndale, California|http://earthquake.usgs.gov/earthquakes/eventpage/nc72134626</qu127>
+<qu128>  4.4|2014/01/02 05:37:55|  -7.2194| 129.3933| 152.29|227km WNW of Saumlaki, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvin</qu128>
+<qu129>  3.0|2014/01/02 05:30:55|  17.9580| -65.0122|   6.00|40km NW of Christiansted, U.S. Virgin Islands|http://earthquake.usgs.gov/earthquakes/eventpage/pr14002001</qu129>
+<qu130>  2.7|2014/01/02 04:31:20|  32.1570|-116.3687|  18.27|39km NE of Ensenada, Mexico|http://earthquake.usgs.gov/earthquakes/eventpage/ci11408970</qu130>
+<qu131>  2.7|2014/01/02 03:45:06|  18.5515| -65.0432|  29.00|26km NNW of Charlotte Amalie, U.S. Virgin Islands|http://earthquake.usgs.gov/earthquakes/eventpage/pr14002002</qu131>
+<qu132>  4.3|2014/01/02 03:24:20|  27.1750|  54.3768|  10.00|56km S of Lar, Iran|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvhu</qu132>
+<qu133>  5.5|2014/01/02 03:13:56|  27.2610|  54.4277|  10.10|47km S of Lar, Iran|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvhr</qu133>
+<qu134>  3.4|2014/01/02 03:04:16|  19.1184| -63.9459| 110.00|105km NE of Road Town, British Virgin Islands|http://earthquake.usgs.gov/earthquakes/eventpage/pr14002000</qu134>
+<qu135>  4.4|2014/01/02 03:01:23|   4.8994| 127.0028| 115.06|179km ESE of Sarangani, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvhq</qu135>
+<qu136>  2.6|2014/01/02 01:30:16|  39.3005|-122.7922|   9.10|18km NE of Upper Lake, California|http://earthquake.usgs.gov/earthquakes/eventpage/nc72134506</qu136>
+<qu137>  2.5|2014/01/02 01:29:48|  61.2558|-146.3244|  19.10|13km N of Valdez, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10934334</qu137>
+<qu138>  2.5|2014/01/02 00:08:07|  63.1670|-151.5844|   5.80|120km NW of Talkeetna, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10934324</qu138>
+<qu139>  2.7|2014/01/01 23:10:08|  18.3276| -66.1455|  58.00|4km SW of Guaynabo, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14001004</qu139>
+<qu140>  2.5|2014/01/01 22:20:35|  37.6037|-118.4288|   9.60|24km N of Dixon Lane-Meadow Creek, California|http://earthquake.usgs.gov/earthquakes/eventpage/nc72134431</qu140>
+<qu141>  4.7|2014/01/01 21:25:49|  -2.9824| 129.5064|  31.66|76km ENE of Amahai, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvew</qu141>
+<qu142>  4.5|2014/01/01 21:11:35|   1.0318|  97.0595|  20.72|177km SSE of Sinabang, Indonesia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lven</qu142>
+<qu143>  4.9|2014/01/01 16:47:53|  51.9425|  82.0703|  20.83|20km E of Pospelikha, Russia|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvcu</qu143>
+<qu144>  4.9|2014/01/01 16:14:14| -22.4429| -66.1655| 243.23|57km WNW of Abra Pampa, Argentina|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvb7</qu144>
+<qu145>  6.5|2014/01/01 16:03:28| -13.8779| 167.2434| 187.00|33km W of Sola, Vanuatu|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lvb5</qu145>
+<qu146>  3.0|2014/01/01 15:47:16|  35.6647|-118.4690|  10.57|4km SSW of Wofford Heights, California|http://earthquake.usgs.gov/earthquakes/eventpage/ci11408690</qu146>
+<qu147>  4.9|2014/01/01 14:39:25|  36.6703| 141.0184|  57.74|27km ESE of Kitaibaraki, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lval</qu147>
+<qu148>  5.0|2014/01/01 14:23:04| -35.5023|-179.1738|  59.33|East of the North Island of New Zealand|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lva0</qu148>
+<qu149>  2.5|2014/01/01 13:40:46|  18.4022| -67.3630|  21.00|13km WNW of Rincon, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14001001</qu149>
+<qu150>  4.5|2014/01/01 11:08:10| -44.3245| -82.0489|  10.00|West Chile Rise|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv8w</qu150>
+<qu151>  2.5|2014/01/01 10:44:28|  53.4979|-165.1454|  21.00|82km SSE of Akutan, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10930287</qu151>
+<qu152>  3.2|2014/01/01 09:27:19|  19.0540| -67.7055|  42.00|89km NW of San Antonio, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr14001000</qu152>
+<qu153>  2.5|2014/01/01 09:03:54|  51.4805|-178.1499|  10.80|44km S of Tanaga Volcano, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10930267</qu153>
+<qu154>  4.8|2014/01/01 07:53:55| -18.4698|-177.9316| 563.14|254km NNE of Ndoi Island, Fiji|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv7u</qu154>
+<qu155>  4.8|2014/01/01 07:04:04|  41.8989| 137.5443| 288.87|258km W of Kamiiso, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv7r</qu155>
+<qu156>  4.7|2014/01/01 04:46:29| -44.6265| -15.4332|   9.82|Southern Mid-Atlantic Ridge|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv78</qu156>
+<qu157>  2.9|2014/01/01 04:19:56|  42.1302|-112.5290|   6.80|23km WSW of Malad City, Idaho|http://earthquake.usgs.gov/earthquakes/eventpage/uu60050592</qu157>
+<qu158>  2.9|2014/01/01 03:39:43|  52.0722|-167.0103|  41.50|158km SE of Nikolski, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10928805</qu158>
+<qu159>  4.4|2014/01/01 03:20:14|  -6.9571| 127.6982| 251.75|293km NE of Dili, East Timor|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv6s</qu159>
+<qu160>  2.5|2014/01/01 01:58:50|  19.2765|-155.4777|   8.00|7km N of Pahala, Hawaii|http://earthquake.usgs.gov/earthquakes/eventpage/hv60614066</qu160>
+<qu161>  2.5|2014/01/01 01:58:14|  19.3297|-155.0803|   4.60|19km SE of Volcano, Hawaii|http://earthquake.usgs.gov/earthquakes/eventpage/hv60614061</qu161>
+<qu162>  4.6|2014/01/01 00:05:27| -18.4945|-175.5626| 203.50|167km W of Neiafu, Tonga|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv5j</qu162>
+<qu163>  5.1|2014/01/01 00:01:16|  19.0807| 120.2521|  10.05|75km NNW of Davila, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv5e</qu163>
+<qu164>  5.2|2013/12/31 23:41:47|  19.0873| 120.0979|   9.85|84km NW of Davila, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv53</qu164>
+<qu165>  3.2|2013/12/31 23:15:12|  17.5501| -67.6095|  38.00|65km SW of Pole Ojea, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr13365008</qu165>
+<qu166>  2.8|2013/12/31 22:30:36|  51.5220|-178.8153|   8.70|35km NE of Amatignak Island, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10927719</qu166>
+<qu167>  4.8|2013/12/31 21:45:56|  19.1382| 120.2376|  16.94|81km NNW of Davila, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv1d</qu167>
+<qu168>  5.2|2013/12/31 21:32:01|  19.1243| 120.2182|   5.49|81km NNW of Davila, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lv0r</qu168>
+<qu169>  2.8|2013/12/31 21:03:30|  19.1690| -67.6737|  44.00|96km NW of San Antonio, Puerto Rico|http://earthquake.usgs.gov/earthquakes/eventpage/pr13365009</qu169>
+<qu170>  5.7|2013/12/31 20:01:06|  19.1051| 120.2770|   8.31|76km NNW of Davila, Philippines|http://earthquake.usgs.gov/earthquakes/eventpage/usc000luwe</qu170>
+<qu171>  2.6|2013/12/31 19:25:31|  36.5700| -97.8420|   4.40|19km N of Enid, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000luva</qu171>
+<qu172>  2.7|2013/12/31 17:45:12|  60.1853|-153.1610| 136.30|40km SW of Redoubt Volcano, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10926302</qu172>
+<qu173>  4.8|2013/12/31 15:43:30|  17.3888| 146.0868|  96.84|86km SSE of Pagan, Northern Mariana Islands|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lur4</qu173>
+<qu174>  4.2|2013/12/31 15:06:14|  34.3876|  25.3093|  26.50|69km SSE of Pirgos, Greece|http://earthquake.usgs.gov/earthquakes/eventpage/usc000luqt</qu174>
+<qu175>  3.2|2013/12/31 13:03:06|  66.1952|-149.0746|   4.70|128km SSE of Coldfoot, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10924947</qu175>
+<qu176>  3.1|2013/12/31 12:33:24|  31.5517|-115.4987|  10.00|81km SSW of Alberto Oviedo Mota, Mexico|http://earthquake.usgs.gov/earthquakes/eventpage/ci11408186</qu176>
+<qu177>  4.6|2013/12/31 10:45:28| -20.2756|-178.3935| 570.91|52km NE of Ndoi Island, Fiji|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lup9</qu177>
+<qu178>  2.8|2013/12/31 10:29:01|  18.4720| -64.8663| 107.00|15km NNE of Charlotte Amalie, U.S. Virgin Islands|http://earthquake.usgs.gov/earthquakes/eventpage/pr13365005</qu178>
+<qu179>  3.3|2013/12/31 10:27:56|  51.7924| 177.4318|  25.00|36km SSW of Kiska Volcano, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10924080</qu179>
+<qu180>  4.5|2013/12/31 10:22:06|  14.0124| -92.1119|  59.51|38km SSW of Champerico, Guatemala|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lunz</qu180>
+<qu181>  2.7|2013/12/31 09:46:52|  19.8598|-155.5455|  24.30|22km SE of Waimea, Hawaii|http://earthquake.usgs.gov/earthquakes/eventpage/hv60613471</qu181>
+<qu182>  3.1|2013/12/31 09:21:08|  33.5015|-116.4773|   9.50|19km ESE of Anza, California|http://earthquake.usgs.gov/earthquakes/eventpage/ci11407970</qu182>
+<qu183>  3.1|2013/12/31 08:55:30|  19.1187| -68.3127|  64.00|60km N of Punta Cana, Dominican Republic|http://earthquake.usgs.gov/earthquakes/eventpage/pr13365004</qu183>
+<qu184>  3.4|2013/12/31 08:48:34|  18.9064| -68.3977|  96.00|35km N of Punta Cana, Dominican Republic|http://earthquake.usgs.gov/earthquakes/eventpage/pr13365002</qu184>
+<qu185>  5.1|2013/12/31 08:36:30| -15.6590|-172.8473|  23.38|101km ENE of Hihifo, Tonga|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lumu</qu185>
+<qu186>  2.9|2013/12/31 08:21:16|  32.1850|-115.2572|  15.19|9km WSW of Alberto Oviedo Mota, Mexico|http://earthquake.usgs.gov/earthquakes/eventpage/ci11407954</qu186>
+<qu187>  4.3|2013/12/31 07:45:46|  13.4080| -91.1211|  48.23|65km SSW of Puerto San Jose, Guatemala|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lumj</qu187>
+<qu188>  2.9|2013/12/31 03:13:55|  36.0530| -96.8458|   4.99|10km NW of Cushing, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lul1</qu188>
+<qu189>  3.8|2013/12/31 02:23:19|  51.2391|-178.2623|  13.20|59km E of Amatignak Island, Alaska|http://earthquake.usgs.gov/earthquakes/eventpage/ak10922301</qu189>
+<qu190>  2.9|2013/12/31 01:36:23|  36.6574| -98.5514|   5.00|19km SSE of Alva, Oklahoma|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lujk</qu190>
+<qu191>  5.1|2013/12/31 01:03:00|  36.7891| 140.5911|   9.90|13km NW of Takahagi, Japan|http://earthquake.usgs.gov/earthquakes/eventpage/usc000luj7</qu191>
+<qu192>  3.2|2013/12/31 00:18:17|  18.2745| -68.0195| 105.00|52km SE of Punta Cana, Dominican Republic|http://earthquake.usgs.gov/earthquakes/eventpage/pr13365000</qu192>
+<qu193>  4.6|2013/12/30 23:48:19| -10.2336| -75.4972|  45.50|39km NNW of Oxapampa, Peru|http://earthquake.usgs.gov/earthquakes/eventpage/usc000luih</qu193>
+<qu194>  3.6|2013/12/30 23:44:21|  33.7002|-116.7325|  19.59|4km S of Idyllwild-Pine Cove, California|http://earthquake.usgs.gov/earthquakes/eventpage/ci11407682</qu194>
+<qu195>  4.2|2013/12/30 23:33:13| -31.9952|-177.9234|  23.74|111km SE of L'Esperance Rock, New Zealand|http://earthquake.usgs.gov/earthquakes/eventpage/usc000lui7</qu195>
 </quakes>
 <quakes>
 <wequ001>  9.5|1960/05/22 19:11:14|  -38.24|-73.05 |   0.0|Chile, #1|http://earthquake.usgs.gov/regional/world/events/1960_05_22.php</wequ001>
