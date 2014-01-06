@@ -862,7 +862,7 @@ CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -O2 -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64 -Qunused-arguments
 CFLAG_CURL_SYMBOL_HIDING = -fvisibility=hidden
-CONFIGURE_OPTIONS = " '--without-ssl' '--disable-shared' 'CFLAGS=-O2  -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64' 'LDFLAGS=-L/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/ -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -Wl,-syslibroot,/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64' 'CPPFLAGS=-O2 -I/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64'"
+CONFIGURE_OPTIONS = " '--without-ssl' '--disable-shared' '--disable-ldap' 'CFLAGS=-O2  -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64' 'LDFLAGS=-L/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/ -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -Wl,-syslibroot,/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64' 'CPPFLAGS=-O2 -I/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64'"
 CPP = gcc -E
 CPPFLAGS = -O2 -isystem /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64
 CPPFLAG_CURL_STATICLIB = -DCURL_STATICLIB
@@ -875,8 +875,8 @@ CURL_DISABLE_FTP =
 CURL_DISABLE_GOPHER = 
 CURL_DISABLE_HTTP = 
 CURL_DISABLE_IMAP = 
-CURL_DISABLE_LDAP = 
-CURL_DISABLE_LDAPS = 
+CURL_DISABLE_LDAP = 1
+CURL_DISABLE_LDAPS = 1
 CURL_DISABLE_POP3 = 
 CURL_DISABLE_PROXY = 
 CURL_DISABLE_RTSP = 
@@ -902,7 +902,7 @@ EXEEXT =
 FGREP = /usr/bin/grep -F
 GREP = /usr/bin/grep
 HAVE_GNUTLS_SRP = 
-HAVE_LDAP_SSL = 1
+HAVE_LDAP_SSL = 
 HAVE_LIBZ = 1
 HAVE_SSLEAY_SRP = 
 IDN_ENABLED = 
@@ -914,7 +914,7 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 IPV6_ENABLED = 1
 LD = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
 LDFLAGS = -L/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/ -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -Wl,-syslibroot,/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64
-LIBCURL_LIBS = -lldap -lz
+LIBCURL_LIBS = -lz
 LIBMETALINK_CPPFLAGS = 
 LIBMETALINK_LDFLAGS = 
 LIBMETALINK_LIBS = 
@@ -960,7 +960,7 @@ SHELL = /bin/sh
 SSL_ENABLED = 
 STRIP = strip
 SUPPORT_FEATURES = IPv6 libz
-SUPPORT_PROTOCOLS = DICT FILE FTP GOPHER HTTP IMAP LDAP LDAPS POP3 RTSP SMTP TELNET TFTP
+SUPPORT_PROTOCOLS = DICT FILE FTP GOPHER HTTP IMAP POP3 RTSP SMTP TELNET TFTP
 USE_ARES = 
 USE_AXTLS = 
 USE_CYASSL = 
@@ -1085,9 +1085,9 @@ EXTRA_DIST = test75.pl test307.pl test610.pl test613.pl test1013.pl	\
 test1022.pl Makefile.inc notexists.pl
 
 #SUPPORTFILES_LIBS = $(top_builddir)/lib/libcurl.la 
-SUPPORTFILES_LIBS = $(top_builddir)/lib/libcurl.la -lldap -lz
+SUPPORTFILES_LIBS = $(top_builddir)/lib/libcurl.la -lz
 #TESTUTIL_LIBS = $(top_builddir)/lib/libcurl.la 
-TESTUTIL_LIBS = $(top_builddir)/lib/libcurl.la -lldap -lz
+TESTUTIL_LIBS = $(top_builddir)/lib/libcurl.la -lz
 
 # Dependencies (may need to be overriden)
 LDADD = $(SUPPORTFILES_LIBS)
