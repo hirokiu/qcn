@@ -26,7 +26,7 @@
 
 #include "config.h"
 
-#include <string>
+#include <string.h>
 
 #include "FTGL/ftgl.h"
 
