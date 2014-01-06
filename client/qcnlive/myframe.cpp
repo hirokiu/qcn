@@ -59,7 +59,7 @@ const short ICON_SIZE = 32;
 MyAboutBox::MyAboutBox(QMainWindow *pmw)  
    : QMessageBox(QMessageBox::Information, 
 				 tr("About QCNLive"), 
-				 tr("<b>QCNLive</b> is provided by the <BR> Quake-Catcher Network Project <BR><BR>http://qcn.stanford.edu<BR><BR>(c) 2010 Stanford University"),
+				 tr("<b>QCNLive</b> is provided by the <BR> Quake-Catcher Network Project <BR><BR>http://qcn.stanford.edu<BR><BR>(c) 2008-2014 Stanford University"),
 				 QMessageBox::Ok,
 				 pmw
 				 )
@@ -70,7 +70,7 @@ MyAboutBox::MyAboutBox(QMainWindow *pmw)
 	 myAboutBox.SetVersion(wxString(QCN_VERSION_STRING));
 	 myAboutBox.SetName(wxT("QCNLive"));
 	 myAboutBox.SetWebSite(wxT("http://qcn.stanford.edu"), wxT("Quake-Catcher Network Website"));
-	 myAboutBox.SetCopyright(wxT("(c) 2009 Stanford University")); 
+	 myAboutBox.SetCopyright(wxT("(c) 2008-2014 Stanford University")); 
 	 //myAboutBox.AddDeveloper(wxT("Carl Christensen  (carlgt1@yahoo.com"));
 	 myAboutBox.SetDescription(wxT("This software is provided free of charge for educational purposes.\n\nPlease visit us on the web:\n"));
 	 
@@ -842,7 +842,7 @@ void MyFrame::actionHelp()
 			"<A HREF='http://qcn.stanford.edu'>http://qcn.stanford.edu</A>"
 		    "<BR><BR>Stanford University<BR>School of Earth Sciences<BR><BR>"
 			"University of California at Riverside<BR>Department of Earth Sciences"
-			"<BR><BR>(c) 2010 Stanford University")
+			"<BR><BR>(c) 2008-2014 Stanford University")
 		);
 		strVer += QCN_VERSION_STRING;
 		QMessageBox::about(this, strVer, 
