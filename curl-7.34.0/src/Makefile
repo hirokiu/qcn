@@ -282,14 +282,14 @@ AUTOHEADER = ${SHELL} "/Users/carlgt1/projects/qcn/curl-7.34.0/missing" --run au
 AUTOMAKE = ${SHELL} "/Users/carlgt1/projects/qcn/curl-7.34.0/missing" --run automake-1.14
 AWK = awk
 BLANK_AT_MAKETIME = 
-CC = /usr/bin/llvm-gcc
+CC = gcc
 CCDEPMODE = depmode=gcc3
 
 # This might hold -Werror
 CFLAGS = -O2 -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64 -Qunused-arguments 
 CFLAG_CURL_SYMBOL_HIDING = -fvisibility=hidden
-CONFIGURE_OPTIONS = " '--disable-shared' 'CC=/usr/bin/llvm-gcc' 'CFLAGS=-O2  -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64' 'LDFLAGS=-L/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/ -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -Wl,-syslibroot,/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64' 'CPPFLAGS=-O2 -I/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64'"
-CPP = /usr/bin/llvm-gcc -E
+CONFIGURE_OPTIONS = " '--without-ssl' '--disable-shared' 'CFLAGS=-O2  -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64' 'LDFLAGS=-L/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/ -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -Wl,-syslibroot,/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64' 'CPPFLAGS=-O2 -I/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64'"
+CPP = gcc -E
 CPPFLAGS = -O2 -isystem /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/include -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64
 CPPFLAG_CURL_STATICLIB = -DCURL_STATICLIB
 CURLVERSION = 7.34.0
@@ -340,7 +340,7 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 IPV6_ENABLED = 1
 LD = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
 LDFLAGS = -L/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/ -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -Wl,-syslibroot,/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64
-LIBCURL_LIBS = -lssl -lcrypto -lldap -lz
+LIBCURL_LIBS = -lldap -lz
 LIBMETALINK_CPPFLAGS = 
 LIBMETALINK_LDFLAGS = 
 LIBMETALINK_LIBS = 
@@ -379,16 +379,16 @@ PKGADD_NAME = cURL - a client that groks URLs
 PKGADD_PKG = HAXXcurl
 PKGADD_VENDOR = curl.haxx.se
 PKGCONFIG = no
-RANDOM_FILE = /dev/urandom
+RANDOM_FILE = 
 RANLIB = ranlib
 REQUIRE_LIB_DEPS = yes
 SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
-SSL_ENABLED = 1
+SSL_ENABLED = 
 STRIP = strip
-SUPPORT_FEATURES = SSL IPv6 libz NTLM NTLM_WB
-SUPPORT_PROTOCOLS = DICT FILE FTP FTPS GOPHER HTTP HTTPS IMAP IMAPS LDAP LDAPS POP3 POP3S RTSP SMTP SMTPS TELNET TFTP
+SUPPORT_FEATURES = IPv6 libz
+SUPPORT_PROTOCOLS = DICT FILE FTP GOPHER HTTP IMAP LDAP LDAPS POP3 RTSP SMTP TELNET TFTP
 USE_ARES = 
 USE_AXTLS = 
 USE_CYASSL = 
@@ -402,7 +402,7 @@ USE_NSS =
 USE_OPENLDAP = 
 USE_POLARSSL = 
 USE_SCHANNEL = 
-USE_SSLEAY = 1
+USE_SSLEAY = 
 USE_WINDOWS_SSPI = 
 VERSION = -
 VERSIONNUM = 072200
@@ -412,7 +412,7 @@ abs_srcdir = /Users/carlgt1/projects/qcn/curl-7.34.0/src
 abs_top_builddir = /Users/carlgt1/projects/qcn/curl-7.34.0
 abs_top_srcdir = /Users/carlgt1/projects/qcn/curl-7.34.0
 ac_ct_AR = 
-ac_ct_CC = /usr/bin/llvm-gcc
+ac_ct_CC = gcc
 ac_ct_DUMPBIN = 
 am__include = include
 am__leading_dot = .
@@ -595,7 +595,7 @@ CURL_HFILES = \
 
 curl_SOURCES = $(CURL_CFILES) $(CURLX_ONES) $(CURL_HFILES)
 #curl_LDADD = $(top_builddir)/lib/libcurl.la  -lz 
-curl_LDADD = $(top_builddir)/lib/libcurl.la  -lssl -lcrypto -lldap -lz
+curl_LDADD = $(top_builddir)/lib/libcurl.la  -lldap -lz
 curl_LDFLAGS = 
 curl_CPPFLAGS = $(AM_CPPFLAGS) $(LIBMETALINK_CPPFLAGS)
 curl_DEPENDENCIES = $(top_builddir)/lib/libcurl.la

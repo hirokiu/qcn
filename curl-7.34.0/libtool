@@ -164,7 +164,7 @@ old_postuninstall_cmds=""
 lock_old_archive_extraction=yes
 
 # A C compiler.
-LTCC="/usr/bin/llvm-gcc"
+LTCC="gcc"
 
 # LTCC compiler flags.
 LTCFLAGS="-O2 -isysroot /Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -arch x86_64 -Qunused-arguments"
@@ -305,7 +305,7 @@ reload_cmds="\$LTCC \$LTCFLAGS -nostdlib \${wl}-r -o \$output\$reload_objs"
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$tool_oldlib"
 
 # A language specific compiler.
-CC="/usr/bin/llvm-gcc"
+CC="gcc"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes
