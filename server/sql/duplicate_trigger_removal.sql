@@ -1,10 +1,14 @@
 /*
 
-
+use to remove duplicate triggers from the archive table
 
 */
 
 use continual_archive;
+
+/* remove extraneous "Not Found" triggers */
+delete from qcn_trigger where varietyid=1 and qcn_sensorid=0;
+
 
 create temporary table qcn_trigger_duplicate 
    (id int, hostid int, varietyid smallint, time_trigger double, result_name varchar(64));
@@ -17,9 +21,9 @@ insert into qcn_trigger_duplicate
        group by hostid, varietyid, time_trigger, result_name);
 
 
-select count(*) from qcn_trigger_duplicate;
-
 delete from qcn_trigger where id not in (select id from qcn_trigger_duplicate);
+
+optimize table qcn_trigger;
 
 drop table qcn_trigger_duplicate;
 
