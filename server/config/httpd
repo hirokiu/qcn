@@ -72,8 +72,9 @@ start() {
 # httpd parent to SIGKILL any errant children.
 stop() {
 	echo -n $"Stopping $prog: "
-	killproc -p ${pidfile} -d ${STOP_TIMEOUT} $httpd
-	RETVAL=$?
+	#killproc -p ${pidfile} -d ${STOP_TIMEOUT} $httpd
+	$apachectl stop
+        RETVAL=$?
 	echo
 	[ $RETVAL = 0 ] && rm -f ${lockfile} ${pidfile}
 }
@@ -130,3 +131,4 @@ case "$1" in
 esac
 
 exit $RETVAL
+
