@@ -7,7 +7,7 @@
 # Script to compile various BOINC libraries for Android to be used
 # by science applications
 
-COMPILEBOINC="yes"
+COMPILEBOINC="no"
 CONFIGURE="yes"
 MAKECLEAN="yes"
 
