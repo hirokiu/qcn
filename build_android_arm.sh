@@ -7,9 +7,9 @@
 # Script to compile various BOINC libraries for Android to be used
 # by science applications
 
-COMPILEBOINC="no"
-CONFIGURE="yes"
-MAKECLEAN="yes"
+COMPILEBOINC=
+CONFIGURE=yes
+MAKECLEAN=yes
 
 export BOINC="../boinc" #BOINC source code
 
