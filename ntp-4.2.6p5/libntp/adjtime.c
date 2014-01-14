@@ -2,6 +2,29 @@
 # include <config.h>
 #endif
 
+// CMC here - problem in Android not defining adjtime
+#if defined(ANDROID) && ! defined(adjtime)
+
+  #include <time.h>
+  #include <linux/timex.h>
+  #include <sys/syscall.h>
+  int adjtimex(struct timex *buf);
+  int adjtime(const struct timeval *delta, struct timeval *olddelta);
+
+  int adjtimex(struct timex *buf) {
+    return syscall(__NR_adjtimex, buf);
+  }
+
+  int adjtime(const struct timeval *delta, struct timeval *olddelta) {
+    // struct timex tx;
+    // return adjtimex(&tx);
+    // for QCN purposes we never adjust the system clock so return an error code just so the function is defined
+    return -1;
+  }
+
+#endif
+// CMC end
+
 #ifdef MPE 
 /*
  * MPE lacks adjtime(), so we define our own.  But note that time slewing has

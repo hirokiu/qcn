@@ -50,7 +50,11 @@ fi
 
 # NTP
 cd ntp-4.2.6p5
-./configure_android_arm --host=arm-linux --disable-shared --enable-static
+./configure --host=arm-linux --disable-shared --enable-static
+make clean 
+cd libntp 
+make clean && make
+cd ../ntpdate
 make clean && make
 
 

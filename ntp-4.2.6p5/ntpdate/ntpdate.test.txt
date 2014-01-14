@@ -1,0 +1,1 @@
+./ntpdate -p 8 -t 20 -u -b -q qcn-upl.stanford.edu

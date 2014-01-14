@@ -152,6 +152,13 @@ keytype_name(
 #ifdef HAVE_GETPASSPHRASE
 # define	getpass(str)	getpassphrase(str)
 #endif
+// CMC dummy stub as we don't use ssl
+#ifdef ANDROID
+   char* getpass(const char* prompt)
+   {
+      return -1;
+   }
+#endif
 
 /*
  * getpass_keytype() -- shared between ntpq and ntpdc, only vaguely

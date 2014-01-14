@@ -29,7 +29,11 @@ export LDFLAGS="-L$TCSYSROOT/usr/lib -L$TCINCLUDES/lib -llog"
 export GDB_CFLAGS="--sysroot=$TCSYSROOT -Wall -g -I$TCINCLUDES/include"
 export PKG_CONFIG_SYSROOT_DIR=$TCSYSROOT
 
-# NTP
-./configure_android_arm --host=arm-linux --disable-shared --enable-static
+# NTP - just build the necessary stuff ie libntp & ntpdate
+./configure --host=arm-linux --disable-shared --enable-static
+make clean
+cd libntp
+make clean && make
+cd ../ntpdate
 make clean && make
 
