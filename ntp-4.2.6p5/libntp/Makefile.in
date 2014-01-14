@@ -60,7 +60,7 @@ ARFLAGS = cru
 libntp_a_AR = $(AR) $(ARFLAGS)
 libntp_a_LIBADD =
 am__objects_1 =
-am__objects_2 = a_md5encrypt.$(OBJEXT) adjtime.$(OBJEXT) \
+am__objects_2 = adjtime.$(OBJEXT) \
 	atoint.$(OBJEXT) atolfp.$(OBJEXT) atouint.$(OBJEXT) \
 	audio.$(OBJEXT) authkeys.$(OBJEXT) authreadkeys.$(OBJEXT) \
 	authusekey.$(OBJEXT) bsd_strerror.$(OBJEXT) \
@@ -281,7 +281,6 @@ CLEANFILES = .deps-ver
 noinst_LIBRARIES = libntp.a @MAKE_LIBNTPSIM@
 EXTRA_LIBRARIES = libntpsim.a
 libntp_a_SRCS = \
-	a_md5encrypt.c					\
 	adjtime.c					\
 	atoint.c					\
 	atolfp.c					\
@@ -438,7 +437,6 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/a_md5encrypt.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/adjtime.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/adjtimex.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/assertions.Po@am__quote@

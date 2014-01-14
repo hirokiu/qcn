@@ -144,6 +144,7 @@ extern	int	score_all	(struct peer *);
 extern	struct	peer *findmanycastpeer	(struct recvbuf *);
 
 /* ntp_crypto.c */
+#undef OPENSSL  /// CMC here
 #ifdef OPENSSL
 extern	int	crypto_recv	(struct peer *, struct recvbuf *);
 extern	int	crypto_xmit	(struct peer *, struct pkt *,

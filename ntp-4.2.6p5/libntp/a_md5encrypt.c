@@ -9,6 +9,9 @@
 #include "ntp_string.h"
 #include "ntp_stdlib.h"
 #include "ntp.h"
+
+#undef OPENSSL // CMC here
+
 #ifdef OPENSSL
 # include "openssl/evp.h"
 #else
