@@ -51,4 +51,7 @@ fi
 # NTP
 cd ntp-4.2.4p7
 ./configure_android_arm --host=arm-linux --with-boinc-platform="arm-android-linux-gnu" --with-ssl=$TCINCLUDES --disable-server --disable-manager --disable-client --disable-shared --enable-static
+make clean
+make
+
 
