@@ -12,13 +12,37 @@
 #include <ntp_debug.h>
 #include <lib_strbuf.h>
 
+// CMC here - for QCN, bypass SSL
+
+int ssl_init_done = 0;
+
+// dummy functions
+void ssl_init(void)
+{
+	ssl_init_done = 0;
+}
+
+int	MD5authdecrypt(int par, u_char * par2, u_int32 * par3, int par4, int par5)
+{
+	return -1;
+}
+
+int	MD5authencrypt	(int par1, u_char * par2, u_int32 * par3, int par4)
+{
+	return -1;
+}
+
 #undef OPENSSL
+
+
+// end CMC
+
+
 #ifdef OPENSSL
 #include "openssl/err.h"
 #include "openssl/evp.h"
 
 
-int ssl_init_done;
 
 void
 ssl_init(void)

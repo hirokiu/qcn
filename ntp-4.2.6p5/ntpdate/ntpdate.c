@@ -80,6 +80,8 @@ isc_boolean_t ntp_port_inuse(int af, u_short port);
 UINT wTimerRes;
 #endif /* SYS_WINNT */
 
+#define Version "4.2.6p5QCN"
+
 /*
  * Scheduling priority we run at
  */

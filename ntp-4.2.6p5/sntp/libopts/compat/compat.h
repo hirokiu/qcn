@@ -325,7 +325,9 @@
 #endif
 
 #ifndef HAVE_SIZE_T
+#if !defined(size_t) && !defined(_WIN64)
   typedef unsigned int          size_t;
+#endif
 # define  HAVE_SIZE_T           1
 #endif
 #ifndef HAVE_WINT_T
