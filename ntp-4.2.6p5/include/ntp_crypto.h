@@ -19,6 +19,7 @@
 #define	CRYPTO_CONF_IDENT 9	/* specify identity scheme */
 #define	CRYPTO_CONF_NID   10	/* specify digest name */
 
+#undef OPENSSL // CMC here --- we don't need SSL
 #ifdef OPENSSL
 #include "openssl/evp.h"
 

@@ -129,6 +129,7 @@ authreadkeys(
 			    "authreadkeys: no key type for key %d", keyno);
 			continue;
 		}
+#undef OPENSSL
 #ifdef OPENSSL
 		/*
 		 * The key type is the NID used by the message digest 
@@ -158,7 +159,7 @@ authreadkeys(
 			    "authreadkeys: invalid type for key %d", keyno);
 			continue;
 		}
-		keytype = KEY_TYPE_MD5;
+		keytype = 'M'; //KEY_TYPE_MD5;
 #endif /* OPENSSL */
 
 		/*

@@ -12,6 +12,7 @@
 #include <ntp_debug.h>
 #include <lib_strbuf.h>
 
+#undef OPENSSL
 #ifdef OPENSSL
 #include "openssl/err.h"
 #include "openssl/evp.h"
@@ -87,7 +88,7 @@ keytype_from_text(
 #endif
 
 	if (!key_type && 'm' == tolower(text[0]))
-		key_type = NID_md5;
+		key_type = 0; //NID_md5;
 
 	if (!key_type)
 		return 0;
@@ -136,10 +137,10 @@ keytype_name(
 	if (NULL == name)
 		name = unknown_type;
 #else	/* !OPENSSL follows */
-	if (NID_md5 == nid)
+	//if (NID_md5 == nid)
 		name = "MD5";
-	else
-		name = unknown_type;
+	//else
+		//name = unknown_type;
 #endif
 	return name;
 }
