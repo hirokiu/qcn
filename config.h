@@ -97,22 +97,22 @@
 #define HAVE_INTTYPES_H 1
 
 /* Define to 1 if you have the c library */
-/* #undef HAVE_LIBC */
+#define HAVE_LIBC 1
 
 /* Define to 1 if you have the gcc library */
-/* #undef HAVE_LIBGCC */
+#define HAVE_LIBGCC 1
 
 /* Define to 1 if you have the gcc_eh library */
-/* #undef HAVE_LIBGCC_EH */
+#define HAVE_LIBGCC_EH 1
 
 /* Define to 1 if you have the math library */
-/* #undef HAVE_LIBM */
+#define HAVE_LIBM 1
 
 /* Define to 1 if you have the pthread library */
-/* #undef HAVE_LIBPTHREAD */
+#define HAVE_LIBPTHREAD 1
 
 /* Define to 1 if you have the stdc++ library */
-/* #undef HAVE_LIBSTDC__ */
+#define HAVE_LIBSTDC__ 1
 
 /* Define to 1 if you have the wsock32 library */
 /* #undef HAVE_LIBWSOCK32 */
@@ -167,6 +167,9 @@
 
 /* Define if you have POSIX threads libraries and header files. */
 #define HAVE_PTHREAD 1
+
+/* Have PTHREAD_PRIO_INHERIT. */
+#define HAVE_PTHREAD_PRIO_INHERIT 1
 
 /* Define to 1 if you have the `putenv' function. */
 #define HAVE_PUTENV 1
@@ -379,7 +382,7 @@
 /* Define to the version of this package. */
 #define PACKAGE_VERSION "7.36"
 
-/* Define to the necessary symbol if this constant uses a non-standard name on
+/* Define to necessary symbol if this constant uses a non-standard name on
    your system. */
 /* #undef PTHREAD_CREATE_JOINABLE */
 

@@ -59,10 +59,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/boinc
-pkgincludedir = $(includedir)/boinc
-pkglibdir = $(libdir)/boinc
-pkglibexecdir = $(libexecdir)/boinc
+pkgdatadir = $(datadir)/qcn
+pkgincludedir = $(includedir)/qcn
+pkglibdir = $(libdir)/qcn
+pkglibexecdir = $(libexecdir)/qcn
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -76,8 +76,8 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-unknown-linux-gnu
-host_triplet = arm-unknown-linux-gnu
-target_triplet = arm-unknown-linux-gnu
+host_triplet = x86_64-unknown-linux-gnu
+target_triplet = x86_64-unknown-linux-gnu
 subdir = m4
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -87,14 +87,8 @@ am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_gl.m4 \
 	$(top_srcdir)/m4/ax_lang_compiler_ms.m4 \
 	$(top_srcdir)/m4/ax_pthread.m4 $(top_srcdir)/m4/ax_winsock.m4 \
 	$(top_srcdir)/m4/boinc_check_cygwin.m4 \
-	$(top_srcdir)/m4/boinc_check_fcgi.m4 \
-	$(top_srcdir)/m4/boinc_check_flags.m4 \
-	$(top_srcdir)/m4/boinc_check_lib_with.m4 \
-	$(top_srcdir)/m4/boinc_platform.m4 \
-	$(top_srcdir)/m4/boinc_set_compile_flags.m4 \
-	$(top_srcdir)/m4/boinc_wxwidgets.m4 \
-	$(top_srcdir)/m4/check_ssl.m4 $(top_srcdir)/m4/kc_mysql.m4 \
-	$(top_srcdir)/m4/libcurl.m4 $(top_srcdir)/m4/libtool.m4 \
+	$(top_srcdir)/m4/boinc_getsockopt.m4 \
+	$(top_srcdir)/m4/boinc_platform.m4 $(top_srcdir)/m4/libtool.m4 \
 	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
 	$(top_srcdir)/m4/ltversion.m4 $(top_srcdir)/m4/lt~obsolete.m4 \
 	$(top_srcdir)/m4/sah_check_lib.m4 \
@@ -104,8 +98,7 @@ am__aclocal_m4_deps = $(top_srcdir)/m4/ax_check_gl.m4 \
 	$(top_srcdir)/m4/sah_namespace.m4 \
 	$(top_srcdir)/m4/sah_select_bitness.m4 \
 	$(top_srcdir)/m4/sah_staticize_ldflags.m4 \
-	$(top_srcdir)/m4/sqlite3.m4 $(top_srcdir)/m4/wxWidgets.m4 \
-	$(top_srcdir)/configure.ac
+	$(top_srcdir)/m4/wxWidgets.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 mkinstalldirs = $(install_sh) -d
@@ -133,35 +126,29 @@ am__can_run_installinfo = \
   esac
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/carlgt1/projects/boinc/missing aclocal-1.13
+ACLOCAL = aclocal-1.13
 AMTAR = $${TAR-tar}
-AM_DEFAULT_VERBOSITY = 0
+AM_DEFAULT_VERBOSITY = 1
 AR = /usr/bin/ar
 AS = as
-AUTOCONF = ${SHELL} /home/carlgt1/projects/boinc/missing autoconf
-AUTOHEADER = ${SHELL} /home/carlgt1/projects/boinc/missing autoheader
-AUTOMAKE = ${SHELL} /home/carlgt1/projects/boinc/missing automake-1.13
+AUTOCONF = autoconf
+AUTOHEADER = autoheader
+AUTOMAKE = automake-1.13
 AWK = /usr/bin/gawk
-BOINC_EXTRA_LIBS =  -L/home/carlgt1/androidarm-tc/arm-linux-androideabi -L/home/carlgt1/androidarm-tc/arm-linux-androideabi/lib -lssl -lcrypto   -ldl -lz
-BOINC_MAJOR_VERSION = 7
-BOINC_MINOR_VERSION = 3
-BOINC_RELEASE = 0
-BOINC_VERSION_STRING = 7.3.0
-CC = arm-linux-androideabi-gcc
+CC = gcc
 CCDEPMODE = depmode=gcc3
-CFLAGS = --sysroot=/home/carlgt1/androidarm-tc/sysroot -DANDROID -DDECLARE_TIMEZONE -Wall -I/home/carlgt1/androidarm-tc/arm-linux-androideabi/include -O3 -fomit-frame-pointer -Wall
+CFLAGS = -g -O2 -pthread
 CLIENTGUIFLAGS = 
-CLIENTGUILIBS =   
-CLIENTLIBS = -lm 
-CLIENT_BIN_FILENAME = boinc
-CLIENT_CMD_BIN_FILENAME = boinccmd
-CLIENT_GUI_BIN_FILENAME = boincmgr
-CPP = arm-linux-androideabi-gcc -E
+CLIENTGUILIBS = 
+CLIENTLIBS =  -lc -lgcc_eh -lstdc++ -lgcc -lm -lpthread
+CLIENT_BIN_FILENAME = qcn
+CLIENT_GUI_BIN_FILENAME = qcn_graphics
+CPP = gcc -E
 CPPFLAGS = 
-CXX = arm-linux-androideabi-g++
-CXXCPP = arm-linux-androideabi-g++ -E
+CXX = /usr/bin/g++
+CXXCPP = /usr/bin/g++ -E
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = --sysroot=/home/carlgt1/androidarm-tc/sysroot -DANDROID -Wall -I/home/carlgt1/androidarm-tc/arm-linux-androideabi/include -funroll-loops -fexceptions -O3 -fomit-frame-pointer -Wall
+CXXFLAGS = -g -O2 -pthread
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
@@ -169,124 +156,95 @@ DLLEXT = so
 DLLTOOL = dlltool
 DOCBOOK2X_MAN = 
 DSYMUTIL = 
-DUMPBIN = :
+DUMPBIN = 
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
 EGREP = /bin/grep -E
 EXEEXT = 
-F77 = 
-FFLAGS = 
 FGREP = /bin/grep -F
-FULLNAME = Carl Christensen,,,
 GLUT_CFLAGS = 
 GLUT_LIBS = 
 GLU_CFLAGS = 
 GLU_LIBS = 
-GL_CFLAGS = 
-GL_LIBS = 
+GL_CFLAGS = -pthread
+GL_LIBS = -L/usr/local/lib -lGL  -lm
 GREP = /bin/grep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LD = arm-linux-androideabi-ld
-LDFLAGS = -L/home/carlgt1/androidarm-tc/sysroot/usr/lib -L/home/carlgt1/androidarm-tc/arm-linux-androideabi/lib -llog
+LD = /usr/bin/ld -m elf_x86_64
+LDFLAGS = 
 LD_EXPORT_DYNAMIC = 
-LIBBOINC_VERSION = 7:3:0
-LIBCURL = 
-LIBCURL_CPPFLAGS = 
+LIBBOINC_VERSION = 7:36
 LIBEXT = a
-LIBNOTIFY_CFLAGS = 
-LIBNOTIFY_LIBS = 
 LIBOBJS = 
-LIBS = -lm 
+LIBS =  -lz  -lpthread -lm -lgcc -lstdc++ -lgcc_eh -lc  
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN = /bin/ln
 LN_S = ln -s
-LOGNAME = carlgt1
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/carlgt1/projects/boinc/missing makeinfo
+MAKEINFO = makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
-MYSQL_CFLAGS = 
-MYSQL_CONFIG = 
-MYSQL_LIBS = 
-NM = nm
+NM = /usr/bin/nm -B
 NMEDIT = 
-OBJC = arm-linux-androideabi-gcc
+OBJC = gcc
 OBJCDEPMODE = depmode=none
 OBJCFLAGS = -ObjC
-OBJCXX = /usr/bin/g++
-OBJCXXDEPMODE = depmode=gcc3
-OBJCXXFLAGS = 
 OBJDUMP = objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = boinc
+PACKAGE = qcn
 PACKAGE_BUGREPORT = 
-PACKAGE_NAME = BOINC
-PACKAGE_STRING = BOINC 7.3.0
-PACKAGE_TARNAME = boinc
+PACKAGE_NAME = QCN
+PACKAGE_STRING = QCN 7.36
+PACKAGE_TARNAME = qcn
 PACKAGE_URL = 
-PACKAGE_VERSION = 7.3.0
+PACKAGE_VERSION = 7.36
 PATH_SEPARATOR = :
 PICFLAGS =  -fPIC -DPIC
-PKGCONFIG = /usr/bin/pkg-config
-PKG_CONFIG = 
-PKG_CONFIG_LIBDIR = 
-PKG_CONFIG_PATH = 
-PTHREAD_CC = arm-linux-androideabi-gcc
-PTHREAD_CFLAGS = 
+PTHREAD_CC = gcc
+PTHREAD_CFLAGS = -pthread
 PTHREAD_LIBS = 
+QCN_MAJOR_VERSION = 7
+QCN_MINOR_VERSION = 36
+QCN_RELEASE = 
+QCN_VERSION_STRING = 7.36
 RANLIB = ranlib
-RDATE = 2014.01.13
-REV = 
 SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/bash
-SQLITE3_CPPFLAGS = 
-SQLITE3_LIBS = 
-SSLDIR = /home/carlgt1/androidarm-tc/arm-linux-androideabi
-SSL_CFLAGS = -I/home/carlgt1/androidarm-tc/arm-linux-androideabi/include -I/home/carlgt1/androidarm-tc/arm-linux-androideabi/include/openssl
-SSL_CXXFLAGS = -I/home/carlgt1/androidarm-tc/arm-linux-androideabi/include -I/home/carlgt1/androidarm-tc/arm-linux-androideabi/include/openssl
-SSL_LIBS = -L/home/carlgt1/androidarm-tc/arm-linux-androideabi -L/home/carlgt1/androidarm-tc/arm-linux-androideabi/lib -lssl -lcrypto  
 STRIP = strip
-TOP_BUILD_DIR = /home/carlgt1/projects/boinc
-VERSION = 7.3.0
-WHOAMI = /usr/bin/whoami
+TOP_BUILD_DIR = /home/carlgt1/projects/qcn
+TOP_SOURCE_DIR = /home/carlgt1/projects/qcn
+VERSION = 7.36
 WX_CFLAGS = 
 WX_CFLAGS_ONLY = 
-WX_CONFIG_PATH = 
+WX_CONFIG_PATH = no
 WX_CPPFLAGS = 
 WX_CXXFLAGS = 
 WX_CXXFLAGS_ONLY = 
 WX_LIBS = 
 WX_LIBS_STATIC = 
 WX_VERSION = 
-XCBATOM_CFLAGS = 
-XCBATOM_LIBS = 
-XCB_CFLAGS = 
-XCB_LIBS = 
 XMKMF = 
 X_CFLAGS = 
 X_EXTRA_LIBS = 
 X_LIBS = 
-X_PRE_LIBS = 
-_libcurl_config = 
-abs_builddir = /home/carlgt1/projects/boinc/m4
-abs_srcdir = /home/carlgt1/projects/boinc/m4
-abs_top_builddir = /home/carlgt1/projects/boinc
-abs_top_srcdir = /home/carlgt1/projects/boinc
+X_PRE_LIBS =  -lSM -lICE
+abs_builddir = /home/carlgt1/projects/qcn/m4
+abs_srcdir = /home/carlgt1/projects/qcn/m4
+abs_top_builddir = /home/carlgt1/projects/qcn
+abs_top_srcdir = /home/carlgt1/projects/qcn
 ac_ct_AR = /usr/bin/ar
-ac_ct_CC = 
-ac_ct_CXX = 
-ac_ct_DUMPBIN = /usr/bin/link
-ac_ct_F77 = 
-ac_ct_OBJCXX = /usr/bin/g++
+ac_ct_CC = gcc
+ac_ct_CXX = /usr/bin/g++
+ac_ct_DUMPBIN = 
 am__include = include
 am__leading_dot = .
 am__quote = 
@@ -294,8 +252,8 @@ am__tar = $${TAR-tar} chof - "$$tardir"
 am__untar = $${TAR-tar} xf -
 ax_pthread_config = 
 bindir = ${exec_prefix}/bin
-boinc_alt_platform = 
-boinc_platform = arm-android-linux-gnu
+boinc_alt_platform = i686-pc-linux-gnu
+boinc_platform = x86_64-pc-linux-gnu
 build = x86_64-unknown-linux-gnu
 build_alias = 
 build_cpu = x86_64
@@ -306,16 +264,16 @@ datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
-exec_prefix = /usr/local
-host = arm-unknown-linux-gnu
-host_alias = arm-linux
-host_cpu = arm
+exec_prefix = ${prefix}
+host = x86_64-unknown-linux-gnu
+host_alias = 
+host_cpu = x86_64
 host_os = linux-gnu
 host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/carlgt1/projects/boinc/install-sh
+install_sh = ${SHELL} /home/carlgt1/projects/qcn/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -330,10 +288,10 @@ psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = .
-sysconfdir = /etc
-target = arm-unknown-linux-gnu
+sysconfdir = ${prefix}/etc
+target = x86_64-unknown-linux-gnu
 target_alias = 
-target_cpu = arm
+target_cpu = x86_64
 target_os = linux-gnu
 target_vendor = unknown
 top_build_prefix = ../
