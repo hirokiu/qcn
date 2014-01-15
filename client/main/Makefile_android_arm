@@ -13,6 +13,7 @@
 # PARTICULAR PURPOSE.
 
 
+BOINC_LIB = -L$(BOINC_DIR)/lib -lboinc -L$(BOINC_DIR)/api -lboinc_api -L$(BOINC_DIR)/zip -lboinc_zip
 
 
 am__is_gnu_make = test -n '$(MAKEFILE_LIST)' && test -n '$(MAKELEVEL)'
@@ -85,7 +86,7 @@ DIST_COMMON = $(top_srcdir)/Makefile.incl $(srcdir)/Makefile.in \
 #	-framework Foundation -framework ScreenSaver \
 #	-framework Carbon -framework Cocoa \
 #	 -ldl $(BOINC_LIB)
-am__append_2 = -z lazy -ldl $(BOINC_LIB) -lphidget21 -lusb-1.0 -lrt 
+#am__append_2 = -z lazy -ldl $(BOINC_LIB) -lphidget21 -lusb-1.0 -lrt 
 bin_PROGRAMS = qcn$(EXEEXT) qcndemo$(EXEEXT)
 subdir = client/main
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -207,7 +208,7 @@ AUTOMAKE = automake-1.13
 AWK = gawk
 CC = arm-linux-androideabi-gcc
 CCDEPMODE = depmode=gcc3
-CFLAGS = --sysroot=/home/carlgt1/androidarm-tc/sysroot -DANDROID -DDECLARE_TIMEZONE -Wall -I/home/carlgt1/androidarm-tc/arm-linux-androideabi/include -I../boinc/samples/jpeglib -O3 -fomit-frame-pointer
+CFLAGS = --sysroot=/home/carlgt1/androidarm-tc/sysroot -DANDROID -DDECLARE_TIMEZONE -Wall -I/home/carlgt1/androidarm-tc/arm-linux-androideabi/include -I$(BOINC_DIR)/lib -I$(BOINC_DIR)/api -I$(BOINC_DIR)/boinc/zip -O3 -fomit-frame-pointer
 CLIENTGUIFLAGS = 
 CLIENTGUILIBS = 
 CLIENTLIBS = 
@@ -217,7 +218,7 @@ CPP = arm-linux-androideabi-gcc -E
 CPPFLAGS = 
 CXX = arm-linux-androideabi-g++
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = --sysroot=/home/carlgt1/androidarm-tc/sysroot -DANDROID -Wall -I/home/carlgt1/androidarm-tc/arm-linux-androideabi/include -funroll-loops -fexceptions -O3 -fomit-frame-pointer
+CXXFLAGS = --sysroot=/home/carlgt1/androidarm-tc/sysroot -DANDROID -DDECLARE_TIMEZONE -Wall -I/home/carlgt1/androidarm-tc/arm-linux-androideabi/include -I$(BOINC_DIR)/lib -I$(BOINC_DIR)/api -I$(BOINC_DIR)/boinc/zip -O3 -fomit-frame-pointer
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
@@ -329,17 +330,19 @@ BASEDIR = $(top_builddir)
 LIBDIR = $(top_builddir)/client/linux_build
 BOINC_BASEDIR = $(top_builddir)/../boinc
 BOINC_DIR = $(BOINC_BASEDIR)
+BOINC_LIB = -L$(BOINC_DIR)/lib -lboinc -L$(BOINC_DIR)/api -lboinc_api -L$(BOINC_DIR)/zip -lboinc_zip
 FTGL_DIR = $(top_builddir)/ftgl-2.1.3
 FREETYPE_DIR = $(top_builddir)/freetype-2.4.6
 ZLIB_DIR = $(top_builddir)/zlib-1.2.5
-CURL_DIR = $(top_builddir)/curl-7.25.0
+CURL_DIR = $(top_builddir)/curl-7.34.0
 
 #if OS_DARWIN
 #   BOINC_LIB_DIR = $(BOINC_BASEDIR)/mac_build/build/Deployment
 #   BOINC_LIB = -L$(BOINC_LIB_DIR) -lboinc -lboinc_api -lboinc_graphics2 -L$(BOINC_BASEDIR)/zip/build/Release -lboinc_zip
 #else
 #   BOINC_LIB = $(BOINC_DIR)/api/libboinc_api.a $(BOINC_DIR)/api/libboinc_graphics2.a $(BOINC_DIR)/lib/libboinc.a $(BOINC_DIR)/zip/libboinc_zip.a
-BOINC_LIB = -L$(LIBDIR) -lboinc_api -lboinc_graphics2 -lboinc -lboinc_zip
+#BOINC_LIB = -L$(LIBDIR) -lboinc_api -lboinc_graphics2 -lboinc -lboinc_zip
+BOINC_LIB = -L$(BOINC_DIR)/lib -lboinc -L$(BOINC_DIR)/api -lboinc_api -L$(BOINC_DIR)/zip -lboinc_zip
 #endif
 
 #ZIPARCH_DIR = $(BASEDIR)/ziparchive/ZipArchive
@@ -349,7 +352,7 @@ MAINDIR = $(BASEDIR)/client/main
 SENSORDIR = $(BASEDIR)/client/sensor
 GRAPHICSDIR = $(BASEDIR)/client/graphics
 #PTHREAD_CFLAGS = @PTHREAD_CFLAGS@
-PTHREAD_LIBS = @PTHREAD_LIBS@
+#PTHREAD_LIBS = @PTHREAD_LIBS@
 AM_CPPFLAGS = \
         -Wall \
         -DQCN -D_THREAD_SAFE -D_ZLIB \
@@ -410,7 +413,7 @@ qcn_DEPENDENCIES =
 #qcn_CFLAGS = -I$(NTPINCLUDEDIR) -I$(NTPDATEDIR) $(AM_CPPFLAGS) $(PTHREAD_CFLAGS)
 qcn_CPPFLAGS = -D_USE_NTPDATE_EXEC_ -I$(QCNUSBDIR) $(AM_CPPFLAGS) $(PTHREAD_CFLAGS)
 #qcn_CPPFLAGS = -I$(QCNUSBDIR) $(AM_CPPFLAGS) $(PTHREAD_CFLAGS)
-qcn_LDFLAGS = $(LIBS) $(AM_LDFLAGS) -lstdc++ $(STACKSIZE) $(PTHREAD_LIBS)
+qcn_LDFLAGS = $(LIBS) $(AM_LDFLAGS) -lstdc++ $(STACKSIZE) $(PTHREAD_LIBS) $(LDFLAGS) $(BOINC_LIB)
 qcn_LDADD = 
 qcndemo_SOURCES = \
            $(UTILDIR)/qcn_thread.cpp \

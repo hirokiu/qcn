@@ -34,12 +34,16 @@ if OS_DARWIN
            $(SENSORDIR)/csensor_mac_usb_jw.cpp \
            $(SENSORDIR)/csensor_usb_phidgets.cpp 
 else #Android
+  if OS_ARM_LINUX
+   LIBS += -z lazy -ldl $(BOINC_LIB) @CLIENTLIBS@
+  else
    # must be Android Linux because I'm sure not using autoconf on Windows! ;-)
-   #STACKSIZE = --stack=2000000
+   STACKSIZE = --stack=2000000
    LIBS += -z lazy -ldl $(BOINC_LIB) -lrt @CLIENTLIBS@
-   #GRAPHICS = $(UTILDIR)/texture.cpp
-   #SENSORS  = \
-   #     $(SENSORDIR)/csensor_usb_phidgets.cpp 
+   GRAPHICS = $(UTILDIR)/texture.cpp
+   SENSORS  = \
+        $(SENSORDIR)/csensor_usb_phidgets.cpp 
+  endif
 endif
 
 bin_PROGRAMS = qcn qcndemo

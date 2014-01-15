@@ -7,6 +7,7 @@ AC_PREREQ(2.58)
 
 dnl Set the BOINC version here.  You can also use the set-version script.
 AC_INIT(BOINC, 7.3.0)
+AC_INIT(QCN, 7.36)
 AC_CONFIG_MACRO_DIR([m4])
 LIBBOINC_VERSION=`echo ${PACKAGE_VERSION} | sed 's/\./:/g'`
 AC_SUBST([LIBBOINC_VERSION])
@@ -952,51 +953,9 @@ AC_SUBST(FULLNAME)
 
 AC_CONFIG_FILES([
                  version.h
-                 api/Makefile
-                 apps/Makefile
-                 clientgui/Makefile
-                 clientgui/res/Makefile
-                 clientscr/Makefile
-                 client/Makefile
-                 client/win/boinc_path_config.py:py/boinc_path_config.py.in
-                 client/scripts/Makefile
-                 client/scripts/boinc-client
-                 db/Makefile
-                 doc/Makefile
-                 doc/manpages/Makefile
-                 html/Makefile
-                 lib/Makefile
-                 locale/Makefile
-                 Makefile
-                 py/Boinc/version.py
-                 py/Makefile
-                 py/boinc_path_config.py:py/boinc_path_config.py.in
-                 py/setup.py
-                 sched/boinc_path_config.py:py/boinc_path_config.py.in
-                 sched/Makefile
-                 packages/generic/sea/Makefile
-                 packages/solaris/CSW/Makefile
-                 packages/solaris/CSW/boincclient/Makefile
-                 packages/solaris/CSW/boincclient/pkginfo
-                 packages/solaris/CSW/boincclient/prototype
-                 packages/solaris/CSW/boincdevel/Makefile
-                 packages/solaris/CSW/boincdevel/pkginfo
-                 packages/solaris/CSW/boincdevel/prototype
-                 packages/solaris/CSW/boinclibs/Makefile
-                 packages/solaris/CSW/boinclibs/pkginfo
-                 packages/solaris/CSW/boinclibs/prototype
-                 packages/solaris/CSW/boincmanager/Makefile
-                 packages/solaris/CSW/boincmanager/pkginfo
-                 packages/solaris/CSW/boincmanager/prototype
-                 test/boinc_path_config.py:py/boinc_path_config.py.in
-                 test/Makefile
-                 test/version.inc
-                 tools/boinc_path_config.py:py/boinc_path_config.py.in
-                 tools/Makefile
-                 vda/Makefile
-                 zip/Makefile
-                 zip/zip/Makefile
-                 zip/unzip/Makefile
+                 client/main/Makefile
+                 client/graphics/Makefile
+                 client/qcnlive/Makefile
                  m4/Makefile
 		])
 

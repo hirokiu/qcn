@@ -19,8 +19,11 @@ CURL_DIR=$(top_builddir)/curl-7.25.0
 #   BOINC_LIB = -L$(BOINC_LIB_DIR) -lboinc -lboinc_api -lboinc_graphics2 -L$(BOINC_BASEDIR)/zip/build/Release -lboinc_zip
 #else
 #   BOINC_LIB = $(BOINC_DIR)/api/libboinc_api.a $(BOINC_DIR)/api/libboinc_graphics2.a $(BOINC_DIR)/lib/libboinc.a $(BOINC_DIR)/zip/libboinc_zip.a
+if OS_ARM_LINUX
+   BOINC_LIB = -L$(BOINC_DIR)/api -lboinc_api -L$(BOINC_DIR)/lib -lboinc -L$(BOINC_DIR)/zip -lboinc_zip
+else
    BOINC_LIB = -L$(LIBDIR) -lboinc_api -lboinc_graphics2 -lboinc -lboinc_zip
-#endif
+endif
 
 
 #ZIPARCH_DIR = $(BASEDIR)/ziparchive/ZipArchive
