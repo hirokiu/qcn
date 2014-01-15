@@ -6,7 +6,6 @@ CLEANFILES =
 noinst_LIBRARIES = libntp.a @MAKE_LIBNTPSIM@
 EXTRA_LIBRARIES = libntpsim.a
 libntp_a_SRCS =						\
-	a_md5encrypt.c					\
 	adjtime.c					\
 	atoint.c					\
 	atolfp.c					\

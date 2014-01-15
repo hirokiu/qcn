@@ -156,6 +156,7 @@ struct codestring peer_codes[] = {
 	{ -1,				"" }
 };
 
+#undef OPENSSL // CMC here
 #ifdef OPENSSL
 /*
  * Crypto events (cryp)
