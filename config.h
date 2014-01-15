@@ -11,17 +11,8 @@
 
 
 
-/* Define to the type pointed to by the 5th parameter of getsockopt */
-#define BOINC_SOCKLEN_T socklen_t
-
-/* Define to 1 if CYGWIN should use the WIN32 GUI */
-/* #undef CYGWIN_USE_WIN32 */
-
 /* Define to 1 if compiling under OS X 10.3 or earlier */
 /* #undef DARWIN_10_3 */
-
-/* Define to the platform's shared library extension */
-#define DLLEXT ".so"
 
 /* Define to 1 if you have the `alloca' function. */
 /* #undef HAVE_ALLOCA */
@@ -29,14 +20,8 @@
 /* Define to 1 if you have the <alloca.h> header file. */
 #define HAVE_ALLOCA_H 1
 
-/* Use the Apple OpenGL framework. */
-/* #undef HAVE_APPLE_OPENGL_FRAMEWORK */
-
 /* Define to 1 if you have the <arpa/inet.h> header file. */
 #define HAVE_ARPA_INET_H 1
-
-/* Define to 1 if you have the `daemon' function. */
-#define HAVE_DAEMON 1
 
 /* Define to 1 if you have the declaration of `tzname', and to 0 if you don't.
    */
@@ -44,9 +29,6 @@
 
 /* Define to 1 if you have the <dirent.h> header file. */
 #define HAVE_DIRENT_H 1
-
-/* Define to 1 if you have the <dlfcn.h> header file. */
-#define HAVE_DLFCN_H 1
 
 /* Define to 1 if you don't have `vprintf' but do have `_doprnt.' */
 /* #undef HAVE_DOPRNT */
@@ -96,27 +78,6 @@
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
 
-/* Define to 1 if you have the c library */
-#define HAVE_LIBC 1
-
-/* Define to 1 if you have the gcc library */
-#define HAVE_LIBGCC 1
-
-/* Define to 1 if you have the gcc_eh library */
-#define HAVE_LIBGCC_EH 1
-
-/* Define to 1 if you have the math library */
-#define HAVE_LIBM 1
-
-/* Define to 1 if you have the pthread library */
-#define HAVE_LIBPTHREAD 1
-
-/* Define to 1 if you have the stdc++ library */
-#define HAVE_LIBSTDC__ 1
-
-/* Define to 1 if you have the wsock32 library */
-/* #undef HAVE_LIBWSOCK32 */
-
 /* Define to 1 if you have the <malloc.h> header file. */
 #define HAVE_MALLOC_H 1
 
@@ -134,9 +95,6 @@
 
 /* Define to 1 if you have the <MesaGL/gl.h> header file. */
 /* #undef HAVE_MESAGL_GL_H */
-
-/* Define if your C++ compiler supports namespaces */
-#define HAVE_NAMESPACES 1
 
 /* Define to 1 if you have the <ndir.h> header file, and it defines `DIR'. */
 /* #undef HAVE_NDIR_H */
@@ -165,18 +123,6 @@
 /* Define to 1 if you have the <procfs.h> header file. */
 /* #undef HAVE_PROCFS_H */
 
-/* Define if you have POSIX threads libraries and header files. */
-#define HAVE_PTHREAD 1
-
-/* Have PTHREAD_PRIO_INHERIT. */
-#define HAVE_PTHREAD_PRIO_INHERIT 1
-
-/* Define to 1 if you have the `putenv' function. */
-#define HAVE_PUTENV 1
-
-/* Define to 1 if you have the `setenv' function. */
-#define HAVE_SETENV 1
-
 /* Define to 1 if you have the `setpriority' function. */
 #define HAVE_SETPRIORITY 1
 
@@ -189,12 +135,6 @@
 /* Define to 1 if you have the <signal.h> header file. */
 #define HAVE_SIGNAL_H 1
 
-/* Define to 1 if the system has the type `socklen_t'. */
-#define HAVE_SOCKLEN_T 1
-
-/* Define to 1 if you have the `stat64' function. */
-#define HAVE_STAT64 1
-
 /* Define to 1 if you have the <stdint.h> header file. */
 #define HAVE_STDINT_H 1
 
@@ -202,25 +142,16 @@
 #define HAVE_STDLIB_H 1
 
 /* Define to 1 if locale is in namespace std:: */
-#define HAVE_STD_LOCALE 1
+/* #undef HAVE_STD_LOCALE */
 
 /* Define to 1 if max is in namespace std:: */
-#define HAVE_STD_MAX 1
+/* #undef HAVE_STD_MAX */
 
 /* Define to 1 if min is in namespace std:: */
-#define HAVE_STD_MIN 1
+/* #undef HAVE_STD_MIN */
 
 /* Define to 1 if transform is in namespace std:: */
-#define HAVE_STD_TRANSFORM 1
-
-/* Define to 1 if you have the `strcasestr' function. */
-#define HAVE_STRCASESTR 1
-
-/* Define to 1 if you have the `strdup' function. */
-#define HAVE_STRDUP 1
-
-/* Define to 1 if you have the `strdupa' function. */
-/* #undef HAVE_STRDUPA */
+/* #undef HAVE_STD_TRANSFORM */
 
 /* Define to 1 if you have the <strings.h> header file. */
 #define HAVE_STRINGS_H 1
@@ -229,16 +160,16 @@
 #define HAVE_STRING_H 1
 
 /* Define to 1 if you have the `strlcat' function. */
-/* #undef HAVE_STRLCAT */
+#define HAVE_STRLCAT 1
 
 /* Define to 1 if you have the `strlcpy' function. */
-/* #undef HAVE_STRLCPY */
+#define HAVE_STRLCPY 1
 
 /* Define to 1 if `tm_zone' is a member of `struct tm'. */
 #define HAVE_STRUCT_TM_TM_ZONE 1
 
 /* Define to 1 if you have the <sys/auxv.h> header file. */
-#define HAVE_SYS_AUXV_H 1
+/* #undef HAVE_SYS_AUXV_H */
 
 /* Define to 1 if you have the <sys/dir.h> header file, and it defines `DIR'.
    */
@@ -267,7 +198,7 @@
 #define HAVE_SYS_SELECT_H 1
 
 /* Define to 1 if you have the <sys/shm.h> header file. */
-#define HAVE_SYS_SHM_H 1
+/* #undef HAVE_SYS_SHM_H */
 
 /* Define to 1 if you have the <sys/socket.h> header file. */
 #define HAVE_SYS_SOCKET_H 1
@@ -276,16 +207,16 @@
 #define HAVE_SYS_STATFS_H 1
 
 /* Define to 1 if you have the <sys/statvfs.h> header file. */
-#define HAVE_SYS_STATVFS_H 1
+/* #undef HAVE_SYS_STATVFS_H */
 
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #define HAVE_SYS_STAT_H 1
 
 /* Define to 1 if you have the <sys/swap.h> header file. */
-#define HAVE_SYS_SWAP_H 1
+/* #undef HAVE_SYS_SWAP_H */
 
 /* Define to 1 if you have the <sys/sysctl.h> header file. */
-#define HAVE_SYS_SYSCTL_H 1
+/* #undef HAVE_SYS_SYSCTL_H */
 
 /* Define to 1 if you have the <sys/systeminfo.h> header file. */
 /* #undef HAVE_SYS_SYSTEMINFO_H */
@@ -325,12 +256,6 @@
 /* Define to 1 if you have the <windows.h> header file. */
 /* #undef HAVE_WINDOWS_H */
 
-/* Define to 1 if you have the <winsock2.h> header file. */
-/* #undef HAVE_WINSOCK2_H */
-
-/* Define to 1 if you have the <winsock.h> header file. */
-/* #undef HAVE_WINSOCK_H */
-
 /* Define to 1 if you have the `_alloca' function. */
 /* #undef HAVE__ALLOCA */
 
@@ -342,21 +267,6 @@
 
 /* Define to 1 if /proc/self/stat exists */
 #define HAVE__PROC_SELF_STAT 1
-
-/* Platform identification used to identify applications for this BOINC core
-   client */
-#define HOSTTYPE "x86_64-pc-linux-gnu"
-
-/* Alternate identification used to identify applications for this BOINC core
-   client */
-#define HOSTTYPEALT "i686-pc-linux-gnu"
-
-/* "Define to 1 if largefile support causes missing symbols in C++" */
-/* #undef LARGEFILE_BREAKS_CXX */
-
-/* Define to the sub-directory in which libtool stores uninstalled libraries.
-   */
-#define LT_OBJDIR ".libs/"
 
 /* Define to 1 if your C compiler doesn't accept -c and -o together. */
 /* #undef NO_MINUS_C_MINUS_O */
@@ -371,7 +281,7 @@
 #define PACKAGE_NAME "QCN"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "QCN 7.36"
+#define PACKAGE_STRING "QCN 2.64"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "qcn"
@@ -380,11 +290,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "7.36"
-
-/* Define to necessary symbol if this constant uses a non-standard name on
-   your system. */
-/* #undef PTHREAD_CREATE_JOINABLE */
+#define PACKAGE_VERSION "2.64"
 
 /* Define as the return type of signal handlers (`int' or `void'). */
 #define RETSIGTYPE void
@@ -398,20 +304,11 @@
 /* Define to 1 if your <sys/time.h> declares `struct tm'. */
 /* #undef TM_IN_SYS_TIME */
 
-/* Define to 1 to use windows sockets */
-/* #undef USE_WINSOCK */
-
 /* utmp file location */
 #define UTMP_LOCATION "/var/run/utmp"
 
 /* Version number of package */
-#define VERSION "7.36"
-
-/* Define to prevent redefinition of INT32 in jconfig.h */
-/* #undef XMD_H */
-
-/* Define to 1 if the X Window System is missing or not being used. */
-/* #undef X_DISPLAY_MISSING */
+#define VERSION "2.64"
 
 /* Enable large inode numbers on Mac OS X 10.5.  */
 #ifndef _DARWIN_USE_64_BIT_INODE
@@ -429,12 +326,6 @@
 
 /* Define to `unsigned int' if <sys/types.h> does not define. */
 /* #undef size_t */
-
-
-#ifndef HAVE_SOCKLEN_T
-typedef BOINC_SOCKLEN_T socklen_t;
-#endif
-
 
 
 
