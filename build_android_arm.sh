@@ -8,6 +8,7 @@
 # by science applications
 
 COMPILEBOINC=
+COMPILENTP=
 CONFIGURE=yes
 MAKECLEAN=yes
 
@@ -48,7 +49,9 @@ make stage
 echo "=============================BOINC done============================="
 fi
 
+if [ -n "$COMPILENTP" ]; then
 # NTP
+echo "=============================NTP start============================="
 cd ntp-4.2.6p5
 ./configure --host=arm-linux --disable-shared --enable-static
 make clean 
@@ -56,5 +59,10 @@ cd libntp
 make clean && make
 cd ../ntpdate
 make clean && make
+echo "=============================NTP done============================="
+fi
 
+./_autosetup
+./configure --host=arm-linux --disable-shared --enable-static --disable-server --disable-manager --disable-client
+make clean 
 
