@@ -4,7 +4,7 @@ dnl not sure exactly what the minimum version is (but 2.13 wont work)
 AC_PREREQ(2.57)
 
 dnl Set the QCN version here.  You can also use the set-version script.
-AC_INIT(QCN, 2.64)
+AC_INIT(QCN, 7.36)
 
 AC_ARG_ENABLE(debug, 
     AS_HELP_STRING([--enable-debug],

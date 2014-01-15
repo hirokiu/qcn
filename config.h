@@ -281,7 +281,7 @@
 #define PACKAGE_NAME "QCN"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "QCN 2.64"
+#define PACKAGE_STRING "QCN 7.36"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "qcn"
@@ -290,7 +290,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.64"
+#define PACKAGE_VERSION "7.36"
 
 /* Define as the return type of signal handlers (`int' or `void'). */
 #define RETSIGTYPE void
@@ -308,7 +308,7 @@
 #define UTMP_LOCATION "/var/run/utmp"
 
 /* Version number of package */
-#define VERSION "2.64"
+#define VERSION "7.36"
 
 /* Enable large inode numbers on Mac OS X 10.5.  */
 #ifndef _DARWIN_USE_64_BIT_INODE
