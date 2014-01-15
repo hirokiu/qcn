@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{400FBFCB-462E-40D0-B06B-3B74E3FFFD00}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\Debug\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\Release\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..\..\libntp;..\..\include;..\..\..\..\include;..\..\..\..\lib\isc\win32\include;..\..\..\..\lib\isc\include;$(OPENSSL_INC);..\..\..\..\sntp\libopts;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_LIB;WIN32;SYS_WINNT;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\Debug\libntp.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Debug\libntp.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\libntp.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..\..\libntp;..\..\include;..\..\..\..\include;..\..\..\..\lib\isc\win32\include;..\..\..\..\lib\isc\include;$(OPENSSL_INC);..\..\..\..\sntp\libopts;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_LIB;WIN32;SYS_WINNT;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\Debug\libntp.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Debug\libntp.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\libntp.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..\..\libntp;..\..\include;..\..\..\..\include;..\..\..\..\lib\isc\win32\include;..\..\..\..\lib\isc\include;$(OPENSSL_INC);..\..\..\..\sntp\libopts;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_LIB;WIN32;SYS_WINNT;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\Release\libntp.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Release\libntp.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\libntp.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..\..\libntp;..\..\include;..\..\..\..\include;..\..\..\..\lib\isc\win32\include;..\..\..\..\lib\isc\include;$(OPENSSL_INC);..\..\..\..\sntp\libopts;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_LIB;WIN32;SYS_WINNT;HAVE_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\Release\libntp.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Release\libntp.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\libntp.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\libntp\adjtime.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\assertions.c" />
+    <ClCompile Include="..\..\..\..\libntp\atoint.c" />
+    <ClCompile Include="..\..\..\..\libntp\atolfp.c" />
+    <ClCompile Include="..\..\..\..\libntp\atouint.c" />
+    <ClCompile Include="..\..\..\..\libntp\audio.c" />
+    <ClCompile Include="..\..\..\..\libntp\authkeys.c" />
+    <ClCompile Include="..\..\..\..\libntp\authreadkeys.c" />
+    <ClCompile Include="..\..\..\..\libntp\authusekey.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\buffer.c" />
+    <ClCompile Include="..\..\..\..\libntp\buftvtots.c" />
+    <ClCompile Include="..\..\..\..\libntp\caljulian.c" />
+    <ClCompile Include="..\..\..\..\libntp\caltontp.c" />
+    <ClCompile Include="..\..\..\..\libntp\calyearstart.c" />
+    <ClCompile Include="..\..\..\..\libntp\clocktime.c" />
+    <ClCompile Include="..\..\..\..\libntp\clocktypes.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\win32\condition.c" />
+    <ClCompile Include="..\..\..\..\libntp\decodenetnum.c" />
+    <ClCompile Include="..\..\..\..\libntp\dofptoa.c" />
+    <ClCompile Include="..\..\..\..\libntp\dolfptoa.c" />
+    <ClCompile Include="..\..\..\..\libntp\emalloc.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\error.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\event.c" />
+    <ClCompile Include="..\..\..\..\libntp\findconfig.c" />
+    <ClCompile Include="..\..\..\..\libntp\fptoa.c" />
+    <ClCompile Include="..\..\..\..\libntp\fptoms.c" />
+    <ClCompile Include="..\..\libntp\getclock.c" />
+    <ClCompile Include="..\..\..\..\libntp\getopt.c" />
+    <ClCompile Include="..\..\..\..\libntp\hextoint.c" />
+    <ClCompile Include="..\..\..\..\libntp\hextolfp.c" />
+    <ClCompile Include="..\..\..\..\libntp\humandate.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\inet_aton.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\inet_ntop.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\inet_pton.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\win32\interfaceiter.c" />
+    <ClCompile Include="..\..\..\..\libntp\inttoa.c" />
+    <ClCompile Include="..\..\..\..\libntp\iosignal.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\lib.c" />
+    <ClCompile Include="..\..\..\..\libntp\lib_strbuf.c" />
+    <ClCompile Include="..\..\..\..\sntp\libopts\libopts.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\log.c" />
+    <ClCompile Include="..\..\..\..\libntp\machines.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\md5.c" />
+    <ClCompile Include="..\..\..\..\libntp\memmove.c" />
+    <ClCompile Include="..\..\..\..\libntp\mfptoa.c" />
+    <ClCompile Include="..\..\..\..\libntp\mfptoms.c" />
+    <ClCompile Include="..\..\..\..\libntp\mktime.c" />
+    <ClCompile Include="..\..\..\..\libntp\modetoa.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\nls\msgcat.c" />
+    <ClCompile Include="..\..\..\..\libntp\mstolfp.c" />
+    <ClCompile Include="..\..\..\..\libntp\msutotsf.c" />
+    <ClCompile Include="..\..\..\..\libntp\msyslog.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\win32\net.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\netaddr.c" />
+    <ClCompile Include="..\..\..\..\libntp\netof.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\netscope.c" />
+    <ClCompile Include="..\..\..\..\libntp\ntp_libopts.c" />
+    <ClCompile Include="..\..\..\..\libntp\ntp_lineedit.c" />
+    <ClCompile Include="..\..\..\..\libntp\ntp_random.c" />
+    <ClCompile Include="..\..\..\..\libntp\ntp_rfc2553.c" />
+    <ClCompile Include="..\..\..\..\libntp\numtoa.c" />
+    <ClCompile Include="..\..\..\..\libntp\numtohost.c" />
+    <ClCompile Include="..\..\..\..\libntp\octtoint.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\win32\once.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\ondestroy.c" />
+    <ClCompile Include="..\..\..\..\libntp\prettydate.c" />
+    <ClCompile Include="..\..\libntp\randfile.c" />
+    <ClCompile Include="..\..\..\..\libntp\recvbuff.c" />
+    <ClCompile Include="..\..\..\..\libntp\refnumtoa.c" />
+    <ClCompile Include="..\..\libntp\setpriority.c" />
+    <ClCompile Include="..\..\libntp\SetSystemTime.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\sockaddr.c" />
+    <ClCompile Include="..\..\..\..\libntp\socktoa.c" />
+    <ClCompile Include="..\..\..\..\libntp\socktohost.c" />
+    <ClCompile Include="..\..\..\..\libntp\ssl_init.c" />
+    <ClCompile Include="..\..\..\..\libntp\statestr.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\win32\stdtime.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\win32\strerror.c" />
+    <ClCompile Include="..\..\libntp\syslog.c" />
+    <ClCompile Include="..\..\..\..\libntp\syssignal.c" />
+    <ClCompile Include="..\..\..\..\libntp\systime.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\task.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\win32\thread.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\win32\time.c" />
+    <ClCompile Include="..\..\libntp\transmitbuff.c" />
+    <ClCompile Include="..\..\..\..\libntp\tsftomsu.c" />
+    <ClCompile Include="..\..\..\..\libntp\tstotv.c" />
+    <ClCompile Include="..\..\..\..\libntp\tvtots.c" />
+    <ClCompile Include="..\..\..\..\libntp\uglydate.c" />
+    <ClCompile Include="..\..\..\..\libntp\uinttoa.c" />
+    <ClCompile Include="..\..\libntp\util_clockstuff.c" />
+    <ClCompile Include="..\..\..\..\lib\isc\win32\win32os.c" />
+    <ClCompile Include="..\..\..\..\libntp\ymd2yd.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\sntp\libopts\ag-char-map.h" />
+    <ClInclude Include="..\..\..\..\include\binio.h" />
+    <ClInclude Include="..\..\..\..\lib\isc\include\isc\buffer.h" />
+    <ClInclude Include="..\..\include\clockstuff.h" />
+    <ClInclude Include="..\..\..\..\lib\isc\win32\include\isc\condition.h" />
+    <ClInclude Include="..\..\include\config.h" />
+    <ClInclude Include="..\..\..\..\lib\isc\include\isc\event.h" />
+    <ClInclude Include="..\..\..\..\include\global.h" />
+    <ClInclude Include="..\..\..\..\lib\isc\include\isc\hash.h" />
+    <ClInclude Include="..\..\..\..\include\ieee754io.h" />
+    <ClInclude Include="..\..\include\netinet\in.h" />
+    <ClInclude Include="..\..\include\arpa\inet.h" />
+    <ClInclude Include="..\..\..\..\lib\isc\include\isc\interfaceiter.h" />
+    <ClInclude Include="..\..\include\sys\ioctl.h" />
+    <ClInclude Include="..\..\..\..\include\iosignal.h" />
+    <ClInclude Include="..\..\..\..\lib\isc\win32\include\isc\ipv6.h" />
+    <ClInclude Include="..\..\..\..\include\l_stdlib.h" />
+    <ClInclude Include="..\..\..\..\include\lib_strbuf.h" />
+    <ClInclude Include="..\..\..\..\lib\isc\include\isc\log.h" />
+    <ClInclude Include="..\..\..\..\include\md5.h" />
+    <ClInclude Include="..\..\..\..\include\isc\mem.h" />
+    <ClInclude Include="..\..\..\..\lib\isc\win32\include\isc\net.h" />
+    <ClInclude Include="..\..\..\..\include\isc\netaddr.h" />
+    <ClInclude Include="..\..\include\netdb.h" />
+    <ClInclude Include="..\..\..\..\include\isc\netscope.h" />
+    <ClInclude Include="..\..\..\..\include\ntp.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_assert.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_calendar.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_control.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_debug.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_fp.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_if.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_io.h" />
+    <ClInclude Include="..\..\include\ntp_iocompletionport.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_libopts.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_lineedit.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_lists.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_machine.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_malloc.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_md5.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_net.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_proto.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_random.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_refclock.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_rfc2553.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_select.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_sprintf.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_stdlib.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_string.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_syslog.h" />
+    <ClInclude Include="..\..\include\ntp_timer.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_types.h" />
+    <ClInclude Include="..\..\..\..\include\ntp_unixtime.h" />
+    <ClInclude Include="..\..\..\..\include\ntpd.h" />
+    <ClInclude Include="..\..\..\..\lib\isc\include\isc\ondestroy.h" />
+    <ClInclude Include="..\..\..\..\lib\isc\win32\include\isc\platform.h" />
+    <ClInclude Include="..\..\..\..\include\recvbuff.h" />
+    <ClInclude Include="..\..\include\sys\resource.h" />
+    <ClInclude Include="..\..\include\sys\signal.h" />
+    <ClInclude Include="..\..\include\sys\socket.h" />
+    <ClInclude Include="..\..\..\..\lib\isc\win32\include\isc\stat.h" />
+    <ClInclude Include="..\..\..\..\lib\isc\win32\include\isc\stdtime.h" />
+    <ClInclude Include="..\..\include\syslog.h" />
+    <ClInclude Include="..\..\..\..\lib\isc\include\isc\task.h" />
+    <ClInclude Include="..\..\include\termios.h" />
+    <ClInclude Include="..\..\..\..\lib\isc\win32\include\isc\thread.h" />
+    <ClInclude Include="..\..\include\sys\time.h" />
+    <ClInclude Include="..\..\..\..\lib\isc\win32\include\isc\time.h" />
+    <ClInclude Include="..\..\include\transmitbuff.h" />
+    <ClInclude Include="..\..\include\win32_io.h" />
+    <ClInclude Include="..\..\include\isc\win32os.h" />
+    <ClInclude Include="..\..\libntp\messages.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\libntp\messages.mc">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Message Compiler</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Message Compiler</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mc -h %(RootDir)%(Directory) -r %(RootDir)%(Directory) -e h %(FullPath)
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mc -h %(RootDir)%(Directory) -r %(RootDir)%(Directory) -e h %(FullPath)
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(RootDir)%(Directory)%(Filename).rc;%(RootDir)%(Directory)%(Filename).h;%(RootDir)%(Directory)msg00001.bin;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(RootDir)%(Directory)%(Filename).rc;%(RootDir)%(Directory)%(Filename).h;%(RootDir)%(Directory)msg00001.bin;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Message Compiler</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Message Compiler</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mc -h %(RootDir)%(Directory) -r %(RootDir)%(Directory) -e h %(FullPath)
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mc -h %(RootDir)%(Directory) -r %(RootDir)%(Directory) -e h %(FullPath)
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(RootDir)%(Directory)%(Filename).rc;%(RootDir)%(Directory)%(Filename).h;%(RootDir)%(Directory)msg00001.bin;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(RootDir)%(Directory)%(Filename).rc;%(RootDir)%(Directory)%(Filename).h;%(RootDir)%(Directory)msg00001.bin;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
