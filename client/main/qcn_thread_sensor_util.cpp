@@ -309,9 +309,10 @@ bool getSensor(CSensor* volatile *ppsms)
 					   *ppsms = NULL; // (CSensor*) new CSensorLinuxUSBJW();
           #else
 					   *ppsms = (CSensor*) new CSensorLinuxUSBJW();
-          #endif
+          #endif // ANDROID or Linux
 				   }
 				   break;
+          #ifndef ANDROID
 			   case 1:
 					   *ppsms = (CSensor*) new CSensorLinuxUSBJW24F14();
 				   break;
@@ -328,6 +329,7 @@ bool getSensor(CSensor* volatile *ppsms)
 				   break;
 	#endif
 	     */
+          #endif // ANDROID or Linux
 		   }
 	#endif // _WIN32 or Linux
 	#endif // APPLE

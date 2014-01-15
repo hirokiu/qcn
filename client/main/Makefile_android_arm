@@ -372,7 +372,7 @@ AM_CPPFLAGS = \
 AM_LDFLAGS = -L$(UTILDIR) -L$(LIBDIR)
 BINARY = qcn_$(QCN_VERSION_STRING)_$(build)
 QCNUSBDIR = $(BASEDIR)/client/qcnusb
-STACKSIZE = --stack=2000000
+#STACKSIZE = --stack=2000000
 #STACKSIZE = -Wl,-stack_size -Wl,2000000
 GRAPHICS = $(UTILDIR)/texture.cpp
 #GRAPHICS = 
