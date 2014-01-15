@@ -290,7 +290,11 @@ bool getSensor(CSensor* volatile *ppsms)
 //#endif
 		   }
 	#else // Linux
+          #ifdef ANDROID
+	   const int iMaxSensor = 1;
+          #else
 	   const int iMaxSensor = 4;
+          #endif
 	   // for Windows the sensor can either be a CSensorThinkpad or CSensorWinUSBJW
 	   // note we try to detect the USB sensors first (if any), then try the laptop
 		 for (int i = 0; i < (bForceSensor ? 1 : iMaxSensor); i++)  {
@@ -300,7 +304,12 @@ bool getSensor(CSensor* volatile *ppsms)
 					   psmsForceSensor(ppsms);
 				   }
 				   else {
+          #ifdef ANDROID
+                                   // CMC HERE - need a CSensor for built-in Android device accelerometer
+					   *ppsms = NULL; // (CSensor*) new CSensorLinuxUSBJW();
+          #else
 					   *ppsms = (CSensor*) new CSensorLinuxUSBJW();
+          #endif
 				   }
 				   break;
 			   case 1:

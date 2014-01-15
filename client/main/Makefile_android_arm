@@ -104,23 +104,13 @@ am__qcn_SOURCES_DIST = $(UTILDIR)/sac.cpp $(UTILDIR)/qcn_thread.cpp \
 	$(UTILDIR)/qcn_util.cpp $(UTILDIR)/qcn_signal.cpp \
 	$(UTILDIR)/cserialize.cpp $(UTILDIR)/gzstream.cpp \
 	$(MAINDIR)/qcn_shmem.cpp $(SENSORDIR)/csensor.cpp \
-	$(UTILDIR)/texture.cpp $(SENSORDIR)/csensor_linux_usb_jw.cpp \
-	$(SENSORDIR)/csensor_linux_usb_jw24f14.cpp \
-	$(SENSORDIR)/csensor_linux_usb_onavi.cpp \
-	$(SENSORDIR)/csensor_usb_phidgets.cpp \
-	$(SENSORDIR)/csensor_mac_laptop.cpp \
-	$(SENSORDIR)/csensor_mac_usb_generic.cpp \
-	$(SENSORDIR)/csensor_mac_usb_jw.cpp \
 	$(QCNUSBDIR)/qcn_shmem_usb.cpp \
 	$(MAINDIR)/qcn_thread_sensor.cpp \
 	$(MAINDIR)/qcn_thread_sensor_util.cpp \
 	$(MAINDIR)/qcn_thread_sensor_loop.cpp \
 	$(MAINDIR)/qcn_thread_time.cpp $(MAINDIR)/main.cpp
-am__objects_1 = qcn-texture.$(OBJEXT)
-am__objects_2 = qcn-csensor_linux_usb_jw.$(OBJEXT) \
-	qcn-csensor_linux_usb_jw24f14.$(OBJEXT) \
-	qcn-csensor_linux_usb_onavi.$(OBJEXT) \
-	qcn-csensor_usb_phidgets.$(OBJEXT)
+am__objects_1 =
+am__objects_2 =
 #am__objects_2 = qcn-csensor_mac_laptop.$(OBJEXT) \
 #	qcn-csensor_mac_usb_generic.$(OBJEXT) \
 #	qcn-csensor_mac_usb_jw.$(OBJEXT) \
@@ -386,11 +376,7 @@ STACKSIZE = --stack=2000000
 #STACKSIZE = -Wl,-stack_size -Wl,2000000
 GRAPHICS = $(UTILDIR)/texture.cpp
 #GRAPHICS = 
-SENSORS = \
-        $(SENSORDIR)/csensor_linux_usb_jw.cpp \
-        $(SENSORDIR)/csensor_linux_usb_jw24f14.cpp \
-        $(SENSORDIR)/csensor_linux_usb_onavi.cpp \
-        $(SENSORDIR)/csensor_usb_phidgets.cpp 
+SENSORS = 
 
 #SENSORS = \
 #           $(SENSORDIR)/csensor_mac_laptop.cpp \
@@ -534,13 +520,6 @@ distclean-compile:
 	-rm -f *.tab.c
 
 include ./$(DEPDIR)/qcn-csensor.Po
-include ./$(DEPDIR)/qcn-csensor_linux_usb_jw.Po
-include ./$(DEPDIR)/qcn-csensor_linux_usb_jw24f14.Po
-include ./$(DEPDIR)/qcn-csensor_linux_usb_onavi.Po
-include ./$(DEPDIR)/qcn-csensor_mac_laptop.Po
-include ./$(DEPDIR)/qcn-csensor_mac_usb_generic.Po
-include ./$(DEPDIR)/qcn-csensor_mac_usb_jw.Po
-include ./$(DEPDIR)/qcn-csensor_usb_phidgets.Po
 include ./$(DEPDIR)/qcn-cserialize.Po
 include ./$(DEPDIR)/qcn-execproc.Po
 include ./$(DEPDIR)/qcn-gzstream.Po
@@ -763,105 +742,6 @@ qcn-texture.obj: $(UTILDIR)/texture.cpp
 #	$(AM_V_CXX)source='$(UTILDIR)/texture.cpp' object='qcn-texture.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qcn-texture.obj `if test -f '$(UTILDIR)/texture.cpp'; then $(CYGPATH_W) '$(UTILDIR)/texture.cpp'; else $(CYGPATH_W) '$(srcdir)/$(UTILDIR)/texture.cpp'; fi`
-
-qcn-csensor_linux_usb_jw.o: $(SENSORDIR)/csensor_linux_usb_jw.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qcn-csensor_linux_usb_jw.o -MD -MP -MF $(DEPDIR)/qcn-csensor_linux_usb_jw.Tpo -c -o qcn-csensor_linux_usb_jw.o `test -f '$(SENSORDIR)/csensor_linux_usb_jw.cpp' || echo '$(srcdir)/'`$(SENSORDIR)/csensor_linux_usb_jw.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/qcn-csensor_linux_usb_jw.Tpo $(DEPDIR)/qcn-csensor_linux_usb_jw.Po
-#	$(AM_V_CXX)source='$(SENSORDIR)/csensor_linux_usb_jw.cpp' object='qcn-csensor_linux_usb_jw.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qcn-csensor_linux_usb_jw.o `test -f '$(SENSORDIR)/csensor_linux_usb_jw.cpp' || echo '$(srcdir)/'`$(SENSORDIR)/csensor_linux_usb_jw.cpp
-
-qcn-csensor_linux_usb_jw.obj: $(SENSORDIR)/csensor_linux_usb_jw.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qcn-csensor_linux_usb_jw.obj -MD -MP -MF $(DEPDIR)/qcn-csensor_linux_usb_jw.Tpo -c -o qcn-csensor_linux_usb_jw.obj `if test -f '$(SENSORDIR)/csensor_linux_usb_jw.cpp'; then $(CYGPATH_W) '$(SENSORDIR)/csensor_linux_usb_jw.cpp'; else $(CYGPATH_W) '$(srcdir)/$(SENSORDIR)/csensor_linux_usb_jw.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/qcn-csensor_linux_usb_jw.Tpo $(DEPDIR)/qcn-csensor_linux_usb_jw.Po
-#	$(AM_V_CXX)source='$(SENSORDIR)/csensor_linux_usb_jw.cpp' object='qcn-csensor_linux_usb_jw.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qcn-csensor_linux_usb_jw.obj `if test -f '$(SENSORDIR)/csensor_linux_usb_jw.cpp'; then $(CYGPATH_W) '$(SENSORDIR)/csensor_linux_usb_jw.cpp'; else $(CYGPATH_W) '$(srcdir)/$(SENSORDIR)/csensor_linux_usb_jw.cpp'; fi`
-
-qcn-csensor_linux_usb_jw24f14.o: $(SENSORDIR)/csensor_linux_usb_jw24f14.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qcn-csensor_linux_usb_jw24f14.o -MD -MP -MF $(DEPDIR)/qcn-csensor_linux_usb_jw24f14.Tpo -c -o qcn-csensor_linux_usb_jw24f14.o `test -f '$(SENSORDIR)/csensor_linux_usb_jw24f14.cpp' || echo '$(srcdir)/'`$(SENSORDIR)/csensor_linux_usb_jw24f14.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/qcn-csensor_linux_usb_jw24f14.Tpo $(DEPDIR)/qcn-csensor_linux_usb_jw24f14.Po
-#	$(AM_V_CXX)source='$(SENSORDIR)/csensor_linux_usb_jw24f14.cpp' object='qcn-csensor_linux_usb_jw24f14.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qcn-csensor_linux_usb_jw24f14.o `test -f '$(SENSORDIR)/csensor_linux_usb_jw24f14.cpp' || echo '$(srcdir)/'`$(SENSORDIR)/csensor_linux_usb_jw24f14.cpp
-
-qcn-csensor_linux_usb_jw24f14.obj: $(SENSORDIR)/csensor_linux_usb_jw24f14.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qcn-csensor_linux_usb_jw24f14.obj -MD -MP -MF $(DEPDIR)/qcn-csensor_linux_usb_jw24f14.Tpo -c -o qcn-csensor_linux_usb_jw24f14.obj `if test -f '$(SENSORDIR)/csensor_linux_usb_jw24f14.cpp'; then $(CYGPATH_W) '$(SENSORDIR)/csensor_linux_usb_jw24f14.cpp'; else $(CYGPATH_W) '$(srcdir)/$(SENSORDIR)/csensor_linux_usb_jw24f14.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/qcn-csensor_linux_usb_jw24f14.Tpo $(DEPDIR)/qcn-csensor_linux_usb_jw24f14.Po
-#	$(AM_V_CXX)source='$(SENSORDIR)/csensor_linux_usb_jw24f14.cpp' object='qcn-csensor_linux_usb_jw24f14.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qcn-csensor_linux_usb_jw24f14.obj `if test -f '$(SENSORDIR)/csensor_linux_usb_jw24f14.cpp'; then $(CYGPATH_W) '$(SENSORDIR)/csensor_linux_usb_jw24f14.cpp'; else $(CYGPATH_W) '$(srcdir)/$(SENSORDIR)/csensor_linux_usb_jw24f14.cpp'; fi`
-
-qcn-csensor_linux_usb_onavi.o: $(SENSORDIR)/csensor_linux_usb_onavi.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qcn-csensor_linux_usb_onavi.o -MD -MP -MF $(DEPDIR)/qcn-csensor_linux_usb_onavi.Tpo -c -o qcn-csensor_linux_usb_onavi.o `test -f '$(SENSORDIR)/csensor_linux_usb_onavi.cpp' || echo '$(srcdir)/'`$(SENSORDIR)/csensor_linux_usb_onavi.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/qcn-csensor_linux_usb_onavi.Tpo $(DEPDIR)/qcn-csensor_linux_usb_onavi.Po
-#	$(AM_V_CXX)source='$(SENSORDIR)/csensor_linux_usb_onavi.cpp' object='qcn-csensor_linux_usb_onavi.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qcn-csensor_linux_usb_onavi.o `test -f '$(SENSORDIR)/csensor_linux_usb_onavi.cpp' || echo '$(srcdir)/'`$(SENSORDIR)/csensor_linux_usb_onavi.cpp
-
-qcn-csensor_linux_usb_onavi.obj: $(SENSORDIR)/csensor_linux_usb_onavi.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qcn-csensor_linux_usb_onavi.obj -MD -MP -MF $(DEPDIR)/qcn-csensor_linux_usb_onavi.Tpo -c -o qcn-csensor_linux_usb_onavi.obj `if test -f '$(SENSORDIR)/csensor_linux_usb_onavi.cpp'; then $(CYGPATH_W) '$(SENSORDIR)/csensor_linux_usb_onavi.cpp'; else $(CYGPATH_W) '$(srcdir)/$(SENSORDIR)/csensor_linux_usb_onavi.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/qcn-csensor_linux_usb_onavi.Tpo $(DEPDIR)/qcn-csensor_linux_usb_onavi.Po
-#	$(AM_V_CXX)source='$(SENSORDIR)/csensor_linux_usb_onavi.cpp' object='qcn-csensor_linux_usb_onavi.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qcn-csensor_linux_usb_onavi.obj `if test -f '$(SENSORDIR)/csensor_linux_usb_onavi.cpp'; then $(CYGPATH_W) '$(SENSORDIR)/csensor_linux_usb_onavi.cpp'; else $(CYGPATH_W) '$(srcdir)/$(SENSORDIR)/csensor_linux_usb_onavi.cpp'; fi`
-
-qcn-csensor_usb_phidgets.o: $(SENSORDIR)/csensor_usb_phidgets.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qcn-csensor_usb_phidgets.o -MD -MP -MF $(DEPDIR)/qcn-csensor_usb_phidgets.Tpo -c -o qcn-csensor_usb_phidgets.o `test -f '$(SENSORDIR)/csensor_usb_phidgets.cpp' || echo '$(srcdir)/'`$(SENSORDIR)/csensor_usb_phidgets.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/qcn-csensor_usb_phidgets.Tpo $(DEPDIR)/qcn-csensor_usb_phidgets.Po
-#	$(AM_V_CXX)source='$(SENSORDIR)/csensor_usb_phidgets.cpp' object='qcn-csensor_usb_phidgets.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qcn-csensor_usb_phidgets.o `test -f '$(SENSORDIR)/csensor_usb_phidgets.cpp' || echo '$(srcdir)/'`$(SENSORDIR)/csensor_usb_phidgets.cpp
-
-qcn-csensor_usb_phidgets.obj: $(SENSORDIR)/csensor_usb_phidgets.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qcn-csensor_usb_phidgets.obj -MD -MP -MF $(DEPDIR)/qcn-csensor_usb_phidgets.Tpo -c -o qcn-csensor_usb_phidgets.obj `if test -f '$(SENSORDIR)/csensor_usb_phidgets.cpp'; then $(CYGPATH_W) '$(SENSORDIR)/csensor_usb_phidgets.cpp'; else $(CYGPATH_W) '$(srcdir)/$(SENSORDIR)/csensor_usb_phidgets.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/qcn-csensor_usb_phidgets.Tpo $(DEPDIR)/qcn-csensor_usb_phidgets.Po
-#	$(AM_V_CXX)source='$(SENSORDIR)/csensor_usb_phidgets.cpp' object='qcn-csensor_usb_phidgets.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qcn-csensor_usb_phidgets.obj `if test -f '$(SENSORDIR)/csensor_usb_phidgets.cpp'; then $(CYGPATH_W) '$(SENSORDIR)/csensor_usb_phidgets.cpp'; else $(CYGPATH_W) '$(srcdir)/$(SENSORDIR)/csensor_usb_phidgets.cpp'; fi`
-
-qcn-csensor_mac_laptop.o: $(SENSORDIR)/csensor_mac_laptop.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qcn-csensor_mac_laptop.o -MD -MP -MF $(DEPDIR)/qcn-csensor_mac_laptop.Tpo -c -o qcn-csensor_mac_laptop.o `test -f '$(SENSORDIR)/csensor_mac_laptop.cpp' || echo '$(srcdir)/'`$(SENSORDIR)/csensor_mac_laptop.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/qcn-csensor_mac_laptop.Tpo $(DEPDIR)/qcn-csensor_mac_laptop.Po
-#	$(AM_V_CXX)source='$(SENSORDIR)/csensor_mac_laptop.cpp' object='qcn-csensor_mac_laptop.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qcn-csensor_mac_laptop.o `test -f '$(SENSORDIR)/csensor_mac_laptop.cpp' || echo '$(srcdir)/'`$(SENSORDIR)/csensor_mac_laptop.cpp
-
-qcn-csensor_mac_laptop.obj: $(SENSORDIR)/csensor_mac_laptop.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qcn-csensor_mac_laptop.obj -MD -MP -MF $(DEPDIR)/qcn-csensor_mac_laptop.Tpo -c -o qcn-csensor_mac_laptop.obj `if test -f '$(SENSORDIR)/csensor_mac_laptop.cpp'; then $(CYGPATH_W) '$(SENSORDIR)/csensor_mac_laptop.cpp'; else $(CYGPATH_W) '$(srcdir)/$(SENSORDIR)/csensor_mac_laptop.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/qcn-csensor_mac_laptop.Tpo $(DEPDIR)/qcn-csensor_mac_laptop.Po
-#	$(AM_V_CXX)source='$(SENSORDIR)/csensor_mac_laptop.cpp' object='qcn-csensor_mac_laptop.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qcn-csensor_mac_laptop.obj `if test -f '$(SENSORDIR)/csensor_mac_laptop.cpp'; then $(CYGPATH_W) '$(SENSORDIR)/csensor_mac_laptop.cpp'; else $(CYGPATH_W) '$(srcdir)/$(SENSORDIR)/csensor_mac_laptop.cpp'; fi`
-
-qcn-csensor_mac_usb_generic.o: $(SENSORDIR)/csensor_mac_usb_generic.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qcn-csensor_mac_usb_generic.o -MD -MP -MF $(DEPDIR)/qcn-csensor_mac_usb_generic.Tpo -c -o qcn-csensor_mac_usb_generic.o `test -f '$(SENSORDIR)/csensor_mac_usb_generic.cpp' || echo '$(srcdir)/'`$(SENSORDIR)/csensor_mac_usb_generic.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/qcn-csensor_mac_usb_generic.Tpo $(DEPDIR)/qcn-csensor_mac_usb_generic.Po
-#	$(AM_V_CXX)source='$(SENSORDIR)/csensor_mac_usb_generic.cpp' object='qcn-csensor_mac_usb_generic.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qcn-csensor_mac_usb_generic.o `test -f '$(SENSORDIR)/csensor_mac_usb_generic.cpp' || echo '$(srcdir)/'`$(SENSORDIR)/csensor_mac_usb_generic.cpp
-
-qcn-csensor_mac_usb_generic.obj: $(SENSORDIR)/csensor_mac_usb_generic.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qcn-csensor_mac_usb_generic.obj -MD -MP -MF $(DEPDIR)/qcn-csensor_mac_usb_generic.Tpo -c -o qcn-csensor_mac_usb_generic.obj `if test -f '$(SENSORDIR)/csensor_mac_usb_generic.cpp'; then $(CYGPATH_W) '$(SENSORDIR)/csensor_mac_usb_generic.cpp'; else $(CYGPATH_W) '$(srcdir)/$(SENSORDIR)/csensor_mac_usb_generic.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/qcn-csensor_mac_usb_generic.Tpo $(DEPDIR)/qcn-csensor_mac_usb_generic.Po
-#	$(AM_V_CXX)source='$(SENSORDIR)/csensor_mac_usb_generic.cpp' object='qcn-csensor_mac_usb_generic.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qcn-csensor_mac_usb_generic.obj `if test -f '$(SENSORDIR)/csensor_mac_usb_generic.cpp'; then $(CYGPATH_W) '$(SENSORDIR)/csensor_mac_usb_generic.cpp'; else $(CYGPATH_W) '$(srcdir)/$(SENSORDIR)/csensor_mac_usb_generic.cpp'; fi`
-
-qcn-csensor_mac_usb_jw.o: $(SENSORDIR)/csensor_mac_usb_jw.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qcn-csensor_mac_usb_jw.o -MD -MP -MF $(DEPDIR)/qcn-csensor_mac_usb_jw.Tpo -c -o qcn-csensor_mac_usb_jw.o `test -f '$(SENSORDIR)/csensor_mac_usb_jw.cpp' || echo '$(srcdir)/'`$(SENSORDIR)/csensor_mac_usb_jw.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/qcn-csensor_mac_usb_jw.Tpo $(DEPDIR)/qcn-csensor_mac_usb_jw.Po
-#	$(AM_V_CXX)source='$(SENSORDIR)/csensor_mac_usb_jw.cpp' object='qcn-csensor_mac_usb_jw.o' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qcn-csensor_mac_usb_jw.o `test -f '$(SENSORDIR)/csensor_mac_usb_jw.cpp' || echo '$(srcdir)/'`$(SENSORDIR)/csensor_mac_usb_jw.cpp
-
-qcn-csensor_mac_usb_jw.obj: $(SENSORDIR)/csensor_mac_usb_jw.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qcn-csensor_mac_usb_jw.obj -MD -MP -MF $(DEPDIR)/qcn-csensor_mac_usb_jw.Tpo -c -o qcn-csensor_mac_usb_jw.obj `if test -f '$(SENSORDIR)/csensor_mac_usb_jw.cpp'; then $(CYGPATH_W) '$(SENSORDIR)/csensor_mac_usb_jw.cpp'; else $(CYGPATH_W) '$(srcdir)/$(SENSORDIR)/csensor_mac_usb_jw.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/qcn-csensor_mac_usb_jw.Tpo $(DEPDIR)/qcn-csensor_mac_usb_jw.Po
-#	$(AM_V_CXX)source='$(SENSORDIR)/csensor_mac_usb_jw.cpp' object='qcn-csensor_mac_usb_jw.obj' libtool=no \
-#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o qcn-csensor_mac_usb_jw.obj `if test -f '$(SENSORDIR)/csensor_mac_usb_jw.cpp'; then $(CYGPATH_W) '$(SENSORDIR)/csensor_mac_usb_jw.cpp'; else $(CYGPATH_W) '$(srcdir)/$(SENSORDIR)/csensor_mac_usb_jw.cpp'; fi`
-
 qcn-qcn_shmem_usb.o: $(QCNUSBDIR)/qcn_shmem_usb.cpp
 	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qcn_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT qcn-qcn_shmem_usb.o -MD -MP -MF $(DEPDIR)/qcn-qcn_shmem_usb.Tpo -c -o qcn-qcn_shmem_usb.o `test -f '$(QCNUSBDIR)/qcn_shmem_usb.cpp' || echo '$(srcdir)/'`$(QCNUSBDIR)/qcn_shmem_usb.cpp
 	$(AM_V_at)$(am__mv) $(DEPDIR)/qcn-qcn_shmem_usb.Tpo $(DEPDIR)/qcn-qcn_shmem_usb.Po
