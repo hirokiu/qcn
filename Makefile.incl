@@ -50,6 +50,7 @@ AM_CPPFLAGS = \
         -I$(BOINC_DIR)/lib \
         -I$(BOINC_DIR)/api \
         -I$(BOINC_DIR)/zip \
+        -I$(BOINC_DIR)/samples/jpeglib \
         -I$(GRAPHICSDIR) 
 #-I$(ZIPARCH_DIR) 
 

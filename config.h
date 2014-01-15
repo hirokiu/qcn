@@ -21,7 +21,7 @@
 /* #undef DARWIN_10_3 */
 
 /* Define to the platform's shared library extension */
-#define DLLEXT ".dylib"
+#define DLLEXT ".so"
 
 /* Define to 1 if you have the `alloca' function. */
 /* #undef HAVE_ALLOCA */
@@ -61,7 +61,7 @@
 /* #undef HAVE_GETISAX */
 
 /* Define to 1 if you have the `getutent' function. */
-/* #undef HAVE_GETUTENT */
+#define HAVE_GETUTENT 1
 
 /* Define to 1 if you have the <glaux.h> header file. */
 /* #undef HAVE_GLAUX_H */
@@ -97,28 +97,28 @@
 #define HAVE_INTTYPES_H 1
 
 /* Define to 1 if you have the c library */
-#define HAVE_LIBC 1
+/* #undef HAVE_LIBC */
 
 /* Define to 1 if you have the gcc library */
-#define HAVE_LIBGCC 1
+/* #undef HAVE_LIBGCC */
 
 /* Define to 1 if you have the gcc_eh library */
-#define HAVE_LIBGCC_EH 1
+/* #undef HAVE_LIBGCC_EH */
 
 /* Define to 1 if you have the math library */
-#define HAVE_LIBM 1
+/* #undef HAVE_LIBM */
 
 /* Define to 1 if you have the pthread library */
-#define HAVE_LIBPTHREAD 1
+/* #undef HAVE_LIBPTHREAD */
 
 /* Define to 1 if you have the stdc++ library */
-#define HAVE_LIBSTDC__ 1
+/* #undef HAVE_LIBSTDC__ */
 
 /* Define to 1 if you have the wsock32 library */
 /* #undef HAVE_LIBWSOCK32 */
 
 /* Define to 1 if you have the <malloc.h> header file. */
-/* #undef HAVE_MALLOC_H */
+#define HAVE_MALLOC_H 1
 
 /* Define to 1 if you have the <memory.h> header file. */
 #define HAVE_MEMORY_H 1
@@ -178,7 +178,7 @@
 #define HAVE_SETPRIORITY 1
 
 /* Define to 1 if you have the `setutent' function. */
-/* #undef HAVE_SETUTENT */
+#define HAVE_SETUTENT 1
 
 /* Define to 1 if you have the `sigaction' function. */
 #define HAVE_SIGACTION 1
@@ -226,16 +226,16 @@
 #define HAVE_STRING_H 1
 
 /* Define to 1 if you have the `strlcat' function. */
-#define HAVE_STRLCAT 1
+/* #undef HAVE_STRLCAT */
 
 /* Define to 1 if you have the `strlcpy' function. */
-#define HAVE_STRLCPY 1
+/* #undef HAVE_STRLCPY */
 
-/* Define to 1 if `tm_zone' is member of `struct tm'. */
+/* Define to 1 if `tm_zone' is a member of `struct tm'. */
 #define HAVE_STRUCT_TM_TM_ZONE 1
 
 /* Define to 1 if you have the <sys/auxv.h> header file. */
-/* #undef HAVE_SYS_AUXV_H */
+#define HAVE_SYS_AUXV_H 1
 
 /* Define to 1 if you have the <sys/dir.h> header file, and it defines `DIR'.
    */
@@ -270,16 +270,16 @@
 #define HAVE_SYS_SOCKET_H 1
 
 /* Define to 1 if you have the <sys/statfs.h> header file. */
-/* #undef HAVE_SYS_STATFS_H */
+#define HAVE_SYS_STATFS_H 1
 
 /* Define to 1 if you have the <sys/statvfs.h> header file. */
-//#define HAVE_SYS_STATVFS_H 1
+#define HAVE_SYS_STATVFS_H 1
 
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #define HAVE_SYS_STAT_H 1
 
 /* Define to 1 if you have the <sys/swap.h> header file. */
-/* #undef HAVE_SYS_SWAP_H */
+#define HAVE_SYS_SWAP_H 1
 
 /* Define to 1 if you have the <sys/sysctl.h> header file. */
 #define HAVE_SYS_SYSCTL_H 1
@@ -297,7 +297,7 @@
 #define HAVE_SYS_UTSNAME_H 1
 
 /* Define to 1 if you have the <sys/vmmeter.h> header file. */
-#define HAVE_SYS_VMMETER_H 1
+/* #undef HAVE_SYS_VMMETER_H */
 
 /* Define to 1 if you have the <sys/wait.h> header file. */
 #define HAVE_SYS_WAIT_H 1
@@ -332,24 +332,28 @@
 /* #undef HAVE__ALLOCA */
 
 /* Define to 1 if /proc/meminfo exists */
-/* #undef HAVE__PROC_MEMINFO */
+#define HAVE__PROC_MEMINFO 1
 
 /* Define to 1 if /proc/self/psinfo exists */
 /* #undef HAVE__PROC_SELF_PSINFO */
 
 /* Define to 1 if /proc/self/stat exists */
-/* #undef HAVE__PROC_SELF_STAT */
+#define HAVE__PROC_SELF_STAT 1
 
 /* Platform identification used to identify applications for this BOINC core
    client */
-#define HOSTTYPE "i686-apple-darwin"
+#define HOSTTYPE "x86_64-pc-linux-gnu"
 
 /* Alternate identification used to identify applications for this BOINC core
    client */
-/* #undef HOSTTYPEALT */
+#define HOSTTYPEALT "i686-pc-linux-gnu"
 
 /* "Define to 1 if largefile support causes missing symbols in C++" */
 /* #undef LARGEFILE_BREAKS_CXX */
+
+/* Define to the sub-directory in which libtool stores uninstalled libraries.
+   */
+#define LT_OBJDIR ".libs/"
 
 /* Define to 1 if your C compiler doesn't accept -c and -o together. */
 /* #undef NO_MINUS_C_MINUS_O */
@@ -364,13 +368,16 @@
 #define PACKAGE_NAME "QCN"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "QCN 4.86"
+#define PACKAGE_STRING "QCN 7.36"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "qcn"
 
+/* Define to the home page for this package. */
+#define PACKAGE_URL ""
+
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "4.86"
+#define PACKAGE_VERSION "7.36"
 
 /* Define to the necessary symbol if this constant uses a non-standard name on
    your system. */
@@ -392,16 +399,21 @@
 /* #undef USE_WINSOCK */
 
 /* utmp file location */
-/* #undef UTMP_LOCATION */
+#define UTMP_LOCATION "/var/run/utmp"
 
 /* Version number of package */
-#define VERSION "4.86"
+#define VERSION "7.36"
 
 /* Define to prevent redefinition of INT32 in jconfig.h */
 /* #undef XMD_H */
 
 /* Define to 1 if the X Window System is missing or not being used. */
 /* #undef X_DISPLAY_MISSING */
+
+/* Enable large inode numbers on Mac OS X 10.5.  */
+#ifndef _DARWIN_USE_64_BIT_INODE
+# define _DARWIN_USE_64_BIT_INODE 1
+#endif
 
 /* Number of bits in a file offset, on hosts where this is settable. */
 /* #undef _FILE_OFFSET_BITS */
@@ -414,6 +426,12 @@
 
 /* Define to `unsigned int' if <sys/types.h> does not define. */
 /* #undef size_t */
+
+
+#ifndef HAVE_SOCKLEN_T
+typedef BOINC_SOCKLEN_T socklen_t;
+#endif
+
 
 
 
