@@ -18,7 +18,7 @@ dnl AM_INIT_AUTOMAKE(dist-bzip2 dist-zip)
 AM_INIT_AUTOMAKE(dist-zip)
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
-AC_CONFIG_SRCDIR(lib/shmem.cpp)
+#AC_CONFIG_SRCDIR(lib/shmem.cpp)
 
 AC_REVISION([$Revision$]) 
 REV=`echo '$Revision$' | awk "{print $2}"`
