@@ -20,8 +20,8 @@ CURL_DIR=$(top_builddir)/curl-7.25.0
 #   BOINC_LIB = -L$(LIBDIR) -lboinc_api -lboinc_graphics2 -lboinc -lboinc_zip
 #endif
 
-PTHREAD_CFLAGS = @PTHREAD_CFLAGS@
-PTHREAD_LIBS = @PTHREAD_LIBS@
+#PTHREAD_CFLAGS = @PTHREAD_CFLAGS@
+#PTHREAD_LIBS = @PTHREAD_LIBS@
 
 LIBDIR=$(top_builddir)/client
 BOINC_LIB=-L$(BOINC_DIR)/api -lboinc_api -L$(BOINC_DIR)/lib -lboinc -L$(BOINC_DIR)/zip -lboinc_zip
