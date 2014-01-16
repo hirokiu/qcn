@@ -431,13 +431,13 @@
 /* #undef HAVE_XSS */
 
 /* Define to 1 if /proc/meminfo exists */
-#define HAVE__PROC_MEMINFO 1
+/* #undef HAVE__PROC_MEMINFO */
 
 /* Define to 1 if /proc/self/psinfo exists */
 /* #undef HAVE__PROC_SELF_PSINFO */
 
 /* Define to 1 if /proc/self/stat exists */
-#define HAVE__PROC_SELF_STAT 1
+/* #undef HAVE__PROC_SELF_STAT */
 
 /* Platform identification used to identify applications for this BOINC core
    client */
@@ -549,7 +549,7 @@
 /* #undef USE_WX_DEBUG */
 
 /* utmp file location */
-#define UTMP_LOCATION "/var/run/utmp"
+/* #undef UTMP_LOCATION */
 
 /* Version number of package */
 #define VERSION "7.36"
@@ -558,12 +558,7 @@
 /* #undef XMD_H */
 
 /* Define to 1 if the X Window System is missing or not being used. */
-#define X_DISPLAY_MISSING 1
-
-/* Enable large inode numbers on Mac OS X 10.5.  */
-#ifndef _DARWIN_USE_64_BIT_INODE
-# define _DARWIN_USE_64_BIT_INODE 1
-#endif
+/* #undef X_DISPLAY_MISSING */
 
 /* Number of bits in a file offset, on hosts where this is settable. */
 /* #undef _FILE_OFFSET_BITS */
