@@ -34,21 +34,20 @@ if OS_DARWIN
            $(SENSORDIR)/csensor_mac_usb_jw.cpp \
            $(SENSORDIR)/csensor_usb_phidgets.cpp 
 else #Android
-  if OS_ARM_LINUX
-   LIBS += -z lazy -ldl $(BOINC_LIB) @CLIENTLIBS@
+  if OS_ARM_LINUX_TRUE
+     LIBS += -z lazy -ldl $(BOINC_LIB) @CLIENTLIBS@
   else
-   # must be Android Linux because I'm sure not using autoconf on Windows! ;-)
-   STACKSIZE = --stack=2000000
-   LIBS += -z lazy -ldl $(BOINC_LIB) -lrt @CLIENTLIBS@
-   GRAPHICS = $(UTILDIR)/texture.cpp
-   SENSORS  = \
+     # must be Android Linux because I'm sure not using autoconf on Windows! ;-)
+     STACKSIZE = --stack=2000000
+     LIBS += -z lazy -ldl $(BOINC_LIB) -lrt @CLIENTLIBS@
+     GRAPHICS = $(UTILDIR)/texture.cpp
+     SENSORS  = \
         $(SENSORDIR)/csensor_usb_phidgets.cpp 
   endif
 endif
 
 bin_PROGRAMS = qcn qcndemo
 
-           #$(UTILDIR)/qcn_ntpdate.c 
 qcn_SOURCES = \
            $(UTILDIR)/sac.cpp \
            $(UTILDIR)/qcn_thread.cpp \
@@ -62,7 +61,7 @@ qcn_SOURCES = \
            $(UTILDIR)/gzstream.cpp \
            $(MAINDIR)/qcn_shmem.cpp \
            $(SENSORDIR)/csensor.cpp \
-           #$(GRAPHICS) \
+           $(GRAPHICS) \
            $(SENSORS) \
            $(QCNUSBDIR)/qcn_shmem_usb.cpp \
            $(MAINDIR)/qcn_thread_sensor.cpp \
