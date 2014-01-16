@@ -149,7 +149,7 @@ BOINC_RELEASE =
 BOINC_VERSION_STRING = 7.36
 CC = arm-linux-androideabi-gcc
 CCDEPMODE = depmode=gcc3
-CFLAGS = --sysroot=/home/carlgt1/androidarm-tc/sysroot -DANDROID -DDECLARE_TIMEZONE -Wall -I/home/carlgt1/androidarm-tc/arm-linux-androideabi/include -O3 -fomit-frame-pointer -Wall
+CFLAGS = --sysroot=/home/carlgt1/androidarm-tc/sysroot -DANDROID -DDECLARE_TIMEZONE -Wall -I/home/carlgt1/androidarm-tc/arm-linux-androideabi/include -I../boinc/samples/jpeglib -O3 -fomit-frame-pointer -Wall
 CLIENTGUIFLAGS = 
 CLIENTGUILIBS =   
 CLIENTLIBS = -lm 

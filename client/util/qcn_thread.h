@@ -1,7 +1,6 @@
 #ifndef _QCN_THREAD_H
 #define _QCN_THREAD_H
 
-
 #ifdef _WIN32
 //      typedef (UINT WINAPI *QCNThreadFunctionPointer)(LPVOID);
       typedef DWORD (WINAPI *QCNThreadFunctionPointer)(LPVOID);

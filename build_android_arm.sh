@@ -63,6 +63,7 @@ echo "=============================NTP done============================="
 fi
 
 ./_autosetup
-./configure --host=arm-linux --disable-server --disable-client
+./configure --host=arm-linux --with-boinc-platform="arm-android-linux-gnu" --disable-server --disable-manager --disable-client
 make clean 
+make
 
