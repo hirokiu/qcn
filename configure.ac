@@ -300,9 +300,7 @@ dnl the manpages only if docbook2x-man is available.
 AC_PATH_PROG(DOCBOOK2X_MAN, docbook2x-man)
 AM_CONDITIONAL(HAVE_DOCBOOK2X_MAN, [test -n "${DOCBOOK2X_MAN}"])
 
-AC_SUBST([CLIENT_BIN_FILENAME],[boinc${EXEEXT}])
-AC_SUBST([CLIENT_CMD_BIN_FILENAME],[boinccmd${EXEEXT}])
-AC_SUBST([CLIENT_GUI_BIN_FILENAME],[boincmgr${EXEEXT}])
+AC_SUBST([CLIENT_BIN_FILENAME],[qcn${EXEEXT}])
 
 dnl If we're running under cygwin, check whether we want to use X11 or WIN32
 dnl GUI

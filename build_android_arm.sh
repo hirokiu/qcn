@@ -64,6 +64,5 @@ fi
 
 ./_autosetup
 ./configure --host=arm-linux --disable-server --disable-client
-#./configure --host=arm-linux --disable-shared --enable-static --disable-server --disable-manager --disable-client
 make clean 
 

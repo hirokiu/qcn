@@ -112,7 +112,7 @@
 /* #undef HAVE_LIBC */
 
 /* Define to 1 if you have a functional curl library. */
-/* #undef HAVE_LIBCURL */
+#define HAVE_LIBCURL 1
 
 /* Define to 1 if you have the c_nonshared library */
 /* #undef HAVE_LIBC_NONSHARED */
@@ -463,28 +463,28 @@
 /* #undef LIBCURL_FEATURE_KRB4 */
 
 /* Defined if libcurl supports libz */
-/* #undef LIBCURL_FEATURE_LIBZ */
+#define LIBCURL_FEATURE_LIBZ 1
 
 /* Defined if libcurl supports SSL */
 /* #undef LIBCURL_FEATURE_SSL */
 
 /* Defined if libcurl supports DICT */
-/* #undef LIBCURL_PROTOCOL_DICT */
+#define LIBCURL_PROTOCOL_DICT 1
 
 /* Defined if libcurl supports FILE */
-/* #undef LIBCURL_PROTOCOL_FILE */
+#define LIBCURL_PROTOCOL_FILE 1
 
 /* Defined if libcurl supports FTP */
-/* #undef LIBCURL_PROTOCOL_FTP */
+#define LIBCURL_PROTOCOL_FTP 1
 
 /* Defined if libcurl supports FTPS */
 /* #undef LIBCURL_PROTOCOL_FTPS */
 
 /* Defined if libcurl supports GOPHER */
-/* #undef LIBCURL_PROTOCOL_GOPHER */
+#define LIBCURL_PROTOCOL_GOPHER 1
 
 /* Defined if libcurl supports HTTP */
-/* #undef LIBCURL_PROTOCOL_HTTP */
+#define LIBCURL_PROTOCOL_HTTP 1
 
 /* Defined if libcurl supports HTTPS */
 /* #undef LIBCURL_PROTOCOL_HTTPS */
@@ -493,7 +493,7 @@
 /* #undef LIBCURL_PROTOCOL_LDAP */
 
 /* Defined if libcurl supports TELNET */
-/* #undef LIBCURL_PROTOCOL_TELNET */
+#define LIBCURL_PROTOCOL_TELNET 1
 
 /* Define to the sub-directory in which libtool stores uninstalled libraries.
    */
