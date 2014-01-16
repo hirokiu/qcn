@@ -35,7 +35,7 @@ qcn_DEPENDENCIES =
 qcn_CPPFLAGS = -D_USE_NTPDATE_EXEC_ -I$(QCNUSBDIR) $(AM_CPPFLAGS) $(PTHREAD_CFLAGS)
 qcn_LDFLAGS = $(BOINC_LIB)
 # -ldddthread_db $(LIBS) $(BOINC_LIB) $(PTHREAD_LDFLAGS) $(AM_LDFLAGS) -lstdc++ -lz $(STACKSIZE)
-qcn_LDADD = -lz
+qcn_LDADD = -lstdc++ -lz
 
 qcndemo_SOURCES = \
            $(UTILDIR)/qcn_thread.cpp \
