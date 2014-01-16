@@ -954,6 +954,7 @@ AC_CONFIG_FILES([
                  client/graphics/Makefile
                  client/qcnlive/Makefile
                  m4/Makefile
+                 Makefile
 		])
 
 

@@ -18,7 +18,7 @@ dnl AM_INIT_AUTOMAKE(dist-bzip2 dist-zip)
 AM_INIT_AUTOMAKE(dist-zip)
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
-AC_CONFIG_SRCDIR(lib/shmem.cpp)
+#AC_CONFIG_SRCDIR(lib/shmem.cpp)
 
 AC_REVISION([$Revision$]) 
 REV=`echo '$Revision$' | awk "{print $2}"`
@@ -300,9 +300,7 @@ dnl the manpages only if docbook2x-man is available.
 AC_PATH_PROG(DOCBOOK2X_MAN, docbook2x-man)
 AM_CONDITIONAL(HAVE_DOCBOOK2X_MAN, [test -n "${DOCBOOK2X_MAN}"])
 
-AC_SUBST([CLIENT_BIN_FILENAME],[boinc${EXEEXT}])
-AC_SUBST([CLIENT_CMD_BIN_FILENAME],[boinccmd${EXEEXT}])
-AC_SUBST([CLIENT_GUI_BIN_FILENAME],[boincmgr${EXEEXT}])
+AC_SUBST([CLIENT_BIN_FILENAME],[qcn${EXEEXT}])
 
 dnl If we're running under cygwin, check whether we want to use X11 or WIN32
 dnl GUI
@@ -598,7 +596,7 @@ AH_BOTTOM([
 #define res_init() (0)
 #endif
 
-#include "project_specific_defines.h"
+//#include "project_specific_defines.h"
 
 /* end double-inclusion protection for config.h */
 #endif /* #ifndef BOINC_CONFIG_H */
@@ -956,6 +954,7 @@ AC_CONFIG_FILES([
                  client/graphics/Makefile
                  client/qcnlive/Makefile
                  m4/Makefile
+                 Makefile
 		])
 
 
