@@ -149,7 +149,7 @@ BOINC_RELEASE =
 BOINC_VERSION_STRING = 7.36
 CC = arm-linux-androideabi-gcc
 CCDEPMODE = depmode=gcc3
-CFLAGS = --sysroot=/home/carlgt1/androidarm-tc/sysroot -DANDROID -DDECLARE_TIMEZONE -Wall -I/home/carlgt1/androidarm-tc/arm-linux-androideabi/include -I../boinc/samples/jpeglib -O3 -fomit-frame-pointer -Wall
+CFLAGS = --sysroot=/home/carlgt1/androidarm-tc/sysroot -DANDROID -DDECLARE_TIMEZONE -Wall -I/home/carlgt1/androidarm-tc/arm-linux-androideabi/include -I/home/carlgt1/androidarm-tc/sysroot/usr/include-I../boinc/samples/jpeglib -O3 -fomit-frame-pointer -Wall
 CLIENTGUIFLAGS = 
 CLIENTGUILIBS =   
 CLIENTLIBS = -lm 
@@ -159,7 +159,7 @@ CPPFLAGS =
 CXX = arm-linux-androideabi-g++
 CXXCPP = arm-linux-androideabi-g++ -E
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = --sysroot=/home/carlgt1/androidarm-tc/sysroot -DANDROID -Wall -I/home/carlgt1/androidarm-tc/arm-linux-androideabi/include -funroll-loops -fexceptions -O3 -fomit-frame-pointer -Wall
+CXXFLAGS = --sysroot=/home/carlgt1/androidarm-tc/sysroot -DANDROID -Wall -I/home/carlgt1/androidarm-tc/arm-linux-androideabi/include -I/home/carlgt1/androidarm-tc/sysroot/usr/include -funroll-loops -fexceptions -O3 -fomit-frame-pointer -Wall
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
