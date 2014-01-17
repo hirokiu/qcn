@@ -13,9 +13,16 @@ else
 endif
 endif ## ENABLE_CLIENT_RELEASE
 
-CLIENTLIBS = -lm $(STDCPPTC)
-LIBS += $(CLIENTLIBS)
 QCNUSBDIR = $(BASEDIR)/client/qcnusb
+
+CLIENTLIBS = -lz -lm $(STDCPPTC)
+
+##   $(BOINC_DIR)/zip/libboinc_zip.la
+##BOINC_LIBS = $(BOINC_DIR)/api/libboinc_api.a $(BOINC_DIR)/lib/libboinc.a $(BOINC_DIR)/zip/libboinc_zip.a
+BOINC_LIBS = -L$(BOINC_DIR)/api -lboinc_api -L$(BOINC_DIR)/lib -lboinc -L$(BOINC_DIR)/zip -lboinc_zip
+
+BOINC_EXTRA_LIBS =  -L/home/carlgt1/androidarm-tc/arm-linux-androideabi/lib -lcurl -lssl -lcrypto -lz -L/home/carlgt1/androidarm-tc/arm-linux-androideabi -L/home/carlgt1/androidarm-tc/arm-linux-androideabi/lib -lssl -lcrypto   -ldl -lz
+
 
 if OS_DARWIN
    LIBS += -framework IOKit -framework Foundation -framework ScreenSaver -framework Cocoa -framework CoreServices
@@ -45,10 +52,10 @@ qcn_SOURCES = \
            $(MAINDIR)/qcn_thread_time.cpp \
            $(MAINDIR)/main.cpp
 
-qcn_DEPENDENCIES = 
+qcn_DEPENDENCIES =
 qcn_CPPFLAGS = $(AM_CPPFLAGS)
-qcn_LDFLAGS = $(AM_LDFLAGS) -lz
-qcn_LDADD = $(CLIENTLIBS) $(BOINC_EXTRA_LIBS) $(PTHREAD_LIBS) 
+qcn_LDFLAGS = $(AM_LDFLAGS)
+qcn_LDADD = $(CLIENTLIBS) $(PTHREAD_LIBS) $(BOINC_LIBS)
 
 qcndemo_SOURCES = \
            $(UTILDIR)/qcn_thread.cpp \

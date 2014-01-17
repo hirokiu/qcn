@@ -41,7 +41,7 @@ make clean
 fi
 if [ -n "$CONFIGURE" ]; then
 ./_autosetup
-./configure --host=arm-linux --with-boinc-platform="arm-android-linux-gnu" --with-ssl=$TCINCLUDES --disable-server --disable-manager --disable-client --disable-shared --enable-static
+./configure --host=arm-linux --with-boinc-platform="arm-android-linux-gnu" --disable-client --disable-server --disable-manager --disable-shared --enable-static
 fi
 make
 make stage

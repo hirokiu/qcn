@@ -1,4 +1,5 @@
 # ignore any LIBS set by configure
+
 LIBS=
 
 BASEDIR = $(top_builddir)
@@ -12,8 +13,6 @@ CURL_DIR=$(top_builddir)/curl-7.34.0
 
 PTHREAD_CFLAGS = @PTHREAD_CFLAGS@
 PTHREAD_LIBS = @PTHREAD_LIBS@
-
-BOINC_EXTRA_LIBS = -L$(BOINC_DIR)/api -lboinc_api -L$(BOINC_DIR)/lib -lboinc -L$(BOINC_DIR)/zip -lboinc_zip
 
 UTILDIR = $(BASEDIR)/client/util
 MAINDIR = $(BASEDIR)/client/main
