@@ -1,14 +1,28 @@
 include $(top_srcdir)/Makefile.incl
 
-client-bin: @CLIENT_BIN_FILENAME@
+if ENABLE_CLIENT_RELEASE
+  AM_LDFLAGS += -static-libtool-libs
+## for an entirely statically linked library, you may want to try
+## -all-static instead.  There's a good chance it won't work properly,
+## so we'll use the safer "-static-libtool-libs" by default.
+else
+if DYNAMIC_CLIENT
+## if libtool starts to need flags for dynamic linking, add them here
+else
+  AM_LDFLAGS += -static
+endif
+endif ## ENABLE_CLIENT_RELEASE
 
-BINARY = @CLIENT_BIN_FILENAME@_$(QCN_VERSION_STRING)_$(build)
-
+CLIENTLIBS = -lm /home/carlgt1/androidarm-tc/arm-linux-androideabi/lib/libstdc++.a
+LIBS += $(CLIENTLIBS)
 QCNUSBDIR = $(BASEDIR)/client/qcnusb
+
+if OS_DARWIN
+   LIBS += -framework IOKit -framework Foundation -framework ScreenSaver -framework Cocoa -framework CoreServices
+endif
 
 bin_PROGRAMS = qcn qcndemo
 
-           #$(UTILDIR)/qcn_ntpdate.c 
 qcn_SOURCES = \
            $(UTILDIR)/sac.cpp \
            $(UTILDIR)/qcn_thread.cpp \
@@ -31,10 +45,10 @@ qcn_SOURCES = \
            $(MAINDIR)/qcn_thread_time.cpp \
            $(MAINDIR)/main.cpp
 
-qcn_DEPENDENCIES =
-qcn_CPPFLAGS = -D_USE_NTPDATE_EXEC_ -I$(QCNUSBDIR) $(AM_CPPFLAGS) $(PTHREAD_CFLAGS)
-qcn_LDFLAGS = $(BOINC_LIB) $(PTHREAD_LDFLAGS) $(STACKSIZE)
-qcn_LDADD = -lstdc++ -lz
+qcn_DEPENDENCIES = 
+qcn_CPPFLAGS = $(AM_CPPFLAGS)
+qcn_LDFLAGS = $(AM_LDFLAGS) -lz
+qcn_LDADD = $(CLIENTLIBS) $(BOINC_EXTRA_LIBS) $(PTHREAD_LIBS) 
 
 qcndemo_SOURCES = \
            $(UTILDIR)/qcn_thread.cpp \
