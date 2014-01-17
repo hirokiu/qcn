@@ -596,7 +596,7 @@ AH_BOTTOM([
 #define res_init() (0)
 #endif
 
-//#include "project_specific_defines.h"
+#include "project_specific_defines.h"
 
 /* end double-inclusion protection for config.h */
 #endif /* #ifndef BOINC_CONFIG_H */
