@@ -432,11 +432,12 @@ void retrieveProjectPrefs()
 		free(sm->dataBOINC.project_preferences);
 		sm->dataBOINC.project_preferences = NULL;
       }
-
+//#ifndef QCNDEMO
 	  if (boinc_parse_init_data_file() == 0) {// successfully parsed the file for BOINC
           boinc_get_init_data_p(&sm->dataBOINC);
           //boinc_get_init_data(sm->dataBOINC);
 	  }
+//#endif //QCNDEMO
 
       // translate weird tokens from names, i.e. >, <, & etc
       string_tidy(sm->dataBOINC.user_name, 256);

@@ -15,6 +15,7 @@
 #include "qcn_shmem.h"
 #include "qcn_thread.h"
 #include "qcn_signal.h"
+#include "boinc_zip.h"
 
 CQCNShMem* volatile sm = NULL;
 char strSuffix[128];
@@ -28,6 +29,7 @@ const char strGraphics[] = {"qcn_graphics"};
 const int iLenReply = 1024;  // that should be plenty for the return value, it's probably more like 100 chars across two lines
 char strReply[1024];
 char strCWD[_MAX_PATH];
+ZipFileList zfl;
 
 #ifdef _WIN32
 #define popen _popen

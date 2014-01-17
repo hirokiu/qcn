@@ -21,7 +21,8 @@ CLIENTLIBS = -lz -lm $(STDCPPTC)
 
 ##   $(BOINC_DIR)/zip/libboinc_zip.la
 ##BOINC_LIBS = $(BOINC_DIR)/api/libboinc_api.a $(BOINC_DIR)/lib/libboinc.a $(BOINC_DIR)/zip/libboinc_zip.a
-BOINC_LIBS = -L$(BOINC_DIR)/api -lboinc_api -L$(BOINC_DIR)/lib -lboinc -L$(BOINC_DIR)/zip -lboinc_zip
+##BOINC_LIBS = -L$(BOINC_DIR)/api -lboinc_api -L$(BOINC_DIR)/lib -lboinc -L$(BOINC_DIR)/zip -lboinc_zip
+BOINC_LIBS = $(BOINC_DIR)/api/libboinc_api.la $(BOINC_DIR)/lib/libboinc.la $(BOINC_DIR)/zip/libboinc_zip.la
 
 BOINC_EXTRA_LIBS =  -L/home/carlgt1/androidarm-tc/arm-linux-androideabi/lib -lcurl -lssl -lcrypto -lz -L/home/carlgt1/androidarm-tc/arm-linux-androideabi -L/home/carlgt1/androidarm-tc/arm-linux-androideabi/lib -lssl -lcrypto   -ldl -lz
 
@@ -71,14 +72,15 @@ qcndemo_SOURCES = \
 
 qcndemo_DEPENDENCIES =
 qcndemo_CPPFLAGS = -DQCNDEMO $(qcn_CPPFLAGS)
-qcndemo_LDFLAGS = $(qcn_LDFLAGS)
-qcndemo_LDADD = $(qcn_LDADD)
+qcndemo_LDFLAGS = $(qcn_LDFLAGS) -L$(BOINC_DIR)/api -lboinc_api
+#qcndemo_LDADD = -L$(BOINC_DIR)/api -lboinc_api -L$(BOINC_DIR)/lib -lboinc $(CLIENTLIBS) $(PTHREAD_LIBS)
+qcndemo_LDADD = -L$(BOINC_DIR)/lib -lboinc -L$(BOINC_DIR)/zip -lboinc_zip $(CLIENTLIBS) $(PTHREAD_LIBS)
 
 .PHONY: moveover
 
 qcndir = $(BASEDIR)/bin
 
-all-local: client-bin qcndemo moveover 
+all-local: qcn qcndemo moveover 
 
 moveover:
 	mv @CLIENT_BIN_FILENAME@ $(BINARY)
