@@ -83,7 +83,11 @@ void* QCNThreadTime(void*)
                  NTPDATE_EXEC_VERSION
          );
        #else
+        #ifdef ANDROID
+         sprintf(strExec, "%s%s_arm-android-linux-gnu", 
+        #else
          sprintf(strExec, "%s%s_i686-pc-linux-gnu", 
+        #endif // android vs linux
 // if using the GUI (qcnwx) need to prepend ./ as we are already in the working directory
 #ifdef QCNLIVE
                  "./",
@@ -92,7 +96,7 @@ void* QCNThreadTime(void*)
 #endif
                  NTPDATE_EXEC_VERSION
          );
-       #endif
+       #endif // mac vs linux
       #endif
    #endif
 
