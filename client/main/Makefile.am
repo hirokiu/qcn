@@ -13,7 +13,7 @@ else
 endif
 endif ## ENABLE_CLIENT_RELEASE
 
-CLIENTLIBS = -lm /home/carlgt1/androidarm-tc/arm-linux-androideabi/lib/libstdc++.a
+CLIENTLIBS = -lm $(STDCPPTC)
 LIBS += $(CLIENTLIBS)
 QCNUSBDIR = $(BASEDIR)/client/qcnusb
 
