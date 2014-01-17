@@ -756,14 +756,6 @@ if test "${enable_manager}" = yes ; then
   AM_PATH_SQLITE3
 fi
 
-dnl ---------- XCB --------------------------------------------------------
-if test "${enable_manager}" = yes; then
-    PKG_CHECK_MODULES(XCB,xcb,have_Xcb="yes",[echo "WARNING: Xcb not found, x11_screensaver will not be built"])
-    PKG_CHECK_MODULES(XCBATOM,xcb-atom,have_Xcbatom="yes",[echo "WARNING: Xcb-atom not found, x11_screensaver will not be built"])
-fi
-AM_CONDITIONAL(BUILD_X11_SCREENSAVER, [ test "$have_Xcb" = yes -a "$have_Xcbatom" = yes ]) 
-dnl -----------------------------------------------------------------------
-
 dnl Heres another way to set up host-specific stuff
 AM_CONDITIONAL(OS_DARWIN, [echo $host_os | grep '^darwin' > /dev/null])
 if echo $host_os | grep '^darwin' >/dev/null ; then

@@ -1,5 +1,7 @@
 include $(top_srcdir)/Makefile.incl
 
+AUTOMAKE_OPTIONS = std-options
+
 client-bin: @CLIENT_GUI_BIN_FILENAME@
 
 BINARY = @CLIENT_GUI_BIN_FILENAME@_$(QCN_VERSION_STRING)_$(build)

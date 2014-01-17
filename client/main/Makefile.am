@@ -1,5 +1,7 @@
 include $(top_srcdir)/Makefile.incl
 
+AUTOMAKE_OPTIONS = std-options
+
 if ENABLE_CLIENT_RELEASE
   AM_LDFLAGS += -static-libtool-libs
 ## for an entirely statically linked library, you may want to try
