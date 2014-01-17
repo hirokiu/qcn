@@ -431,13 +431,13 @@
 /* #undef HAVE_XSS */
 
 /* Define to 1 if /proc/meminfo exists */
-#define HAVE__PROC_MEMINFO 1
+/* #undef HAVE__PROC_MEMINFO */
 
 /* Define to 1 if /proc/self/psinfo exists */
 /* #undef HAVE__PROC_SELF_PSINFO */
 
 /* Define to 1 if /proc/self/stat exists */
-#define HAVE__PROC_SELF_STAT 1
+/* #undef HAVE__PROC_SELF_STAT */
 
 /* Platform identification used to identify applications for this BOINC core
    client */
@@ -546,7 +546,7 @@
 /* #undef USE_WX_DEBUG */
 
 /* utmp file location */
-#define UTMP_LOCATION "/var/run/utmp"
+/* #undef UTMP_LOCATION */
 
 /* Version number of package */
 #define VERSION "7.36"
