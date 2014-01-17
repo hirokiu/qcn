@@ -14,7 +14,6 @@ MAKECLEAN=yes
 
 export BOINC="../../../boinc"
 
-export ANDROIDTC="$HOME/androidarm-tc"
 export TCBINARIES="$ANDROIDTC/bin"
 export TCINCLUDES="$ANDROIDTC/arm-linux-androideabi"
 export TCSYSROOT="$ANDROIDTC/sysroot"
@@ -24,11 +23,15 @@ export PATH="$PATH:$TCBINARIES:$TCINCLUDES/bin"
 export CC=arm-linux-androideabi-gcc
 export CXX=arm-linux-androideabi-g++
 export LD=arm-linux-androideabi-ld
-export CFLAGS="--sysroot=$TCSYSROOT -DANDROID -DDECLARE_TIMEZONE -Wall -I$TCINCLUDES/include -I$TCSYSROOT/usr/include-I$BOINC/samples/jpeglib -O3 -fomit-frame-pointer"
-export CXXFLAGS="--sysroot=$TCSYSROOT -DANDROID -Wall -I$TCINCLUDES/include -I$TCSYSROOT/usr/include -funroll-loops -fexceptions -O3 -fomit-frame-pointer"
+export CFLAGS="--sysroot=$TCSYSROOT -DANDROID -DDECLARE_TIMEZONE -Wall -I$TCINCLUDES/include -O3 -fomit-frame-pointer"
+export CXXFLAGS="--sysroot=$TCSYSROOT -DANDROID -Wall -I$TCINCLUDES/include -funroll-loops -fexceptions -O3 -fomit-frame-pointer"
 export LDFLAGS="-L$TCSYSROOT/usr/lib -L$TCINCLUDES/lib -llog"
 export GDB_CFLAGS="--sysroot=$TCSYSROOT -Wall -g -I$TCINCLUDES/include"
 export PKG_CONFIG_SYSROOT_DIR=$TCSYSROOT
+
+
+
+
 export QCNINC='-I./ -I../../ -I../util -I../sensor -I../../../boinc/api -I../../../boinc/lib -I../../../boinc/zip'
 #export BOINC_LIBS="-L$BOINC/api -lboinc_api -L$BOINC/lib -lboinc -L$BOINC/zip -lboinc_zip"
 export BOINC_LIBS="$BOINC/api/libboinc_api.a $BOINC/lib/libboinc.a $BOINC/zip/libboinc_zip.a"
