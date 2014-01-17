@@ -22,7 +22,8 @@ CLIENTLIBS = -lz -lm $(STDCPPTC)
 ##   $(BOINC_DIR)/zip/libboinc_zip.la
 ##BOINC_LIBS = $(BOINC_DIR)/api/libboinc_api.a $(BOINC_DIR)/lib/libboinc.a $(BOINC_DIR)/zip/libboinc_zip.a
 ##BOINC_LIBS = -L$(BOINC_DIR)/api -lboinc_api -L$(BOINC_DIR)/lib -lboinc -L$(BOINC_DIR)/zip -lboinc_zip
-BOINC_LIBS = $(BOINC_DIR)/api/libboinc_api.la $(BOINC_DIR)/lib/libboinc.la $(BOINC_DIR)/zip/libboinc_zip.la
+##BOINC_LIBS = $(BOINC_DIR)/api/libboinc_api.la $(BOINC_DIR)/lib/libboinc.la $(BOINC_DIR)/zip/libboinc_zip.la
+BOINC_LIBS = -L$(BOINC_DIR)/api -lboinc_api -L$(BOINC_DIR)/lib -lboinc -L$(BOINC_DIR)/zip -lboinc_zip
 
 BOINC_EXTRA_LIBS =  -L/home/carlgt1/androidarm-tc/arm-linux-androideabi/lib -lcurl -lssl -lcrypto -lz -L/home/carlgt1/androidarm-tc/arm-linux-androideabi -L/home/carlgt1/androidarm-tc/arm-linux-androideabi/lib -lssl -lcrypto   -ldl -lz
 
