@@ -218,7 +218,7 @@ OBJC = arm-linux-androideabi-gcc
 OBJCDEPMODE = depmode=none
 OBJCFLAGS = -ObjC
 OBJCXX = /Users/carlgt1/androidarm-tc/arm-linux-androideabi/bin/g++
-OBJCXXDEPMODE = depmode=none
+OBJCXXDEPMODE = depmode=gcc3
 OBJCXXFLAGS = 
 OBJDUMP = objdump
 OBJEXT = o

@@ -77,29 +77,11 @@ qcndemo_LDFLAGS = $(qcn_LDFLAGS) -L$(BOINC_DIR)/api -lboinc_api
 #qcndemo_LDADD = -L$(BOINC_DIR)/api -lboinc_api -L$(BOINC_DIR)/lib -lboinc $(CLIENTLIBS) $(PTHREAD_LIBS)
 qcndemo_LDADD = -L$(BOINC_DIR)/lib -lboinc -L$(BOINC_DIR)/zip -lboinc_zip $(CLIENTLIBS) $(PTHREAD_LIBS)
 
-.PHONY: moveover
-
 qcndir = $(BASEDIR)/bin
 
-all-local: qcn qcndemo moveover 
+all-local: qcn qcndemo 
 
-moveover:
-	mv @CLIENT_BIN_FILENAME@ $(BINARY)
-	$(STRIP) $(BINARY)
-	mkdir -p $(top_srcdir)/client/test/projects/qcn.edu_qcn
-	mv $(BINARY) $(top_srcdir)/client/bin/
-	cp $(top_srcdir)/client/bin/$(BINARY) $(top_srcdir)/client/test/projects/qcn.edu_qcn/
-	$(STRIP) qcndemo
-	mv qcndemo ../test/
-
-## these source files need to be specified because no rule uses them.
-
-#EXTRA_DIST = *.h \
-#    mac \
-#    translation \
-#    win
-#
 clean-local:
-	rm -f @CLIENT_BIN_FILENAME@ $(BINARY) ../test/qcndemo $(top_srcdir)/client/bin/*qcn_* $(top_srcdir)/client/test/projects/qcn.edu_qcn/*qcn_* 
+	rm -f @CLIENT_BIN_FILENAME@ ../test/qcndemo $(top_srcdir)/client/bin/*qcn_* $(top_srcdir)/client/test/projects/qcn.edu_qcn/*qcn_* 
 
 
