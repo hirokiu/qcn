@@ -299,7 +299,7 @@
 /* Define to 1 if the system has the type `struct lifreq'. */
 #undef HAVE_STRUCT_LIFREQ
 
-/* Define to 1 if `tm_zone' is a member of `struct tm'. */
+/* Define to 1 if `tm_zone' is member of `struct tm'. */
 #undef HAVE_STRUCT_TM_TM_ZONE
 
 /* Define to 1 if you have the <sys/auxv.h> header file. */
@@ -516,9 +516,6 @@
 /* Define to the one symbol short name of this package. */
 #undef PACKAGE_TARNAME
 
-/* Define to the home page for this package. */
-#undef PACKAGE_URL
-
 /* Define to the version of this package. */
 #undef PACKAGE_VERSION
 
@@ -584,7 +581,7 @@
 #define res_init() (0)
 #endif
 
-//#include "project_specific_defines.h"
+#include "project_specific_defines.h"
 
 /* end double-inclusion protection for config.h */
 #endif /* #ifndef BOINC_CONFIG_H */

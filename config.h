@@ -300,7 +300,7 @@
 /* Define to 1 if the system has the type `struct lifreq'. */
 /* #undef HAVE_STRUCT_LIFREQ */
 
-/* Define to 1 if `tm_zone' is a member of `struct tm'. */
+/* Define to 1 if `tm_zone' is member of `struct tm'. */
 #define HAVE_STRUCT_TM_TM_ZONE 1
 
 /* Define to 1 if you have the <sys/auxv.h> header file. */
@@ -517,9 +517,6 @@
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "qcn"
 
-/* Define to the home page for this package. */
-#define PACKAGE_URL ""
-
 /* Define to the version of this package. */
 #define PACKAGE_VERSION "7.36"
 
@@ -558,7 +555,7 @@
 /* #undef XMD_H */
 
 /* Define to 1 if the X Window System is missing or not being used. */
-#define X_DISPLAY_MISSING 1
+/* #undef X_DISPLAY_MISSING */
 
 /* Number of bits in a file offset, on hosts where this is settable. */
 /* #undef _FILE_OFFSET_BITS */
@@ -585,7 +582,7 @@
 #define res_init() (0)
 #endif
 
-//#include "project_specific_defines.h"
+#include "project_specific_defines.h"
 
 /* end double-inclusion protection for config.h */
 #endif /* #ifndef BOINC_CONFIG_H */

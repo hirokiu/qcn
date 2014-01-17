@@ -20,4 +20,8 @@
 //#define _WCG 1
 //#endif
 
+#ifndef QCN
+#define QCN 1
+#endif
+
 #endif
