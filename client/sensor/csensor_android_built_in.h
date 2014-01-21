@@ -21,18 +21,26 @@ using namespace std;
 
 #include <android/input.h>
 #include <android/sensor.h>
+#include <android/log.h>
+#include <android/looper.h>
 
 // this is the Linux implementation for the JoyWarrior sensor, used for QCNLive as well as the Mac service program qcnmacusb under BOINC
 class CSensorAndroidBuiltIn  : public CSensor
 {
    private:
-      // vars lifted from the codemercs.com JW24F8 Linux example
-      int m_fdJoy, *m_piAxes, m_iNumAxes, m_iNumButtons;
-      char *m_strButton, m_strJoystick[80];
+      ASensorVector m_SensorVector;  // Android sensor vector for x/y/z readings etc
+      ASensorManager* m_pSensorManager;  
+      ASensor* m_pSensor;
+      ASensorEventQueue* m_pSensorEventQueue;
+      ALooper* m_pLooper;
 
       virtual bool read_xyz(float& x1, float& y1, float& z1);  
 
-      bool testJoystick();  // tests that it really is the JoyWarrior & sets to "raw data" mode
+      char m_strSensor[_MAX_PATH];
+      char m_strVendor[_MAX_PATH];
+
+      float m_fResolution;
+      int m_minDelayMsec;
 
    public:
       CSensorAndroidBuiltIn();

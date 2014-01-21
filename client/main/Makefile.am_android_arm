@@ -1,14 +1,40 @@
 include $(top_srcdir)/Makefile.incl
 
-client-bin: @CLIENT_BIN_FILENAME@
+AUTOMAKE_OPTIONS = std-options
 
-BINARY = @CLIENT_BIN_FILENAME@_$(QCN_VERSION_STRING)_$(build)
+if ENABLE_CLIENT_RELEASE
+  AM_LDFLAGS += -static-libtool-libs
+## for an entirely statically linked library, you may want to try
+## -all-static instead.  There's a good chance it won't work properly,
+## so we'll use the safer "-static-libtool-libs" by default.
+else
+if DYNAMIC_CLIENT
+## if libtool starts to need flags for dynamic linking, add them here
+else
+  AM_LDFLAGS += -static
+endif
+endif ## ENABLE_CLIENT_RELEASE
 
 QCNUSBDIR = $(BASEDIR)/client/qcnusb
 
+##   $(BOINC_DIR)/zip/libboinc_zip.la
+##BOINC_LIBS = $(BOINC_DIR)/api/libboinc_api.a $(BOINC_DIR)/lib/libboinc.a $(BOINC_DIR)/zip/libboinc_zip.a
+##BOINC_LIBS = -L$(BOINC_DIR)/api -lboinc_api -L$(BOINC_DIR)/lib -lboinc -L$(BOINC_DIR)/zip -lboinc_zip
+##BOINC_LIBS = $(BOINC_DIR)/api/libboinc_api.la $(BOINC_DIR)/lib/libboinc.la $(BOINC_DIR)/zip/libboinc_zip.la
+BOINC_LIBS = -L$(BOINC_DIR)/api -lboinc_api -L$(BOINC_DIR)/lib -lboinc -L$(BOINC_DIR)/zip -lboinc_zip
+
+
+BOINC_EXTRA_LIBS =  -L/home/carlgt1/androidarm-tc/arm-linux-androideabi/lib -lcurl -lssl -lcrypto -lz -L/home/carlgt1/androidarm-tc/arm-linux-androideabi -L/home/carlgt1/androidarm-tc/arm-linux-androideabi/lib -lssl -lcrypto   -ldl -lz
+
+CLIENTLIBS = -landroid -lz -lm $(STDCPPTC)
+SENSORS = $(SENSORDIR)/csensor_android_built_in.cpp
+
+if OS_DARWIN
+   LIBS += -framework IOKit -framework Foundation -framework ScreenSaver -framework Cocoa -framework CoreServices
+endif
+
 bin_PROGRAMS = qcn qcndemo
 
-           #$(UTILDIR)/qcn_ntpdate.c 
 qcn_SOURCES = \
            $(UTILDIR)/sac.cpp \
            $(UTILDIR)/qcn_thread.cpp \
@@ -32,11 +58,9 @@ qcn_SOURCES = \
            $(MAINDIR)/main.cpp
 
 qcn_DEPENDENCIES =
-#qcn_CFLAGS = -I$(NTPINCLUDEDIR) -I$(NTPDATEDIR) $(AM_CPPFLAGS) $(PTHREAD_CFLAGS)
-qcn_CPPFLAGS = -D_USE_NTPDATE_EXEC_ -I$(QCNUSBDIR) $(AM_CPPFLAGS) $(PTHREAD_CFLAGS)
-#qcn_CPPFLAGS = -I$(QCNUSBDIR) $(AM_CPPFLAGS) $(PTHREAD_CFLAGS)
-qcn_LDFLAGS = $(LIBS) $(AM_LDFLAGS) -lstdc++ $(STACKSIZE) $(PTHREAD_LIBS) $(BOINC_LIB)
-qcn_LDADD = 
+qcn_CPPFLAGS = $(AM_CPPFLAGS)
+qcn_LDFLAGS = $(AM_LDFLAGS)
+qcn_LDADD = $(CLIENTLIBS) $(PTHREAD_LIBS) $(BOINC_LIBS)
 
 qcndemo_SOURCES = \
            $(UTILDIR)/qcn_thread.cpp \
@@ -50,32 +74,15 @@ qcndemo_SOURCES = \
 
 qcndemo_DEPENDENCIES =
 qcndemo_CPPFLAGS = -DQCNDEMO $(qcn_CPPFLAGS)
-qcndemo_LDFLAGS = $(qcn_LDFLAGS)
-qcndemo_LDADD = $(qcn_LDADD)
-
-.PHONY: moveover
+qcndemo_LDFLAGS = $(qcn_LDFLAGS) -L$(BOINC_DIR)/api -lboinc_api
+#qcndemo_LDADD = -L$(BOINC_DIR)/api -lboinc_api -L$(BOINC_DIR)/lib -lboinc $(CLIENTLIBS) $(PTHREAD_LIBS)
+qcndemo_LDADD = -L$(BOINC_DIR)/lib -lboinc -L$(BOINC_DIR)/zip -lboinc_zip $(CLIENTLIBS) $(PTHREAD_LIBS)
 
 qcndir = $(BASEDIR)/bin
 
-all-local: client-bin qcndemo moveover 
+all-local: qcn qcndemo 
 
-moveover:
-	mv @CLIENT_BIN_FILENAME@ $(BINARY)
-	$(STRIP) $(BINARY)
-	mkdir -p $(top_srcdir)/client/test/projects/qcn.edu_qcn
-	mv $(BINARY) $(top_srcdir)/client/bin/
-	cp $(top_srcdir)/client/bin/$(BINARY) $(top_srcdir)/client/test/projects/qcn.edu_qcn/
-	$(STRIP) qcndemo
-	mv qcndemo ../test/
-
-## these source files need to be specified because no rule uses them.
-
-#EXTRA_DIST = *.h \
-#    mac \
-#    translation \
-#    win
-#
 clean-local:
-	rm -f @CLIENT_BIN_FILENAME@ $(BINARY) ../test/qcndemo $(top_srcdir)/client/bin/*qcn_* $(top_srcdir)/client/test/projects/qcn.edu_qcn/*qcn_* 
+	rm -f @CLIENT_BIN_FILENAME@ ../test/qcndemo $(top_srcdir)/client/bin/*qcn_* $(top_srcdir)/client/test/projects/qcn.edu_qcn/*qcn_* 
 
 
