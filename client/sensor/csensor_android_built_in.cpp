@@ -18,8 +18,8 @@ CSensorAndroidBuiltIn::CSensorAndroidBuiltIn()
   : CSensor(), m_pSensorManager(NULL), m_pSensor(NULL), m_pSensorEventQueue(NULL), m_pLooper(NULL), 
        m_fResolution(0.0f), m_minDelayMsec(0)
 { 
-  strcpy(m_strVendor, "");
-  strcpy(m_strSensor, "");
+  memset(m_strSensor, 0x00, _MAX_PATH);
+  memset(m_strVendor, 0x00, _MAX_PATH);
 }
 
 CSensorAndroidBuiltIn::~CSensorAndroidBuiltIn()
@@ -29,9 +29,9 @@ CSensorAndroidBuiltIn::~CSensorAndroidBuiltIn()
 
 void CSensorAndroidBuiltIn::closePort()
 {
-   if (m_pSensorEventQueue) {
-      int iRetVal = ASensorEventQueue_disableSensor(m_pSensorEventQueue, m_pSensor);
-   }
+  if (m_pSensorEventQueue) {
+     ASensorEventQueue_disableSensor(m_pSensorEventQueue, m_pSensor);
+  }
   setType();
   setPort();
 
@@ -42,6 +42,12 @@ void CSensorAndroidBuiltIn::closePort()
   m_pSensor = NULL;
   m_pSensorEventQueue = NULL;
   m_pLooper = NULL;
+
+  m_fResolution = 0.0f;
+  m_minDelayMsec = 0;
+
+  memset(m_strSensor, 0x00, _MAX_PATH);
+  memset(m_strVendor, 0x00, _MAX_PATH);
 }
 
 
@@ -49,8 +55,6 @@ void CSensorAndroidBuiltIn::closePort()
 ASENSOR_TYPE_ACCELEROMETER
 
 int ASensor_getType(ASensor const* sensor);
-
-const char* ASensor_getName(ASensor const* sensor);
 
 float ASensor_getResolution(ASensor const* sensor) __NDK_FPABI__;
 
@@ -76,7 +80,6 @@ float ASensor_getResolution(ASensor const* sensor) __NDK_FPABI__;
  * A value of zero means that this sensor doesn't report events at a
  * constant rate, but rather only when a new data is available.
 int ASensor_getMinDelay(ASensor const* sensor);
-
 
 */
 
@@ -114,15 +117,24 @@ bool CSensorAndroidBuiltIn::detect()
    setType();
    setPort();
 
-   m_pSensorManager = (ASensorManager*) ASensorManager_getInstance();
+   // get the singleton instance of the m_pSensorManager
+   if (!m_pSensorManager) m_pSensorManager = (ASensorManager*) ASensorManager_getInstance();
+
+   // get the default accelerometer
    m_pSensor = (ASensor*) ASensorManager_getDefaultSensor(m_pSensorManager, ASENSOR_TYPE_ACCELEROMETER);
 
-   if (m_pSensor) {
+   if (!m_pSensor) {
       fprintf(stdout, "No Android accelerometer detected.\n");
       return false; // no sensor
    }
 
    setType(SENSOR_ANDROID);
+
+   m_fResolution = ASensor_getResolution(m_pSensor);
+   m_minDelayMsec = ASensor_getMinDelay(m_pSensor);
+
+   strlcpy(m_strSensor, ASensor_getName(m_pSensor), _MAX_PATH);
+   strlcpy(m_strVendor, ASensor_getVendor(m_pSensor), _MAX_PATH);
 
 #ifdef QCN_RAW_DATA
    setSingleSampleDT(true); // set to true in raw mode so we don't get any interpolated/avg points (i.e. just the "integer" value hopefully)
