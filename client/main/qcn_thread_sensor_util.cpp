@@ -305,8 +305,7 @@ bool getSensor(CSensor* volatile *ppsms)
 				   }
 				   else {
           #ifdef ANDROID
-                                   // CMC HERE - need a CSensor for built-in Android device accelerometer
-					   *ppsms = NULL; // (CSensor*) new CSensorLinuxUSBJW();
+					   *ppsms = (CSensor*) new CSensorAndroidBuiltIn();
           #else
 					   *ppsms = (CSensor*) new CSensorLinuxUSBJW();
           #endif // ANDROID or Linux

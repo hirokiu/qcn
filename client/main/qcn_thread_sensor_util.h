@@ -31,7 +31,8 @@
     #endif
   #else // LINUX
     #ifdef ANDROID
-       // CMC HERE just will need on-board Android device accelerometer, eventually phidgets?
+       // just will need on-board Android device accelerometer, eventually phidgets?
+       #include "csensor_android_built_in.h"
     #else // "regular" Linux PC i686 or x86_64
        #include "csensor_linux_usb_jw.h"
        #include "csensor_linux_usb_jw24f14.h"

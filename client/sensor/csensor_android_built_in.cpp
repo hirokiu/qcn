@@ -136,6 +136,9 @@ bool CSensorAndroidBuiltIn::detect()
    strlcpy(m_strSensor, ASensor_getName(m_pSensor), _MAX_PATH);
    strlcpy(m_strVendor, ASensor_getVendor(m_pSensor), _MAX_PATH);
 
+   fprintf(stdout, "Android Default Sensor Detected: \n\n   %s - %s\n     Res = %f --- Min Delay msec = %d\n",
+           m_strVendor, m_strSensor, m_fResolution, m_minDelayMsec);
+
 #ifdef QCN_RAW_DATA
    setSingleSampleDT(true); // set to true in raw mode so we don't get any interpolated/avg points (i.e. just the "integer" value hopefully)
 #else
