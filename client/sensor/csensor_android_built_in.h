@@ -19,10 +19,15 @@ using namespace std;
 
 #ifdef ANDROID
 
+#define LOOPER_QCN 100
+
 #include <android/input.h>
 #include <android/sensor.h>
 #include <android/log.h>
 #include <android/looper.h>
+
+// callback function for Android accelerometer events
+int QCN_ALooper_callback(int fd, int events, void* data);
 
 // this is the Linux implementation for the JoyWarrior sensor, used for QCNLive as well as the Mac service program qcnmacusb under BOINC
 class CSensorAndroidBuiltIn  : public CSensor
