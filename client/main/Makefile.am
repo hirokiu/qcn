@@ -32,6 +32,10 @@ if OS_DARWIN
    LIBS += -framework IOKit -framework Foundation -framework ScreenSaver -framework Cocoa -framework CoreServices
 endif
 
+if OS_ARM_LINUX
+   SENSORS = $(SENSORDIR)/csensor_android_built_in.cpp
+endif
+
 bin_PROGRAMS = qcn qcndemo
 
 qcn_SOURCES = \

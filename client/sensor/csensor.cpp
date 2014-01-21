@@ -26,6 +26,7 @@ insert into qcn_sensor values (3   , 0, 0, 'Mac PPC 3');
 insert into qcn_sensor values (4   , 0, 0, 'Mac Intel');
 insert into qcn_sensor values (5   , 0, 0, 'Lenovo Thinkpad');
 insert into qcn_sensor values (6   , 0, 0, 'HP Laptop');
+insert into qcn_sensor values (7   , 0, 0, 'Android Device');
 insert into qcn_sensor values (100 , 1, 0, 'JoyWarrior 24F8 USB');
 insert into qcn_sensor values (101 , 1, 0, 'MotionNode Accel USB');
 insert into qcn_sensor values (102 , 1, 0, 'ONavi 1 USB');
@@ -60,6 +61,9 @@ insert into qcn_sensor values (1000, 1, 1, 'Phidgets 1040 GPS USB');
 
 #define SENSOR_STRLG_WIN_HP "HP Laptop"
 #define SENSOR_STRSH_WIN_HP "HP"
+
+#define SENSOR_STRLG_ANDROID "Android Device"
+#define SENSOR_STRSH_ANDROID "AN"
 
 #define SENSOR_STRLG_USB_MAC_DRIVER "Mac USB Driver"
 #define SENSOR_STRSH_USB_MAC_DRIVER "MD"
@@ -137,6 +141,9 @@ CSensor::CSensor()
 		
 		cst.init(SENSOR_WIN_HP, SENSOR_STRLG_WIN_HP, SENSOR_STRSH_WIN_HP);
 		m_map.insert(make_pair(SENSOR_WIN_HP, cst));
+		
+		cst.init(SENSOR_ANDROID, SENSOR_STRLG_ANDROID, SENSOR_STRSH_ANDROID);
+		m_map.insert(make_pair(SENSOR_ANDROID, cst));
 		
 		cst.init(SENSOR_USB_JW24F8, SENSOR_STRLG_USB_JW24F8, SENSOR_STRSH_USB_JW24F8);
 		m_map.insert(make_pair(SENSOR_USB_JW24F8, cst));

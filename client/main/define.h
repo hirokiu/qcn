@@ -233,6 +233,7 @@ enum e_sensor  {
                  SENSOR_MAC_INTEL,     // 4
                  SENSOR_WIN_THINKPAD,  // 5
 		 SENSOR_WIN_HP,        // 6
+		 SENSOR_ANDROID,       // 7
 		 SENSOR_USB_JW24F8  = 100,   // 100
 		 SENSOR_USB_MOTIONNODEACCEL, // 101
 	         SENSOR_USB_ONAVI_1,     // 102

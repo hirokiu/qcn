@@ -16,9 +16,11 @@ using namespace std;
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <sys/ioctl.h>
+
+#ifdef ANDROID
+
+#include <android/input.h>
+#include <android/sensor.h>
 
 // this is the Linux implementation for the JoyWarrior sensor, used for QCNLive as well as the Mac service program qcnmacusb under BOINC
 class CSensorAndroidBuiltIn  : public CSensor
@@ -27,7 +29,6 @@ class CSensorAndroidBuiltIn  : public CSensor
       // vars lifted from the codemercs.com JW24F8 Linux example
       int m_fdJoy, *m_piAxes, m_iNumAxes, m_iNumButtons;
       char *m_strButton, m_strJoystick[80];
-      struct js_event m_js;
 
       virtual bool read_xyz(float& x1, float& y1, float& z1);  
 
@@ -41,5 +42,7 @@ class CSensorAndroidBuiltIn  : public CSensor
       virtual void closePort(); // closes the port if open
 
 };
+
+#endif   // ANDROID
 
 #endif

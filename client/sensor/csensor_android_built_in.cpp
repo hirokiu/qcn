@@ -12,13 +12,13 @@
 #include "main.h"
 #include "csensor_android_built_in.h"
 
+#ifdef ANDROID
 
 CSensorAndroidBuiltIn::CSensorAndroidBuiltIn()
   : CSensor(), m_fdJoy(-1), m_piAxes(NULL), m_iNumAxes(0), m_iNumButtons(0), m_strButton(NULL)
 { 
    // vars lifted from the codemercs.com JW24F8 Linux example
    memset(m_strJoystick, 0x00, 80);
-   memset(&m_js, 0x0, sizeof(struct js_event));
 }
 
 CSensorAndroidBuiltIn::~CSensorAndroidBuiltIn()
@@ -59,15 +59,6 @@ inline bool CSensorAndroidBuiltIn::read_xyz(float& x1, float& y1, float& z1)
     // read the joystick state - range on each axis seems to be 0-1023 (-2 to 2g)
     x1 = y1 = z1 = 0.0f;
 
-    // read 3 events to make sure we get the latest xyz?
-    for (int i = 0; i < 3; i++) {
-       memset(&m_js, 0x00, sizeof(struct js_event));
-       read(m_fdJoy, &m_js, sizeof(struct js_event));
-       if ((m_js.type & ~JS_EVENT_INIT) == JS_EVENT_AXIS) {
-           m_piAxes[ m_js.number ] = m_js.value;
-       }
-    }
-
     // note that x/y/z should be scaled to +/- 2g, return values as +/- 2.0f*EARTH_G (in define.h: 9.78033 m/s^2)
 #ifdef QCN_RAW_DATA
     x1 = (float) m_piAxes[0];
@@ -81,32 +72,6 @@ inline bool CSensorAndroidBuiltIn::read_xyz(float& x1, float& y1, float& z1)
 
     // fprintf(stderr, "x1 = %f   y1 = %f   z1 = %f\n", x1, y1, z1);
 
-    /* 
-    // see what to do with the event 
-    switch (m_js.type & ~JS_EVENT_INIT) {
-        case JS_EVENT_AXIS:
-           m_piAxes[ m_js.number ] = m_js.value;
-           break;
-        case JS_EVENT_BUTTON:
-           m_strButton[ m_js.number ] = m_js.value;
-           break;
-    }
-
-    // print the results 
-    fprintf(stderr, "X: %6d  Y: %6d  ", m_piAxes[0], m_piAxes[1] );
-                
-    if ( m_iNumAxes > 2 ) 
-        fprintf(stderr, "Z: %6d  ", m_piAxes[2] );
-                        
-    if ( m_iNumAxes > 3 )
-        fprintf(stderr, "R: %6d  ", m_piAxes[3] );
-                        
-    for( int i=0 ; i < m_iNumButtons; ++i )
-        fprintf(stderr, "B%d: %d  ", i, m_strButton[i] );
-      
-    fprintf(stderr, "\n");
-    */
-
     return true;
 }
 
@@ -117,10 +82,6 @@ bool CSensorAndroidBuiltIn::testJoystick()
    m_iNumAxes = 0;
    m_iNumButtons = 0;
    memset(m_strJoystick, 0x00, 80);
-
-   ioctl(m_fdJoy, JSIOCGAXES, &m_iNumAxes);
-   ioctl(m_fdJoy, JSIOCGBUTTONS, &m_iNumButtons);
-   ioctl(m_fdJoy, JSIOCGNAME(80), m_strJoystick);
 
 //fprintf(stdout, "joystick found = %s\n", m_strJoystick);
 //fflush(stdout);
@@ -148,23 +109,7 @@ bool CSensorAndroidBuiltIn::testJoystick()
       return false;
    }
 
-   // if made it here, then it's a joywarrior, set to raw data mode
-   struct js_corr corr[NUM_AXES_JW24F8];
-
-   // Zero correction coefficient structure and set all axes to Raw mode 
-   for (int i=0; i<NUM_AXES_JW24F8; i++) {
-     corr[i].type = JS_CORR_NONE;
-     corr[i].prec = 0;
-     for (int j=0; j<8; j++) {
-        corr[i].coef[j] = 0;
-     }
-   }
-
-   if (ioctl(m_fdJoy, JSIOCSCORR, &corr)) {
-      fprintf(stderr, "CSensorAndroidBuiltIn:: error setting correction for raw data reads\n");
-   }
-
-   setType(SENSOR_USB_JW24F8);
+   setType(SENSOR_ANDROID);
    setPort(getTypeEnum());
    
    return true; // if here we can return true, i.e Joywarrior found on Linux joystick port, and hopefully set to read raw data
@@ -191,6 +136,8 @@ bool CSensorAndroidBuiltIn::detect()
 #else
    setSingleSampleDT(false);
 #endif
-   return (bool)(getTypeEnum() == SENSOR_USB_JW24F8);
+   return (bool)(getTypeEnum() == SENSOR_ANDROID);
 }
+
+#endif // ANDROID
 
