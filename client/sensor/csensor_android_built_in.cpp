@@ -133,8 +133,7 @@ inline bool CSensorAndroidBuiltIn::read_xyz(float& x1, float& y1, float& z1)
 
       int ident, events;
       float fCtr = 0.0;
-      while((ident = ALooper_pollAll(-1, NULL, &events, NULL)) >= 0)
-      {
+      while((ident = ALooper_pollAll(-1, NULL, &events, NULL)) >= 0) {
          if (ident == LOOPER_ID_QCN) {
             ASensorEvent event;
             while (ASensorEventQueue_getEvents(l_pSensorEventQueue, &event, 1) > 0) {
@@ -142,9 +141,6 @@ inline bool CSensorAndroidBuiltIn::read_xyz(float& x1, float& y1, float& z1)
               x1 += event.acceleration.x;
               y1 += event.acceleration.y;
               z1 += event.acceleration.z;
-              //fprintf(stdout, "read_xyz:  %f %f %f %f\n",
-              //  event.acceleration.x, event.acceleration.y,
-              //  event.acceleration.z, event.timestamp);
             }
          }
       }
@@ -154,6 +150,7 @@ inline bool CSensorAndroidBuiltIn::read_xyz(float& x1, float& y1, float& z1)
           z1 = z1 / fCtr;
       }
 
+    fprintf(stdout, "read_xyz:  %f %f %f\n", x1, y1, z1);
     return true;
 }
 
