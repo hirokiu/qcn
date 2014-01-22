@@ -19,15 +19,32 @@ using namespace std;
 
 #ifdef ANDROID
 
-#define LOOPER_QCN 100
-
 #include <android/input.h>
 #include <android/sensor.h>
 #include <android/log.h>
 #include <android/looper.h>
 
-// callback function for Android accelerometer events
-int QCN_ALooper_callback(int fd, int events, void* data);
+/* this is in client/main currently, copied over from android sdk
+//#include <android_native_app_glue.h>
+// struct copied from above header
+struct android_poll_source {
+    // The identifier of this source.  May be LOOPER_ID_MAIN or
+    // LOOPER_ID_INPUT.
+    int32_t id;
+
+    // The android_app this ident is associated with.
+    struct android_app* app;
+
+    // Function to call to perform the standard processing of data from
+    // this source.
+    void (*process)(struct android_app* app, struct android_poll_source* source);
+};
+#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "CSensorAndroidBuiltIn", __VA_ARGS__))
+*/
+
+#define LOOPER_ID_QCN 2112 
+
+//int QCN_ALooper_callback(int fd, int events, void* data);
 
 // this is the Linux implementation for the JoyWarrior sensor, used for QCNLive as well as the Mac service program qcnmacusb under BOINC
 class CSensorAndroidBuiltIn  : public CSensor
@@ -36,10 +53,11 @@ class CSensorAndroidBuiltIn  : public CSensor
       ASensorVector m_SensorVector;  // Android sensor vector for x/y/z readings etc
       ASensorManager* m_pSensorManager;  
       ASensor* m_pSensor;
-      ASensorEventQueue* m_pSensorEventQueue;
+      //ASensorEventQueue* m_pSensorEventQueue;
       ALooper* m_pLooper;
 
       virtual bool read_xyz(float& x1, float& y1, float& z1);  
+      //int QCN_ALooper_callback(int fd, int events, void* data);
 
       char m_strSensor[_MAX_PATH];
       char m_strVendor[_MAX_PATH];
