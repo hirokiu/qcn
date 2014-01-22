@@ -1,30 +1,18 @@
-BASEDIR = $(top_builddir)
+# ignore any LIBS set by configure
 
-#if ($(IS_I386)
-#   BOINC_DIR = $(BASEDIR)/../boinc/mac_build/build/`uname -p`_Deployment
-#else
-#   BOINC_DIR = $(BASEDIR)/../boinc/mac_build/build/`uname -p`_Deployment
-#endif
-LIBDIR=$(top_builddir)/client/linux_build
+LIBS=
+
+BASEDIR = $(top_builddir)
 BOINC_BASEDIR = $(top_builddir)/../boinc
 BOINC_DIR = $(BOINC_BASEDIR)
 
 FTGL_DIR=$(top_builddir)/ftgl-2.1.3
 FREETYPE_DIR=$(top_builddir)/freetype-2.4.6
 ZLIB_DIR=$(top_builddir)/zlib-1.2.5
-CURL_DIR=$(top_builddir)/curl-7.25.0
+CURL_DIR=$(top_builddir)/curl-7.34.0
 
-#if OS_DARWIN
-#   BOINC_LIB_DIR = $(BOINC_BASEDIR)/mac_build/build/Deployment
-#   BOINC_LIB = -L$(BOINC_LIB_DIR) -lboinc -lboinc_api -lboinc_graphics2 -L$(BOINC_BASEDIR)/zip/build/Release -lboinc_zip
-#else
-#   BOINC_LIB = $(BOINC_DIR)/api/libboinc_api.a $(BOINC_DIR)/api/libboinc_graphics2.a $(BOINC_DIR)/lib/libboinc.a $(BOINC_DIR)/zip/libboinc_zip.a
-   BOINC_LIB = -L$(LIBDIR) -lboinc_api -lboinc_graphics2 -lboinc -lboinc_zip
-#endif
-
-
-#ZIPARCH_DIR = $(BASEDIR)/ziparchive/ZipArchive
-#BOINC_LIB = -L$(BOINC_DIR)/api -lboinc_api -lboinc_graphics2 -L$(BOINC_DIR)/lib -lboinc -L$(ZIPARCH_DIR) -lziparch
+PTHREAD_CFLAGS = @PTHREAD_CFLAGS@
+PTHREAD_LIBS = @PTHREAD_LIBS@
 
 UTILDIR = $(BASEDIR)/client/util
 MAINDIR = $(BASEDIR)/client/main
@@ -32,13 +20,13 @@ SENSORDIR = $(BASEDIR)/client/sensor
 GRAPHICSDIR = $(BASEDIR)/client/graphics
 STRIP = strip
 
-PTHREAD_CFLAGS = @PTHREAD_CFLAGS@
-PTHREAD_LIBS = @PTHREAD_LIBS@
-
+AM_LIBTOOLFLAGS =
 AM_CPPFLAGS = \
         -Wall \
+        -D_USE_NTPDATE_EXEC_ \
         -DQCN -D_THREAD_SAFE -D_ZLIB \
         -O2 \
+        -I$(TCINCLUDES) \
         -I$(BASEDIR) \
         -I$(MAINDIR) \
         -I$(SENSORDIR) \
@@ -51,8 +39,14 @@ AM_CPPFLAGS = \
         -I$(BOINC_DIR)/api \
         -I$(BOINC_DIR)/zip \
         -I$(BOINC_DIR)/samples/jpeglib \
-        -I$(GRAPHICSDIR) 
-#-I$(ZIPARCH_DIR) 
+        -I$(GRAPHICSDIR) \
+	$(PTHREAD_CFLAGS)
 
-AM_LDFLAGS = -L$(UTILDIR) -L$(LIBDIR)
+AM_CFLAGS = -Wall -Wextra -Wshadow -Wredundant-decls -Wdisabled-optimization -Wpointer-arith -Wstrict-aliasing -Wcast-align 
+
+AM_CXXFLAGS = $(AM_CFLAGS)
+
+AM_LDFLAGS =
+
+
 

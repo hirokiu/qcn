@@ -133,7 +133,7 @@ check_version()
   fi
 
   ## ---------- now run autoreconf
-  cmdline="autoreconf -i";
+  cmdline="autoreconf -i --force";
 echo "$cmdline"
 if eval $cmdline; then
     echo "Done, now run ./configure"

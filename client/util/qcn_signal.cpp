@@ -2,6 +2,15 @@
 
 #include "qcn_signal.h"
 
+#ifdef ANDROID
+  #include <unistd.h>
+  #include <sys/syscall.h>
+  // need our own implementation of getsid for Android NDK
+  pid_t getsid(pid_t pid) {
+    return syscall(__NR_getsid, pid);
+  }
+#endif // ANDROID
+
 namespace qcn_signal 
 {
 int InstallHandlers(void(*handler)(int), bool bIgnoreSIGPIPE)

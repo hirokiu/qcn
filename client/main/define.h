@@ -233,6 +233,7 @@ enum e_sensor  {
                  SENSOR_MAC_INTEL,     // 4
                  SENSOR_WIN_THINKPAD,  // 5
 		 SENSOR_WIN_HP,        // 6
+		 SENSOR_ANDROID,       // 7
 		 SENSOR_USB_JW24F8  = 100,   // 100
 		 SENSOR_USB_MOTIONNODEACCEL, // 101
 	         SENSOR_USB_ONAVI_1,     // 102
@@ -320,7 +321,7 @@ struct FDSET_GROUP {
 // ntpdate stuff for sync'ing a BOINC/QCN participant with the qcn-upl time server
 // ntpdate exec can be obtained by boinc_resolve_filename, set ntpdate=ntpdate_4.2.4_i686-apple-darwin in boinc/apps/qcnalpha/*
 #define NTPDATE_EXEC "ntpdate"
-#define NTPDATE_EXEC_VERSION "ntpdate_4.2.4p7c"
+#define NTPDATE_EXEC_VERSION "ntpdate_4.2.6p5a"
 
 #ifdef _WIN32
 #ifdef _WIN64

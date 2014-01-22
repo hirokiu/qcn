@@ -290,7 +290,11 @@ bool getSensor(CSensor* volatile *ppsms)
 //#endif
 		   }
 	#else // Linux
+          #ifdef ANDROID
+	   const int iMaxSensor = 1;
+          #else
 	   const int iMaxSensor = 4;
+          #endif
 	   // for Windows the sensor can either be a CSensorThinkpad or CSensorWinUSBJW
 	   // note we try to detect the USB sensors first (if any), then try the laptop
 		 for (int i = 0; i < (bForceSensor ? 1 : iMaxSensor); i++)  {
@@ -300,9 +304,14 @@ bool getSensor(CSensor* volatile *ppsms)
 					   psmsForceSensor(ppsms);
 				   }
 				   else {
+          #ifdef ANDROID
+					   *ppsms = (CSensor*) new CSensorAndroidBuiltIn();
+          #else
 					   *ppsms = (CSensor*) new CSensorLinuxUSBJW();
+          #endif // ANDROID or Linux
 				   }
 				   break;
+          #ifndef ANDROID
 			   case 1:
 					   *ppsms = (CSensor*) new CSensorLinuxUSBJW24F14();
 				   break;
@@ -319,6 +328,7 @@ bool getSensor(CSensor* volatile *ppsms)
 				   break;
 	#endif
 	     */
+          #endif // ANDROID or Linux
 		   }
 	#endif // _WIN32 or Linux
 	#endif // APPLE

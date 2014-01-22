@@ -4,6 +4,7 @@
 #ifdef _WIN32
       HANDLE    m_handleThread;
 #else
+   #include <pthread.h>
       pthread_t m_handleThread;
 #endif
       long m_lStackSize;

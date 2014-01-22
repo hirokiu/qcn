@@ -36,6 +36,7 @@ insert into qcn_sensor values (3   , 0, 0, 'Mac PPC 3');
 insert into qcn_sensor values (4   , 0, 0, 'Mac Intel');
 insert into qcn_sensor values (5   , 0, 0, 'Lenovo Thinkpad');
 insert into qcn_sensor values (6   , 0, 0, 'HP Laptop');
+insert into qcn_sensor values (7, 0, 0, 'Android Device');
 insert into qcn_sensor values (100 , 1, 0, 'JoyWarrior 24F8 USB');
 insert into qcn_sensor values (101 , 1, 0, 'MotionNode Accel USB');
 insert into qcn_sensor values (102 , 1, 0, 'ONavi 1 USB');

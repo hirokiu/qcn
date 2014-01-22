@@ -83,7 +83,11 @@ void* QCNThreadTime(void*)
                  NTPDATE_EXEC_VERSION
          );
        #else
+        #ifdef ANDROID
+         sprintf(strExec, "%s%s_arm-android-linux-gnu", 
+        #else
          sprintf(strExec, "%s%s_i686-pc-linux-gnu", 
+        #endif // android vs linux
 // if using the GUI (qcnwx) need to prepend ./ as we are already in the working directory
 #ifdef QCNLIVE
                  "./",
@@ -92,7 +96,7 @@ void* QCNThreadTime(void*)
 #endif
                  NTPDATE_EXEC_VERSION
          );
-       #endif
+       #endif // mac vs linux
       #endif
    #endif
 
@@ -141,6 +145,7 @@ void* QCNThreadTime(void*)
     char* strReply = NULL; 
     const char* ntpdateargs[NTPDATE_ARGC] = NTPDATE_ARGS; 
     double volatile myTimeOffset = 0.0f;
+    int iRetval;
     if (!sm || qcn_main::g_iStop || qcn_main::g_threadTime->IsSuspended()) {
         qcn_main::g_dTimeSyncRetry = dtime() + 120.0f;  // set next sync try in 2 minute if still running!
         goto done; // try a graceful exit if shutting down
@@ -148,7 +153,7 @@ void* QCNThreadTime(void*)
 
     // this directly calls the function ntpdatemain which is in util/qcn_ntpdate.cpp, i.e. not an external program
     // since this can take awhile, note I'm passing in a pointer to the global stop flag, in the hopes I can read this and exit gracefully
-    int iRetVal = ntpdatemain(&myTimeOffset, 
+    iRetVal = ntpdatemain(&myTimeOffset, 
         (const int volatile *) &qcn_main::g_iStop, 
         NTPDATE_ARGC, 
         (char**) ntpdateargs

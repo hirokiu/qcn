@@ -30,9 +30,14 @@
       //#include "csensor_win_usb_generic.h"
     #endif
   #else // LINUX
-    #include "csensor_linux_usb_jw.h"
-    #include "csensor_linux_usb_jw24f14.h"
-    #include "csensor_linux_usb_onavi.h"
+    #ifdef ANDROID
+       // just will need on-board Android device accelerometer, eventually phidgets?
+       #include "csensor_android_built_in.h"
+    #else // "regular" Linux PC i686 or x86_64
+       #include "csensor_linux_usb_jw.h"
+       #include "csensor_linux_usb_jw24f14.h"
+       #include "csensor_linux_usb_onavi.h"
+   #endif // Android/Linux
   #endif // Win or Linux
 #endif // Apple
 
