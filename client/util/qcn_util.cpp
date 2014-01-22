@@ -63,12 +63,16 @@ const char* os_type_str()
     #else
     	return "M32";
     #endif
-  #else // linux
-    #if defined(__LP64__) || defined(_LP64)
+  #else // linux or android
+   #ifdef ANDROID
+      return "AN";
+   #else // Llinux
+      #if defined(__LP64__) || defined(_LP64)
 	  return "L64";
-    #else
+      #else
 	  return "L32";
-    #endif
+      #endif
+   #endif
   #endif
 #endif
 }
