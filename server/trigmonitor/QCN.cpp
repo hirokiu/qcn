@@ -1,30 +1,54 @@
 #include <iostream>
 #include <cassert>
+#include <string>
+#include <cstring>
+#include <fstream>
+#include <iomanip>
+#include <algorithm>
+#include <cmath>
+#include <algorithm>
+#include <map>
+#include <set>
+
 
 #include "QCN.h"
-//#include "QCNTrigger.h"
 #include "QCNEvent.h"
 #include "QCNBounds.h"
+#include "QCNSqlQuery.h"
+
+
+#ifdef ONLINE
 #include "sched_msgs.h"
 #include "sched_config.h"
 #include "qcn_types.h"
-#include "Crust2.h"
-#include <sys/stat.h>
 #include "sched_util.h"
+#endif
+
+#include "Crust2.h"
+
+#include <sys/stat.h>
 
 using namespace std;
 
+#ifdef ONLINE
 DB_CONN trigmem_db;
+#endif
 
-QCN::QCN(const Crust2& crust2, bool isDBActivate):
+QCN::QCN(const Crust2& crust2):
         _crust2(crust2),
         ID_USB_SENSOR_START(100),
         C_CNT_MIN(5),
+        C_CNT_MAX(30),
         N_LONG(1000),
-        T_MAX(90),
+        T_MAX_TRIGGER(30),
+        T_MAX_EVENT(90),
         Vs(3.4),
         Vp(6.4),
-        D_MAX(200.0),
+        D_MAX_TRIGGER(200.0),
+        D_MAXLON_EVENT_TRIGGER(3.0),
+        D_MAXLAT_EVENT_TRIGGER(3.0), 
+        MAX_MISFIT_TIME(1.0),
+        R2_MIN(0.5),
         MAX_PATH(255),
         TRIGGER_SLEEP_INTERVAL(3.0),
         TRIGGER_TIME_INTERVAL (10),
@@ -36,29 +60,36 @@ QCN::QCN(const Crust2& crust2, bool isDBActivate):
         EMAIL_PATH("/var/www/boinc/sensor/html/user/earthquake_email.php"),
         EMAIL_DIR("/var/www//boinc/sensor/html/user"),
         EMAIL_INC("/var/www//boinc/sensor/html/inc/earthquake_email.inc"),
-        _dSleepInterval(-1.0),
-        _iTriggerTimeInterval(-1),
-        _iTriggerDeleteInterval(-1),
-        _EMAIL(false),
-        _mapGMT(true),
-        _isUpdateQuakeOut(false),
-        _isDBActivate(isDBActivate)
+        _dSleepInterval(1.0),
+        _iTriggerTimeInterval(120),
+        _iTriggerDeleteInterval(200),
+        _curRefTime(-999.999),
+        _curRefTimeZero(-999.999),
+        _tBeg (time_t(0)),
+        _tEnd (time_t(0)),
+        _methodToCalcMag(TYPE_III),
+        _qcnSQL(NULL),
+        _hostName("localhost"),
+        _userID  ("qcn"),
+        _passwd  ("qcntest"),
+        _db("sensor")
 {
-    if (_isDBActivate){
-        init();
-    }
+     init();
 }
 
 //Destructor
 QCN::~QCN()
 {
-    if (_isDBActivate){
+#ifdef ONLINE
        DBClose();
-    }
+#endif
+   if (_qcnSQL != NULL)
+       delete _qcnSQL;
 }
 
 /////////////////////////////////PUBLIC~ QCN() METHODS::///////////////////////////////////////////
 
+#ifdef ONLINE
 void  
 QCN::execute()
 { 
@@ -80,7 +111,7 @@ QCN::execute()
         getTriggers();  // reads the memories from the trigger memory table into a global vector
         detectEvent();     // searches the vector of triggers for matching events
         k++;
-       // cout << " HI " << k << endl;
+        cout << " HI " << k << endl;
 
         check_stop_daemons();  // checks for a quit request /home/boinc/projects/boinc/sched/sched_util.h
         dTimeCurrent = dtime();
@@ -91,10 +122,11 @@ QCN::execute()
     }
 
 }
-
+#endif 
 
 ////////////////////////////////PRIVATE METHODS::///////////////////////////////////////////
 
+#ifdef ONLINE
 // get the latest triggers from the database memory table and place into k////
 int
 QCN::getTriggers()
@@ -130,7 +162,7 @@ QCN::getTriggers()
     //t.clear();
 
     _vt.clear();  // clear our trigger vector since we will rebuild it from the database below
-    
+
     //char strKeyTrigger[32];
     char strWhere[64];
     sprintf(strWhere, "WHERE time_trigger > (unix_timestamp()-%d)", _iTriggerTimeInterval);
@@ -158,9 +190,288 @@ QCN::getTriggers()
     }
 
     return int(_vt.size());
+}
+#endif
 
+
+#ifdef OFFLINE
+// get the latest triggers from the a file and place into k////
+bool
+QCN::getTriggersOffline(const string& fname, const double fetch_interval)
+{ 
+//tnow is imaginary time to mimic trigger reader
+//curRef time is the imaginary time of the real time
+    static double tnow = 0.0;
+    time(&_tEnd);
+    //if it is less than seconds, wait 1s or 
+    tnow += std::max(fetch_interval, double(_tEnd - _tBeg) );
+/*
+This part is turned off in Offline version, since this is assumed that each loop is one
+second, we don't worry much abut our vector is growing much
+    // flush out old events every few minutes
+    const int iTestTime = 120;  // number of seconds to flush out quake events so our vector doesn't get too big
+    static int iCounter = 0; // use this to keep track of
+    if ( iCounter++ == int(float(iTestTime / _dSleepInterval )) ) {
+        iCounter = 0;
+        if (_ve.size() > 0 ) {
+            // flush out old events
+            log_messages.printf(MSG_DEBUG, "QCN_GetTriggers: erasing old quake events...\n");
+            iCounter = 0;
+            // get time from database
+            long int lTest = long( tnow - double(iTestTime));
+            vector<QCNEvent>::iterator it = _ve.begin();
+            while (it != _ve.end()) {
+                if (it->e_time < lTest) { // remove this record
+                    log_messages.printf(MSG_DEBUG,
+                                        "QCN_GetTriggers: erased old quake id %d %d\n", it->eventid, it->qcn_quakeid);
+                    it = _ve.erase(it);  // erase and set new iterator start as elements will shift
+                } else { // just increment iterator
+                    it++;
+                }
+            }
+        }
+    }
+*/
+    _vt.clear();  // clear our trigger vector since we will rebuild it from the database below
+
+    //open trigger files
+    ifstream  input_file;
+
+    input_file.open( fname.c_str() );
+
+    if( !input_file.is_open() ) {
+           cout << "Cannot open " << fname.c_str() << " file " << endl;
+                abort();
+    }
+    
+    //specify what 
+   bool retval = false; //return value
+    while (true){
+        float lon = -999.0;
+        float lat = -999.0;
+        float mag = -999.0;
+        int    hostid = -1;
+        int    triggerid = -1;
+        string  file;
+        double trigger_time = -1.0;
+        double trigger_time_recv = -1.0;
+        float  significance = -1.0;
+        float  dis = -1.0;
+        vector<float> pgah(4,-1.0);
+        vector<float> pgaz(4,-1.0);
+
+        //assignment
+        char c;
+        input_file >> lon >> c >> lat >> c >> mag >> c >> hostid >> c >> triggerid >> c;
+        getline(input_file,file, ',');
+        input_file >> trigger_time >> c >> trigger_time_recv >> c >>  significance >> c >>
+                      dis >> c >> pgah[0] >> c >> pgaz[0] >> c >>  pgah[1] >> c >> pgaz[1] >> c >>
+                      pgah[2] >> c >> pgaz[2] >> c >> pgah[3] >> c >> pgaz[3];
+
+        //assign the current time from the first arriving trigger recv time
+        if ( _curRefTimeZero < 0.0 ){
+            _curRefTimeZero = trigger_time_recv;
+            tnow = _curRefTimeZero;
+            retval = true;
+            time(&_tBeg);
+        } 
+
+       //check if it is end of file
+        if (input_file.eof())
+           break;
+
+       //read every secs, keep last 200 secs trigger only
+       if( ((tnow  - trigger_time_recv) <= _iTriggerDeleteInterval) && ( (tnow - trigger_time_recv) >= 0.0 ) ){
+            //cout << " tnow = " << setprecision(15) << tnow << " trigger_time_recv = " << trigger_time_recv << endl;
+            retval = true;
+            QCNTrigger t;
+            t.longitude = lon;
+            t.latitude   = lat;
+            t.magnitude  = mag;
+            t.hostid     = hostid;
+            t.triggerid  = triggerid;
+            strcpy(t.file, file.c_str());
+            t.time_trigger  = trigger_time;
+            t.time_received = trigger_time_recv;
+            t.significance  = significance;
+            t.dis           = dis;
+            if ( (tnow  - trigger_time_recv ) > 4.0 ){
+                t.pgah[0]  = pgah[0];
+                t.pgaz[0]  = pgaz[0];
+                t.pgah[1]  = pgah[1];
+                t.pgaz[1]  = pgaz[1];
+                t.pgah[2]  = pgah[2];
+                t.pgaz[2]  = pgaz[2];
+                t.pgah[3]  = pgah[3];
+                t.pgaz[3]  = pgaz[3];
+                t.magnitude = mag;
+            } else{ 
+                t.pgah[0]  = 0.0;
+                t.pgaz[0]  = 0.0;
+                t.pgah[1]  = 0.0;
+                t.pgaz[1]  = 0.0;
+                t.pgah[2]  = 0.0;
+                t.pgaz[2]  = 0.0;
+                t.pgah[3]  = 0.0;
+                t.pgaz[3]  = 0.0;  
+                t.magnitude = mag;
+            }
+            t.setMagnitude();
+           _vt.push_back(t);
+
+/*           
+            cout << lon << "," << lat << "," << mag << "," << hostid << "," <<
+               triggerid << "," << file << "," << trigger_time << "," << trigger_time_recv <<
+               "," << significance << "," << dis << "," << pgah[0] << "," << pgaz[0] << "," <<
+               pgah[1] << "," << pgaz[1] << "," << pgah[2] << "," << pgaz[2] << "," <<
+               pgah[3] << "," << pgaz[3] << endl; */
+ 
+       }
+
+    }
+    //cout << endl;
+    //hold the time begin from reading trigger to until the next reading
+    time(&_tBeg);
+   _curRefTime = tnow;
+
+
+    input_file.close();
+    //reverse that the first trigger is the latest in the memory
+    std::reverse(_vt.begin(), _vt.end());
+
+    return retval;
 
 }
+#endif
+
+#ifdef OFFLINE
+// get the latest triggers from the database memory table and place into k////
+bool
+QCN::getTriggersOffline(long int t1, long int t2, int fetch_interval, int  query_interval)
+{
+    bool retval = true;
+    static long int  first_query_time = 0; 
+    static long int  last_query_time  = 0; 
+     //construnct QCNSqlQuery object if it is a first time
+     if ( _qcnSQL == NULL ){
+        _qcnSQL = new QCNSqlQuery(_hostName, _userID, _passwd, _db); 
+        //query for an hour window 
+        first_query_time = t1;   
+        last_query_time  = std::min(t1 + query_interval,t2);
+        _qcnSQL->query(first_query_time, last_query_time);
+     }
+
+    //tnow is imaginary time to mimic trigger reader
+    //curRef time is the imaginary time of the real time
+    static double tnow = 0.0;
+    time(&_tEnd);
+    //if it is less than seconds, wait 1s or 
+    tnow += std::max(double(fetch_interval), double(_tEnd - _tBeg));
+    //assign the current time as t1 
+    if ( _curRefTimeZero < 0.0 ){
+        _curRefTimeZero = double(t1); 
+        tnow = _curRefTimeZero;
+        time(&_tBeg);
+    } 
+
+    // flush out old events every few minutes
+    const int iTestTime = 120;  // number of seconds to flush out quake events so our vector doesn't get too big
+    static int iCounter = 0; // use this to keep track of
+    if ( iCounter++ == int(float(iTestTime / _dSleepInterval )) ) {
+        iCounter = 0;
+        if (_ve.size() > 0 ) {
+            // flush out old events
+            iCounter = 0;
+            // get time from database
+            long int lTest = long( tnow - double(iTestTime));
+            vector<QCNEvent>::iterator it = _ve.begin();
+            while (it != _ve.end()) {
+                if (it->e_time < lTest) { // remove this record
+                    it = _ve.erase(it);  // erase and set new iterator start as elements will shift
+                } else { // just increment iterator
+                    it++;
+                }
+            }
+        }
+    }
+    _vt.clear();  // clear our trigger vector since we will rebuild it from the database below
+
+
+    
+   //trigger memory table size
+   size_t nn = _qcnSQL->longitude.size();
+   //loop over the memory table
+   for(size_t i = 0; i < nn; i++){
+        double trigger_time_recv = _qcnSQL->time_received[i]; 
+       //read every secs, keep last 200(iTriggerDeleteInterval) secs trigger only
+       if( ((tnow  - trigger_time_recv) <= _iTriggerDeleteInterval) && ( (tnow - trigger_time_recv) >= 0.0 ) ){
+            QCNTrigger t;
+            t.longitude  = _qcnSQL->longitude[i];
+            t.latitude   = _qcnSQL->latitude[i];
+            t.magnitude  = _qcnSQL->magnitude[i];
+            t.hostid     = _qcnSQL->hostid[i];
+            t.triggerid  = -1;
+            strcpy(t.file, _qcnSQL->file[i].c_str());
+            t.time_trigger  = _qcnSQL->time_trigger[i];
+            t.time_received = _qcnSQL->time_received[i];
+            t.significance  = _qcnSQL->significance[i];
+            t.dis           = -1.0;
+            if ( (tnow  - trigger_time_recv ) > 4.0 ){
+                t.pgah[0] = _qcnSQL->mxy1p[i];
+                t.pgaz[0] = _qcnSQL->mz1p[i];
+                t.pgah[1] = _qcnSQL->mxy1a[i];
+                t.pgaz[1] = _qcnSQL->mz1a[i];
+                t.pgah[2] = _qcnSQL->mxy2a[i];
+                t.pgaz[2] = _qcnSQL->mz2a[i];
+                t.pgah[3] = _qcnSQL->mxy4a[i];
+                t.pgaz[3] = _qcnSQL->mz4a[i];
+                t.magnitude = _qcnSQL->magnitude[i];
+            } else{ 
+                t.pgah[0]  = 0.0;
+                t.pgaz[0]  = 0.0;
+                t.pgah[1]  = 0.0;
+                t.pgaz[1]  = 0.0;
+                t.pgah[2]  = 0.0;
+                t.pgaz[2]  = 0.0;
+                t.pgah[3]  = 0.0;
+                t.pgaz[3]  = 0.0;  
+                t.magnitude = _qcnSQL->magnitude[i];
+            }
+            t.setMagnitude();
+           _vt.push_back(t);
+
+       }
+
+    }
+
+
+    //hold the time begin from reading trigger to until the next reading
+    time(&_tBeg);
+    _curRefTime = tnow;
+
+    //return false if the current time is beyond the t2, the end of simulation 
+    if ( _curRefTime > t2 ){
+       retval = false;
+       return retval;
+    }
+
+
+   //do query again when the current time approach the last_query_time less than 60 seconds
+   if (_curRefTime > last_query_time){
+       //query for an hour window 
+       first_query_time = std::max(t1, long(_curRefTime) - _iTriggerDeleteInterval);  
+       last_query_time =  std::min(long(_curRefTime) + query_interval,t2);
+       _qcnSQL->query(first_query_time, last_query_time);
+   }
+
+    //reverse that the first trigger is the latest in the memory
+    std::reverse(_vt.begin(), _vt.end());
+    //return retval
+    return retval;
+}
+#endif
+
+
 
 /* This subroutine determines if a set of triggers is correlated in time and space.
    The subroutine is used by program main, which assumes that the triggers have already been read in.
@@ -174,13 +485,14 @@ QCN::detectEvent()
 {
  
     int iCtr = _vt.size() - 1;   // max index of the trigger vector
-        
+
+#ifdef ONLINE
     if (iCtr < (C_CNT_MIN - 1)) {
         log_messages.printf(MSG_DEBUG, "QCN_DetectEvent: Not enough triggers %d\n", iCtr+1);
         return;
     }
     log_messages.printf(MSG_DEBUG, "QCN_DetectEvent: Scanning %d triggers\n", iCtr+1);
-
+#endif
 
     for (int i=iCtr; i>=2; i--) {                     // For each trigger (go backwards: triggers go last to 1st, & we want 1st first)
         QCNTrigger& vi = _vt[i];
@@ -195,7 +507,6 @@ QCN::detectEvent()
              isRepeatTrigger = true;
         }     
 
-
         if ( isRepeatTrigger ) {        // Do not use repeating triggers
             for (int j = i-1; j>=0; j--) {                  // For every other trigger
                 QCNTrigger& vj = _vt[j];
@@ -204,18 +515,20 @@ QCN::detectEvent()
                bool isCorrelated = false;
                if ( j > 0){
                   isCorrelated  = ( (vj.hostid != vi.hostid) && (vj.hostid != _vt[j-1].hostid) &&
-                                     (fabs(vi.time_trigger - vj.time_trigger) <= T_MAX) );
+                                     (fabs(vi.time_trigger - vj.time_trigger) <= T_MAX_TRIGGER) );
                } else {   //j==0
                   isCorrelated  = ( (vj.hostid != vi.hostid) &&         true                   &&
-                                     (fabs(vi.time_trigger - vj.time_trigger) <= T_MAX) );
+                                     (fabs(vi.time_trigger - vj.time_trigger) <= T_MAX_TRIGGER) );
                }
-               
+
+
+
                 if ( isCorrelated ) {
                     //For non-repeating triggers & triggers less than t_max apart
                     float dist=ang_dist_km(vi.longitude,vi.latitude,vj.longitude,vj.latitude);//Distance between triggers
-                    if ( (fabs(vi.time_trigger-vj.time_trigger) < dist/Vs + 3.f) && (dist<=D_MAX) ) {
+                    if ( (fabs(vi.time_trigger-vj.time_trigger) < dist/Vs + 3.f) && (dist <= D_MAX_TRIGGER) ) {
                         vi.c_cnt++;                       // Add count of correlated triggers for this trigger
-                        if (vi.c_cnt > (QCNTrigger::N_SHORT-1) ) {  // Make sure we don't use more correlations than array size
+                        if (vi.c_cnt >  (QCNTrigger::N_SHORT-1) ) {  // Make sure we don't use more correlations than array size
                             vi.c_cnt = QCNTrigger::N_SHORT-1;     // Set count to max array size
                             break;                          // Done
                         }
@@ -225,8 +538,9 @@ QCN::detectEvent()
                 } // if vt[=j]
             } // for j
         }  // if vt[i] hostid
-     
     } // for i                                    // Done correlating
+
+     
 
     /* Now we correlate triggers that are currently correlated with triggers that are correlated with the initial trigger, but not
        correlated with the initial trigger itself */
@@ -238,8 +552,9 @@ QCN::detectEvent()
             QCNEvent e;
             int kIndx = -1;
             for (int k = 0; k < int(_ve.size()); k++) {    // go through all the events for a match, if not make a new event
-                if ( ( vi.time_trigger <= T_MAX+_ve[k].e_time) &&
-                        (fabs(vi.latitude-_ve[k].latitude)<=3.) ) {
+                if ( ((vi.time_trigger - _ve[k].e_time) <= T_MAX_EVENT              ) &&
+                     (fabs(vi.latitude     - _ve[k].latitude ) <= D_MAXLAT_EVENT_TRIGGER   ) && 
+                     (fabs(vi.longitude    - _ve[k].longitude) <= D_MAXLON_EVENT_TRIGGER   ) ){
                     // this is a match by time & location (just using lat though?)
                     bEventFound = true;
                     e = _ve[k];  // should have a qcn_quakeid here as it should have been inserted in the original pass
@@ -254,21 +569,63 @@ QCN::detectEvent()
                 e.dirty = true;
             }
 
-            if ( !bEventFound && (vi.time_trigger - e.e_t_detect > 4.) ) {
+            //1:New Event -->continue
+            //2:Old Event && v.time_trigger - e.e_t_detect > 4 --> continue
+            //3:Old Event && vi.cnt > e.e_cnt --> continue
+            //For New event we will get e.e_cnt = 0 so condition 3 will be satisfied if we use ||  
+            bool eventLocated = false;
+            if ( vi.c_cnt > e.e_cnt || ((vi.time_received - e.e_t_detect > 4.) && (vi.c_cnt == e.e_cnt)) ) {
                 // Only do new event location ... if more triggers for same event (or new event - no prior triggers)
-                bool isEvent = eventLocate(bEventFound, e, i);
-                bool isContinue = (isEvent && e.e_r2 >= 0.5);
-                if (isContinue){
-                   e.e_cnt = vi.c_cnt;
-                   bInsertEvent = (bool) (e.qcn_quakeid == 0); // if 0 then we don't have a quake id yet hence need to insert
-                   estimateMagnitude(e, i);                // Estimate the magnitude of the earthquake
-                   intensityMap(bInsertEvent, e, i);       // This generates the intensity map -- also where quake info updated in the qcn_quake & qcn_trigger tables    }
-                }
+                if (eventLocate(bEventFound,e,i) && e.e_r2 >= R2_MIN){
+                    cout << i  << " found as a earthquake event" << endl;
+                    e.e_cnt = vi.c_cnt;
+#ifdef OFFLINE
+                    time_t t_now;
+                    time(&t_now);
+                    e.e_t_detect = time_t(_curRefTime) + (t_now - _tBeg);
+#endif
+
+#ifdef ONLINE
+                    e.e_t_detect = double(getMySQLUnixTime());
+#endif
+
+                    bInsertEvent = (bool) (e.qcn_quakeid == 0); // if 0 then we don't have a quake id yet hence need to insert
+                    //estimate magnitude of the earthquake
+                    switch ( _methodToCalcMag){
+                        case TYPE_I:
+                             estimateMagnitudeI(e,i);  //very default one, first
+                             break;
+                        case TYPE_II:                 //Angie's formulation as of April 15
+                             estimateMagnitudeII(e,i);
+                             break;
+                        case TYPE_III:               //Jesses's new formulation from the revision paper as of May 01,2013
+                             estimateMagnitudeIII(e,i);
+                             break;
+                        case TYPE_CI:               //Default one(I), but with the largest pga from each sensor
+                             estimateMagnitudeCI(e,i);
+                             break;
+                        case TYPE_CII:               //(II), but with the largest pga from each sensor
+                             estimateMagnitudeCII(e,i);
+                             break;
+                        case TYPE_CIII:               //(III), but with the largest pga from each sensor
+                             estimateMagnitudeCIII(e,i);
+                             break;
+                        default:
+                              estimateMagnitudeI(e,i);
+
+                    }
+                    intensityMap(bInsertEvent, e, i);       // This generates the intensity map -- also where quake info updated in the qcn_quake & qcn_trigger tables    }
+                    eventLocated = true;
+               } else {
+                   //cout << i << " not found as earthquake " << " e.e_r2 = " << e.e_r2 << endl;
+               }
             }
 
             if (bEventFound) {                            // replace element
                 _ve[kIndx] = e;
-            } else {
+            }
+            
+            if ( !bEventFound && eventLocated ){
                 _ve.push_back(e);
             }
         } // if vt[i]
@@ -283,6 +640,14 @@ QCN::detectEvent()
 void
 QCN::init()
 {
+
+#ifdef OFFLINE
+   //initialize the tbeg and tend
+    time(&_tBeg);
+    time(&_tEnd);
+#endif  
+
+#ifdef ONLINE
     int retval = DBOpen();
     if (retval) {
         log_messages.printf(MSG_CRITICAL,
@@ -290,11 +655,11 @@ QCN::init()
         );
     }
     assert(retval == 0); //make sure retval is true 
-
+#endif
 
 }
 
-
+#ifdef ONLINE
 //boinc_db and config are defined in Carl's code or Boinc library find them out
 int
 QCN::DBOpen()
@@ -333,7 +698,10 @@ QCN::DBOpen()
 
 
 }
+#endif
 
+
+#ifdef ONLINE
 void
 QCN::DBClose()
 {
@@ -342,8 +710,10 @@ QCN::DBClose()
     trigmem_db.close();
 }
 
+#endif
 
 
+#ifdef ONLINE
 long int
 QCN::getMySQLUnixTime()
 {
@@ -368,7 +738,7 @@ QCN::getMySQLUnixTime()
 
     return lTime;
 }
-
+#endif
 
 
 /* This function returns the distance (in km) between two points given as
@@ -395,8 +765,11 @@ QCN::ang_dist_km(const float lon1, const float lat1, const float lon2, const flo
 bool
 QCN::eventLocate(const bool bEventFound, QCNEvent& e, const int ciOff)
 {
+
+#ifdef ONLINE
     log_messages.printf(MSG_DEBUG,
                         "Locate possible event ID %d, Count %d \n", e.eventid, _vt[ciOff].c_cnt);
+#endif
 
     float  dn=0.; float dp=0.;                             // Distances to the nth and pth trigger location
 
@@ -410,12 +783,16 @@ QCN::eventLocate(const bool bEventFound, QCNEvent& e, const int ciOff)
             t_min = _vt[n].time_trigger;                //
             j_min = n;                                 //
         }
-    }       
+    }
 
-    e.longitude = _vt[j_min].longitude;               // Start with assumption of quake at/near earliest trigger
-    e.latitude  = _vt[j_min].latitude;
-    e.depth = 33.;                                       // Start with default Moho depth eq.
+   if ( e.updateFocus ){
+       e.longitude = _vt[j_min].longitude;               // Start with assumption of quake at/near earliest trigger
+       e.latitude  = _vt[j_min].latitude;
+       e.depth = 33.;                                       // Start with default Moho depth eq.
+   }
 
+    //we use first 30 triggers 
+    int mBeg =max(vciOff.c_cnt-C_CNT_MAX,0);
 
     float dp_x = 0.0;
     int    n_iter=3;                                       // Number of grid search iterations
@@ -424,11 +801,16 @@ QCN::eventLocate(const bool bEventFound, QCNEvent& e, const int ciOff)
     float  width = 4.f; float zrange=150.f;                // Lateral and vertical grid size
     float  dx = 0.1f; float dz = 10.f;                     // Lateral and vertical grid step size
     for (int j = 1; j<=n_iter; j++) {                          // For each iteration
+
         QCNBounds g(e.longitude, e.latitude, e.depth, width, dx, zrange, dz);
         float ls_mf_min = 9999999999.f;                       // Set obserdly high misfit minimum
         for (int h = 0; h < g.nz; h++) {                           // For each vertical grid step
             dp_x = g.z_min + g.dz * float(h);               // Calculate depth
             //Get depth-averaged velocity for location from CRUST2.0
+
+            //even update location stops if we used more than 30 triggers
+            if (e.updateFocus){
+
             _crust2.getMeanVel(dp_x, _vt[j_min].longitude, _vt[j_min].latitude,v);
             for (int k = 0; k < g.nx; k++) {                          // For each x node
                 const float ln_x = g.x_min + g.dx * float(k);              // Longitude of grid point
@@ -437,9 +819,8 @@ QCN::eventLocate(const bool bEventFound, QCNEvent& e, const int ciOff)
                     double ls_mf = 0.;
                     double ls_ct = 0.;                            // Zero least-squares misfit & count
                     // Compare times and distance difference between each station pair
-                    for (int m = 0; m < vciOff.c_cnt; m++) {                  // For each trigger
+                    for (int m =mBeg ; m < vciOff.c_cnt; m++) {                  // For each trigger
                         const int n = vciOff.c_ind[m];                        // Index of correlated trigger
-                        //cout << " m  = " << m  << "    n = " << n << endl;
                         // Horizontal distance between node and host/station
                         float dn = ang_dist_km(ln_x, lt_x, _vt[n].longitude, _vt[n].latitude);
                         // Actual distance between event & station/host
@@ -478,6 +859,9 @@ QCN::eventLocate(const bool bEventFound, QCNEvent& e, const int ciOff)
                     }                      // End loop over 1st trigger of pair
                 } // l                         // End loop over latitude
             } // k                          // End loop over Longitude
+
+            } //updateFocus
+
         }  // h (depth)                  // End loop over depth
         // Reduce grid dimensions by an order of magnitude
         dx /= 10.f;
@@ -496,6 +880,7 @@ QCN::eventLocate(const bool bEventFound, QCNEvent& e, const int ciOff)
             // Horizontal distance between node and host/station
             dn = ang_dist_km(e.longitude,e.latitude, _vt[n].longitude, _vt[n].latitude);
             dn = sqrt(dn*dn + e.depth*e.depth);                 // Actual distance between event & station/host
+            int count = 0;
             for (int o = 0; o <= vciOff.c_cnt; o++) {          // Compare with each other trigger
                 const int p = vciOff.c_ind[o];                          // Index of correlated trigger
                 if (p!=n) {
@@ -512,22 +897,24 @@ QCN::eventLocate(const bool bEventFound, QCNEvent& e, const int ciOff)
                                 dt_min = dt;                                    //    Save minimum time
                             }                                                //
                         }                                                 //
-                    }                                                  //
+                    }     
+                     count++;                                             //
                     _vt[n].pors += q_save;                                 // Sum most optimal values to see if it lies closer to P or S
                 }
             }  // o
             // Normalize P or S to see if it is closer to P or S
-            _vt[n].pors = (int) round( float(_vt[n].pors) / float(vciOff.c_cnt + 1.0));
+            _vt[n].pors = (int) round( float(_vt[n].pors) /  float(count)); //float(vciOff.c_cnt + 1.0));
             _vt[n].dis=dn;                    // Save distance
             e.e_time += _vt[n].time_trigger - dn/v[_vt[n].pors];          // Time of event calculated from ith trigger.
         } // m                                                     //
 
         // Time of earthquake:
         e.e_time = e.e_time / ((float) vciOff.c_cnt + 1.0 ); // Time of earthquake calculated by averaging time w.r.t each station normalized by number of stations
-        
         if (!bEventFound) {// e.eventid<=0) {                                    // For New earthquake ID if earthquake time wasn't set
             e.eventid = ((int) e.e_time);
+#ifdef ONLINE
             log_messages.printf(MSG_DEBUG, "NEW EID: %d \n", e.eventid);
+#endif
         }
     } // j  ie big outer loop ending
 
@@ -546,11 +933,15 @@ QCN::eventLocate(const bool bEventFound, QCNEvent& e, const int ciOff)
     //  Require that the earthquake-to-array distance be less than four times the dimension of the array
     if (ss_dist_max*4. < _vt[j_min].dis) {                   // If the event-to-station distance > 4 times the array dimension
         e.e_r2=-1.;                                        // Set correlation to -1 (will reject earthquake)
+#ifdef ONLINE
         log_messages.printf(MSG_DEBUG,
                             "Event poorly located: Array dimension=%f EQ Dist=%f.\n",ss_dist_max,dn);
+#endif
         return false;                                               // Return so done
     } else {                                               // Otherwise output status report
+#ifdef ONLINE
         log_messages.printf(MSG_DEBUG, "Event located: %f %f\n",e.longitude,e.latitude);
+#endif
     }
 
     //Calculate the estimated arrival time of the phase
@@ -563,23 +954,32 @@ QCN::eventLocate(const bool bEventFound, QCNEvent& e, const int ciOff)
         _vt[n].time_est = e.e_time + _vt[n].dis / v[_vt[n].pors];   // Estimated time is event origin time plus distance divided by velocity
         t_obs[j]=_vt[n].time_trigger-e.e_time;                    // Store observed times
         t_est[j]=_vt[n].time_est-e.e_time;                      // Store estimated times
-        dt_ave += abs(t_obs[j]-t_est[j]);                     // Sum averaged model-data time variance
+        dt_ave += fabs(t_obs[j]-t_est[j]);                     // Sum averaged model-data time variance
+        //dt_ave += fabs(vt[n].time_trigger-vt[n].time_est) the same as above??
         e.e_msfit += (t_obs[j]-t_est[j])*(t_obs[j]-t_est[j]);// Sum L2 misfit
     }
     e.e_msfit /= float( vciOff.c_cnt + 1.0);            // Normalize the event misfit
     e.e_msfit = sqrt(e.e_msfit);                     //
     //Require that the model variance is less than two seconds
     dt_ave /= float(vciOff.c_cnt + 1.0);                  // Normalize the data-model variance
-    if (dt_ave > 2.) {                                     // If the average travel time misfit is greater than 2 seconds, reject the event detection
+    if (dt_ave > MAX_MISFIT_TIME) {  // If the average travel time misfit is greater than 2 seconds, reject the event detection
         e.e_r2 = -1.;                                      // Set correlation to < 0 for rejection
+#ifdef ONLINE
         log_messages.printf(MSG_DEBUG,
                             "Event rejected - average travel time misfit greater than 2 seconds \n");
+#endif
         return false;                                               // Return with bad correlation
     }
 
-    //correlate observed and estimated travel times
-    e.e_r2 = correlate(t_obs, t_est, vciOff.c_cnt+1);  // Correlate observed & estimated times
+    //correlate observed and estimated travel times   //cout << " e.e_r2 = " << e.e_r2 << endl;
+    e.e_r2 = correlate(t_obs, t_est, vciOff.c_cnt+1);  // Correlate observed & estimated times   //
+#ifdef ONLINE
     log_messages.printf(MSG_DEBUG, "Estimated times correlate at r^2= %f \n",e.e_r2);
+#endif
+    //if this is event and found more than 30 triggers
+    if (mBeg > 0){
+        e.updateFocus = false;
+    }
     return true;
 }
 
@@ -663,8 +1063,10 @@ QCN::average(const vector<float>& dat, const int ndat)
    This subroutine was written by Jesse F. Lawrence (jflawrence@stanford.edu).
  
 */
+
+
 void
-QCN::estimateMagnitude(QCNEvent& e, const int ciOff)
+QCN::estimateMagnitudeI(QCNEvent& e, const int ciOff)
 {
     //Constants for equation above (Need to be adjusted)
     float a=0.544f;
@@ -688,14 +1090,12 @@ QCN::estimateMagnitude(QCNEvent& e, const int ciOff)
         for (int k = 0; k <= c_cnt; k++) {            // Select one point for each trigger
             const int kk = rand() % (c_cnt);                 // Use random trigger
             const int n = _vt[ciOff].c_ind[kk];                           // Index of correlated trigger
-            assert( n >= 0 );
             float mul_amp = 1.0;                               // Multiplication factor depends on P & S waves currently set to 1
-            if ( _vt[n].pors == 0 ) {                           // Use appropriate multilication factor (currently not used but will eventually)
+            if ( _vt[n].pors == 0 ) {              // Use appropriate multilication factor (currently not used but will eventually)
                 mul_amp = 1.0;                                    //
             } else {                                           //
                 mul_amp = 1.0;                                    //
-            }
-            ;                                                 //
+            };                                                 //
             mag_ave[j] += a * log(_vt[n].magnitude * b * mul_amp) +
                           c * log(_vt[n].dis) + d; // Sum magnitude estimate from each trigger for average estimate
         }
@@ -706,6 +1106,372 @@ QCN::estimateMagnitude(QCNEvent& e, const int ciOff)
 }
 
 
+//Angie's suggestion as of April 9, 2013, she says that it might be good for larger magnitude estimations
+void
+QCN::estimateMagnitudeII(QCNEvent& e, const int ciOff)
+{
+    //Constants for equation above (Need to be adjusted)
+    float a=0.0211f;
+    float b=0.0173f;
+    float c=0.0267f; 
+    float d=1.4444f;
+    srand ( time(NULL) );                                // Set randomization kernel
+
+    e.magnitude = 0.0f;                                   // Zero magnitude
+    const int c_cnt = _vt[ciOff].c_cnt;
+    for (int j = 0; j <= c_cnt; j++) {              // Bootstrap once for each trigger 
+       const int n = _vt[ciOff].c_ind[j];
+
+       //vector<float> A(3,0.0);
+       //vector<float> B(3,0.0);
+       ////event location
+       //A[0] = e.longitude;
+       //A[1] = e.latitude;
+       //A[2] = e.depth;
+       ////trigger location
+       //B[0] = _vt[n].longitude;
+       //B[1] = _vt[n].latitude;
+       //B[2] = 0.0; //on the surface
+       //get the arrival times t[0] and t[1] (P, S)
+       //vector<double> t = getTimeAtoB(A, B, _vt[n].dis);
+       vector<double> t(2,0.0);
+       t[0]  = _vt[n].dis / Vp;
+       t[1]  = _vt[n].dis / Vs;
+       e.magnitude += exp(a * log(_vt[n].magnitude)  + b * sqrt(_vt[n].dis) -
+                      c * erf(t[0] / sqrt(_vt[n].dis)) + d);
+
+    }
+    e.magnitude /= ( (float) _vt[ciOff].c_cnt + 1.0);            // Normalize summed mag estimates for average magnitude estimate
+
+  // Average magnitude
+   vector<float> mag_ave(c_cnt+1,0.0);
+    for (int j = 0; j <= c_cnt; j++) {              // Bootstrap once for each trigger
+        for (int k = 0; k <= c_cnt; k++) {            // Select one point for each trigger
+            const int kk = rand() % (c_cnt);                 // Use random trigger
+            const int n = _vt[ciOff].c_ind[kk];                           // Index of correlated trigger
+            //vector<float> A(3,0.0);
+            //vector<float> B(3,0.0);
+            ////event location
+            //A[0] = e.longitude;
+            //A[1] = e.latitude;
+            //A[2] = e.depth;
+            ////trigger location
+            //B[0] = _vt[n].longitude;
+            //B[1] = _vt[n].latitude;
+            //B[2] = 0.0; //on the surface
+            //get the arrival times t[0] and t[1] (P, S)
+            //vector<double> t = getTimeAtoB(A, B, _vt[n].dis);
+            vector<double> t(2,0.0);
+            t[0] = _vt[n].dis / Vp;
+            t[1] = _vt[n].dis / Vs;
+            mag_ave[j] += exp(a * log(_vt[n].magnitude) + b * sqrt( _vt[n].dis ) -
+                          c * erf(t[0] / sqrt(_vt[n].dis)) + d);
+        }
+        mag_ave[j]/= ( (float) _vt[ciOff].c_cnt + 1.0);            // Normalize summed mag estimates for average magnitude estimate
+    }
+    e.e_std     = stdDev(mag_ave, c_cnt+1)*3.;// 3 sigma is the 99 % confidence (assuming a statistically large enough data set)
+    e.dirty = true; // flag that we should update this event
+} 
+
+
+void
+QCN::estimateMagnitudeIII(QCNEvent& e, const int ciOff)
+{
+    //Constants for equation above (Need to be adjusted)
+    float a=0.03f;
+    float b=1.09f;
+    float c=4.28f;
+    srand ( time(NULL) );                                // Set randomization kernel
+
+    e.magnitude = 0.f;                                   // Zero magnitude
+    const int c_cnt = _vt[ciOff].c_cnt;
+    for (int j = 0; j <= c_cnt; j++) {              // Bootstrap once for each trigger 
+       const int n = _vt[ciOff].c_ind[j]; 
+       e.magnitude += a* _vt[n].dis  + b * log10( _vt[n].magnitude ) + c;
+    }
+    e.magnitude /= ( (float) _vt[ciOff].c_cnt + 1.0);            // Normalize summed mag estimates for average magnitude estimate
+
+  // Average magnitude
+   vector<float> mag_ave(c_cnt+1,0.0);
+    for (int j = 0; j <= c_cnt; j++) {              // Bootstrap once for each trigger
+        for (int k = 0; k <= c_cnt; k++) {            // Select one point for each trigger
+            const int kk = rand() % (c_cnt);                 // Use random trigger
+            const int n = _vt[ciOff].c_ind[kk];                           // Index of correlated trigger
+            float mul_amp = 1.0;                               // Multiplication factor depends on P & S waves currently set to 1
+            if ( _vt[n].pors == 0 ) {              // Use appropriate multilication factor (currently not used but will eventually)
+                mul_amp = 1.0;                                    //
+            } else {                                           //
+                mul_amp = 1.0;                                    //
+            };
+           //Sum magnitude estimate from each trigger for average estimate                                       //
+            mag_ave[j] += a * _vt[n].dis  + b * log10( _vt[n].magnitude ) + c;
+                   
+        }
+        mag_ave[j]/= ( (float) _vt[ciOff].c_cnt + 1.0);            // Normalize summed mag estimates for average magnitude estimate
+    }
+    e.e_std = stdDev(mag_ave, c_cnt+1)*3.;// 3 sigma is the 99 % confidence (assuming a statistically large enough data set)
+    e.dirty = true; // flag that we should update this event
+}
+
+
+
+//get the arrival time of  P and S velocities from a point A to a point B 
+//(lon,lat,depth) = (x,y,z), dist should be given in km
+const vector<double>
+QCN::getTimeAtoB(const vector<float>& A, const vector<float>& B, const float dis)
+{
+    //get AB vectors
+    vector<float> AB(3,0.0);
+    AB[0] = B[0] - A[0];
+    AB[1] = B[1] - B[1];
+    AB[2] = B[2] - B[2];
+    //get distance
+    const int N = 20; //N segments
+    double ds = 1.0 / double(N);  //lets divide the 20 parts
+    //each segment distance
+    //float dn = ang_dist_km(A[0], A[1], B[0], B[1]);
+    //dn = sqrt ( dn*dn + AB[2] * AB[2] );
+
+    double dAB = dis / double(N); 
+    vector<double> t(2,0.0);
+    vector<float>  v(2,0.0);
+    for(int i = 0; i < N; i++){
+        double s = (double(i)+0.5) * ds;
+        //these are the x,y,z position of s 
+        float x = A[0] + s * AB[0];
+        float y = A[1] + s * AB[1];
+        float z = A[2] + s * AB[2];
+        //find dt for this ds
+        _crust2.getMeanVel(z, x, y, v);  //return v
+        t[0] += dAB / v[0]; // the arrival time for P
+        t[1] += dAB / v[1]; // the arrival time for S
+    }
+
+    return t;
+
+}
+
+
+void
+QCN::estimateMagnitudeCI(QCNEvent& e, const int ciOff)
+{
+    //Constants for equation above (Need to be adjusted)
+    float a=0.544f;
+    float b=2.0f;
+    float c=0.03085f; float d=4.28f;
+    srand ( time(NULL) );                                // Set randomization kernel
+    
+    const int c_cnt = _vt[ciOff].c_cnt;
+   //hosid ---> magnitude
+    multimap<int, float> hostIDToMag;
+    map<int, float> distMap;
+    for (int i = 0; i <= c_cnt; i++){
+        const int n = _vt[ciOff].c_ind[i];
+        int key = _vt[n].hostid;
+        float mag = _vt[n].magnitude;
+        float dis = _vt[n].dis;
+        hostIDToMag.insert(std::pair<int,float>(key,mag));
+        distMap.insert(std::pair<int,float>(key,dis));
+    }
+
+
+    //  loop over to find unique hostid 
+    set<int> hostIDSet;
+    for (multimap<int,float>::iterator it=hostIDToMag.begin(); it!=hostIDToMag.end(); ++it){
+       hostIDSet.insert(it->first);
+    }
+
+    //loop over uniqe hostids
+    e.magnitude = 0.0f;
+    for(set<int>::iterator it1=hostIDSet.begin(); it1 !=hostIDSet.end(); ++it1){
+        float mul_amp = 1.0;
+        const int n = *it1;
+        float maxValue = 0.0;
+        for (multimap<int,float>::iterator it2=hostIDToMag.lower_bound(n); it2!=hostIDToMag.upper_bound(n); ++it2){
+            if ( it2->second  > maxValue ){
+                maxValue = it2->second;
+            }
+        }  
+     
+        e.magnitude += a * log(maxValue * b * mul_amp) +  c * log(distMap[n]) + d; // Sum magnitude estimate from each trigger for average estimate
+    }
+
+    e.magnitude /= float( hostIDSet.size() );            // Normalize summed mag estimates for average magnitude estimate
+  // Average magnitude
+   vector<float> mag_ave(c_cnt+1,0.0);
+    for (int j = 0; j <= c_cnt; j++) {              // Bootstrap once for each trigger
+        for (int k = 0; k <= c_cnt; k++) {            // Select one point for each trigger
+            const int kk = rand() % (c_cnt);                 // Use random trigger
+            const int n = _vt[ciOff].c_ind[kk];                           // Index of correlated trigger
+            float mul_amp = 1.0;                               // Multiplication factor depends on P & S waves currently set to 1
+            if ( _vt[n].pors == 0 ) {                           // Use appropriate multilication factor (currently not used but will eventually)
+                mul_amp = 1.0;                                    //
+            } else {                                           //
+                mul_amp = 1.0;                                    //
+            };                                                 //
+            mag_ave[j] += a * log(_vt[n].magnitude * b * mul_amp) +
+                          c * log(_vt[n].dis) + d; // Sum magnitude estimate from each trigger for average estimate
+        }
+        mag_ave[j]/= ( (float) _vt[ciOff].c_cnt + 1.0);            // Normalize summed mag estimates for average magnitude estimate
+    }
+    e.e_std     = stdDev (mag_ave, c_cnt+1)*3.;// 3 sigma is the 99 % confidence (assuming a statistically large enough data set)
+    e.dirty = true; // flag that we should update this event
+}
+
+
+//Angie's suggestion as of April 9, 2013, she says that it might be good for larger magnitude estimations
+void
+QCN::estimateMagnitudeCII(QCNEvent& e, const int ciOff)
+{
+    //Constants for equation above (Need to be adjusted)
+    float a=0.0211f;
+    float b=0.0173f;
+    float c=0.0267f; 
+    float d=1.4444f;
+    srand ( time(NULL) );                                // Set randomization kernel
+
+
+    const int c_cnt = _vt[ciOff].c_cnt;
+   //hosid ---> magnitude
+    multimap<int, float> hostIDToMag;
+    map<int, float> distMap;
+    for (int i = 0; i <= c_cnt; i++){
+        const int n = _vt[ciOff].c_ind[i];
+        int key = _vt[n].hostid;
+        float mag = _vt[n].magnitude;
+        float dis = _vt[n].dis;
+        hostIDToMag.insert(std::pair<int,float>(key,mag));
+        distMap.insert(std::pair<int,float>(key,dis));
+    }
+
+
+    //  loop over to find unique hostid 
+    set<int> hostIDSet;
+    for (multimap<int,float>::iterator it=hostIDToMag.begin(); it!=hostIDToMag.end(); ++it){
+       hostIDSet.insert(it->first);
+    }
+
+    //loop over uniqe hostids
+    e.magnitude = 0.0f;
+    for(set<int>::iterator it1=hostIDSet.begin(); it1 !=hostIDSet.end(); ++it1){
+        const int n = *it1;
+        float maxValue = 0.0;
+        for (multimap<int,float>::iterator it2=hostIDToMag.lower_bound(n); it2!=hostIDToMag.upper_bound(n); ++it2){
+            if ( it2->second  > maxValue ){
+                maxValue = it2->second;
+            }
+        }  
+
+       vector<double> t(2,0.0);
+       t[0]  = distMap[n] / Vp;
+       t[1]  = distMap[n] / Vs;
+
+       e.magnitude += exp(a * log(maxValue)  + b * sqrt(distMap[n]) -
+                      c * erf(t[0] / sqrt(distMap[n])) + d);
+    }
+
+    e.magnitude /= float( hostIDSet.size() );            // Normalize summed mag estimates for average magnitude estimate
+
+
+  // Average magnitude
+   vector<float> mag_ave(c_cnt+1,0.0);
+    for (int j = 0; j <= c_cnt; j++) {              // Bootstrap once for each trigger
+        for (int k = 0; k <= c_cnt; k++) {            // Select one point for each trigger
+            const int kk = rand() % (c_cnt);                 // Use random trigger
+            const int n = _vt[ciOff].c_ind[kk];                           // Index of correlated trigger
+            //vector<float> A(3,0.0);
+            //vector<float> B(3,0.0);
+            ////event location
+            //A[0] = e.longitude;
+            //A[1] = e.latitude;
+            //A[2] = e.depth;
+            ////trigger location
+            //B[0] = _vt[n].longitude;
+            //B[1] = _vt[n].latitude;
+            //B[2] = 0.0; //on the surface
+            //get the arrival times t[0] and t[1] (P, S)
+            //vector<double> t = getTimeAtoB(A, B, _vt[n].dis);
+            vector<double> t(2,0.0);
+            t[0] = _vt[n].dis / Vp;
+            t[1] = _vt[n].dis / Vs;
+            mag_ave[j] += exp(a * log(_vt[n].magnitude) + b * sqrt( _vt[n].dis ) -
+                          c * erf(t[0] / sqrt(_vt[n].dis)) + d);
+        }
+        mag_ave[j]/= ( (float) _vt[ciOff].c_cnt + 1.0);            // Normalize summed mag estimates for average magnitude estimate
+    }
+    e.e_std     = stdDev(mag_ave, c_cnt+1)*3.;// 3 sigma is the 99 % confidence (assuming a statistically large enough data set)
+    e.dirty = true; // flag that we should update this event
+} 
+
+
+void
+QCN::estimateMagnitudeCIII(QCNEvent& e, const int ciOff)
+{
+    //Constants for equation above (Need to be adjusted)
+    float a=0.03f;
+    float b=1.09f;
+    float c=4.28f;
+    srand ( time(NULL) );                                // Set randomization kernel
+    
+    const int c_cnt = _vt[ciOff].c_cnt;
+   //hosid ---> magnitude
+    multimap<int, float> hostIDToMag;
+    map<int, float> distMap;
+    for (int i = 0; i <= c_cnt; i++){
+        const int n = _vt[ciOff].c_ind[i];
+        int key = _vt[n].hostid;
+        float mag = _vt[n].magnitude;
+        float dis = _vt[n].dis;
+        hostIDToMag.insert(std::pair<int,float>(key,mag));
+        distMap.insert(std::pair<int,float>(key,dis));
+    }
+
+
+    //  loop over to find unique hostid 
+    set<int> hostIDSet;
+    for (multimap<int,float>::iterator it=hostIDToMag.begin(); it!=hostIDToMag.end(); ++it){
+       hostIDSet.insert(it->first);
+    }
+
+    //loop over uniqe hostids
+    e.magnitude = 0.0f;
+    for(set<int>::iterator it1=hostIDSet.begin(); it1 !=hostIDSet.end(); ++it1){
+        const int n = *it1;
+        float maxValue = 0.0;
+        for (multimap<int,float>::iterator it2=hostIDToMag.lower_bound(n); it2!=hostIDToMag.upper_bound(n); ++it2){
+            if ( it2->second  > maxValue ){
+                maxValue = it2->second;
+            }
+        }  
+     
+        e.magnitude += a * distMap[n]  + b * log(maxValue) +   c; // Sum magnitude estimate from each trigger for average estimate
+    }
+
+    e.magnitude /= float( hostIDSet.size() );            // Normalize summed mag estimates for average magnitude estimate
+  // Average magnitude
+   vector<float> mag_ave(c_cnt+1,0.0);
+    for (int j = 0; j <= c_cnt; j++) {              // Bootstrap once for each trigger
+        for (int k = 0; k <= c_cnt; k++) {            // Select one point for each trigger
+            const int kk = rand() % (c_cnt);                 // Use random trigger
+            const int n = _vt[ciOff].c_ind[kk];                           // Index of correlated trigger
+            float mul_amp = 1.0;                               // Multiplication factor depends on P & S waves currently set to 1
+            if ( _vt[n].pors == 0 ) {                           // Use appropriate multilication factor (currently not used but will eventually)
+                mul_amp = 1.0;                                    //
+            } else {                                           //
+                mul_amp = 1.0;                                    //
+            };                                                 //
+            // Sum magnitude estimate from each trigger for average estimate
+            mag_ave[j] += a * distMap[n]  + b * log(_vt[n].magnitude) +   c; 
+        }
+        mag_ave[j]/= ( (float) _vt[ciOff].c_cnt + 1.0);            // Normalize summed mag estimates for average magnitude estimate
+    }
+    e.e_std     = stdDev (mag_ave, c_cnt+1)*3.;// 3 sigma is the 99 % confidence (assuming a statistically large enough data set)
+    e.dirty = true; // flag that we should update this event
+}
+
+
+
+#ifdef ONLINE
 // insert or update this event in the qcn_quake table
 // we will also want to get the triggers and update their data in qcn_trigger as well,
 // including sending a file upload request if one wasn't posted already
@@ -812,7 +1578,10 @@ QCN::updateQuake(const bool bInsert, QCNEvent& e, const int ciOff)
     } // end for loop over vt[n]
 
 }
+#endif
 
+
+#ifdef ONLINE
 /* // use this to get the latest result name sent out for given hostid
    const char strFileReq[] = "insert into msg_to_host " 
                "(create_time,hostid,variety,handled,xml) " 
@@ -844,7 +1613,7 @@ QCN::sendTriggerFileRequest(const char* strFile, const char* strResult, const in
     }
     return true;
 }
-
+#endif
 
 
 
@@ -867,6 +1636,10 @@ QCN::intensityMap(const bool bInsertEvent, QCNEvent& e, const int ciOff)
 
     time_t t_now;
     time(&t_now);
+#ifdef OFFLINE
+    t_now = time_t(_curRefTime) + (t_now - _tBeg);
+#endif
+
     double t_dif = difftime(t_now,t_eq);
 
     // Create an event directory name
@@ -929,8 +1702,10 @@ QCN::intensityMap(const bool bInsertEvent, QCNEvent& e, const int ciOff)
     fp[OUT_EVENT] = fopen(strPath[OUT_EVENT],"w");      // Open event output file
     if (!fp[OUT_EVENT]) {
         retval = 1;
+#ifdef ONLINE
         log_messages.printf(MSG_CRITICAL,
                             "Error in intensity_map OUT_EVENT file creation %s\n", strPath[OUT_EVENT]);
+#endif
         goto close_output_files;
     }
 
@@ -945,9 +1720,11 @@ QCN::intensityMap(const bool bInsertEvent, QCNEvent& e, const int ciOff)
     fp[OUT_STATION] = fopen(strPath[OUT_STATION],"w");                                  // Open station output file
     if (!fp[OUT_STATION]) {
         retval = 1;
+#ifdef ONLINE
         log_messages.printf(MSG_CRITICAL,
                             "Error in intensity_map OUT_STATION file creation\n"
                            );
+#endif
         goto close_output_files;
     }
 
@@ -973,9 +1750,11 @@ QCN::intensityMap(const bool bInsertEvent, QCNEvent& e, const int ciOff)
     fp[OUT_CONT_LABEL] = fopen(strPath[OUT_CONT_LABEL],"w");  // label file for contours
     if (!fp[OUT_CONT_LABEL] || !fp[OUT_CONT_TIME]) {
         retval = 1;
+#ifdef ONLINE
         log_messages.printf(MSG_CRITICAL,
                             "Error in intensity_map OUT_CONT_TIME/LABEL file creation %lx %lx\n", (unsigned long) fp[OUT_CONT_TIME], (unsigned long) fp[OUT_CONT_LABEL]
                            );
+#endif
         goto close_output_files;
     }
 
@@ -987,7 +1766,7 @@ QCN::intensityMap(const bool bInsertEvent, QCNEvent& e, const int ciOff)
         if (dis > 0.) {                                          // Only use if distance greater than zero
             for (int k=0; k<=180; k++) {                                // for each azimuth
                 float az = (float) k * 2 * pi / 180.;                  // azimuth in radians
-                float dlon = sin(az)*dis/111.19/abs(cos(latr));        // Longitudinal distance
+                float dlon = sin(az)*dis/111.19/fabs(cos(latr));        // Longitudinal distance
                 ln_x = e.longitude + dlon;                             // New longitude
                 lt_x = e.latitude + cos(az)*dis/111.19;                // New latitude
                 fprintf(fp[OUT_CONT_TIME],"%f,%f\n",ln_x,lt_x);        // Output contour
@@ -1004,8 +1783,10 @@ QCN::intensityMap(const bool bInsertEvent, QCNEvent& e, const int ciOff)
     fp[OUT_TIME_SCATTER] = fopen(strPath[OUT_TIME_SCATTER],"w");                               // Open time scatter plot file
     if (!fp[OUT_TIME_SCATTER]) {
         retval = 1;
+#ifdef ONLINE
         log_messages.printf(MSG_CRITICAL,
                             "Error in intensity_map OUT_TIME_SCATTER file creation\n");
+#endif
         goto close_output_files;
     }
 
@@ -1016,17 +1797,15 @@ QCN::intensityMap(const bool bInsertEvent, QCNEvent& e, const int ciOff)
     fclose(fp[OUT_TIME_SCATTER]);                                             // Close scatter plot file
     fp[OUT_TIME_SCATTER] = NULL;
 
-    if (_mapGMT )
-        intensityMapGMT(epath2);                              // Run Scripts for plotting (GMT)
+    intensityMapGMT(epath2);                              // Run Scripts for plotting (GMT)
 
     // quake event info
-    if( _isUpdateQuakeOut )
-       updateQuake(bInsertEvent, e, ciOff);
-
-    //php_event_page(e,epath2);                             // Output event Page
-    if (email==1 && _EMAIL) {
+#ifdef ONLINE
+    updateQuake(bInsertEvent, e, ciOff);
+    if (email==1 ) {
         php_event_email(e,edir);                            // Email if a new event
     }
+#endif
 
 close_output_files:
     if (edir) delete [] edir;
@@ -1054,13 +1833,22 @@ QCN::intensityMapGMT(const char* epath)
 
     sprintf(gmtfile,"%s/gmt_script.csh", epath);
     FILE *fpGMT = fopen(gmtfile,"w");                      // gmt script
+#ifdef ONLINE
     log_messages.printf(MSG_DEBUG,
                         "Create/run GMT map script %s\n", gmtfile
                        );
+#endif
     if (!fpGMT) {
+#ifdef ONLINE
         log_messages.printf(MSG_CRITICAL,
                             "Error in intensity_map_gmt - could not open file %s\n", gmtfile
                            );
+#endif
+
+#ifdef OFFLINE
+        cout << "Error in intensity_map_gmt - could not open file " << gmtfile << endl;
+#endif 
+
         retval = 1;  //error
         goto ints_map_gmt_cleanup;
     }
@@ -1070,8 +1858,9 @@ QCN::intensityMapGMT(const char* epath)
     fclose(fpGMT);     // Close script
 
     //Execute GMT script
-    sprintf(syscmd,"%s %s", CSHELL_CMD.c_str(), gmtfile);
+    sprintf(syscmd,"%s %s & \n", CSHELL_CMD.c_str(), gmtfile);
     retval = system(syscmd);
+   
 
 ints_map_gmt_cleanup:
     if (gmtfile) delete [] gmtfile;
@@ -1081,7 +1870,7 @@ ints_map_gmt_cleanup:
 }
 
 
-
+#ifdef ONLINE
 // This subroutine creates a web page for the event.
 //void
 //QCN::php_event_page(const QCNEvent& e, const char* epath)
@@ -1130,7 +1919,7 @@ QCN::php_event_email(const QCNEvent& e, const char* epath)
 
     char *sys_cmd = new char[MAX_PATH];
     memset(sys_cmd, 0x00, sizeof(char) * MAX_PATH);
-    sprintf(sys_cmd,"%s %s", PHP_CMD.c_str(), EMAIL_PATH.c_str());
+    sprintf(sys_cmd,"%s %s & \n", PHP_CMD.c_str(), EMAIL_PATH.c_str());
     int retval = system(sys_cmd);
     if (retval) {
         log_messages.printf(MSG_CRITICAL,
@@ -1140,7 +1929,9 @@ QCN::php_event_email(const QCNEvent& e, const char* epath)
 
     delete [] sys_cmd;
 }
+#endif
 
+#ifdef ONLINE
 void
 QCN::do_delete_trigmem()
 {
@@ -1174,5 +1965,6 @@ QCN::do_delete_trigmem()
     }
   
 }
+#endif
 
 

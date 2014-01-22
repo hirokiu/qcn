@@ -1,9 +1,13 @@
 #include <iostream>
+#include <cstdio>
+#include <cstring>
 #include <cassert>
 
 #include "Crust2.h"
-#include "sched_msgs.h"
 
+#ifdef ONLINE
+#include "sched_msgs.h"
+#endif
 
 
 using namespace std;
@@ -38,12 +42,18 @@ Crust2::load()
     fpCrust[CRUST_ELEV] = fopen(_CEF.c_str(),  "r");    // Open elevation file w/ data at each lat/lon
 
     if (!fpCrust[CRUST_KEY] || !fpCrust[CRUST_MAP] || !fpCrust[CRUST_ELEV]) {
+#ifdef ONLINE
         log_messages.printf(MSG_CRITICAL,
-                            "File Open Error %lx %lx %lx\n",
+                            "File Open  Error in Crust2 %lx %lx %lx\n",
                             (unsigned long) fpCrust[CRUST_KEY],
                             (unsigned long) fpCrust[CRUST_MAP],
                             (unsigned long) fpCrust[CRUST_ELEV]
                            );
+#endif 
+
+#ifdef OFFLINE
+        cout <<  "File Open Error in Crust2 : " <<  _CKF << "  or/and " << _CMF << " or/and " << _CEF << endl; 
+#endif
         retval = 1;
         for (int i = 0; i < 3; i++) {
            if (fpCrust[i]) fclose(fpCrust[i]);
@@ -52,7 +62,6 @@ Crust2::load()
         return retval; 
     }
 
-    
     char  aline[1000];                      // A full line of characters
 
     // Temporary variales because I was worried about reading in directly to the variable
@@ -104,36 +113,58 @@ Crust2::load()
     }
 
     // Read in map and associate letters with key index:
-    for (int i=0; i<=mx_cr_lt-1; i++) {                          // For each latitude
+    for (int i=0; i<mx_cr_lt; i++) {                          // For each latitude
         int   ilat;                             // Index of latitude
-        fscanf(fpCrust[CRUST_MAP],"%d",&ilat);                              // Read latitude at beginning of each line
-        fscanf(fpCrust[CRUST_ELEV],"%d",&ilat);                              // Read latitude at beginning of each line
+        int retInt = fscanf(fpCrust[CRUST_MAP],"%d",&ilat);                              // Read latitude at beginning of each line
+        assert( retInt > 0);
+        retInt =fscanf(fpCrust[CRUST_ELEV],"%d",&ilat);                              // Read latitude at beginning of each line
+        assert( retInt > 0 );
 
-        for(int j=0; j<=mx_cr_ln-1; j++) {                        // For each longitude
-            fscanf(fpCrust[CRUST_MAP],"%s",mod_string[i][j]);                // Read in key letters for that lat/lon location
-            fscanf(fpCrust[CRUST_ELEV],"%f",&_crm.elev[i][j]);                 // Read elevations for each longitude at this latitude
+        for(int j=0; j<mx_cr_ln; j++) {                        // For each longitude
+            retInt = fscanf(fpCrust[CRUST_MAP],"%s",mod_string[i][j]);                // Read in key letters for that lat/lon location
+            assert( retInt > 0 );
+            retInt = fscanf(fpCrust[CRUST_ELEV],"%f",&_crm.elev[i][j]);                 // Read elevations for each longitude at this latitude
+            assert( retInt > 0 );
 
-            for(int k=0;k<=mx_cr_type-1; k++) {                   // Index the map key by searching through crk.tp
-
-                if (memcmp(key_string[k],mod_string[i][j],2)==0) {    // If key found, store the key and stop searching
-                    break;                                             // Stop looking for additional matches since match found
+            for(int k=0 ;k<mx_cr_type; k++) {                   // Index the map key by searching through crk.tp
+                //May 6, 2013, replace memcmp to strcmp, and add crm.ikey[ilat][ilon] assignment
+                if (strcmp(key_string[k],mod_string[i][j])==0) {    // If key found, store the key and stop searching
+                    _crm.ikey[i][j] = k;
+                     break;                // Stop looking for additional matches since match found
                 }
             }
         }
     }
 
     // Set the longitude and latitude for each node:
+    //May 6, 2013, wrong lat and lon values are fixed
     for (int i=0; i<mx_cr_lt; i++)
-        _crm.lat[i]=90.f-( ((float)i)+0.5)*dx_cr ;    //for each latitude
+        _crm.lat[i]=90.f- float(i) * dx_cr;    //for each latitude
 
     for (int i=0; i<mx_cr_ln; i++)
-        _crm.lon[i]=     ( ((float)i)+0.5)*dx_cr ;    //for each longitude
+        _crm.lon[i]=  -180.0f + float(i) * dx_cr;    //for each longitude
 
-                                                                                        // Done with function
 
+    for (int i = 0; i < 3; i++) {
+      fclose(fpCrust[i]);
+    }
+ 
+
+    // Done with function
     return retval;
 
+}
 
+
+void
+Crust2::getVel(int depth_layer, float qlon, float qlat, vector<float>& v){
+     v[0] = 0.0;
+     v[1] = 0.0;
+     int itype = type(qlon, qlat);
+     
+    //cout << "dpth layer = " << depth_layer << endl;
+     v[0] = _crk[itype].vp[depth_layer];
+     v[1] = _crk[itype].vs[depth_layer]; 
 
 }
 
@@ -142,9 +173,11 @@ Crust2::load()
         The velocity is for P:v[0] and S:v[1] waves.  Note: for a zero depth qdep, use the first 
         non-zero thickness layer.
 */
+
 void
 Crust2::getMeanVel(const float qdep, const float qlon, const float qlat, vector<float>& v) const
 {
+
     v[0]=0.0;
     v[1]=0.0;                               // set P(0) and S(1) velocity to 0
 
@@ -204,15 +237,15 @@ int
 Crust2::type(const float lon, const float lat) const
 {
     // This function returns the index of the model key for the map
-    float lon2=lon;
-    if (lon2<0.f)
-        lon2+=360.f;        // make sure 0<lon<360 rather than -180<lon<180
-
+    float lon2=lon + 180.;
     int ilat = int( (90.f-lat)/dx_cr );               // index of longitude
     int ilon = int( (    lon2)/dx_cr );               // index of latitude
+
+#ifdef ONLINE   
     log_messages.printf(MSG_DEBUG,
                         "ilon=%d    ilat=%d     type=%d\n", ilon, ilat, _crm.ikey[ilat][ilon]
                        );
+#endif 
 
     return _crm.ikey[ilat][ilon];                                                                    // index key for this lon/lat location
 }

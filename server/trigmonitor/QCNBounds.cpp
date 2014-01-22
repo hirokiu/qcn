@@ -28,6 +28,8 @@ QCNBounds::QCNBounds(float lon, float lat, float depth, float width,  float dx, 
     init();
 }
 
+
+
 //Destructor
 QCNBounds::~QCNBounds()
 {
@@ -38,7 +40,7 @@ QCNBounds::~QCNBounds()
 
 
 void
-QCNBounds::print()
+QCNBounds::print() const
 {
       cout << " xw   = " <<   xw  << ", yw   = " << yw    << ", zw   = " << zw    << endl;
       cout << " xmin = " << x_min << ", ymin = " << y_min << ", zmin = " << z_min << endl;

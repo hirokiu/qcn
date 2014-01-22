@@ -3,14 +3,7 @@
 #ifndef QCNEvent_H
 #define QCNEvent_H
 
-//#include <vector>
 #include <string>
-//#include <map>
-//#include <blitz/array.h>
-//#include <iostream>
-
-
-//using namespace std;
 
 class QCNEvent
 {
@@ -38,7 +31,7 @@ public :
     double e_t_detect;            // Time detected
     float  e_dt_detect;           // Time from event origin time to detection
     bool   dirty;    // if this is true, we changed and should update the qcn_trigger table ie for quakeid etc
-
+    bool   updateFocus;  //this this is false, we stop searching the center of an earthquake
 
 
 

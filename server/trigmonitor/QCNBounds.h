@@ -13,7 +13,7 @@ public :
     QCNBounds(float lon, float lat, float depth, float width,  float dx, float zrange, float dz);
     ~QCNBounds();
 
-    void print();
+    void print() const;
 
     float xw;                      // Longitudinal grid width
     float yw;                      // Latitudinal grid width

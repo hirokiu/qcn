@@ -5,14 +5,13 @@
 
 #include <vector>
 #include <string>
-//#include <map>
-//#include <blitz/array.h>
-//#include <iostream>
-
 
 using namespace std;
 
+#ifdef ONLINE
 class DB_QCN_TRIGGER_MEMORY;
+#endif
+
 
 class QCNTrigger
 {
@@ -24,7 +23,11 @@ public :
     //destructor
     ~QCNTrigger();
 
+#ifdef ONLINE
     void copyFromUSBTrigger( const DB_QCN_TRIGGER_MEMORY& qtm);
+#endif
+
+
     void print();
     void setMagnitude();
 
@@ -45,10 +48,13 @@ public :
     float  longitude, latitude;            // Sensor location
     double time_trigger, time_received, time_est;       // Time of trigger & Time received
     float  significance, magnitude;              // Significance and magnitude (sig/noise)
-    float  pgah[4],pgaz[4];       // Peak Ground Acceleration (Horizontal & vertical)
+    float  pgah[4],pgaz[4], pga[4];       // Peak Ground Acceleration (Horizontal & vertical)
     int    c_cnt;                 // Count of correlated triggers
     vector<int>    c_ind;        // Correlated trigger IDs  (really the index into the trigger vector)
-    vector<int>    c_hid;        // Correlated host IDs
+    vector<int>    c_hid;        // Correlated host IDs    
+ //   int    c_cnt2;                 // Count of correlated triggers
+ //   vector<int>    c_ind2;        // Correlated trigger IDs  (really the index into the trigger vector)
+ //   vector<int>    c_hid2;        // Correlated host IDs
     float  dis;                   // Event to station distance (km)
     int    pors;                   // 1=P, 2=S wave
     bool   dirty;    // if this is true, we changed and should update the qcn_trigger table ie for quakeid etc

@@ -21,6 +21,25 @@ public :
 
     int load();
     void getMeanVel(const float qdep, const float qlon, const float qlat, vector<float>& v) const;
+    void getVel(int depth_layer, float qlon, float qlat, vector<float>& v);
+
+
+    //set paths for CKF, CMF, CEF
+    void setCKF_PATH(const string& str){
+       _CKF = str;
+    };
+
+    void setCMF_PATH(const string& str){
+       _CMF = str;
+    };
+
+    void setCEF_PATH(const string& str){
+       _CEF = str;
+    }
+
+
+
+
     
     //vector<float> getMeanVel(const float qdep, const float qlon, const float qlat);
 
@@ -59,12 +78,6 @@ private :
 
     struct cr_mod   _crm;                        //The Curst2.0 model map
     struct cr_key   _crk[mx_cr_type];            //The Crust2.0 model key
-
-
-
-
-
-
 
 };
 

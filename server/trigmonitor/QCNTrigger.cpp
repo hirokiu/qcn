@@ -3,7 +3,10 @@
 #include <iomanip>
 
 #include "QCNTrigger.h"
+
+#ifdef ONLINE
 #include "/home/boinc/projects/qcn/server/trigger/qcn_types.h"
+#endif
 
 using namespace std;
 
@@ -36,6 +39,7 @@ QCNTrigger::QCNTrigger() :
 QCNTrigger::~QCNTrigger()
 {}
 
+#ifdef ONLINE
 /////////////////////////////////PUBLIC METHODS::///////////////////////////////////////////
 void
 QCNTrigger::copyFromUSBTrigger( const DB_QCN_TRIGGER_MEMORY& qtm)
@@ -74,7 +78,7 @@ QCNTrigger::copyFromUSBTrigger( const DB_QCN_TRIGGER_MEMORY& qtm)
 
 
 }
-
+#endif
 
 void
 QCNTrigger::setMagnitude()

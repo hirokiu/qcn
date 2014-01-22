@@ -9,7 +9,7 @@
 #  qmake -spec linux-icc
 #QMAKE_CFLAGS   +=  -funroll-loops
 #QMAKE_CFLAGS   -=  -funroll-loops
-QMAKE_CXXFLAGS +=   -o3  -funroll-loops -frounding-math -fPIC
+QMAKE_CXXFLAGS +=   -o3  -funroll-loops -frounding-math -fPIC -DONLINE
 #QMAKE_CFLAGS   -=  g
 
 
@@ -31,6 +31,7 @@ HEADERS += Crust2.h \
            QCNBounds.h \
            QCNEvent.h \
            QCNTrigger.h \
+           QCNSqlQuery.h \
            QCN.h 
 
 
@@ -48,6 +49,7 @@ SOURCES += Crust2.cpp \
            QCNBounds.cpp \
            QCNEvent.cpp \
            QCNTrigger.cpp \
+           QCNSqlQuery.cpp \
            QCN.cpp \
            QCNMain.cpp 
 TEMPLATE = app
