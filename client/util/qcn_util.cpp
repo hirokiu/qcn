@@ -1262,4 +1262,25 @@ bool boinc_filelist(const std::string directory,
 }
 #endif //ZIPARCHIVE
 
+#ifdef ANDROID
+
+// simple function to return if android device is ac powered/charging - ie not in pocket
+bool android_ac_power()
+{
+   const char strAC[] = {"/sys/class/power_supply/ac/online"};
+   bool bRet = false;
+   if (boinc_file_exists(strAC)) {
+      char* strIn = {"0"};
+      FILE* fd = fopen(strAC, "r");
+      // read a byte, if it's 1 then charging, if 0 then not
+      if (fd && fread(strIn, 1, 1, fd) == 1) {
+         if (atoi(strIn) == 1) bRet = true; // if the file exists and contains 1 then we're charging/on AC power
+      }
+      fclose(fd);
+   }
+   return bRet;
+}
+
+#endif
+
 } // namespace util

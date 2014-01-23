@@ -106,6 +106,11 @@ void sendIntermediateUpload(std::string strLogicalName, std::string strFullPath)
                   ZipFileList* pList,
                   const unsigned char ucSort = 0x00, const bool bClear = true);
 #endif
+
+#ifdef ANDROID
+ bool android_ac_power(); // returns if android device is on AC power ie charging - so presumably not shaking around in a pocket!
+#endif
+
 }
 
 #endif //_QCN_UTIL_H_
