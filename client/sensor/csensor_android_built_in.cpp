@@ -112,7 +112,10 @@ inline bool CSensorAndroidBuiltIn::read_xyz(float& x1, float& y1, float& z1)
 #ifndef QCN_USB
     if (qcn_main::g_iStop) return false;
 #endif
-    if (! m_pSensor || ! m_pLooper | ! l_pSensorEventQueue) return false;  // no open file descriptor
+    if (! m_pSensor || ! m_pLooper | ! l_pSensorEventQueue) {
+      fprintf(stderr, "read_xyz error: no sensor %x or looper %x or event queue %x setup!\n", m_pSensor, m_pLooper, l_pSensorEventQueue);
+      return false;  // no open file descriptor
+    }
 
     // read the joystick state - range on each axis seems to be 0-1023 (-2 to 2g)
     x1 = y1 = z1 = 0.0f;
@@ -133,6 +136,7 @@ inline bool CSensorAndroidBuiltIn::read_xyz(float& x1, float& y1, float& z1)
 
       int ident, events;
       float fCtr = 0.0;
+/*
       while((ident = ALooper_pollAll(-1, NULL, &events, NULL)) >= 0) {
          if (ident == LOOPER_ID_QCN) {
             ASensorEvent event;
@@ -144,6 +148,7 @@ inline bool CSensorAndroidBuiltIn::read_xyz(float& x1, float& y1, float& z1)
             }
          }
       }
+*/
       if (fCtr > 0.0) {
           x1 = x1 / fCtr;
           y1 = y1 / fCtr;
