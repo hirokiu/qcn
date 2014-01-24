@@ -20,18 +20,6 @@ cd /var/www
   --exclude "boinc/continual/tmp_qcn-web" \
   --exclude "boinc/continual/html/cache/*" \
   --exclude "boinc/continual/html/cache" \
-  --exclude "qcn/earthquakes/aichung/*" \
-  --exclude "qcn/earthquakes/aichung" \
-  --exclude "qcn/earthquakes/view/12*/*" \
-  --exclude "qcn/earthquakes/view/12*" \
-  --exclude "qcn/earthquakes/view/13*/*" \
-  --exclude "qcn/earthquakes/view/13*" \
-  --exclude "qcn/earthquakes/13*/*" \
-  --exclude "qcn/earthquakes/13*" \
-  --exclude "qcn/earthquakes/SAFE*/*" \
-  --exclude "qcn/earthquakes/SAFE*" \
-  --exclude "qcn/earthquakes/12*/*" \
-  --exclude "qcn/earthquakes/12*" \
  boinc/ qcn/ qcnwp/ taskfreak-0.6.4/ \
  1>/root/backupweb.log 2>/root/backupweb.err
 # note for the following line need to have .ssh id between root & carlgt1 setup
