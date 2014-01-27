@@ -44,13 +44,10 @@ struct android_poll_source {
 
 #define LOOPER_ID_QCN 2112 
 
-//int QCN_ALooper_callback(int fd, int events, void* data);
-
 // this is the Linux implementation for the JoyWarrior sensor, used for QCNLive as well as the Mac service program qcnmacusb under BOINC
 class CSensorAndroidBuiltIn  : public CSensor
 {
    private:
-      ASensorVector m_SensorVector;  // Android sensor vector for x/y/z readings etc
       ASensorManager* m_pSensorManager;  
       ASensor* m_pSensor;
       //ASensorEventQueue* m_pSensorEventQueue;

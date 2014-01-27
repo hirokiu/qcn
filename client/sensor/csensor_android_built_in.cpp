@@ -9,33 +9,46 @@
  *    note this just does a simple read of the joystick, so no setting of sample rate etc on-board the JW24F8 (which is fine)
  */
 
+#ifdef ANDROID
+
 #include "main.h"
 #include "csensor_android_built_in.h"
 
-#ifdef ANDROID
+static ASensorEventQueue* l_pSensorEventQueue = NULL;
+static ASensorVector l_SensorVector;
 
-ASensorEventQueue* l_pSensorEventQueue = NULL;
-
-/*
-int QCN_ALooper_callback(int fd, int events, void* data)
+static int QCN_ALooper_callback(int fd, int events, void* data)
 {
-  return 0;
+  if (!l_pSensorEventQueue) return 1;
+/*
+  int hasEvents = ASensorEventQueue_hasEvents(l_pSensorEventQueue);
+  fprintf(stdout, "callback has events = %d\n", hasEvents);
+*/
   ASensorEvent event;
-  while (ASensorEventQueue_getEvents(l_pSensorEventQueue, &event, 1) > 0) {
-     if(event.type==ASENSOR_TYPE_ACCELEROMETER) {
-            fprintf(stdout, "callback: accl(x,y,z,t): %f %f %f %lld\n",
-                 event.acceleration.x, event.acceleration.y,
-                 event.acceleration.z, event.timestamp);
+  event.acceleration.x = event.acceleration.y = event.acceleration.z = 0.0f;
+  while (l_pSensorEventQueue && ASensorEventQueue_getEvents(l_pSensorEventQueue, &event, 1) > 0) {
+     if(event.type == ASENSOR_TYPE_ACCELEROMETER) {
+        l_SensorVector.x = event.acceleration.x;
+        l_SensorVector.y = event.acceleration.y;
+        l_SensorVector.z = event.acceleration.z;
+        fprintf(stdout, "callback: accl(x,y,z,t): %f %f %f %lld\n",
+           l_SensorVector.x, 
+           l_SensorVector.y, 
+           l_SensorVector.z, 
+           event.timestamp);
      }
-   }
+  }
   return 1;  // return 1 to continue receiving callbacks
 }
-*/
 
 CSensorAndroidBuiltIn::CSensorAndroidBuiltIn()
   : CSensor(), m_pSensorManager(NULL), m_pSensor(NULL), m_pLooper(NULL), 
        m_fResolution(0.0f), m_minDelayMsec(0)
 { 
+  l_SensorVector.x = 0.0;
+  l_SensorVector.y = 0.0;
+  l_SensorVector.z = 0.0;
+
   memset(m_strSensor, 0x00, _MAX_PATH);
   memset(m_strVendor, 0x00, _MAX_PATH);
 }
@@ -53,6 +66,10 @@ void CSensorAndroidBuiltIn::closePort()
   if (m_pSensorManager && l_pSensorEventQueue) {
      ASensorManager_destroyEventQueue(m_pSensorManager, l_pSensorEventQueue);
   }
+
+  l_SensorVector.x = 0.0;
+  l_SensorVector.y = 0.0;
+  l_SensorVector.z = 0.0;
 
   strcpy(m_strVendor, "");
   strcpy(m_strSensor, "");
@@ -136,8 +153,7 @@ inline bool CSensorAndroidBuiltIn::read_xyz(float& x1, float& y1, float& z1)
 
       int ident, events;
       float fCtr = 0.0;
-/*
-      while((ident = ALooper_pollAll(-1, NULL, &events, NULL)) >= 0) {
+      while((ident = ALooper_pollAll(m_minDelayMsec, NULL, &events, NULL)) >= 0) {
          if (ident == LOOPER_ID_QCN) {
             ASensorEvent event;
             while (ASensorEventQueue_getEvents(l_pSensorEventQueue, &event, 1) > 0) {
@@ -148,14 +164,14 @@ inline bool CSensorAndroidBuiltIn::read_xyz(float& x1, float& y1, float& z1)
             }
          }
       }
-*/
+
       if (fCtr > 0.0) {
           x1 = x1 / fCtr;
           y1 = y1 / fCtr;
           z1 = z1 / fCtr;
       }
+//      fprintf(stdout, "read_xyz:  %f %f %f\n", x1, y1, z1);
 
-    fprintf(stdout, "read_xyz:  %f %f %f\n", x1, y1, z1);
     return true;
 }
 
@@ -186,44 +202,53 @@ bool CSensorAndroidBuiltIn::detect()
    }
 */
 
+   // create looper
+   m_pLooper = ALooper_forThread(); // get existing looper
+   if (!m_pLooper) {  // make new looper
+     m_pLooper = ALooper_prepare(0);
+     //m_pLooper = ALooper_prepare(ALOOPER_PREPARE_ALLOW_NON_CALLBACKS);
+   }
+   if (!m_pLooper) { // no existing or new looper -- error
+     fprintf(stderr, "can't create Looper\n");
+     return false; // can't create looper
+   }
+
+   // setup event queue
+   l_pSensorEventQueue = ASensorManager_createEventQueue(m_pSensorManager, m_pLooper, 
+        LOOPER_ID_QCN, QCN_ALooper_callback, &l_SensorVector);
+   //l_pSensorEventQueue = ASensorManager_createEventQueue(m_pSensorManager, m_pLooper, 
+   //       LOOPER_ID_QCN, NULL, NULL);
+   if (!l_pSensorEventQueue) {
+     fprintf(stderr, "can't create SensorEventQueue\n");
+     return false;  // can't setup queue
+   }
+
    // get the default accelerometer
    m_pSensor = (ASensor*) ASensorManager_getDefaultSensor(m_pSensorManager, ASENSOR_TYPE_ACCELEROMETER);
-
    if (!m_pSensor) {
       //fprintf(stdout, "No Android accelerometer detected.\n");
       return false; // no sensor
    }
 
-
+   int iRetVal = 0;
+   if ((iRetVal = ASensorEventQueue_enableSensor(l_pSensorEventQueue, m_pSensor)) < 0) {
+     fprintf(stderr, "Error in enableSensor %d\n", iRetVal);
+     return false;
+   };
    m_fResolution = ASensor_getResolution(m_pSensor);
    m_minDelayMsec = ASensor_getMinDelay(m_pSensor);
+   int rateMsec = (int)((sm->dt > 0. ? sm->dt : g_DT) * 1000.);
+   if (rateMsec > m_minDelayMsec) m_minDelayMsec = rateMsec;
 
+   fprintf(stdout, "Setting data rate to %d Hz\n", 1000L/rateMsec);
    strlcpy(m_strSensor, ASensor_getName(m_pSensor), _MAX_PATH);
    strlcpy(m_strVendor, ASensor_getVendor(m_pSensor), _MAX_PATH);
 
-   // create looper
-   m_pLooper = ALooper_forThread(); // get existing looper
-   if (!m_pLooper) {  // make new looper
-     //m_pLooper = ALooper_prepare(0); //ALOOPER_PREPARE_ALLOW_NON_CALLBACKS);
-     m_pLooper = ALooper_prepare(ALOOPER_PREPARE_ALLOW_NON_CALLBACKS);
+   // NB: the rate is in microseconds!
+   if ((iRetVal = ASensorEventQueue_setEventRate(l_pSensorEventQueue, m_pSensor, m_minDelayMsec * 1000L)) < 0) { 
+     fprintf(stderr, "Error in setEventRate %d\n", iRetVal);
+     // return false; // not really a fatal error
    }
-   if (!m_pLooper) { // no existing or new looper -- error
-     fprintf(stderr, "Android Default Sensor Detected - but can't create Looper: \n\n   %s - %s\n     Res = %f --- Min Delay msec = %d\n",
-           m_strVendor, m_strSensor, m_fResolution, m_minDelayMsec);
-      return false; // can't create looper
-   }
-
-   // setup event queue
-   //l_pSensorEventQueue = ASensorManager_createEventQueue(m_pSensorManager, m_pLooper, LOOPER_ID_QCN, QCN_ALooper_callback, &m_SensorVector);
-   l_pSensorEventQueue = ASensorManager_createEventQueue(m_pSensorManager, m_pLooper, LOOPER_ID_QCN, NULL, NULL);
-   if (!l_pSensorEventQueue) {
-     fprintf(stderr, "Android Default Sensor Detected - but can't create SensorEventQueue: \n\n   %s - %s\n     Res = %f --- Min Delay msec = %d\n",
-           m_strVendor, m_strSensor, m_fResolution, m_minDelayMsec);
-      return false;  // can't setup queue
-   }
-
-   ASensorEventQueue_enableSensor(l_pSensorEventQueue, m_pSensor);
-   ASensorEventQueue_setEventRate(l_pSensorEventQueue, m_pSensor, (int)((sm->dt > 0. ? sm->dt : g_DT) * 1000.));
 
    fprintf(stdout, "Android Default Sensor Detected: \n\n   %s - %s\n"
                    "  Res = %f --- Min Delay msec = %d\n"
@@ -241,4 +266,3 @@ bool CSensorAndroidBuiltIn::detect()
 }
 
 #endif // ANDROID
-
