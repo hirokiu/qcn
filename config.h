@@ -431,13 +431,13 @@
 /* #undef HAVE_XSS */
 
 /* Define to 1 if /proc/meminfo exists */
-/* #undef HAVE__PROC_MEMINFO */
+#define HAVE__PROC_MEMINFO 1
 
 /* Define to 1 if /proc/self/psinfo exists */
 /* #undef HAVE__PROC_SELF_PSINFO */
 
 /* Define to 1 if /proc/self/stat exists */
-/* #undef HAVE__PROC_SELF_STAT */
+#define HAVE__PROC_SELF_STAT 1
 
 /* Platform identification used to identify applications for this BOINC core
    client */
@@ -499,6 +499,9 @@
    */
 #define LT_OBJDIR ".libs/"
 
+/* Define to 1 if your C compiler doesn't accept -c and -o together. */
+/* #undef NO_MINUS_C_MINUS_O */
+
 /* Name of package */
 #define PACKAGE "qcn"
 
@@ -509,7 +512,7 @@
 #define PACKAGE_NAME "QCN"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "QCN 7.36"
+#define PACKAGE_STRING "QCN 7.38"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "qcn"
@@ -518,7 +521,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "7.36"
+#define PACKAGE_VERSION "7.38"
 
 /* Define to necessary symbol if this constant uses a non-standard name on
    your system. */
@@ -546,16 +549,16 @@
 /* #undef USE_WX_DEBUG */
 
 /* utmp file location */
-/* #undef UTMP_LOCATION */
+#define UTMP_LOCATION "/var/run/utmp"
 
 /* Version number of package */
-#define VERSION "7.36"
+#define VERSION "7.38"
 
 /* Define to prevent redefinition of INT32 in jconfig.h */
 /* #undef XMD_H */
 
 /* Define to 1 if the X Window System is missing or not being used. */
-/* #undef X_DISPLAY_MISSING */
+#define X_DISPLAY_MISSING 1
 
 /* Enable large inode numbers on Mac OS X 10.5.  */
 #ifndef _DARWIN_USE_64_BIT_INODE

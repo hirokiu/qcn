@@ -6,7 +6,7 @@ dnl not sure exactly what the minimum version is (but 2.13 wont work)
 AC_PREREQ(2.58)
 
 dnl Set the BOINC version here.  You can also use the set-version script.
-AC_INIT(QCN, 7.36)
+AC_INIT(QCN, 7.38)
 AC_CONFIG_MACRO_DIR([m4])
 LIBBOINC_VERSION=`echo ${PACKAGE_VERSION} | sed 's/\./:/g'`
 AC_SUBST([LIBBOINC_VERSION])
@@ -238,7 +238,7 @@ else
     build_state='Release'
 fi
 
-echo "--- Configuring BOINC AC_PACKAGE_VERSION (${build_state}) ---"
+echo "--- Configuring QCN AC_PACKAGE_VERSION (${build_state}) ---"
 echo "--- Build Components: (${configured_to_build}) ---"
 
 
@@ -265,14 +265,14 @@ or write to the Free Software Foundation, Inc.,
 
 AC_DEFUN([KC_STRIP_LEADING_ZEROS],[m4_bregexp([$*],[^0*\(..*\)],\1)])
 
-AC_DEFUN([BOINC_SET_VERSION],[dnl
-AC_SUBST([BOINC_MAJOR_VERSION],KC_STRIP_LEADING_ZEROS([$1]))
-AC_SUBST([BOINC_MINOR_VERSION],KC_STRIP_LEADING_ZEROS([$2]))
-AC_SUBST([BOINC_RELEASE],KC_STRIP_LEADING_ZEROS([$3]))
-AC_SUBST([BOINC_VERSION_STRING],AC_PACKAGE_VERSION)
+AC_DEFUN([QCN_SET_VERSION],[dnl
+AC_SUBST([QCN_MAJOR_VERSION],KC_STRIP_LEADING_ZEROS([$1]))
+AC_SUBST([QCN_MINOR_VERSION],KC_STRIP_LEADING_ZEROS([$2]))
+AC_SUBST([QCN_RELEASE],KC_STRIP_LEADING_ZEROS([$3]))
+AC_SUBST([QCN_VERSION_STRING],AC_PACKAGE_VERSION)
 ])
 
-BOINC_SET_VERSION(translit(AC_PACKAGE_VERSION, [.], [,]))
+QCN_SET_VERSION(translit(AC_PACKAGE_VERSION, [.], [,]))
 
 dnl Version information moved to version.h so removed from config.h
 dnl AC_DEFINE_UNQUOTED([BOINC_VERSION_STRING], "$BOINC_VERSION_STRING", [String representation of BOINC version number])
@@ -955,5 +955,5 @@ AC_CONFIG_HEADERS([config.h])
 
 AC_OUTPUT
 
-echo "--- Configuring BOINC AC_PACKAGE_VERSION (${build_state}) ---"
+echo "--- Configuring QCN AC_PACKAGE_VERSION (${build_state}) ---"
 echo "--- Build Components: (${configured_to_build}) ---"
