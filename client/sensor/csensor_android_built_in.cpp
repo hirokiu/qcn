@@ -17,13 +17,14 @@
 static ASensorEventQueue* l_pSensorEventQueue = NULL;
 static ASensorVector l_SensorVector;
 
+/*
 static int QCN_ALooper_callback(int fd, int events, void* data)
 {
   if (!l_pSensorEventQueue) return 1;
-/*
-  int hasEvents = ASensorEventQueue_hasEvents(l_pSensorEventQueue);
-  fprintf(stdout, "callback has events = %d\n", hasEvents);
-*/
+
+//  int hasEvents = ASensorEventQueue_hasEvents(l_pSensorEventQueue);
+//  fprintf(stdout, "callback has events = %d\n", hasEvents);
+
   ASensorEvent event;
   event.acceleration.x = event.acceleration.y = event.acceleration.z = 0.0f;
   while (l_pSensorEventQueue && ASensorEventQueue_getEvents(l_pSensorEventQueue, &event, 1) > 0) {
@@ -31,15 +32,18 @@ static int QCN_ALooper_callback(int fd, int events, void* data)
         l_SensorVector.x = event.acceleration.x;
         l_SensorVector.y = event.acceleration.y;
         l_SensorVector.z = event.acceleration.z;
-        fprintf(stdout, "callback: accl(x,y,z,t): %f %f %f %lld\n",
-           l_SensorVector.x, 
-           l_SensorVector.y, 
-           l_SensorVector.z, 
-           event.timestamp);
+
+//        fprintf(stdout, "callback: accl(x,y,z,t): %f %f %f %lld\n",
+//           l_SensorVector.x, 
+//           l_SensorVector.y, 
+//           l_SensorVector.z, 
+//           event.timestamp);
+
      }
   }
   return 1;  // return 1 to continue receiving callbacks
 }
+*/
 
 CSensorAndroidBuiltIn::CSensorAndroidBuiltIn()
   : CSensor(), m_pSensorManager(NULL), m_pSensor(NULL), m_pLooper(NULL), 
@@ -126,34 +130,19 @@ int ASensor_getMinDelay(ASensor const* sensor);
 
 inline bool CSensorAndroidBuiltIn::read_xyz(float& x1, float& y1, float& z1)
 {  
-#ifndef QCN_USB
     if (qcn_main::g_iStop) return false;
-#endif
+
     if (! m_pSensor || ! m_pLooper | ! l_pSensorEventQueue) {
       fprintf(stderr, "read_xyz error: no sensor %x or looper %x or event queue %x setup!\n", m_pSensor, m_pLooper, l_pSensorEventQueue);
       return false;  // no open file descriptor
     }
 
-    // read the joystick state - range on each axis seems to be 0-1023 (-2 to 2g)
     x1 = y1 = z1 = 0.0f;
 
-    // note that x/y/z should be scaled to +/- 2g, return values as +/- 2.0f*EARTH_G (in define.h: 9.78033 m/s^2)
+   int ident, events;
+   float fCtr = 0.0;
 /*
-#ifdef QCN_RAW_DATA
-    x1 = (float) m_piAxes[0];
-    y1 = (float) m_piAxes[1];
-    z1 = (float) m_piAxes[2];
-#else           
-    x1 = EARTH_G * (((float) m_piAxes[0] - 512.0f ) / 256.0f);
-    y1 = EARTH_G * (((float) m_piAxes[1] - 512.0f ) / 256.0f);
-    z1 = EARTH_G * (((float) m_piAxes[2] - 512.0f ) / 256.0f);
-#endif 
-
-*/
-
-      int ident, events;
-      float fCtr = 0.0;
-      while((ident = ALooper_pollAll(m_minDelayMsec, NULL, &events, NULL)) >= 0) {
+   while((ident = ALooper_pollAll(m_minDelayMsec/2, NULL, &events, NULL)) >= 0) {
          if (ident == LOOPER_ID_QCN) {
             ASensorEvent event;
             while (ASensorEventQueue_getEvents(l_pSensorEventQueue, &event, 1) > 0) {
@@ -163,16 +152,29 @@ inline bool CSensorAndroidBuiltIn::read_xyz(float& x1, float& y1, float& z1)
               z1 += event.acceleration.z;
             }
          }
-      }
+   }
 
-      if (fCtr > 0.0) {
+   if (fCtr > 0.0) {
           x1 = x1 / fCtr;
           y1 = y1 / fCtr;
           z1 = z1 / fCtr;
-      }
-//      fprintf(stdout, "read_xyz:  %f %f %f\n", x1, y1, z1);
+   }
+*/
 
-    return true;
+   if ((ident = ALooper_pollAll(m_minDelayMsec/2, NULL, &events, NULL)) >= 0) {
+         if (ident == LOOPER_ID_QCN) {
+            ASensorEvent event;
+            if (ASensorEventQueue_getEvents(l_pSensorEventQueue, &event, 1) > 0) {
+              x1 = event.acceleration.x;
+              y1 = event.acceleration.y;
+              z1 = event.acceleration.z;
+            }
+         }
+   }
+
+   //fprintf(stdout, "read_xyz:  %f %f %f\n", x1, y1, z1);
+
+   return true;
 }
 
 // try and open up the JoyWarrior file descriptor
@@ -205,8 +207,8 @@ bool CSensorAndroidBuiltIn::detect()
    // create looper
    m_pLooper = ALooper_forThread(); // get existing looper
    if (!m_pLooper) {  // make new looper
-     m_pLooper = ALooper_prepare(0);
-     //m_pLooper = ALooper_prepare(ALOOPER_PREPARE_ALLOW_NON_CALLBACKS);
+     //m_pLooper = ALooper_prepare(0);
+     m_pLooper = ALooper_prepare(ALOOPER_PREPARE_ALLOW_NON_CALLBACKS);
    }
    if (!m_pLooper) { // no existing or new looper -- error
      fprintf(stderr, "can't create Looper\n");
@@ -214,10 +216,10 @@ bool CSensorAndroidBuiltIn::detect()
    }
 
    // setup event queue
-   l_pSensorEventQueue = ASensorManager_createEventQueue(m_pSensorManager, m_pLooper, 
-        LOOPER_ID_QCN, QCN_ALooper_callback, &l_SensorVector);
    //l_pSensorEventQueue = ASensorManager_createEventQueue(m_pSensorManager, m_pLooper, 
-   //       LOOPER_ID_QCN, NULL, NULL);
+   //     LOOPER_ID_QCN, QCN_ALooper_callback, &l_SensorVector);
+   l_pSensorEventQueue = ASensorManager_createEventQueue(m_pSensorManager, m_pLooper, 
+        LOOPER_ID_QCN, NULL, &l_SensorVector);
    if (!l_pSensorEventQueue) {
      fprintf(stderr, "can't create SensorEventQueue\n");
      return false;  // can't setup queue
@@ -238,9 +240,11 @@ bool CSensorAndroidBuiltIn::detect()
    m_fResolution = ASensor_getResolution(m_pSensor);
    m_minDelayMsec = ASensor_getMinDelay(m_pSensor);
    int rateMsec = (int)((sm->dt > 0. ? sm->dt : g_DT) * 1000.);
-   if (rateMsec > m_minDelayMsec) m_minDelayMsec = rateMsec;
+   //fprintf(stdout, "Rates: m_minDelayMSec = %d   raceMsec = %d\n", m_minDelayMsec, rateMsec);
+   //if (rateMsec > m_minDelayMsec) m_minDelayMsec = rateMsec;
+   if (rateMsec < m_minDelayMsec) m_minDelayMsec = rateMsec;
 
-   fprintf(stdout, "Setting data rate to %d Hz\n", 1000L/rateMsec);
+   fprintf(stdout, "Setting data rate to %d Hz\n", 1000L/m_minDelayMsec);
    strlcpy(m_strSensor, ASensor_getName(m_pSensor), _MAX_PATH);
    strlcpy(m_strVendor, ASensor_getVendor(m_pSensor), _MAX_PATH);
 
@@ -257,11 +261,7 @@ bool CSensorAndroidBuiltIn::detect()
 
    setType(SENSOR_ANDROID);
 
-#ifdef QCN_RAW_DATA
    setSingleSampleDT(true); // set to true in raw mode so we don't get any interpolated/avg points (i.e. just the "integer" value hopefully)
-#else
-   setSingleSampleDT(false);
-#endif
    return (bool)(getTypeEnum() == SENSOR_ANDROID);
 }
 
