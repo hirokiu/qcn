@@ -303,6 +303,7 @@ int handle_qcn_trigger(const DB_MSG_FROM_HOST* pmfh, const int iVariety, DB_QCN_
      }
 
 // CMC hack - change JW 7 to 100, MN 8 to 101
+/*
      switch(qtrig.qcn_sensorid) {
         case 7:
            qtrig.qcn_sensorid = 100;
@@ -311,6 +312,7 @@ int handle_qcn_trigger(const DB_MSG_FROM_HOST* pmfh, const int iVariety, DB_QCN_
            qtrig.qcn_sensorid = 101;
            break;
       }
+*/
 
      qtrig.flag = 0;
      qtrig.time_received = dtime();  // mark current server time as time_received, this gets overridden by database unix_timestamp() in qcn_trigger.h db_print
