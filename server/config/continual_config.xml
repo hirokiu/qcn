@@ -18,6 +18,9 @@
     <download_dir>
       /var/www/boinc/continual/download
     </download_dir>
+    <uldl_dir_fanout>
+      1024
+    </uldl_dir_fanout>
     <sched_debug_level>
       2
     </sched_debug_level>
