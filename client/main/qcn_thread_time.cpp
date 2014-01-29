@@ -122,7 +122,7 @@ void* QCNThreadTime(void*)
        fprintf(stdout, "Synchronized server time at local time = %f   offset = %f   elapsed time = %f\n",
            qcn_main::g_dTimeSync, qcn_main::g_dTimeOffset, qcn_main::g_dTimeSync - dStart);
        fflush(stdout);
-       qcn_main::g_dTimeSyncRetry = dTimeNow + 900.0f;  // 15 minutes until the next sync
+       qcn_main::g_dTimeSyncRetry = dTimeNow + FLOAT_TIME_SYNC_INTERVAL;  // 15 minutes until the next sync
     }
     else { // try again in two minutes
        if (qcn_main::g_iStop) {
@@ -135,7 +135,7 @@ void* QCNThreadTime(void*)
        }
        fflush(stdout);
        fflush(stderr);
-       qcn_main::g_dTimeSyncRetry = dTimeNow + 180.0f;  // set next sync try in 3 minutes if still running!
+       qcn_main::g_dTimeSyncRetry = dTimeNow + FLOAT_TIME_SYNC_ERROR;  // set next sync try in 3 minutes if still running!
        qcn_main::g_dTimeSync = 0.0f;
        //qcn_main::g_dTimeOffset = 0.0f; // don't reset the offset time, carry through
     } 
@@ -147,7 +147,7 @@ void* QCNThreadTime(void*)
     double volatile myTimeOffset = 0.0f;
     int iRetval;
     if (!sm || qcn_main::g_iStop || qcn_main::g_threadTime->IsSuspended()) {
-        qcn_main::g_dTimeSyncRetry = dtime() + 120.0f;  // set next sync try in 2 minute if still running!
+        qcn_main::g_dTimeSyncRetry = dtime() + FLOAT_TIME_SYNC_ERROR;  // set next sync try in 2 minute if still running!
         goto done; // try a graceful exit if shutting down
     }
 
@@ -170,7 +170,7 @@ void* QCNThreadTime(void*)
     if (!iRetVal) { // good return value
        qcn_main::g_dTimeSync = dtime();
        qcn_main::g_dTimeOffset = myTimeOffset;
-       //qcn_main::g_dTimeSyncRetry = qcn_main::g_dTimeSync + 900.0f;  // next sync in 15 minutes 
+       //qcn_main::g_dTimeSyncRetry = qcn_main::g_dTimeSync + FLOAT_TIME_SYNC_INTERVAL;  // next sync in 15 minutes 
        qcn_main::g_dTimeSyncRetry = qcn_main::g_dTimeSync + 1.0f;  // next sync in 15 minutes 
         fprintf(stdout, "Synchronized server time at local time = %f   offset = %f   elapsed time = %f\n",
            qcn_main::g_dTimeSync, qcn_main::g_dTimeOffset, qcn_main::g_dTimeSync - dTimeNow);
@@ -180,7 +180,7 @@ void* QCNThreadTime(void*)
        // hmm, should we reset if failed, but we have a good time 10 minutes ago?
        qcn_main::g_dTimeSync = 0.0f;
        //qcn_main::g_dTimeOffset = 0.0f;  // don't reset last offset time, carry through
-       qcn_main::g_dTimeSyncRetry = dtime() + 180.0f;  // next sync try in 3 minutes 
+       qcn_main::g_dTimeSyncRetry = dtime() + FLOAT_TIME_SYNC_ERROR;  // next sync try in 3 minutes 
        fprintf(stderr, "Server time synchronization failed - elapsed time = %f - using previous offset of %f - retry at %.2f\n", 
            dtime() - dTimeNow, qcn_main::g_dTimeOffset, qcn_main::g_dTimeSyncRetry);
        fflush(stderr);

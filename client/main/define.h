@@ -58,6 +58,9 @@ typedef vector<string> ZipFileList;
 */
 #define QCN_INPUT_LOGICAL_NAME "qcn_0"
 
+// constants for the time sync - bumped up to half-hour between successful tries, 3 minutes for unsuccessful
+#define FLOAT_TIME_SYNC_INTERVAL  1800.0f
+#define FLOAT_TIME_SYNC_ERROR      180.0f
 
 
 #ifdef _WIN32
