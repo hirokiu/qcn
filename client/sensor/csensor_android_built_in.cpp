@@ -143,10 +143,11 @@ inline bool CSensorAndroidBuiltIn::read_xyz(float& x1, float& y1, float& z1)
          }
    }
 
-   //fprintf(stdout, "read_xyz:  %f %f %f\n", x1, y1, z1);
    x1 = m_xyz[0];
    y1 = m_xyz[1];
    z1 = m_xyz[2];
+
+   //fprintf(stdout, "read_xyz:  %f %f %f\n", x1, y1, z1);
 
    return true;
 }
