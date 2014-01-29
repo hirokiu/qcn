@@ -188,8 +188,15 @@ enum e_perturb {
 #define INTERVAL_PING_SECONDS 1800.0f
 
 const float g_cfTimeWindow = 60.0f;  // time window in seconds
-const double g_DT = 0.02;          // delta t sampling interval, i.e. target time between points
-const double g_DT_SLOW = 0.10;      // delta t sampling interval for slow/troublesome machines (i.e. can't keep up at <3 samples per dt=.02)
+
+// android has trouble keeping up?
+#ifdef ANDROID
+   const double g_DT = 0.05;          // delta t sampling interval, i.e. target time between points
+   const double g_DT_SLOW = 0.20;      // delta t sampling interval for slow/troublesome machines (i.e. can't keep up at <3 samples per dt=.02)
+#else
+   const double g_DT = 0.02;          // delta t sampling interval, i.e. target time between points
+   const double g_DT_SLOW = 0.10;      // delta t sampling interval for slow/troublesome machines (i.e. can't keep up at <3 samples per dt=.02)
+#endif
 const double g_DT_SNAIL = 0.20;      // for horrible machines but maybe let them run for educational purposes?
 
 // common QCN defines & return codes can go here

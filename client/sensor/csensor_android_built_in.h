@@ -50,17 +50,18 @@ class CSensorAndroidBuiltIn  : public CSensor
    private:
       ASensorManager* m_pSensorManager;  
       ASensor* m_pSensor;
-      //ASensorEventQueue* m_pSensorEventQueue;
+      ASensorEventQueue* m_pSensorEventQueue;
       ALooper* m_pLooper;
-
+      
       virtual bool read_xyz(float& x1, float& y1, float& z1);  
-      //int QCN_ALooper_callback(int fd, int events, void* data);
 
       char m_strSensor[_MAX_PATH];
       char m_strVendor[_MAX_PATH];
 
       float m_fResolution;
       int m_minDelayMsec;
+
+      float m_xyz[3];
 
    public:
       CSensorAndroidBuiltIn();

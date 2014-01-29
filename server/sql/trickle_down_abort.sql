@@ -25,6 +25,20 @@ concat('<trickle_down>\n<result_name>',
 ;
 
 
+/*
+    this sends a 'killer trickle' for android hosts
+*/
+insert into continual.msg_to_host
+(create_time,hostid,variety,handled,xml)
+select unix_timestamp(), hostid, 'abort', 0,
+concat('<trickle_down>\n<result_name>',
+  result_name,
+   '</result_name>\n<abort></abort>\n</trickle_down>\n')
+  from continual.qcn_trigger where qcn_sensorid=7 group by hostid;
+;
+
+
+
 /* killer trickle for hosts with no sensor that are ping triggering too much (>100) */
 
 insert into msg_to_host
