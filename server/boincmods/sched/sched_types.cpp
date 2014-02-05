@@ -619,7 +619,7 @@ int MSG_FROM_HOST_DESC::parse(XML_PARSER& xp) {
 }
 
 SCHEDULER_REPLY::SCHEDULER_REPLY() {
-    memset(&wreq, 0, sizeof(wreq));
+    wreq.clear();
     memset(&disk_limits, 0, sizeof(disk_limits));
     request_delay = 0;
     hostid = 0;
@@ -652,6 +652,7 @@ static bool have_apps_for_client() {
 int SCHEDULER_REPLY::write(FILE* fout, SCHEDULER_REQUEST& sreq, bool bTrigger, DB_QCN_HOST_IPADDR& qhip) {
 //int SCHEDULER_REPLY::write(FILE* fout, SCHEDULER_REQUEST& sreq) {
 // end CMC
+
     unsigned int i;
     char buf[BLOB_SIZE];
 
@@ -684,10 +685,6 @@ int SCHEDULER_REPLY::write(FILE* fout, SCHEDULER_REQUEST& sreq, bool bTrigger, D
     // Make it 1% larger than the min required to take care of time skew.
     // If this is less than one second bigger, bump up by one sec.
     //
-   // CMC block to bypass on triggers
-/*
-  if (!bTrigger) {
-*/
     if (request_delay || config.min_sendwork_interval) {
         double min_delay_needed = 1.01*config.min_sendwork_interval;
         if (min_delay_needed < config.min_sendwork_interval+1) {
@@ -698,10 +695,6 @@ int SCHEDULER_REPLY::write(FILE* fout, SCHEDULER_REQUEST& sreq, bool bTrigger, D
         }
         fprintf(fout, "<request_delay>%f</request_delay>\n", request_delay);
     }
-
-/*  } // CMC end bypass on triggers
-*/
-
     log_messages.printf(MSG_NORMAL,
         "Sending reply to [HOST#%d]: %d results, delay req %.2f\n",
         host.id, wreq.njobs_sent, request_delay
@@ -816,8 +809,12 @@ int SCHEDULER_REPLY::write(FILE* fout, SCHEDULER_REQUEST& sreq, bool bTrigger, D
             fputs("\n", fout);
         }
 
-    }  // userid
+        // always send project prefs
+        //
+        fputs(user.project_prefs, fout);
+        fputs("\n", fout);
 
+    }
     if (hostid) {
         fprintf(fout,
             "<hostid>%d</hostid>\n",
@@ -1516,7 +1513,7 @@ int qcn_send_quakelist(bool bTrigger, int hostid, DB_QCN_HOST_IPADDR& qhip, USER
          char* strQuake = NULL; // CMC note - read_file_malloc allocates this, make sure to free it! new char[APP_VERSION_XML_BLOB_SIZE];
 
       // CMC note -- we bypass this if a trigger trickle
-	if (bTrigger || ! user.id) return 0;
+        if (bTrigger || ! user.id) return 0;
    // CMC here -- send latest quake list
         // always send project prefs
         //
@@ -1560,28 +1557,6 @@ int qcn_send_quakelist(bool bTrigger, int hostid, DB_QCN_HOST_IPADDR& qhip, USER
 
          const char* strWhere = strstr(user.project_prefs, "</project_specific>");
          strTemp  = new char[APP_VERSION_XML_BLOB_SIZE];
-
-
-/*
-       if (bTrigger) {  // send lat/lng info back to client for this trigger
-         // send lat/lng on trigger trickles
-         if (strLatLng) {
-           if (strWhere) { // we found </project so prefs exist, insert lat/lng in the middle
-               strTemp[0] = '\n'; // seems to like a leading newline?
-               strncpy(strTemp, user.project_prefs, strWhere - user.project_prefs - 1);
-               strlcat(strTemp, strLatLng, APP_VERSION_XML_BLOB_SIZE);
-               strlcat(strTemp, "</project_specific>\n</project_preferences>\n", APP_VERSION_XML_BLOB_SIZE);
-           }
-           else {  // blank project prefs, so just write quake data
-                 sprintf(strTemp, "<project_preferences>\n<project_specific>\n%s\n</project_specific>\n</project_preferences>\n",
-                     strLatLng);
-           }
-           fputs(strTemp, fout);
-           fputs("\n", fout);
-         } //strLatLng
-       } // bTrigger
-       else { // don't send the big quake list on a trigger trickle
-*/
          strQuake = NULL; // CMC note - read_file_malloc allocates this, make sure to free it! new char[APP_VERSION_XML_BLOB_SIZE];
          memset(strTemp,  0x00, sizeof(char) * APP_VERSION_XML_BLOB_SIZE);
          //memset(strQuake, 0x00, sizeof(char) * APP_VERSION_XML_BLOB_SIZE);
@@ -1622,4 +1597,5 @@ int qcn_send_quakelist(bool bTrigger, int hostid, DB_QCN_HOST_IPADDR& qhip, USER
       return 0;
 }
 // CMC end
+
 const char *BOINC_RCSID_ea659117b3 = "$Id$";

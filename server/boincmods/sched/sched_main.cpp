@@ -134,9 +134,7 @@ void debug_sched(const char *trigger) {
         "Found %s, so writing %s\n", trigger, tmpfilename
     );
 
-/* CMC HERE COMMENT OUT
     g_reply->write(fp, *g_request);
-*/
     fclose(fp);
 
     sprintf(tmpfilename,
@@ -160,6 +158,9 @@ void debug_sched(const char *trigger) {
     );
 
     g_request->write(fp);
+/* CMC HERE COMMENT OUT
+    g_reply->write(fp, *g_request);
+*/
     fclose(fp);
 
     return;
@@ -192,13 +193,9 @@ int open_database() {
             log_messages.printf(MSG_CRITICAL,
                 "lost connection to database - trying to reconnect\n"
             );
-        }
-/* CMC here
-         else {
+        } else {
             return 0;
         }
-// CMC end bypass reutrn
-*/
     }
 
     retval = boinc_db.open(

@@ -396,8 +396,8 @@ lookup_user_and_make_new_host:
         //
         if (strlen(g_request->host.host_cpid)) {
             if (find_host_by_cpid(user, g_request->host.host_cpid, host)) {
-                log_messages.printf(MSG_CRITICAL,
-                    "[HOST#%d] [USER#%d] User has another host with same CPID.\n",
+                log_messages.printf(MSG_NORMAL,
+                    "[HOST#%d] [USER#%d] No host ID in request, but host with matching CPID found.\n",
                     host.id, host.userid
                 );
                 if ((g_request->allow_multiple_clients != 1)
@@ -1058,6 +1058,7 @@ void handle_msgs_from_host(DB_QCN_HOST_IPADDR& qhip) { // CMC mod line
             );
             // CMC - if too many msgs, send an ack so we don't get huge repeats
             g_reply->send_msg_ack = (bool) (i > 20);
+            //g_reply->send_msg_ack = false;
 
             // may as well return; if one insert failed, others will too
             //
@@ -1130,7 +1131,6 @@ void process_request(
 //    SCHEDULER_REQUEST& sreq, SCHEDULER_REPLY& reply, char* code_sign_key, bool bTrigger
 // void process_request(char* code_sign_key) {
 // CMC end new declaration of process_request
-
     PLATFORM* platform;
     int retval;
     double last_rpc_time, x;
@@ -1451,7 +1451,6 @@ void handle_request(FILE* fin, FILE* fout, char* code_sign_key) {
     const char* p = sreq.parse(xp);
     double start_time = dtime();
     if (!p){
-
        // CMC here -- sreq has been parsed, see if contains a trigger
          //  loop through the msg_from_host vector and see that all entries are variety "trigger"
          //  IFF all entries are "trigger" should we bypass (i.e. may be part of another msg)
@@ -1479,6 +1478,7 @@ void handle_request(FILE* fin, FILE* fout, char* code_sign_key) {
         process_request(code_sign_key, bTrigger, qhip);
          // CMC end section
        //  CMC end block handle_request/process_request
+//        process_request(code_sign_key);
 
         if ((config.locality_scheduling || config.locality_scheduler_fraction) && !sreply.nucleus_only) {
             send_file_deletes();
@@ -1497,7 +1497,6 @@ void handle_request(FILE* fin, FILE* fout, char* code_sign_key) {
      sreply.write(fout, sreq, bTrigger, qhip);
      //sreply.write(fout, sreq);
   // CMC end
-
     log_messages.printf(MSG_NORMAL,
         "Scheduler ran %.3f seconds\n", dtime()-start_time
     );

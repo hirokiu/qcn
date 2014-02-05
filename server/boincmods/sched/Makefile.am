@@ -4,6 +4,7 @@
 include $(top_srcdir)/Makefile.incl
 
 AM_CPPFLAGS += $(MYSQL_CFLAGS) $(PTHREAD_CFLAGS)
+
 # CMC need libcurl for GeoIP lookup etc
 AM_LDFLAGS += -static -lcurl
 
