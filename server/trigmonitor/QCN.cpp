@@ -1187,7 +1187,7 @@ QCN::estimateMagnitudeIII(QCNEvent& e, const int ciOff)
     const int c_cnt = _vt[ciOff].c_cnt;
     for (int j = 0; j <= c_cnt; j++) {              // Bootstrap once for each trigger 
        const int n = _vt[ciOff].c_ind[j]; 
-       e.magnitude += a* _vt[n].dis  + b * log10( _vt[n].magnitude ) + c;
+       e.magnitude += a* _vt[n].dis  + b * log( _vt[n].magnitude ) + c;
     }
     e.magnitude /= ( (float) _vt[ciOff].c_cnt + 1.0);            // Normalize summed mag estimates for average magnitude estimate
 
@@ -1204,7 +1204,7 @@ QCN::estimateMagnitudeIII(QCNEvent& e, const int ciOff)
                 mul_amp = 1.0;                                    //
             };
            //Sum magnitude estimate from each trigger for average estimate                                       //
-            mag_ave[j] += a * _vt[n].dis  + b * log10( _vt[n].magnitude ) + c;
+            mag_ave[j] += a * _vt[n].dis  + b * log( _vt[n].magnitude ) + c;
                    
         }
         mag_ave[j]/= ( (float) _vt[ciOff].c_cnt + 1.0);            // Normalize summed mag estimates for average magnitude estimate
