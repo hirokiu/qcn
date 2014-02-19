@@ -88,7 +88,7 @@
        1
     </non_cpu_intensive>
     <daily_result_quota>
-       10
+       3 
     </daily_result_quota>
     <max_wus_in_progress>
       1

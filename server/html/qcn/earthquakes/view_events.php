@@ -9,6 +9,7 @@ elseif (file_exists("common.inc"))
 require_once(BASEPATH . '/qcn/inc/inc/utils.inc');
 require_once(BASEPATH . '/qcn/inc/qcn_auto_detect.inc');
 
+
 $show_mg = $_GET["show_mag"];
 
 $event = $_GET["event"];
