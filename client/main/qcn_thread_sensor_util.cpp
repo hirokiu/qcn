@@ -655,6 +655,7 @@ void SetSensorThresholdAndDiffFactor()
 		case SENSOR_MAC_INTEL:
 			g_fThreshold = 0.10f;
 			break;
+		case SENSOR_ANDROID:
 		case SENSOR_WIN_HP:
 		case SENSOR_WIN_THINKPAD:
 			g_fThreshold = 0.20f;
