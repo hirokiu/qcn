@@ -111,7 +111,7 @@ QCN::execute()
         getTriggers();  // reads the memories from the trigger memory table into a global vector
         detectEvent();     // searches the vector of triggers for matching events
         k++;
-        cout << " HI " << k << endl;
+     // CMC removed useless output   cout << " HI " << k << endl;
 
         check_stop_daemons();  // checks for a quit request /home/boinc/projects/boinc/sched/sched_util.h
         dTimeCurrent = dtime();

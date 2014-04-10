@@ -16,10 +16,13 @@ CFLAGS   = -pipe -Wall -W -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexception
 CXXFLAGS = -pipe -o3 -funroll-loops -frounding-math -fPIC -DONLINE -Wall -W -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  -DQT_NO_DEBUG -DQT_SHARED -DQT_THREAD_SUPPORT
 LEXFLAGS = 
 YACCFLAGS= -d
-INCPATH  = -I/usr/lib64/qt-3.3/mkspecs/default -I. -I../../../boinc -I../../../boinc/lib -I../../../boinc/tools -I../../../boinc/db -I../../../boinc/sched -I/usr/local/mysql-5.5.16-linux2.6-x86_64/include -I../trigger -I/usr/local/include -I../../../client/util -I$(QTDIR)/include
+INCPATH  = -I/usr/lib64/qt-3.3/mkspecs/default -I. -I../../../boinc -I../../../boinc/lib -I../../../boinc/tools -I../../../boinc/db -I../../../boinc/sched -I/usr/local/mysql/include -I../trigger -I/usr/local/include -I../../../client/util -I$(QTDIR)/include
 LINK     = g++
 LFLAGS   = 
-LIBS     = $(SUBLIBS) -L$(QTDIR)/lib -L/usr/local/mysql/lib -lmysqlclient_r -L/home/boinc/projects/boinc/lib -L/home/boinc/projects/boinc/lib/.libs -lboinc -L/usr/local/ssl/lib -lcrypto -lssl -L/usr/local/lib -lcurl -lqt-mt -lXext -lX11 -lm
+# CMC removed unneeded libraries
+#LIBS     = $(SUBLIBS) -L$(QTDIR)/lib -L/usr/local/mysql/lib -lmysqlclient_r -L/home/boinc/projects/boinc/lib -L/home/boinc/projects/boinc/lib/.libs -lboinc -L/usr/local/ssl/lib -lcrypto -lssl -L/usr/local/lib -lcurl
+#-lqt-mt -lXext -lX11 -lm
+LIBS     = -L/usr/local/mysql/lib -lmysqlclient_r -L/home/boinc/projects/boinc/lib -L/home/boinc/projects/boinc/lib/.libs -lboinc -L/usr/local/ssl/lib -lcrypto -lssl -L/usr/local/lib -lcurl
 AR       = ar cqs
 RANLIB   = 
 MOC      = $(QTDIR)/bin/moc
