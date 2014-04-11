@@ -4,8 +4,8 @@ import sys, string, MySQLdb
 from time import time
 
 DBNAME = "sensor"
-DBHOST = "db-private"
-DBUSER = "qcn"
+DBHOST = "localhost"
+DBUSER = "root"
 DBPASSWD = "PASSWORD"
 
 def main():
@@ -17,8 +17,8 @@ def main():
                            db = DBNAME)
       cMain = dbconn.cursor()
       cMain.execute("set autocommit=1");
-      cMain.execute("update sensor.result set validate_state=1 where server_state=5 and outcome=1")
-      cMain.execute("update continual.result set validate_state=1 where server_state=5 and outcome=1")
+      cMain.execute("update sensor.result set validate_state=1 where server_state=5 and outcome=1 and validate_state!=1")
+      cMain.execute("update continual.result set validate_state=1 where server_state=5 and outcome=1 and validate_state!=1")
       cMain.execute("call do_stats();")
       dbconn.close()
       t2 = time()
