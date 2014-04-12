@@ -18,8 +18,8 @@ def main():
       cMain = dbconn.cursor()
       cMain.execute("set autocommit=1");
       cMain.execute("call do_stats();")
-      cMain.execute("update sensor.result set outcome=1 and validate_state=1 where server_state=5 and (outcome!=1 or validate_state!=1)")
-      cMain.execute("update continual.result set outcome=1 and validate_state=1 where server_state=5 and (outcome!=1 or validate_state!=1)")
+      cMain.execute("update sensor.result set outcome=1,validate_state=1 where server_state=5 and (outcome!=1 or validate_state!=1)")
+      cMain.execute("update continual.result set outcome=1,validate_state=1 where server_state=5 and (outcome!=1 or validate_state!=1)")
       dbconn.close()
       t2 = time()
       print "do_stats Successful on " + str(t2) + " - Elapsed Time = " + str(t2-t1) + " seconds"
