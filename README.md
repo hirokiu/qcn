@@ -4,7 +4,7 @@ http://qcn.stanford.edu
 
 All files are (c) 2013 Stanford University, School of Earth Sciences
 
-Primary author of all files unless otherwise noted is Carl Christensen, carlgt1@yahoo.com  (github: carlgt1)
+Primary author of all files unless otherwise noted is Carl Christensen, carlgt1@hotmail.com  (github: carlgt1)
 
 This repository is released under the Lesser GNU Public License (LGPL), with the hopes that it will
 be useful for academic use and experimentation in seismology.
