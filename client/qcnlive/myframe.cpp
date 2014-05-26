@@ -71,7 +71,7 @@ MyAboutBox::MyAboutBox(QMainWindow *pmw)
 	 myAboutBox.SetName(wxT("QCNLive"));
 	 myAboutBox.SetWebSite(wxT("http://qcn.stanford.edu"), wxT("Quake-Catcher Network Website"));
 	 myAboutBox.SetCopyright(wxT("(c) 2008-2014 Stanford University")); 
-	 //myAboutBox.AddDeveloper(wxT("Carl Christensen  (carlgt1@yahoo.com"));
+	 //myAboutBox.AddDeveloper(wxT("Carl Christensen  (carlgt1@hotmail.com"));
 	 myAboutBox.SetDescription(wxT("This software is provided free of charge for educational purposes.\n\nPlease visit us on the web:\n"));
 	 
 	 wxAboutBox(myAboutBox);

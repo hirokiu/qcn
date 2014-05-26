@@ -2,7 +2,7 @@
 #define _QCN_MAIN_H_
 /*!
   \file    main.h
-  \author  Carl Christensen, carlgt1@yahoo.com
+  \author  Carl Christensen, carlgt1@hotmail.com
   
  *  main header file for the Quake Catcher Network
  *  declares the qcn_main namespace and globals as defined below

@@ -3,7 +3,7 @@
 
 /**
   \file    define.h
-  \author  Carl Christensen, carlgt1@yahoo.com
+  \author  Carl Christensen, carlgt1@hotmail.com
   
  *  global defines used for the Quake Catcher Network client, graphics, and QCNLive programs
 
